@@ -1,0 +1,6 @@
+framework module Pods_Barva_ {
+  umbrella header "Pods-Barva.-umbrella.h"
+
+  export *
+  module * { export * }
+}
