@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SigninViewController.swift
 //  Barva.
 //
 //  Created by 김동겸 on 2022/08/08.
@@ -7,13 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SigninViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+
     }
 
-
 }
-

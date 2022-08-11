@@ -7,23 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		479A32FA7830B5F0E9D0CF2E /* Pods_Barva_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA1E479E1F26CD78C571DECC /* Pods_Barva_.framework */; };
 		EB25ACF828A1364D0006C1F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25ACF728A1364D0006C1F2 /* AppDelegate.swift */; };
 		EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25ACF928A1364D0006C1F2 /* SceneDelegate.swift */; };
-		EB25ACFC28A1364D0006C1F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25ACFB28A1364D0006C1F2 /* ViewController.swift */; };
-		EB25ACFF28A1364D0006C1F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB25ACFD28A1364D0006C1F2 /* Main.storyboard */; };
+		EB25ACFC28A1364D0006C1F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25ACFB28A1364D0006C1F2 /* LoginViewController.swift */; };
+		EB25ACFF28A1364D0006C1F2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB25ACFD28A1364D0006C1F2 /* Login.storyboard */; };
 		EB25AD0128A136500006C1F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB25AD0028A136500006C1F2 /* Assets.xcassets */; };
 		EB25AD0428A136500006C1F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB25AD0228A136500006C1F2 /* LaunchScreen.storyboard */; };
+		EB2EA2F928A1409800EC0685 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2EA2F828A1409800EC0685 /* SigninViewController.swift */; };
+		EB2EA2FB28A1410E00EC0685 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2EA2FA28A1410E00EC0685 /* Home.storyboard */; };
+		EB9CC95C28A40A1A003D9F22 /* UploadTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */; };
+		EB9CC95E28A40A53003D9F22 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */; };
+		EB9CC96028A40A6D003D9F22 /* ColorTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */; };
+		EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */; };
+		EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */; };
+		EBE4EDB628A4E6C7005C7516 /* SigninRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB528A4E6C7005C7516 /* SigninRequest.swift */; };
+		EBE4EDB828A4E6D5005C7516 /* SigninResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB728A4E6D5005C7516 /* SigninResponse.swift */; };
+		EBE4EDBA28A51238005C7516 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB928A51238005C7516 /* HomeViewController.swift */; };
+		EBE4EDBC28A51255005C7516 /* UploadTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDBB28A51255005C7516 /* UploadTabViewController.swift */; };
+		EBE4EDBE28A51288005C7516 /* ProfileTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDBD28A51288005C7516 /* ProfileTabViewController.swift */; };
+		EBE4EDC028A5129A005C7516 /* ColorTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */; };
+		EBE4EDC328A514AF005C7516 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDC228A514AF005C7516 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99C4C033FDF3CECE088BEA18 /* Pods-Barva..release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barva..release.xcconfig"; path = "Target Support Files/Pods-Barva./Pods-Barva..release.xcconfig"; sourceTree = "<group>"; };
+		AAC241ED1C09FC4C51B94F4D /* Pods-Barva..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barva..debug.xcconfig"; path = "Target Support Files/Pods-Barva./Pods-Barva..debug.xcconfig"; sourceTree = "<group>"; };
+		BA1E479E1F26CD78C571DECC /* Pods_Barva_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Barva_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB25ACF428A1364D0006C1F2 /* Barva..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barva..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB25ACF728A1364D0006C1F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB25ACF928A1364D0006C1F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EB25ACFB28A1364D0006C1F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EB25ACFE28A1364D0006C1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB25ACFB28A1364D0006C1F2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EB25ACFE28A1364D0006C1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		EB25AD0028A136500006C1F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB25AD0328A136500006C1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB25AD0528A136500006C1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB2EA2F828A1409800EC0685 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		EB2EA2FA28A1410E00EC0685 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadTab.storyboard; sourceTree = "<group>"; };
+		EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
+		EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorTab.storyboard; sourceTree = "<group>"; };
+		EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		EBE4EDB528A4E6C7005C7516 /* SigninRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninRequest.swift; sourceTree = "<group>"; };
+		EBE4EDB728A4E6D5005C7516 /* SigninResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninResponse.swift; sourceTree = "<group>"; };
+		EBE4EDB928A51238005C7516 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EBE4EDBB28A51255005C7516 /* UploadTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTabViewController.swift; sourceTree = "<group>"; };
+		EBE4EDBD28A51288005C7516 /* ProfileTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabViewController.swift; sourceTree = "<group>"; };
+		EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTabViewController.swift; sourceTree = "<group>"; };
+		EBE4EDC228A514AF005C7516 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +63,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479A32FA7830B5F0E9D0CF2E /* Pods_Barva_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77DCB8BC7F0CDA7004843CA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA1E479E1F26CD78C571DECC /* Pods_Barva_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EB25ACEB28A1364D0006C1F2 = {
 			isa = PBXGroup;
 			children = (
 				EB25ACF628A1364D0006C1F2 /* Barva. */,
 				EB25ACF528A1364D0006C1F2 /* Products */,
+				F672DD687F285981EF7AC4EA /* Pods */,
+				77DCB8BC7F0CDA7004843CA8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +99,94 @@
 		EB25ACF628A1364D0006C1F2 /* Barva. */ = {
 			isa = PBXGroup;
 			children = (
-				EB25ACF728A1364D0006C1F2 /* AppDelegate.swift */,
-				EB25ACF928A1364D0006C1F2 /* SceneDelegate.swift */,
-				EB25ACFB28A1364D0006C1F2 /* ViewController.swift */,
-				EB25ACFD28A1364D0006C1F2 /* Main.storyboard */,
+				EB25AD0E28A137380006C1F2 /* Controller */,
+				EB25AD0C28A137170006C1F2 /* Model */,
+				EB25AD0D28A1372A0006C1F2 /* View */,
+				EB25AD0B28A137060006C1F2 /* Delegate */,
+				EBE4EDC128A5148E005C7516 /* Extension */,
 				EB25AD0028A136500006C1F2 /* Assets.xcassets */,
 				EB25AD0228A136500006C1F2 /* LaunchScreen.storyboard */,
 				EB25AD0528A136500006C1F2 /* Info.plist */,
 			);
 			path = Barva.;
+			sourceTree = "<group>";
+		};
+		EB25AD0B28A137060006C1F2 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				EB25ACF728A1364D0006C1F2 /* AppDelegate.swift */,
+				EB25ACF928A1364D0006C1F2 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		EB25AD0C28A137170006C1F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4EDAF28A4E663005C7516 /* LoginModel */,
+				EBE4EDB028A4E670005C7516 /* SigninModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EB25AD0D28A1372A0006C1F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB25ACFD28A1364D0006C1F2 /* Login.storyboard */,
+				EB2EA2FA28A1410E00EC0685 /* Home.storyboard */,
+				EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */,
+				EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */,
+				EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EB25AD0E28A137380006C1F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB25ACFB28A1364D0006C1F2 /* LoginViewController.swift */,
+				EB2EA2F828A1409800EC0685 /* SigninViewController.swift */,
+				EBE4EDB928A51238005C7516 /* HomeViewController.swift */,
+				EBE4EDBB28A51255005C7516 /* UploadTabViewController.swift */,
+				EBE4EDBD28A51288005C7516 /* ProfileTabViewController.swift */,
+				EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EBE4EDAF28A4E663005C7516 /* LoginModel */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */,
+				EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */,
+			);
+			path = LoginModel;
+			sourceTree = "<group>";
+		};
+		EBE4EDB028A4E670005C7516 /* SigninModel */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4EDB528A4E6C7005C7516 /* SigninRequest.swift */,
+				EBE4EDB728A4E6D5005C7516 /* SigninResponse.swift */,
+			);
+			path = SigninModel;
+			sourceTree = "<group>";
+		};
+		EBE4EDC128A5148E005C7516 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4EDC228A514AF005C7516 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F672DD687F285981EF7AC4EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAC241ED1C09FC4C51B94F4D /* Pods-Barva..debug.xcconfig */,
+				99C4C033FDF3CECE088BEA18 /* Pods-Barva..release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB25AD0828A136500006C1F2 /* Build configuration list for PBXNativeTarget "Barva." */;
 			buildPhases = (
+				48BB17305A5A4C88A1E3E669 /* [CP] Check Pods Manifest.lock */,
 				EB25ACF028A1364D0006C1F2 /* Sources */,
 				EB25ACF128A1364D0006C1F2 /* Frameworks */,
 				EB25ACF228A1364D0006C1F2 /* Resources */,
+				A254FF46F54B0F54EF19EF0F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,34 +249,90 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9CC96028A40A6D003D9F22 /* ColorTab.storyboard in Resources */,
+				EB9CC95E28A40A53003D9F22 /* ProfileTab.storyboard in Resources */,
 				EB25AD0428A136500006C1F2 /* LaunchScreen.storyboard in Resources */,
+				EB9CC95C28A40A1A003D9F22 /* UploadTab.storyboard in Resources */,
 				EB25AD0128A136500006C1F2 /* Assets.xcassets in Resources */,
-				EB25ACFF28A1364D0006C1F2 /* Main.storyboard in Resources */,
+				EB25ACFF28A1364D0006C1F2 /* Login.storyboard in Resources */,
+				EB2EA2FB28A1410E00EC0685 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48BB17305A5A4C88A1E3E669 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Barva.-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A254FF46F54B0F54EF19EF0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Barva./Pods-Barva.-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Barva./Pods-Barva.-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Barva./Pods-Barva.-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB25ACF028A1364D0006C1F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB25ACFC28A1364D0006C1F2 /* ViewController.swift in Sources */,
+				EBE4EDC028A5129A005C7516 /* ColorTabViewController.swift in Sources */,
+				EBE4EDC328A514AF005C7516 /* UIViewController+Extension.swift in Sources */,
+				EB2EA2F928A1409800EC0685 /* SigninViewController.swift in Sources */,
+				EBE4EDB628A4E6C7005C7516 /* SigninRequest.swift in Sources */,
+				EB25ACFC28A1364D0006C1F2 /* LoginViewController.swift in Sources */,
+				EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */,
 				EB25ACF828A1364D0006C1F2 /* AppDelegate.swift in Sources */,
+				EBE4EDBA28A51238005C7516 /* HomeViewController.swift in Sources */,
+				EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */,
+				EBE4EDBE28A51288005C7516 /* ProfileTabViewController.swift in Sources */,
+				EBE4EDB828A4E6D5005C7516 /* SigninResponse.swift in Sources */,
 				EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */,
+				EBE4EDBC28A51255005C7516 /* UploadTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EB25ACFD28A1364D0006C1F2 /* Main.storyboard */ = {
+		EB25ACFD28A1364D0006C1F2 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EB25ACFE28A1364D0006C1F2 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		EB25AD0228A136500006C1F2 /* LaunchScreen.storyboard */ = {
@@ -282,6 +462,7 @@
 		};
 		EB25AD0928A136500006C1F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAC241ED1C09FC4C51B94F4D /* Pods-Barva..debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,7 +473,7 @@
 				INFOPLIST_FILE = Barva./Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,6 +491,7 @@
 		};
 		EB25AD0A28A136500006C1F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99C4C033FDF3CECE088BEA18 /* Pods-Barva..release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,7 +502,7 @@
 				INFOPLIST_FILE = Barva./Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Login;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
