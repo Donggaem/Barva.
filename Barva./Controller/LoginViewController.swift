@@ -10,12 +10,11 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var idTextField: UITextField!
-    
     @IBOutlet weak var pwTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func siginBtnPressed(_ sender: UIButton) {

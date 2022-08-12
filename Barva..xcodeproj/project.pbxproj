@@ -19,6 +19,7 @@
 		EB9CC95C28A40A1A003D9F22 /* UploadTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */; };
 		EB9CC95E28A40A53003D9F22 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */; };
 		EB9CC96028A40A6D003D9F22 /* ColorTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */; };
+		EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBC384E28A70DEE000D075D /* PopupViewController.swift */; };
 		EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */; };
 		EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */; };
 		EBE4EDB628A4E6C7005C7516 /* SigninRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB528A4E6C7005C7516 /* SigninRequest.swift */; };
@@ -47,6 +48,7 @@
 		EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorTab.storyboard; sourceTree = "<group>"; };
+		EBBC384E28A70DEE000D075D /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		EBE4EDB528A4E6C7005C7516 /* SigninRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninRequest.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				EBE4EDBB28A51255005C7516 /* UploadTabViewController.swift */,
 				EBE4EDBD28A51288005C7516 /* ProfileTabViewController.swift */,
 				EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */,
+				EBBC384E28A70DEE000D075D /* PopupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				EBE4EDB828A4E6D5005C7516 /* SigninResponse.swift in Sources */,
 				EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */,
 				EBE4EDBC28A51255005C7516 /* UploadTabViewController.swift in Sources */,
+				EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
