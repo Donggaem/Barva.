@@ -28,5 +28,11 @@ class LoginViewController: UIViewController {
         self.changeRootViewController(homeNav)
     }
     
+    @IBAction func idpwFindPressed(_ sender: UIButton) {
+        let findVC = self.storyboard?.instantiateViewController(withIdentifier: "FindViewController") as! FindViewController
+        self.navigationController?.pushViewController(findVC, animated: true)
+    }
+    
+    
 }
 

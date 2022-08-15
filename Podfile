@@ -9,5 +9,7 @@ target 'Barva.' do
 pod 'Alamofire'
 pod 'IQKeyboardManagerSwift'
 pod 'SnapKit'
+pod 'Tabman'
+pod 'Pageboy'
 
 end

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		479A32FA7830B5F0E9D0CF2E /* Pods_Barva_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA1E479E1F26CD78C571DECC /* Pods_Barva_.framework */; };
+		EB1751F428AA78EA009FEFBF /* TabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1751F328AA78EA009FEFBF /* TabManViewController.swift */; };
+		EB1751F628AA78F8009FEFBF /* PWFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1751F528AA78F8009FEFBF /* PWFindViewController.swift */; };
+		EB1751F828AA7D7A009FEFBF /* IDFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1751F728AA7D7A009FEFBF /* IDFindViewController.swift */; };
+		EB1751FA28AA8D43009FEFBF /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1751F928AA8D43009FEFBF /* FindViewController.swift */; };
 		EB25ACF828A1364D0006C1F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25ACF728A1364D0006C1F2 /* AppDelegate.swift */; };
 		EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25ACF928A1364D0006C1F2 /* SceneDelegate.swift */; };
 		EB25ACFC28A1364D0006C1F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25ACFB28A1364D0006C1F2 /* LoginViewController.swift */; };
@@ -35,6 +39,10 @@
 		99C4C033FDF3CECE088BEA18 /* Pods-Barva..release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barva..release.xcconfig"; path = "Target Support Files/Pods-Barva./Pods-Barva..release.xcconfig"; sourceTree = "<group>"; };
 		AAC241ED1C09FC4C51B94F4D /* Pods-Barva..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Barva..debug.xcconfig"; path = "Target Support Files/Pods-Barva./Pods-Barva..debug.xcconfig"; sourceTree = "<group>"; };
 		BA1E479E1F26CD78C571DECC /* Pods_Barva_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Barva_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB1751F328AA78EA009FEFBF /* TabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManViewController.swift; sourceTree = "<group>"; };
+		EB1751F528AA78F8009FEFBF /* PWFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWFindViewController.swift; sourceTree = "<group>"; };
+		EB1751F728AA7D7A009FEFBF /* IDFindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDFindViewController.swift; sourceTree = "<group>"; };
+		EB1751F928AA8D43009FEFBF /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		EB25ACF428A1364D0006C1F2 /* Barva..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barva..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB25ACF728A1364D0006C1F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB25ACF928A1364D0006C1F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +86,31 @@
 				BA1E479E1F26CD78C571DECC /* Pods_Barva_.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB1751F128AA7869009FEFBF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EB25ACFB28A1364D0006C1F2 /* LoginViewController.swift */,
+				EB2EA2F828A1409800EC0685 /* SigninViewController.swift */,
+				EB1751F328AA78EA009FEFBF /* TabManViewController.swift */,
+				EB1751F728AA7D7A009FEFBF /* IDFindViewController.swift */,
+				EB1751F528AA78F8009FEFBF /* PWFindViewController.swift */,
+				EB1751F928AA8D43009FEFBF /* FindViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EB1751F228AA788A009FEFBF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4EDB928A51238005C7516 /* HomeViewController.swift */,
+				EBE4EDBB28A51255005C7516 /* UploadTabViewController.swift */,
+				EBE4EDBD28A51288005C7516 /* ProfileTabViewController.swift */,
+				EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */,
+				EBBC384E28A70DEE000D075D /* PopupViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		EB25ACEB28A1364D0006C1F2 = {
@@ -146,13 +179,8 @@
 		EB25AD0E28A137380006C1F2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EB25ACFB28A1364D0006C1F2 /* LoginViewController.swift */,
-				EB2EA2F828A1409800EC0685 /* SigninViewController.swift */,
-				EBE4EDB928A51238005C7516 /* HomeViewController.swift */,
-				EBE4EDBB28A51255005C7516 /* UploadTabViewController.swift */,
-				EBE4EDBD28A51288005C7516 /* ProfileTabViewController.swift */,
-				EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */,
-				EBBC384E28A70DEE000D075D /* PopupViewController.swift */,
+				EB1751F128AA7869009FEFBF /* Login */,
+				EB1751F228AA788A009FEFBF /* Home */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -316,6 +344,8 @@
 				EB2EA2F928A1409800EC0685 /* SigninViewController.swift in Sources */,
 				EBE4EDB628A4E6C7005C7516 /* SigninRequest.swift in Sources */,
 				EB25ACFC28A1364D0006C1F2 /* LoginViewController.swift in Sources */,
+				EB1751FA28AA8D43009FEFBF /* FindViewController.swift in Sources */,
+				EB1751F828AA7D7A009FEFBF /* IDFindViewController.swift in Sources */,
 				EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */,
 				EB25ACF828A1364D0006C1F2 /* AppDelegate.swift in Sources */,
 				EBE4EDBA28A51238005C7516 /* HomeViewController.swift in Sources */,
@@ -323,6 +353,8 @@
 				EBE4EDBE28A51288005C7516 /* ProfileTabViewController.swift in Sources */,
 				EBE4EDB828A4E6D5005C7516 /* SigninResponse.swift in Sources */,
 				EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */,
+				EB1751F628AA78F8009FEFBF /* PWFindViewController.swift in Sources */,
+				EB1751F428AA78EA009FEFBF /* TabManViewController.swift in Sources */,
 				EBE4EDBC28A51255005C7516 /* UploadTabViewController.swift in Sources */,
 				EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */,
 			);
