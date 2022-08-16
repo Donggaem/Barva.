@@ -23,6 +23,8 @@
 		EB9CC95C28A40A1A003D9F22 /* UploadTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */; };
 		EB9CC95E28A40A53003D9F22 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */; };
 		EB9CC96028A40A6D003D9F22 /* ColorTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */; };
+		EBA63E9828AB717100144E3A /* BarvaLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA63E9728AB717100144E3A /* BarvaLog.swift */; };
+		EBA63E9C28ABF34900144E3A /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA63E9B28ABF34900144E3A /* testViewController.swift */; };
 		EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBC384E28A70DEE000D075D /* PopupViewController.swift */; };
 		EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */; };
 		EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */; };
@@ -56,6 +58,8 @@
 		EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorTab.storyboard; sourceTree = "<group>"; };
+		EBA63E9728AB717100144E3A /* BarvaLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarvaLog.swift; sourceTree = "<group>"; };
+		EBA63E9B28ABF34900144E3A /* testViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		EBBC384E28A70DEE000D075D /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 				EB1751F728AA7D7A009FEFBF /* IDFindViewController.swift */,
 				EB1751F528AA78F8009FEFBF /* PWFindViewController.swift */,
 				EB1751F928AA8D43009FEFBF /* FindViewController.swift */,
+				EBA63E9B28ABF34900144E3A /* testViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 				EB25AD0C28A137170006C1F2 /* Model */,
 				EB25AD0D28A1372A0006C1F2 /* View */,
 				EB25AD0B28A137060006C1F2 /* Delegate */,
+				EBA63E9628AB714E00144E3A /* Debug */,
 				EBE4EDC128A5148E005C7516 /* Extension */,
 				EB25AD0028A136500006C1F2 /* Assets.xcassets */,
 				EB25AD0228A136500006C1F2 /* LaunchScreen.storyboard */,
@@ -183,6 +189,14 @@
 				EB1751F228AA788A009FEFBF /* Home */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		EBA63E9628AB714E00144E3A /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				EBA63E9728AB717100144E3A /* BarvaLog.swift */,
+			);
+			path = Debug;
 			sourceTree = "<group>";
 		};
 		EBE4EDAF28A4E663005C7516 /* LoginModel */ = {
@@ -352,10 +366,12 @@
 				EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */,
 				EBE4EDBE28A51288005C7516 /* ProfileTabViewController.swift in Sources */,
 				EBE4EDB828A4E6D5005C7516 /* SigninResponse.swift in Sources */,
+				EBA63E9828AB717100144E3A /* BarvaLog.swift in Sources */,
 				EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */,
 				EB1751F628AA78F8009FEFBF /* PWFindViewController.swift in Sources */,
 				EB1751F428AA78EA009FEFBF /* TabManViewController.swift in Sources */,
 				EBE4EDBC28A51255005C7516 /* UploadTabViewController.swift in Sources */,
+				EBA63E9C28ABF34900144E3A /* testViewController.swift in Sources */,
 				EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

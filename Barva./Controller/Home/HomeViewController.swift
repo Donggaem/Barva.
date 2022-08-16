@@ -23,4 +23,8 @@ class HomeViewController: UIViewController {
         self.present(popUp, animated: true, completion: nil)
     }
 
+    @IBAction func test(_ sender: UIButton) {
+        let testVC = self.storyboard?.instantiateViewController(withIdentifier: "testViewController") as! testViewController
+        self.navigationController?.pushViewController(testVC, animated: true)
+    }
 }

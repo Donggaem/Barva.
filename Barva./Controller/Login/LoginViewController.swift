@@ -14,12 +14,13 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
     
     @IBAction func siginBtnPressed(_ sender: UIButton) {
         let signinVC = self.storyboard?.instantiateViewController(withIdentifier: "SigninViewController") as! SigninViewController
         self.navigationController?.pushViewController(signinVC, animated: true)
+       
     }
     
     @IBAction func loginBtnPressed(_ sender: UIButton) {
