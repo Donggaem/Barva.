@@ -97,10 +97,7 @@
 			children = (
 				EB25ACFB28A1364D0006C1F2 /* LoginViewController.swift */,
 				EB2EA2F828A1409800EC0685 /* SigninViewController.swift */,
-				EB1751F328AA78EA009FEFBF /* TabManViewController.swift */,
-				EB1751F728AA7D7A009FEFBF /* IDFindViewController.swift */,
-				EB1751F528AA78F8009FEFBF /* PWFindViewController.swift */,
-				EB1751F928AA8D43009FEFBF /* FindViewController.swift */,
+				EB88610F28ACC3F1003FD651 /* Find */,
 				EBA63E9B28ABF34900144E3A /* testViewController.swift */,
 			);
 			path = Login;
@@ -189,6 +186,18 @@
 				EB1751F228AA788A009FEFBF /* Home */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		EB88610F28ACC3F1003FD651 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				EB1751F328AA78EA009FEFBF /* TabManViewController.swift */,
+				EB1751F728AA7D7A009FEFBF /* IDFindViewController.swift */,
+				EB1751F528AA78F8009FEFBF /* PWFindViewController.swift */,
+				EB1751F928AA8D43009FEFBF /* FindViewController.swift */,
+			);
+			name = Find;
+			path = "랴ㅜㅇ";
 			sourceTree = "<group>";
 		};
 		EBA63E9628AB714E00144E3A /* Debug */ = {

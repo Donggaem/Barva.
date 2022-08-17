@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (5.6.1)
-  - DropDown (2.3.13)
   - IQKeyboardManagerSwift (6.5.10)
   - Pageboy (3.6.2)
   - SnapKit (5.6.0)
@@ -9,7 +8,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - DropDown
   - IQKeyboardManagerSwift
   - Pageboy
   - SnapKit
@@ -18,7 +16,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - DropDown
     - IQKeyboardManagerSwift
     - Pageboy
     - SnapKit
@@ -26,12 +23,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
-  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Tabman: 447a50447ed2869c39ab3b1a779327e43e067c4e
 
-PODFILE CHECKSUM: 6e0c85c09c182372fd67dfd3b26bc02c29746643
+PODFILE CHECKSUM: 8c0c890c484e714b87cbd0e021909308078fc7fc
 
 COCOAPODS: 1.11.3

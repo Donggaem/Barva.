@@ -8,22 +8,35 @@
 import UIKit
 
 class UploadTabViewController: UIViewController {
-
+    
+    @IBOutlet weak var uploadImageView: UIImageView!
+    let imagePickerController = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func uploadPressed(_ sender: UIButton) {
+        self.imagePickerController.delegate = self
+        self.imagePickerController.sourceType = .photoLibrary
+        present(self.imagePickerController, animated: true, completion: nil)
     }
-    */
-
+    
+}
+extension UploadTabViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            uploadImageView.image = image
+        }
+        
+        picker.dismiss(animated: true, completion: nil) //dismiss를 직접 해야함
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
 }

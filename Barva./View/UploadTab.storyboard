@@ -8,18 +8,86 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Upload Tab View Controller-->
+        <!--Item-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="UploadTabViewController" id="Y6W-OH-hqX" customClass="UploadTabViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xbh-ub-pIR">
+                                <rect key="frame" x="32" y="150" width="350" height="417"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="v3h-4s-nof">
+                                <rect key="frame" x="32" y="631" width="350" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvF-dU-Azi">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="2Ki-CM-WWz"/>
+                                            <constraint firstAttribute="height" constant="30" id="k8C-0s-cxR"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="남"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LW0-9J-ahj">
+                                        <rect key="frame" x="51" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="fGc-oc-ceI"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="여"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NyM-1d-Fou">
+                                        <rect key="frame" x="102" y="0.0" width="248" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5hX-tm-cWZ">
+                                <rect key="frame" x="32" y="691" width="350" height="94"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="hM5-Yc-Udw"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvE-pN-MPK">
+                                <rect key="frame" x="343" y="119" width="39" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="업로드"/>
+                                <connections>
+                                    <action selector="uploadPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="j6V-Nf-b01"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xbh-ub-pIR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="34s-Ig-rsj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Xbh-ub-pIR" secondAttribute="trailing" constant="32" id="5wm-pf-0EF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JvE-pN-MPK" secondAttribute="trailing" constant="32" id="64n-jr-ktq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="5hX-tm-cWZ" secondAttribute="bottom" constant="28" id="JK5-k1-0m2"/>
+                            <constraint firstItem="5hX-tm-cWZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="KbK-L4-7ma"/>
+                            <constraint firstItem="Xbh-ub-pIR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="150" id="WLM-PX-2ZR"/>
+                            <constraint firstItem="v3h-4s-nof" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="YaW-9o-3ue"/>
+                            <constraint firstItem="5hX-tm-cWZ" firstAttribute="top" secondItem="v3h-4s-nof" secondAttribute="bottom" constant="30" id="bc2-If-5sV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="v3h-4s-nof" secondAttribute="trailing" constant="32" id="cuA-DQ-aXb"/>
+                            <constraint firstItem="Xbh-ub-pIR" firstAttribute="top" secondItem="JvE-pN-MPK" secondAttribute="bottom" constant="1" id="d1m-3a-qqY"/>
+                            <constraint firstItem="v3h-4s-nof" firstAttribute="top" secondItem="Xbh-ub-pIR" secondAttribute="bottom" constant="64" id="hwO-Og-GuS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5hX-tm-cWZ" secondAttribute="trailing" constant="32" id="lVe-0e-jw9"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="K3w-MZ-nXW"/>
                     <navigationItem key="navigationItem" id="th1-Ym-4ud"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="uploadImageView" destination="Xbh-ub-pIR" id="0tV-Ki-vfu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,6 +115,12 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
