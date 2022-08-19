@@ -9,8 +9,11 @@ import Foundation
 
 struct SignRequest: Encodable {
     
+    var user_name: String
+    var user_nick: String
     var user_id: String
     var user_pw: String
-    var confirm_pw: String
-    var user_name: String
+    var user_confirmPw: String
+    var user_email: String
+    
 }

@@ -35,6 +35,14 @@
 		EBE4EDBE28A51288005C7516 /* ProfileTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDBD28A51288005C7516 /* ProfileTabViewController.swift */; };
 		EBE4EDC028A5129A005C7516 /* ColorTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */; };
 		EBE4EDC328A514AF005C7516 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDC228A514AF005C7516 /* UIViewController+Extension.swift */; };
+		EBF510D128AFBC2D0098BD5A /* IDCheckRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D028AFBC2D0098BD5A /* IDCheckRequest.swift */; };
+		EBF510D328AFBC410098BD5A /* IDCheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D228AFBC410098BD5A /* IDCheckResponse.swift */; };
+		EBF510D528AFBC570098BD5A /* NickCheckRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D428AFBC570098BD5A /* NickCheckRequest.swift */; };
+		EBF510D728AFBC660098BD5A /* NickCheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D628AFBC660098BD5A /* NickCheckResponse.swift */; };
+		EBF510DA28AFBD060098BD5A /* AuthMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D928AFBD060098BD5A /* AuthMailRequest.swift */; };
+		EBF510DC28AFBD1C0098BD5A /* AuthMailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510DB28AFBD1C0098BD5A /* AuthMailResponse.swift */; };
+		EBF510DE28AFBD890098BD5A /* InspectMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510DD28AFBD890098BD5A /* InspectMailRequest.swift */; };
+		EBF510E028AFBD980098BD5A /* InspectMailRewponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510DF28AFBD980098BD5A /* InspectMailRewponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +78,14 @@
 		EBE4EDBD28A51288005C7516 /* ProfileTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabViewController.swift; sourceTree = "<group>"; };
 		EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTabViewController.swift; sourceTree = "<group>"; };
 		EBE4EDC228A514AF005C7516 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		EBF510D028AFBC2D0098BD5A /* IDCheckRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCheckRequest.swift; sourceTree = "<group>"; };
+		EBF510D228AFBC410098BD5A /* IDCheckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCheckResponse.swift; sourceTree = "<group>"; };
+		EBF510D428AFBC570098BD5A /* NickCheckRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickCheckRequest.swift; sourceTree = "<group>"; };
+		EBF510D628AFBC660098BD5A /* NickCheckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickCheckResponse.swift; sourceTree = "<group>"; };
+		EBF510D928AFBD060098BD5A /* AuthMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMailRequest.swift; sourceTree = "<group>"; };
+		EBF510DB28AFBD1C0098BD5A /* AuthMailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMailResponse.swift; sourceTree = "<group>"; };
+		EBF510DD28AFBD890098BD5A /* InspectMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectMailRequest.swift; sourceTree = "<group>"; };
+		EBF510DF28AFBD980098BD5A /* InspectMailRewponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectMailRewponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,8 +177,7 @@
 		EB25AD0C28A137170006C1F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EBE4EDAF28A4E663005C7516 /* LoginModel */,
-				EBE4EDB028A4E670005C7516 /* SigninModel */,
+				EBF510CF28AFBBF40098BD5A /* Login */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,6 +246,39 @@
 				EBE4EDC228A514AF005C7516 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		EBF510CE28AFBBE60098BD5A /* CheckModel */ = {
+			isa = PBXGroup;
+			children = (
+				EBF510D028AFBC2D0098BD5A /* IDCheckRequest.swift */,
+				EBF510D228AFBC410098BD5A /* IDCheckResponse.swift */,
+				EBF510D428AFBC570098BD5A /* NickCheckRequest.swift */,
+				EBF510D628AFBC660098BD5A /* NickCheckResponse.swift */,
+			);
+			path = CheckModel;
+			sourceTree = "<group>";
+		};
+		EBF510CF28AFBBF40098BD5A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4EDAF28A4E663005C7516 /* LoginModel */,
+				EBE4EDB028A4E670005C7516 /* SigninModel */,
+				EBF510CE28AFBBE60098BD5A /* CheckModel */,
+				EBF510D828AFBCE10098BD5A /* EmailModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EBF510D828AFBCE10098BD5A /* EmailModel */ = {
+			isa = PBXGroup;
+			children = (
+				EBF510D928AFBD060098BD5A /* AuthMailRequest.swift */,
+				EBF510DB28AFBD1C0098BD5A /* AuthMailResponse.swift */,
+				EBF510DD28AFBD890098BD5A /* InspectMailRequest.swift */,
+				EBF510DF28AFBD980098BD5A /* InspectMailRewponse.swift */,
+			);
+			path = EmailModel;
 			sourceTree = "<group>";
 		};
 		F672DD687F285981EF7AC4EA /* Pods */ = {
@@ -366,11 +414,15 @@
 				EB2EA2F928A1409800EC0685 /* SigninViewController.swift in Sources */,
 				EBE4EDB628A4E6C7005C7516 /* SigninRequest.swift in Sources */,
 				EB25ACFC28A1364D0006C1F2 /* LoginViewController.swift in Sources */,
+				EBF510D128AFBC2D0098BD5A /* IDCheckRequest.swift in Sources */,
 				EB1751FA28AA8D43009FEFBF /* FindViewController.swift in Sources */,
 				EB1751F828AA7D7A009FEFBF /* IDFindViewController.swift in Sources */,
+				EBF510DA28AFBD060098BD5A /* AuthMailRequest.swift in Sources */,
 				EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */,
 				EB25ACF828A1364D0006C1F2 /* AppDelegate.swift in Sources */,
 				EBE4EDBA28A51238005C7516 /* HomeViewController.swift in Sources */,
+				EBF510DE28AFBD890098BD5A /* InspectMailRequest.swift in Sources */,
+				EBF510D528AFBC570098BD5A /* NickCheckRequest.swift in Sources */,
 				EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */,
 				EBE4EDBE28A51288005C7516 /* ProfileTabViewController.swift in Sources */,
 				EBE4EDB828A4E6D5005C7516 /* SigninResponse.swift in Sources */,
@@ -378,9 +430,13 @@
 				EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */,
 				EB1751F628AA78F8009FEFBF /* PWFindViewController.swift in Sources */,
 				EB1751F428AA78EA009FEFBF /* TabManViewController.swift in Sources */,
+				EBF510D328AFBC410098BD5A /* IDCheckResponse.swift in Sources */,
+				EBF510D728AFBC660098BD5A /* NickCheckResponse.swift in Sources */,
 				EBE4EDBC28A51255005C7516 /* UploadTabViewController.swift in Sources */,
+				EBF510E028AFBD980098BD5A /* InspectMailRewponse.swift in Sources */,
 				EBA63E9C28ABF34900144E3A /* testViewController.swift in Sources */,
 				EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */,
+				EBF510DC28AFBD1C0098BD5A /* AuthMailResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

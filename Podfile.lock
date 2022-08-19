@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.6.1)
+  - BSImagePicker (3.3.1)
   - IQKeyboardManagerSwift (6.5.10)
   - Pageboy (3.6.2)
   - SnapKit (5.6.0)
@@ -8,6 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - BSImagePicker
   - IQKeyboardManagerSwift
   - Pageboy
   - SnapKit
@@ -16,6 +18,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - BSImagePicker
     - IQKeyboardManagerSwift
     - Pageboy
     - SnapKit
@@ -23,11 +26,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  BSImagePicker: 0fe04b574d4d6b81093785d2af6c26227efc8428
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   Tabman: 447a50447ed2869c39ab3b1a779327e43e067c4e
 
-PODFILE CHECKSUM: 8c0c890c484e714b87cbd0e021909308078fc7fc
+PODFILE CHECKSUM: a7bb9dc61c49cfd0a7315b62466cdda9ead9b9be
 
 COCOAPODS: 1.11.3

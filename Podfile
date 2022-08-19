@@ -11,5 +11,6 @@ pod 'IQKeyboardManagerSwift'
 pod 'SnapKit'
 pod 'Tabman'
 pod 'Pageboy'
+pod 'BSImagePicker'
 
 end
