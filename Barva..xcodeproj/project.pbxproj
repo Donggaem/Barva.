@@ -63,6 +63,7 @@
 		EB25AD0528A136500006C1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB2EA2F828A1409800EC0685 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		EB2EA2FA28A1410E00EC0685 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		EB2F99C628B0ABF10084EB7B /* YPImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YPImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorTab.storyboard; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 		77DCB8BC7F0CDA7004843CA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB2F99C628B0ABF10084EB7B /* YPImagePicker.framework */,
 				BA1E479E1F26CD78C571DECC /* Pods_Barva_.framework */,
 			);
 			name = Frameworks;

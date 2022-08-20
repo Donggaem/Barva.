@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//import YPImagePicker
 import BSImagePicker
 import Photos
 
@@ -19,15 +20,20 @@ class UploadTabViewController: UIViewController {
     @IBOutlet weak var uploadBtn: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
+//    var images: [UIImage] = []
+    
     var delegate: AddImageDelegate!
     var selectedAssets: [PHAsset] = [PHAsset]()
     var userSelectedImages: [UIImage] = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(uploadImageView.image)
+    }
     
     @IBAction func pageChanged(_ sender: UIPageControl) {
         uploadImageView.image = userSelectedImages[pageControl.currentPage]
@@ -62,33 +68,68 @@ class UploadTabViewController: UIViewController {
             self.convertAssetToImages()
             self.delegate?.didPickImagesToUpload(images: self.userSelectedImages)
         })
+        
+//        var config = YPImagePickerConfiguration()
+//        config.screens = [.library]
+//        config.library.maxNumberOfItems = 6
+//        let picker = YPImagePicker(configuration: config)
+//
+//        picker.didFinishPicking { [unowned picker] items, cancelled in
+//            self.images = []
+//
+//            if cancelled {
+//                picker.dismiss(animated: true, completion: nil)
+//                return
+//            }
+//
+//            // 여러 이미지를 넣어주기 위해 하나씩 넣어주는 반복문
+//            for item in items {
+//                switch item {
+//                    // 이미지만 받기때문에 photo case만 처리
+//                case .photo(let p):
+//                    // 이미지를 해당하는 이미지 배열에 넣어주는 code
+//                    self.images.append(p.image)
+//
+//                default:
+//                    print("")
+//
+//                }
+//
+//            }
+//            //사진 선택창 닫기
+//            picker.dismiss(animated: true, completion: nil)
+//        }
+//        //선택창 보여주기
+//        present(picker, animated: true, completion: nil)
+        
     }
     
     func convertAssetToImages() {
-        
-        if selectedAssets.count != 0 {
             
-            for i in 0..<selectedAssets.count {
+            if selectedAssets.count != 0 {
                 
-                let imageManager = PHImageManager.default()
-                let option = PHImageRequestOptions()
-                option.isSynchronous = true
-                var thumbnail = UIImage()
-                
-                imageManager.requestImage(for: selectedAssets[i],
-                                          targetSize: CGSize(width: 200, height: 200),
-                                          contentMode: .aspectFit,
-                                          options: option) { (result, info) in
-                    thumbnail = result!
+                for i in 0..<selectedAssets.count {
+                    
+                    let imageManager = PHImageManager.default()
+                    let option = PHImageRequestOptions()
+                    option.isSynchronous = true
+                    var thumbnail = UIImage()
+                    
+                    imageManager.requestImage(for: selectedAssets[i],
+                                              targetSize: CGSize(width: 200, height: 200),
+                                              contentMode: .aspectFit,
+                                              options: option) { (result, info) in
+                        thumbnail = result!
+                    }
+                    
+                    let data = thumbnail.jpegData(compressionQuality: 0.7)
+                    let newImage = UIImage(data: data!)
+                    
+                    self.userSelectedImages.append(newImage! as UIImage)
                 }
-                
-                let data = thumbnail.jpegData(compressionQuality: 0.7)
-                let newImage = UIImage(data: data!)
-                
-                self.userSelectedImages.append(newImage! as UIImage)
             }
         }
-    }
+    
     
     private func setUI() {
         view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.4)
