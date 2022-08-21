@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.6.1)
   - BSImagePicker (3.3.1)
+  - FSPagerView (0.8.3)
   - IQKeyboardManagerSwift (6.5.10)
   - Pageboy (3.6.2)
   - PryntTrimmerView (4.0.2)
@@ -15,6 +16,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - BSImagePicker
+  - FSPagerView
   - IQKeyboardManagerSwift
   - Pageboy
   - SnapKit
@@ -25,6 +27,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - BSImagePicker
+    - FSPagerView
     - IQKeyboardManagerSwift
     - Pageboy
     - PryntTrimmerView
@@ -36,6 +39,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   BSImagePicker: 0fe04b574d4d6b81093785d2af6c26227efc8428
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
@@ -44,6 +48,6 @@ SPEC CHECKSUMS:
   Tabman: 447a50447ed2869c39ab3b1a779327e43e067c4e
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: d2c1b7b2b1e6b3978de944ba69397a3bd3a2fc9a
+PODFILE CHECKSUM: c9710a558e47042a2f66c9d48398a67252dcc6e5
 
 COCOAPODS: 1.11.3

@@ -13,5 +13,6 @@ pod 'Tabman'
 pod 'Pageboy'
 pod 'YPImagePicker'
 pod 'BSImagePicker'
+pod 'FSPagerView'
 
 end

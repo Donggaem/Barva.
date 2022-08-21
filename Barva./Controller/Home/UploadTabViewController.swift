@@ -6,170 +6,99 @@
 //
 
 import UIKit
-//import YPImagePicker
-import BSImagePicker
+import YPImagePicker
 import Photos
+import PhotosUI
+import FSPagerView
 
-protocol AddImageDelegate {
-    func didPickImagesToUpload(images: [UIImage])
-}
-
-class UploadTabViewController: UIViewController {
+class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate {
     
-    @IBOutlet weak var uploadImageView: UIImageView!
+    @IBOutlet weak var pagerView: FSPagerView! {
+        didSet {
+            self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
+            self.pagerView.itemSize = FSPagerView.automaticSize
+        }
+    }
+    
     @IBOutlet weak var uploadBtn: UIButton!
-    @IBOutlet weak var pageControl: UIPageControl!
     
-//    var images: [UIImage] = []
-    
-    var delegate: AddImageDelegate!
-    var selectedAssets: [PHAsset] = [PHAsset]()
-    var userSelectedImages: [UIImage] = [UIImage]()
+    var images: [UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        setUI()
+        self.pagerView.delegate = self
+        self.pagerView.dataSource = self
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(uploadImageView.image)
-    }
-    
-    @IBAction func pageChanged(_ sender: UIPageControl) {
-        uploadImageView.image = userSelectedImages[pageControl.currentPage]
+        
+        print("123123123")
     }
     
     @IBAction func uploadPressed(_ sender: UIButton) {
         
-        selectedAssets.removeAll()
-        userSelectedImages.removeAll()
+        // MARK: - 본의 photo picker 수정 부분
+        /// 버튼 클릭 시 갤러리 화면 보여줌
         
-        let imagePicker = ImagePickerController()
-        imagePicker.settings.selection.max = 5
-        imagePicker.settings.fetch.assets.supportedMediaTypes = [.image]
+        // MARK: 1
+        var config = PHPickerConfiguration(photoLibrary: .shared()) // 갤러리 연결
+        config.selectionLimit = 5 // 최대 몇장의 사진을 선택할 지 구함
+        config.filter = PHPickerFilter.any(of: [.images, .livePhotos]) // 어떤 종류의 사진들 (사진, 라이브 포토, 영상) 을 보여줄지 여기서 필터링 진행
+        let vc = PHPickerViewController(configuration: config)  // 올라오는 vc 정의
+        vc.delegate = self  // 포토 피커의 델리게이트 자신으로 채택
+        //vc.modalPresentationStyle = .overFullScreen // 풀 스크린으로 올리고 싶으면 해당 라인 주석 풀어주세요~
+        present(vc, animated: true)   // 현재 프레즌트 형식으로 올리는데 네비로도 넘길 수 있을 듯 아니면 풀 스크린으로도 가능함.
         
+        // MARK: 2
+        // 상단에 PHPickerViewControllerDelegate 채택
         
-        presentImagePicker(imagePicker, select: { (asset) in
-            
-            // User selected an asset. Do something with it. Perhaps begin processing/upload?
-            
-        }, deselect: { (asset) in
-            // User deselected an asset. Cancel whatever you did when asset was selected.
-            
-        }, cancel: { (assets) in
-            // User canceled selection.
-            
-        }, finish: { (assets) in
-            // User finished selection assets.
-            
-            for i in 0..<assets.count {
-                self.selectedAssets.append(assets[i])
-            }
-            self.convertAssetToImages()
-            self.delegate?.didPickImagesToUpload(images: self.userSelectedImages)
-        })
-        
-//        var config = YPImagePickerConfiguration()
-//        config.screens = [.library]
-//        config.library.maxNumberOfItems = 6
-//        let picker = YPImagePicker(configuration: config)
-//
-//        picker.didFinishPicking { [unowned picker] items, cancelled in
-//            self.images = []
-//
-//            if cancelled {
-//                picker.dismiss(animated: true, completion: nil)
-//                return
-//            }
-//
-//            // 여러 이미지를 넣어주기 위해 하나씩 넣어주는 반복문
-//            for item in items {
-//                switch item {
-//                    // 이미지만 받기때문에 photo case만 처리
-//                case .photo(let p):
-//                    // 이미지를 해당하는 이미지 배열에 넣어주는 code
-//                    self.images.append(p.image)
-//
-//                default:
-//                    print("")
-//
-//                }
-//
-//            }
-//            //사진 선택창 닫기
-//            picker.dismiss(animated: true, completion: nil)
-//        }
-//        //선택창 보여주기
-//        present(picker, animated: true, completion: nil)
-        
+        // MARK: 3.
+        // 채택된 델리게이트 관련 메소드 (func picker) 아래에 정의함 ⬇️
     }
     
-    func convertAssetToImages() {
-            
-            if selectedAssets.count != 0 {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true, completion: nil)
+        self.images.removeAll() // 이전 데이터 지워주기 위해서 배열 초기화
+        let group = DispatchGroup()
+        results.forEach { result in
+            group.enter()
+            result.itemProvider.loadObject(ofClass: UIImage.self) { [ weak self ] reading, error in
+                // weak self 는 '약한 참조'의 개념인데 순환 참조를 막기 위해 클로저 내부에서 많이 사용함 이건 나중에 찾아봐
+                defer { group.leave() }
+                guard let self = self else { return }
+                guard let image = reading as? UIImage, error == nil else { return }
                 
-                for i in 0..<selectedAssets.count {
-                    
-                    let imageManager = PHImageManager.default()
-                    let option = PHImageRequestOptions()
-                    option.isSynchronous = true
-                    var thumbnail = UIImage()
-                    
-                    imageManager.requestImage(for: selectedAssets[i],
-                                              targetSize: CGSize(width: 200, height: 200),
-                                              contentMode: .aspectFit,
-                                              options: option) { (result, info) in
-                        thumbnail = result!
-                    }
-                    
-                    let data = thumbnail.jpegData(compressionQuality: 0.7)
-                    let newImage = UIImage(data: data!)
-                    
-                    self.userSelectedImages.append(newImage! as UIImage)
-                }
+                self.images.append(image)
             }
         }
-    
+        group.notify(queue: .main) {
+            print(self.images.count)
+            //self.pageControl.re
+            self.pagerView.reloadData()
+        }
+    }
     
     private func setUI() {
-        view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.4)
-        view.isOpaque = false
         
-        pageControl.numberOfPages = userSelectedImages.count
-        pageControl.currentPage = 0
-        // 페이지 표시 색상
-        pageControl.pageIndicatorTintColor = UIColor.lightGray
-        // 현재 페이지 표시 색상
-        pageControl.currentPageIndicatorTintColor = UIColor.black
-        uploadImageView.image = userSelectedImages[0]
-        
-        // 한 손가락 스와이프 제스쳐 등록(좌, 우)
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(PopupViewController.respondToSwipeGesture(_:)))
-        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
-        self.view.addGestureRecognizer(swipeLeft)
-        
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(PopupViewController.respondToSwipeGesture(_:)))
-        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
-        self.view.addGestureRecognizer(swipeRight)
+    }
+}
+
+extension UploadTabViewController: FSPagerViewDataSource, FSPagerViewDelegate {
+    
+    //이미지 개수
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        return self.images.count
     }
     
-    @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer) {
-        // 만일 제스쳐가 있다면
-        if let swipeGesture = gesture as? UISwipeGestureRecognizer{
-            
-            // 발생한 이벤트가 각 방향의 스와이프 이벤트라면
-            // pageControl이 가르키는 현재 페이지에 해당하는 이미지를 imageView에 할당
-            switch swipeGesture.direction {
-            case UISwipeGestureRecognizer.Direction.left :
-                pageControl.currentPage += 1
-                uploadImageView.image = userSelectedImages[pageControl.currentPage]
-            case UISwipeGestureRecognizer.Direction.right :
-                pageControl.currentPage -= 1
-                uploadImageView.image = userSelectedImages[pageControl.currentPage]
-            default:
-                break
-            }
-        }
+    //각셀에 대한 설정
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        cell.imageView?.image = self.images[index]
+        return cell
     }
+    
     
 }
+
