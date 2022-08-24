@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SpoqaHanSans/SpoqaHanSansNeo-Medium.ttf</string>
+		<string>SpoqaHanSans/SpoqaHanSansNeo-Regular.ttf</string>
+		<string>SpoqaHanSans/SpoqaHanSansNeo-Bold.ttf</string>
+		<string>MPLUS1Code/MPLUS1Code-Regular.ttf</string>
+		<string>MPLUS1Code/MPLUS1Code-Medium.ttf</string>
+	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>앨범에서 사진 선택</string>
 	<key>UIApplicationSceneManifest</key>

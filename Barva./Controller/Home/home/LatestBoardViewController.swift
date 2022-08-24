@@ -1,13 +1,13 @@
 //
-//  testViewController.swift
+//  LatestViewController.swift
 //  Barva.
 //
-//  Created by 김동겸 on 2022/08/17.
+//  Created by 김동겸 on 2022/08/24.
 //
 
 import UIKit
 
-class testViewController: UIViewController {
+class LatestBoardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

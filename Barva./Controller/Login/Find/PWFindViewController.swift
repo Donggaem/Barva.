@@ -9,21 +9,45 @@ import UIKit
 
 class PWFindViewController: UIViewController {
 
+    @IBOutlet weak var emailBtn: UIButton!
+    @IBOutlet weak var checkNumBtn: UIButton!
+    @IBOutlet weak var pwFindBtn: UIButton!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var checkNumTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUI()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: SET UI
+    private func setUI() {
+        
+        //버튼 모서리
+        emailBtn.layer.cornerRadius = 15
+        checkNumBtn.layer.cornerRadius = 15
+        pwFindBtn.layer.cornerRadius = 5
+        
+        //버튼 활성/비활성 액션
+        self.emailTextField.addAction(UIAction(handler: { _ in
+            if self.emailTextField.text?.isEmpty == true {
+                self.emailBtn.isEnabled = false
+                self.emailBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
+            } else {
+                self.emailBtn.isEnabled = true
+                self.emailBtn.backgroundColor = .black
+            }
+        }), for: .editingChanged)
+        
+        self.checkNumTextField.addAction(UIAction(handler: { _ in
+            if self.checkNumTextField.text?.isEmpty == true {
+                self.checkNumBtn.isEnabled = false
+                self.checkNumBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
+            } else {
+                self.checkNumBtn.isEnabled = true
+                self.checkNumBtn.backgroundColor = .black
+            }
+        }), for: .editingChanged)
     }
-    */
-
 }

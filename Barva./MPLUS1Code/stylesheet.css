@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'M PLUS 1 Code';
+    src: url('MPLUS1Code-ExtraLight.eot');
+    src: local('M PLUS 1 Code ExtraLight'), local('MPLUS1Code-ExtraLight'),
+        url('MPLUS1Code-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('MPLUS1Code-ExtraLight.woff2') format('woff2'),
+        url('MPLUS1Code-ExtraLight.woff') format('woff'),
+        url('MPLUS1Code-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'M PLUS 1 Code';
+    src: url('MPLUS1Code-Bold.eot');
+    src: local('M PLUS 1 Code Bold'), local('MPLUS1Code-Bold'),
+        url('MPLUS1Code-Bold.eot?#iefix') format('embedded-opentype'),
+        url('MPLUS1Code-Bold.woff2') format('woff2'),
+        url('MPLUS1Code-Bold.woff') format('woff'),
+        url('MPLUS1Code-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'M PLUS 1 Code';
+    src: url('MPLUS1Code-Light.eot');
+    src: local('M PLUS 1 Code Light'), local('MPLUS1Code-Light'),
+        url('MPLUS1Code-Light.eot?#iefix') format('embedded-opentype'),
+        url('MPLUS1Code-Light.woff2') format('woff2'),
+        url('MPLUS1Code-Light.woff') format('woff'),
+        url('MPLUS1Code-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'M PLUS 1 Code';
+    src: url('MPLUS1Code-Medium.eot');
+    src: local('M PLUS 1 Code Medium'), local('MPLUS1Code-Medium'),
+        url('MPLUS1Code-Medium.eot?#iefix') format('embedded-opentype'),
+        url('MPLUS1Code-Medium.woff2') format('woff2'),
+        url('MPLUS1Code-Medium.woff') format('woff'),
+        url('MPLUS1Code-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'M PLUS 1 Code';
+    src: url('MPLUS1Code-Thin.eot');
+    src: local('M PLUS 1 Code Thin'), local('MPLUS1Code-Thin'),
+        url('MPLUS1Code-Thin.eot?#iefix') format('embedded-opentype'),
+        url('MPLUS1Code-Thin.woff2') format('woff2'),
+        url('MPLUS1Code-Thin.woff') format('woff'),
+        url('MPLUS1Code-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'M PLUS 1 Code';
+    src: url('MPLUS1Code-Regular.eot');
+    src: local('M PLUS 1 Code Regular'), local('MPLUS1Code-Regular'),
+        url('MPLUS1Code-Regular.eot?#iefix') format('embedded-opentype'),
+        url('MPLUS1Code-Regular.woff2') format('woff2'),
+        url('MPLUS1Code-Regular.woff') format('woff'),
+        url('MPLUS1Code-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'M PLUS 1 Code';
+    src: url('MPLUS1Code-SemiBold.eot');
+    src: local('M PLUS 1 Code SemiBold'), local('MPLUS1Code-SemiBold'),
+        url('MPLUS1Code-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('MPLUS1Code-SemiBold.woff2') format('woff2'),
+        url('MPLUS1Code-SemiBold.woff') format('woff'),
+        url('MPLUS1Code-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
