@@ -25,9 +25,14 @@ class SigninViewController: UIViewController {
         setUI()
         
     }
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     
     //MARK: SET UI
     private func setUI() {
+        
+        self.navigationController?.navigationBar.isHidden = true
         
         //버튼 모서리
         nickBtn.layer.cornerRadius = 20

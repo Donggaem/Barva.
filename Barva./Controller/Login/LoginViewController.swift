@@ -41,10 +41,8 @@ class LoginViewController: UIViewController {
     private func setUI() {
         loginBtn.layer.cornerRadius = 5
         
-        
     }
-    
-   
+
 }
 
 extension LoginViewController: UITextFieldDelegate {
