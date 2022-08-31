@@ -25,11 +25,11 @@
             </objects>
             <point key="canvasLocation" x="955.07246376811599" y="60.9375"/>
         </scene>
-        <!--Color-->
+        <!--Navigation Controller-->
         <scene sceneID="Sko-ps-sCV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h2S-p8-1HK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Color" id="V91-HS-EBx"/>
+                    <tabBarItem key="tabBarItem" title="" image="off-1" id="V91-HS-EBx"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lLV-g2-ZBs">
@@ -47,6 +47,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="off-1" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

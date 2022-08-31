@@ -60,7 +60,7 @@ extension LoginViewController: UITextFieldDelegate {
     //텍스트 필드 입력값 변하면 유효성 검사
     @objc func TFdidChanged(_ sender: UITextField) {
         
-        //3개 텍스트필드가 채워졌는지, 비밀번호가 일치하는 지 확인.
+        //2개 텍스트필드가 채워졌는지, 비밀번호가 일치하는 지 확인.
         if !(self.idTextField.text?.isEmpty ?? true) && !(self.pwTextField.text?.isEmpty ?? true) {
             loginBtn(willActive: true)
         }

@@ -201,8 +201,8 @@
 				EB25ACFD28A1364D0006C1F2 /* Login.storyboard */,
 				EB2EA2FA28A1410E00EC0685 /* Home.storyboard */,
 				EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */,
-				EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */,
 				EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */,
+				EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";

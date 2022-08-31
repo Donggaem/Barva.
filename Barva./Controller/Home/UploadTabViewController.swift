@@ -6,12 +6,14 @@
 //
 
 import UIKit
-import YPImagePicker
 import Photos
 import PhotosUI
 import FSPagerView
 
 class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate {
+    
+    @IBOutlet weak var UPloadtextView: UITextView!
+    @IBOutlet weak var countLabel: UILabel!
     
     @IBOutlet weak var pagerView: FSPagerView! {
         didSet {
@@ -20,25 +22,26 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
         }
     }
     
-    @IBOutlet weak var uploadBtn: UIButton!
+    private let textViewPlaceHolder = "착용한 아이템 및 스타일을 소개해 주세요."
+    private let maxCount = 99
     
     var images: [UIImage] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        setTextView()
         self.pagerView.delegate = self
         self.pagerView.dataSource = self
         
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        print("123123123")
+        countLabel.text = "0 / 100"
     }
     
-    @IBAction func uploadPressed(_ sender: UIButton) {
-        
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
         // MARK: - 본의 photo picker 수정 부분
         /// 버튼 클릭 시 갤러리 화면 보여줌
         
@@ -57,7 +60,7 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
         // MARK: 3.
         // 채택된 델리게이트 관련 메소드 (func picker) 아래에 정의함 ⬇️
     }
-    
+
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true, completion: nil)
         self.images.removeAll() // 이전 데이터 지워주기 위해서 배열 초기화
@@ -82,6 +85,14 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
     
     private func setUI() {
         
+        // 이미지뷰 탭
+        let tapImageViewRecognizer
+        = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        
+        //이미지뷰가 상호작용할 수 있게 설정
+        pagerView.isUserInteractionEnabled = true
+        //이미지뷰에 제스처인식기 연결
+        pagerView.addGestureRecognizer(tapImageViewRecognizer)
     }
 }
 
@@ -98,7 +109,103 @@ extension UploadTabViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         cell.imageView?.image = self.images[index]
         return cell
     }
-    
-    
 }
 
+extension UploadTabViewController: UITextViewDelegate {
+   
+    private func setTextView(){
+                
+        countLabel.text = "0 / 100"
+        
+        //플레이스홀더 설정
+        UPloadtextView.text = textViewPlaceHolder
+        UPloadtextView.textColor = .placeholderText
+        UPloadtextView.font = UIFont(name: "Inter-SemiBold", size: 14.5)
+        
+//        theTextViewHeightConstraint.isActive = false // 스토리보드에 설정된 콘스트레이트 무시
+        UPloadtextView.sizeToFit()
+        UPloadtextView.isScrollEnabled = false
+        textViewDidChange(UPloadtextView)
+        
+        UPloadtextView.delegate = self
+        self.UPloadtextView.textContainerInset =
+        UIEdgeInsets(top: 0, left: -UPloadtextView.textContainer.lineFragmentPadding, bottom: 0, right: -UPloadtextView.textContainer.lineFragmentPadding) // 텍스트뷰 안쪽 marin없애기
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        //이전 글자 - 선택된 글자 + 새로운 글자(대체될 글자)
+        let newLength = textView.text.count - range.length + text.count
+        let koreanMaxCount = maxCount + 1
+        //글자수가 초과 된 경우 or 초과되지 않은 경우
+        if newLength > koreanMaxCount {
+            let overflow = newLength - koreanMaxCount //초과된 글자수
+            if text.count < overflow {
+                return true
+            }
+            let index = text.index(text.endIndex, offsetBy: -overflow)
+            let newText = text[..<index]
+            guard let startPosition = textView.position(from: textView.beginningOfDocument, offset: range.location) else { return false }
+            guard let endPosition = textView.position(from: textView.beginningOfDocument, offset: NSMaxRange(range)) else { return false }
+            guard let textRange = textView.textRange(from: startPosition, to: endPosition) else { return false }
+            
+            textView.replace(textRange, withText: String(newText))
+            
+            return false
+        }
+        return true
+    }
+    
+    //텍스트뷰 열릴시
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        
+        if UPloadtextView.text == textViewPlaceHolder {
+            UPloadtextView.text = nil
+            UPloadtextView.textColor = .black
+            countLabel.text = "0 / 100"
+            
+        }
+    }
+    
+    //텍스트뷰 동작시
+    func textViewDidChange(_ textView: UITextView) {
+        
+        countLabel.text = "\(UPloadtextView.text.count) / 100" //아래 글자수 표시
+        
+        let size = CGSize(width: view.frame.width, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        
+        textView.constraints.forEach { (constraint) in
+            
+            if estimatedSize.height <= 75 {
+               
+            }
+            else {
+                if constraint.firstAttribute == .height {
+                    constraint.constant = estimatedSize.height
+                    
+                }
+            }
+        }
+    }
+    
+    //텍스트뷰 닫힐시
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || textView.text == textViewPlaceHolder {
+            UPloadtextView.text = textViewPlaceHolder
+            UPloadtextView.textColor = .placeholderText
+            UPloadtextView.font = UIFont(name: "Inter-SemiBold", size: 14.5)
+            countLabel.text = "0 / 100"
+        }
+        
+        if textView.text.count > maxCount {
+            //글자수 제한에 걸리면 마지막 글자를 삭제함.
+            UPloadtextView.text.removeLast()
+            let alert = UIAlertController(title: "알림", message: "100자 이내로 적어주시기 바랍니다.", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "확인", style: .default)
+            alert.addAction(okAction)
+            present(alert, animated: false, completion: nil)
+        }
+    }
+    
+   
+}

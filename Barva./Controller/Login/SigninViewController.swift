@@ -35,10 +35,10 @@ class SigninViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         
         //버튼 모서리
-        nickBtn.layer.cornerRadius = 20
-        idBtn.layer.cornerRadius = 15
-        emailBtn.layer.cornerRadius = 15
-        checkNumBtn.layer.cornerRadius = 15
+        nickBtn.layer.cornerRadius = 14
+        idBtn.layer.cornerRadius = 14
+        emailBtn.layer.cornerRadius = 14
+        checkNumBtn.layer.cornerRadius = 14
         signinBtn.layer.cornerRadius = 5
         
 //        nickBtn.layer.cornerRedius = frame.height / 2

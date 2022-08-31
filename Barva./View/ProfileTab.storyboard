@@ -25,11 +25,11 @@
             </objects>
             <point key="canvasLocation" x="955.07246376811599" y="60.9375"/>
         </scene>
-        <!--Profile-->
+        <!--Navigation Controller-->
         <scene sceneID="2CG-wg-IpU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CUv-JF-t1H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="goB-4w-Hwq"/>
+                    <tabBarItem key="tabBarItem" title="" image="off-2" id="goB-4w-Hwq"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zEZ-PC-OY2">
@@ -47,6 +47,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="off-2" width="28" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
