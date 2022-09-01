@@ -4,6 +4,8 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>inter-cufonfonts/Inter-SemiBold.otf</string>
+		<string>inter-cufonfonts/Inter-Medium.otf</string>
 		<string>SpoqaHanSans/SpoqaHanSansNeo-Medium.ttf</string>
 		<string>SpoqaHanSans/SpoqaHanSansNeo-Regular.ttf</string>
 		<string>SpoqaHanSans/SpoqaHanSansNeo-Bold.ttf</string>

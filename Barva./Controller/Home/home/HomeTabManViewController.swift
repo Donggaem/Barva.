@@ -13,11 +13,11 @@ class HomeTabManViewController: TabmanViewController {
 
     
     private var viewControllers: [UIViewController] = []
-    let latestVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LatestBoardViewController") as! LatestBoardViewController
+    let latestVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LatestBoardTabViewController") as! LatestBoardTabViewController
     
-    let likeVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LikeBoardViewController") as! LikeBoardViewController
+    let likeVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LikeBoardTabViewController") as! LikeBoardTabViewController
     
-    let sexVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SexBoardViewController") as! SexBoardViewController
+    let sexVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SexBoardTabViewController") as! SexBoardTabViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()

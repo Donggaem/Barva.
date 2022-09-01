@@ -14,9 +14,9 @@ class FindTabManViewController: TabmanViewController {
     @IBOutlet weak var tabView: UIView!
     
     private var viewControllers: [UIViewController] = []
-    let idVC = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "IDFindViewController") as! IDFindViewController
+    let idVC = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "IDFindTabViewController") as! IDFindTabViewController
     
-    let pwVC = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "PWFindViewController") as! PWFindViewController
+    let pwVC = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "PWFindTabViewController") as! PWFindTabViewController
     
     
     override func viewDidLoad() {

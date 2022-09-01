@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="2720" y="-617"/>
         </scene>
-        <!--Latest Board View Controller-->
+        <!--Latest Board Tab View Controller-->
         <scene sceneID="Q8U-M0-3vz">
             <objects>
-                <viewController storyboardIdentifier="LatestBoardViewController" id="7Op-4y-2St" customClass="LatestBoardViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LatestBoardTabViewController" id="7Op-4y-2St" customClass="LatestBoardTabViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2iG-Qd-JSC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -256,10 +256,10 @@
             </objects>
             <point key="canvasLocation" x="3498.4615384615386" y="-618.12796208530801"/>
         </scene>
-        <!--Like Board View Controller-->
+        <!--Like Board Tab View Controller-->
         <scene sceneID="k2G-V6-hXm">
             <objects>
-                <viewController storyboardIdentifier="LikeBoardViewController" id="9AZ-9W-AVt" customClass="LikeBoardViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LikeBoardTabViewController" id="9AZ-9W-AVt" customClass="LikeBoardTabViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dmM-jD-GFx">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -300,10 +300,10 @@
             </objects>
             <point key="canvasLocation" x="4194" y="-618"/>
         </scene>
-        <!--Sex Board View Controller-->
+        <!--Sex Board Tab View Controller-->
         <scene sceneID="yCZ-x2-QU2">
             <objects>
-                <viewController storyboardIdentifier="SexBoardViewController" id="Ga8-yy-6QA" customClass="SexBoardViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SexBoardTabViewController" id="Ga8-yy-6QA" customClass="SexBoardTabViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vyu-N7-i05">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -8,6 +8,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Inter-Medium.otf">
+            <string>Inter-Medium</string>
+        </array>
+        <array key="Inter-SemiBold.otf">
+            <string>Inter-SemiBold</string>
+        </array>
         <array key="SpoqaHanSansNeo-Medium.ttf">
             <string>SpoqaHanSansNeo-Medium</string>
         </array>
@@ -29,27 +35,27 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dxa-B4-hBL" userLabel="성별, 스펙Stack View">
-                                <rect key="frame" x="22" y="507.99999999999994" width="346" height="66.333333333333314"/>
+                                <rect key="frame" x="22" y="508" width="346" height="63"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="127" translatesAutoresizingMaskIntoConstraints="NO" id="kL4-cb-GJB">
-                                        <rect key="frame" x="0.0" y="0.0" width="220" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="203.33333333333334" height="17"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성별" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gun-KW-o4c">
-                                                <rect key="frame" x="0.0" y="0.0" width="29.666666666666668" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="24.333333333333332" height="17"/>
+                                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신체 스펙" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhr-ji-W01">
-                                                <rect key="frame" x="156.66666666666666" y="0.0" width="63.333333333333343" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="151.33333333333334" y="0.0" width="52" height="17"/>
+                                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="89" translatesAutoresizingMaskIntoConstraints="NO" id="OaA-Gf-6UH">
-                                        <rect key="frame" x="0.0" y="36.333333333333371" width="324" height="30"/>
+                                        <rect key="frame" x="0.0" y="33" width="324" height="30"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ey2-b6-aj1">
                                                 <rect key="frame" x="0.0" y="0.0" width="68" height="30"/>
@@ -61,6 +67,7 @@
                                                             <constraint firstAttribute="height" constant="30" id="6oo-aS-krL"/>
                                                             <constraint firstAttribute="width" constant="30" id="JSI-kF-GvZ"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="12"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="남"/>
@@ -71,6 +78,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="bCf-Tc-Guh"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="12"/>
                                                         <color key="tintColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="여"/>
@@ -90,7 +98,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sj6-rT-9E7" userLabel="소개Stack View">
-                                <rect key="frame" x="10" y="610.33333333333337" width="370" height="113"/>
+                                <rect key="frame" x="10" y="607" width="370" height="113"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOL-hd-QRY">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="1"/>

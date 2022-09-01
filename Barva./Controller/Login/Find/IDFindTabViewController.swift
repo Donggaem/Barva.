@@ -1,5 +1,5 @@
 //
-//  PWFindViewController.swift
+//  IDFindViewController.swift
 //  Barva.
 //
 //  Created by 김동겸 on 2022/08/15.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class PWFindViewController: UIViewController {
+class IDFindTabViewController: UIViewController {
 
     @IBOutlet weak var emailBtn: UIButton!
     @IBOutlet weak var checkNumBtn: UIButton!
-    @IBOutlet weak var pwFindBtn: UIButton!
+    @IBOutlet weak var idFindBtn: UIButton!
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var checkNumTextField: UITextField!
@@ -27,7 +27,7 @@ class PWFindViewController: UIViewController {
         //버튼 모서리
         emailBtn.layer.cornerRadius = 15
         checkNumBtn.layer.cornerRadius = 15
-        pwFindBtn.layer.cornerRadius = 5
+        idFindBtn.layer.cornerRadius = 5
         
         //버튼 활성/비활성 액션
         self.emailTextField.addAction(UIAction(handler: { _ in

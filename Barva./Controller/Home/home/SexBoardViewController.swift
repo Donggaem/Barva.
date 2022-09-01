@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SexBoardViewController: UIViewController {
+class SexBoardTabViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

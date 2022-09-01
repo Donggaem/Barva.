@@ -603,10 +603,10 @@
             </objects>
             <point key="canvasLocation" x="-5" y="-103"/>
         </scene>
-        <!--Find View Controller-->
+        <!--Find Tab View Controller-->
         <scene sceneID="aEG-0M-NTm">
             <objects>
-                <viewController storyboardIdentifier="IDFindViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wqD-MR-K9c" customClass="IDFindViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IDFindTabViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wqD-MR-K9c" customClass="IDFindTabViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ezI-FI-jbA">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="684"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -848,10 +848,10 @@
             </objects>
             <point key="canvasLocation" x="-855" y="571"/>
         </scene>
-        <!--Find View Controller-->
+        <!--Find Tab View Controller-->
         <scene sceneID="R16-5Q-z3t">
             <objects>
-                <viewController storyboardIdentifier="PWFindViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zzl-yN-hVn" customClass="PWFindViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PWFindTabViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zzl-yN-hVn" customClass="PWFindTabViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mrQ-dm-yYr">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="684"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

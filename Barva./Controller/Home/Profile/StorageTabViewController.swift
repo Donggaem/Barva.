@@ -1,13 +1,13 @@
 //
-//  LatestViewController.swift
+//  StorageTabViewController.swift
 //  Barva.
 //
-//  Created by 김동겸 on 2022/08/24.
+//  Created by 김동겸 on 2022/08/31.
 //
 
 import UIKit
 
-class LatestBoardTabViewController: UIViewController {
+class StorageTabViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

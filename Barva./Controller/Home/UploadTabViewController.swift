@@ -120,11 +120,9 @@ extension UploadTabViewController: UITextViewDelegate {
         //플레이스홀더 설정
         UPloadtextView.text = textViewPlaceHolder
         UPloadtextView.textColor = .placeholderText
-        UPloadtextView.font = UIFont(name: "Inter-SemiBold", size: 14.5)
+        UPloadtextView.font = UIFont(name: "Inter-Medium", size: 12)
         
-//        theTextViewHeightConstraint.isActive = false // 스토리보드에 설정된 콘스트레이트 무시
         UPloadtextView.sizeToFit()
-        UPloadtextView.isScrollEnabled = false
         textViewDidChange(UPloadtextView)
         
         UPloadtextView.delegate = self
@@ -171,21 +169,6 @@ extension UploadTabViewController: UITextViewDelegate {
         
         countLabel.text = "\(UPloadtextView.text.count) / 100" //아래 글자수 표시
         
-        let size = CGSize(width: view.frame.width, height: .infinity)
-        let estimatedSize = textView.sizeThatFits(size)
-        
-        textView.constraints.forEach { (constraint) in
-            
-            if estimatedSize.height <= 75 {
-               
-            }
-            else {
-                if constraint.firstAttribute == .height {
-                    constraint.constant = estimatedSize.height
-                    
-                }
-            }
-        }
     }
     
     //텍스트뷰 닫힐시
