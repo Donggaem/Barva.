@@ -32,6 +32,7 @@ class SigninViewController: UIViewController {
     //MARK: SET UI
     private func setUI() {
         
+        //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
         
         //버튼 모서리

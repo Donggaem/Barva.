@@ -88,11 +88,9 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
         // 이미지뷰 탭
         let tapImageViewRecognizer
         = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        
-        //이미지뷰가 상호작용할 수 있게 설정
-        pagerView.isUserInteractionEnabled = true
-        //이미지뷰에 제스처인식기 연결
-        pagerView.addGestureRecognizer(tapImageViewRecognizer)
+        pagerView.isUserInteractionEnabled = true //이미지뷰가 상호작용할 수 있게 설정
+        pagerView.addGestureRecognizer(tapImageViewRecognizer) //이미지뷰에 제스처인식기 연결
+
     }
 }
 

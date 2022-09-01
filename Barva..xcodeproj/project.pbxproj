@@ -24,6 +24,7 @@
 		EB9CC95C28A40A1A003D9F22 /* UploadTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */; };
 		EB9CC95E28A40A53003D9F22 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */; };
 		EB9CC96028A40A6D003D9F22 /* ColorTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */; };
+		EBA45B3228C100B7007B95CC /* ProfileModifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA45B3128C100B7007B95CC /* ProfileModifyViewController.swift */; };
 		EBA63E9828AB717100144E3A /* BarvaLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA63E9728AB717100144E3A /* BarvaLog.swift */; };
 		EBAEEF5D28B35A5A00744A4F /* SpoqaHanSans in Resources */ = {isa = PBXBuildFile; fileRef = EBAEEF5C28B35A5A00744A4F /* SpoqaHanSans */; };
 		EBB8F45828BF99FA0069D4E1 /* inter-cufonfonts in Resources */ = {isa = PBXBuildFile; fileRef = EBB8F45728BF99FA0069D4E1 /* inter-cufonfonts */; };
@@ -78,6 +79,7 @@
 		EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorTab.storyboard; sourceTree = "<group>"; };
+		EBA45B3128C100B7007B95CC /* ProfileModifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModifyViewController.swift; sourceTree = "<group>"; };
 		EBA63E9728AB717100144E3A /* BarvaLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarvaLog.swift; sourceTree = "<group>"; };
 		EBAEEF5C28B35A5A00744A4F /* SpoqaHanSans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SpoqaHanSans; sourceTree = "<group>"; };
 		EBB8F45728BF99FA0069D4E1 /* inter-cufonfonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "inter-cufonfonts"; sourceTree = "<group>"; };
@@ -143,11 +145,10 @@
 		EB1751F228AA788A009FEFBF /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				EBBC384E28A70DEE000D075D /* PopupViewController.swift */,
 				EBC7609928B5F30B006ED770 /* home */,
-				EBE4EDBB28A51255005C7516 /* UploadTabViewController.swift */,
+				EBA45B2F28C0F94F007B95CC /* Upload */,
+				EBA45B3028C0F965007B95CC /* Color */,
 				EBB8F45A28BF9BEE0069D4E1 /* Profile */,
-				EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -236,6 +237,22 @@
 			path = Find;
 			sourceTree = "<group>";
 		};
+		EBA45B2F28C0F94F007B95CC /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4EDBB28A51255005C7516 /* UploadTabViewController.swift */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
+		EBA45B3028C0F965007B95CC /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
 		EBA63E9628AB714E00144E3A /* Debug */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +279,7 @@
 				EBB8F45F28BFA5830069D4E1 /* MyUpTabViewController.swift */,
 				EBB8F45D28BFA56C0069D4E1 /* LikeTabViewController.swift */,
 				EBB8F46128BFA61E0069D4E1 /* StorageTabViewController.swift */,
+				EBA45B3128C100B7007B95CC /* ProfileModifyViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -269,6 +287,7 @@
 		EBC7609928B5F30B006ED770 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				EBBC384E28A70DEE000D075D /* PopupViewController.swift */,
 				EBE4EDB928A51238005C7516 /* HomeViewController.swift */,
 				EBC7609A28B5F32C006ED770 /* HomeTabManViewController.swift */,
 				EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */,
@@ -472,6 +491,7 @@
 				EBE4EDC328A514AF005C7516 /* UIViewController+Extension.swift in Sources */,
 				EB2EA2F928A1409800EC0685 /* SigninViewController.swift in Sources */,
 				EBE4EDB628A4E6C7005C7516 /* SigninRequest.swift in Sources */,
+				EBA45B3228C100B7007B95CC /* ProfileModifyViewController.swift in Sources */,
 				EB25ACFC28A1364D0006C1F2 /* LoginViewController.swift in Sources */,
 				EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */,
 				EBF510D128AFBC2D0098BD5A /* IDCheckRequest.swift in Sources */,

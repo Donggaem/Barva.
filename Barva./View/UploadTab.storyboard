@@ -29,9 +29,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOL-w5-xZG" customClass="FSPagerView" customModule="FSPagerView">
                                 <rect key="frame" x="0.0" y="102" width="390" height="390"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_a_photo" translatesAutoresizingMaskIntoConstraints="NO" id="L7c-yV-1h9">
+                                        <rect key="frame" x="175" y="173" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="XYU-Kj-VNH"/>
+                                            <constraint firstAttribute="height" constant="40" id="eia-E1-MRw"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="L7c-yV-1h9" firstAttribute="leading" secondItem="GOL-w5-xZG" secondAttribute="leading" constant="175" id="4Xe-4M-eZN"/>
                                     <constraint firstAttribute="height" constant="390" id="4mY-UI-9tt"/>
+                                    <constraint firstItem="L7c-yV-1h9" firstAttribute="top" secondItem="GOL-w5-xZG" secondAttribute="top" constant="173" id="Lsg-ti-ukL"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dxa-B4-hBL" userLabel="성별, 스펙Stack View">
@@ -194,7 +205,7 @@
         <scene sceneID="uOi-ze-AsL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ASo-oD-AMI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="off" id="ydP-vc-gkW"/>
+                    <tabBarItem key="tabBarItem" title="" image="add_circle-1" selectedImage="add_circle" id="ydP-vc-gkW"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uah-U8-C7T">
@@ -215,15 +226,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="off" width="24" height="24"/>
+        <image name="add_a_photo" width="40" height="40"/>
+        <image name="add_circle" width="20" height="20"/>
+        <image name="add_circle-1" width="20" height="20"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
