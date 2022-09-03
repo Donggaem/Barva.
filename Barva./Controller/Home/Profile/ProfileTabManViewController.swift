@@ -37,19 +37,16 @@ class ProfileTabManViewController: TabmanViewController {
         bar.layout.transitionStyle = .snap
         bar.layout.alignment = .centerDistributed
         bar.layout.contentMode = .fit
-
+        
                 
         //배경색
         bar.backgroundView.style = .clear
         bar.backgroundColor = UIColor.white
-                                
-//        //버튼 글시 커스텀
-//        bar.buttons.customize{(button) in
-//            button.tintColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
-//            button.selectedTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-//            button.font = UIFont(name: "SpoqaHanSansNeo-Medium", size: 14)!
-//
-//        }
+        
+        bar.buttons.customize { (button) in
+            button.tintColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+            button.selectedTintColor = UIColor(red: 0.11, green: 0.106, blue: 0.122, alpha: 1)
+        }
         
         //indicator
         bar.indicator.weight = .custom(value: 1)
@@ -67,18 +64,25 @@ extension ProfileTabManViewController: PageboyViewControllerDataSource, TMBarDat
         switch index {
         case 0:
             let firstitem = TMBarItem(title: "")
-            firstitem.image = UIImage(named: "grid_view-1")
-            firstitem.selectedImage = UIImage(named: "grid_view")
+//            firstitem.image = UIImage(named: "grid_view-1")
+//            firstitem.selectedImage = UIImage(named: "grid_view")
+            firstitem.image = UIImage(systemName: "square.grid.2x2")
+            firstitem.selectedImage = UIImage(systemName: "square.grid.2x2.fill")
+           
             return firstitem
         case 1:
             let seconditem = TMBarItem(title: "")
-            seconditem.image = UIImage(named: "favorite-1")
-            seconditem.selectedImage = UIImage(named: "favorite")
+//            seconditem.image = UIImage(named: "favorite-1")
+//            seconditem.selectedImage = UIImage(named: "favorite")
+            seconditem.image = UIImage(systemName: "heart")
+            seconditem.selectedImage = UIImage(systemName: "heart.fill")
             return seconditem
         case 2:
             let thirditem = TMBarItem(title: "")
-            thirditem.image = UIImage(named: "bookmark-1")
-            thirditem.selectedImage = UIImage(named: "bookmark")
+//            thirditem.image = UIImage(named: "bookmark-1")
+//            thirditem.selectedImage = UIImage(named: "bookmark")
+            thirditem.image = UIImage(systemName: "bookmark")
+            thirditem.selectedImage = UIImage(systemName: "bookmark.fill")
             return thirditem
         default:
             let title = "Page \(index)"

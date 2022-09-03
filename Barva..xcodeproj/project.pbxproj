@@ -21,6 +21,7 @@
 		EB25AD0428A136500006C1F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB25AD0228A136500006C1F2 /* LaunchScreen.storyboard */; };
 		EB2EA2F928A1409800EC0685 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2EA2F828A1409800EC0685 /* SigninViewController.swift */; };
 		EB2EA2FB28A1410E00EC0685 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2EA2FA28A1410E00EC0685 /* Home.storyboard */; };
+		EB84731E28C2F53700638EE2 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB84731D28C2F53700638EE2 /* FeedTableViewCell.xib */; };
 		EB9CC95C28A40A1A003D9F22 /* UploadTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */; };
 		EB9CC95E28A40A53003D9F22 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */; };
 		EB9CC96028A40A6D003D9F22 /* ColorTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */; };
@@ -76,6 +77,7 @@
 		EB2EA2F828A1409800EC0685 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		EB2EA2FA28A1410E00EC0685 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		EB2F99C628B0ABF10084EB7B /* YPImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YPImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB84731D28C2F53700638EE2 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorTab.storyboard; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */,
 				EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */,
 				EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */,
+				EB84731D28C2F53700638EE2 /* FeedTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				EB25ACFF28A1364D0006C1F2 /* Login.storyboard in Resources */,
 				EBAEEF5D28B35A5A00744A4F /* SpoqaHanSans in Resources */,
 				EB2EA2FB28A1410E00EC0685 /* Home.storyboard in Resources */,
+				EB84731E28C2F53700638EE2 /* FeedTableViewCell.xib in Resources */,
 				EBB8F45828BF99FA0069D4E1 /* inter-cufonfonts in Resources */,
 				EB03C48428B262B700AECA53 /* MPLUS1Code in Resources */,
 			);

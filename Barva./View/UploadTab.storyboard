@@ -152,6 +152,7 @@
                             <constraint firstItem="yK0-ZJ-qpJ" firstAttribute="trailing" secondItem="GOL-w5-xZG" secondAttribute="trailing" id="Fss-fL-ofg"/>
                             <constraint firstItem="dxa-B4-hBL" firstAttribute="top" secondItem="GOL-w5-xZG" secondAttribute="bottom" constant="16" id="PAn-Ft-dOe"/>
                             <constraint firstItem="GOL-w5-xZG" firstAttribute="top" secondItem="Wbg-Ze-45S" secondAttribute="top" constant="102" id="TUC-mw-FAe"/>
+                            <constraint firstAttribute="bottom" secondItem="Sj6-rT-9E7" secondAttribute="bottom" constant="124" id="XqL-2v-1eJ"/>
                             <constraint firstItem="yK0-ZJ-qpJ" firstAttribute="trailing" secondItem="Sj6-rT-9E7" secondAttribute="trailing" constant="10" id="cVt-2I-pB1"/>
                             <constraint firstItem="yK0-ZJ-qpJ" firstAttribute="trailing" secondItem="dxa-B4-hBL" secondAttribute="trailing" constant="22" id="nRq-gm-Nxn"/>
                             <constraint firstItem="Sj6-rT-9E7" firstAttribute="top" secondItem="dxa-B4-hBL" secondAttribute="bottom" constant="36" id="sJN-hs-m7i"/>
@@ -179,14 +180,34 @@
                                 <rect key="frame" x="288" y="5.6666666666666679" width="86" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igN-i6-wn6">
-                                        <rect key="frame" x="11" y="-3" width="75" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igN-i6-wn6">
+                                        <rect key="frame" x="57" y="6" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="VUt-Vz-yHI"/>
+                                            <constraint firstAttribute="height" constant="24" id="qMb-8k-KI5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="location" catalog="system">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                        </state>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="업로드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drG-6d-2Z7">
+                                        <rect key="frame" x="9" y="10.666666666666664" width="34" height="15"/>
+                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Medium" family="Spoqa Han Sans Neo" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="igN-i6-wn6" firstAttribute="leading" secondItem="drG-6d-2Z7" secondAttribute="trailing" constant="14" id="1SG-Lw-7zn"/>
+                                    <constraint firstItem="drG-6d-2Z7" firstAttribute="centerY" secondItem="igN-i6-wn6" secondAttribute="centerY" id="ARX-gW-H9N"/>
+                                    <constraint firstItem="igN-i6-wn6" firstAttribute="top" secondItem="96e-gp-Jb7" secondAttribute="top" constant="6" id="gMZ-xm-e6v"/>
+                                    <constraint firstAttribute="trailing" secondItem="igN-i6-wn6" secondAttribute="trailing" constant="5" id="yWE-A0-UcS"/>
+                                </constraints>
                             </view>
                         </barButtonItem>
                     </navigationItem>
@@ -229,6 +250,7 @@
         <image name="add_a_photo" width="40" height="40"/>
         <image name="add_circle" width="20" height="20"/>
         <image name="add_circle-1" width="20" height="20"/>
+        <image name="location" catalog="system" width="128" height="118"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
