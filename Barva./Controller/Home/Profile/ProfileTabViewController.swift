@@ -30,8 +30,6 @@ class ProfileTabViewController: UIViewController {
 
     private func setUI(){
         
-
-        
         // 이미지뷰 탭
         let tapImageViewRecognizer
         = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))

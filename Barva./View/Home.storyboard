@@ -40,43 +40,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Faq-z8-fKf">
-                                <rect key="frame" x="0.0" y="120" width="390" height="641"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
                                 <connections>
                                     <segue destination="AB4-19-zK8" kind="embed" id="7gl-Qr-Ggg"/>
                                 </connections>
                             </containerView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="zE3-lH-CiW"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Faq-z8-fKf" firstAttribute="top" secondItem="zE3-lH-CiW" secondAttribute="top" constant="32" id="5U2-Li-tlY"/>
-                            <constraint firstAttribute="trailing" secondItem="Faq-z8-fKf" secondAttribute="trailing" id="GuS-oL-qaV"/>
-                            <constraint firstItem="Faq-z8-fKf" firstAttribute="bottom" secondItem="zE3-lH-CiW" secondAttribute="bottom" id="TI0-fC-DUH"/>
-                            <constraint firstItem="Faq-z8-fKf" firstAttribute="leading" secondItem="IQM-MC-AXg" secondAttribute="leading" id="fgr-7w-2dN"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="uJ9-Sb-hPC"/>
-                    <navigationItem key="navigationItem" id="oEP-EC-w2Q">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="NRH-6b-sEZ">
-                            <view key="customView" contentMode="scaleToFill" id="zi8-aG-P65">
-                                <rect key="frame" x="16" y="5.6666666666666679" width="86" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSY-SH-Glr" userLabel="naviView">
+                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="barva." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2f-N1-gQg">
-                                        <rect key="frame" x="6" y="5" width="57" height="23"/>
-                                        <fontDescription key="fontDescription" name="MPLUS1Code-Medium" family="M PLUS 1 Code" pointSize="19"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="barva." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLT-iZ-Gm5">
+                                        <rect key="frame" x="22" y="10.000000000000002" width="54" height="21.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="MPLUS1Code-Medium" family="M PLUS 1 Code" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="s2f-N1-gQg" firstAttribute="top" secondItem="zi8-aG-P65" secondAttribute="top" constant="5" id="9Cf-n6-dvO"/>
-                                    <constraint firstItem="s2f-N1-gQg" firstAttribute="leading" secondItem="zi8-aG-P65" secondAttribute="leading" constant="6" id="lWa-xA-gqN"/>
+                                    <constraint firstItem="fLT-iZ-Gm5" firstAttribute="top" secondItem="mSY-SH-Glr" secondAttribute="top" constant="10" id="CCy-CC-bXo"/>
+                                    <constraint firstAttribute="height" constant="44" id="hNd-vf-FPr"/>
+                                    <constraint firstItem="fLT-iZ-Gm5" firstAttribute="leading" secondItem="mSY-SH-Glr" secondAttribute="leading" constant="22" id="k6d-Cd-FP9"/>
                                 </constraints>
                             </view>
-                        </barButtonItem>
-                    </navigationItem>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zE3-lH-CiW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Faq-z8-fKf" firstAttribute="top" secondItem="zE3-lH-CiW" secondAttribute="top" id="5U2-Li-tlY"/>
+                            <constraint firstItem="mSY-SH-Glr" firstAttribute="top" secondItem="IQM-MC-AXg" secondAttribute="top" constant="44" id="8iT-bi-t5B"/>
+                            <constraint firstAttribute="trailing" secondItem="Faq-z8-fKf" secondAttribute="trailing" id="GuS-oL-qaV"/>
+                            <constraint firstItem="zE3-lH-CiW" firstAttribute="trailing" secondItem="mSY-SH-Glr" secondAttribute="trailing" id="Iq7-eP-dix"/>
+                            <constraint firstItem="Faq-z8-fKf" firstAttribute="bottom" secondItem="zE3-lH-CiW" secondAttribute="bottom" id="TI0-fC-DUH"/>
+                            <constraint firstItem="Faq-z8-fKf" firstAttribute="leading" secondItem="IQM-MC-AXg" secondAttribute="leading" id="fgr-7w-2dN"/>
+                            <constraint firstItem="mSY-SH-Glr" firstAttribute="leading" secondItem="IQM-MC-AXg" secondAttribute="leading" id="z61-vD-TYE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="uJ9-Sb-hPC"/>
+                    <navigationItem key="navigationItem" id="oEP-EC-w2Q"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8EX-BB-I4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -264,7 +264,7 @@
             <objects>
                 <viewController id="AB4-19-zK8" customClass="HomeTabManViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ryt-6m-Ql0">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="641"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="BNu-ei-qcZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

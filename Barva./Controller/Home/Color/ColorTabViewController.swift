@@ -9,21 +9,48 @@ import UIKit
 
 class ColorTabViewController: UIViewController {
 
+    @IBOutlet weak var colorImageView: UIImageView!
+    
+    let imagePickerController = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //OBJC
+    //이미지 탭 제스쳐
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        self.imagePickerController.delegate = self
+        self.imagePickerController.sourceType = .photoLibrary
+        present(self.imagePickerController, animated: true, completion: nil)
     }
-    */
+    
+    private func setUI() {
+        
+        //이미지뷰 클릭동작
+        let tapImageViewRecognizer
+        = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        //이미지뷰가 상호작용할 수 있게 설정
+        colorImageView.isUserInteractionEnabled = true
+        //이미지뷰에 제스처인식기 연결
+        colorImageView.addGestureRecognizer(tapImageViewRecognizer)
+    }
+}
 
+//이미지뷰
+extension ColorTabViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+   
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            colorImageView.image = image
+        }
+        
+        picker.dismiss(animated: true, completion: nil) //dismiss를 직접 해야함
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
 }
