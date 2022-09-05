@@ -38,6 +38,7 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         countLabel.text = "0 / 100"
     }
     
