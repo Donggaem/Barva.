@@ -134,6 +134,7 @@ extension UploadTabViewController: UITextViewDelegate {
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
         //이전 글자 - 선택된 글자 + 새로운 글자(대체될 글자)
         let newLength = textView.text.count - range.length + text.count
         let koreanMaxCount = maxCount + 1
