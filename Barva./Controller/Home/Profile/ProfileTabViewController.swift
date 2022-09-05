@@ -13,6 +13,7 @@ class ProfileTabViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUI()
     }
     
