@@ -20,6 +20,7 @@ class ProfileTabManViewController: TabmanViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setTabView()
     }
     
