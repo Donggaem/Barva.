@@ -8,17 +8,17 @@
 import UIKit
 
 class ColorTabViewController: UIViewController {
-
+    
     @IBOutlet weak var colorImageView: UIImageView!
     
     let imagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
-    //OBJC
+    //MARK: OBJC
     //이미지 탭 제스쳐
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
@@ -27,6 +27,8 @@ class ColorTabViewController: UIViewController {
         present(self.imagePickerController, animated: true, completion: nil)
     }
     
+    
+    //MARK: INNER func
     private func setUI() {
         
         //이미지뷰 클릭동작
@@ -39,9 +41,9 @@ class ColorTabViewController: UIViewController {
     }
 }
 
-//이미지뷰
+//MARK: Extension UIImagePicker
 extension ColorTabViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-   
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             colorImageView.image = image

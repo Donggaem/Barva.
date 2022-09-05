@@ -16,7 +16,8 @@ class HomeViewController: UIViewController {
         setUI()
     }
     
-    func popupPresent() {
+    //MARK: INNER FUNC
+    private func popupPresent() {
         let storyboard = UIStoryboard.init(name: "Home", bundle: nil)
         let popUp = storyboard.instantiateViewController(identifier: "PopupViewController")
         popUp.modalPresentationStyle = .overFullScreen
@@ -32,6 +33,6 @@ class HomeViewController: UIViewController {
         self.tabBarController?.tabBar.backgroundColor = .white //탭바 배경색
         self.tabBarController?.tabBar.layer.borderWidth = 1 //탭바 보더
         self.tabBarController?.tabBar.layer.borderColor = UIColor(red: 0.846, green: 0.846, blue: 0.846, alpha: 1).cgColor //탭바 보더 색
-
+        
     }
 }

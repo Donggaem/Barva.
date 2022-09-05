@@ -10,7 +10,7 @@ import Tabman
 import Pageboy
 
 class HomeTabManViewController: TabmanViewController {
-
+    
     
     private var viewControllers: [UIViewController] = []
     let latestVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LatestBoardTabViewController") as! LatestBoardTabViewController
@@ -28,22 +28,22 @@ class HomeTabManViewController: TabmanViewController {
         viewControllers.append(latestVC)
         viewControllers.append(likeVC)
         viewControllers.append(sexVC)
-
+        
         
         self.dataSource = self
-                
+        
         let bar = TMBar.ButtonBar()
-                
+        
         //탭바 레이아웃 설정
         bar.layout.transitionStyle = .snap
         bar.layout.alignment = .centerDistributed
         bar.layout.contentMode = .fit
-
-                
+        
+        
         //배경색
         bar.backgroundView.style = .clear
         bar.backgroundColor = UIColor.white
-                                
+        
         //버튼 글시 커스텀
         bar.buttons.customize{(button) in
             button.tintColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
@@ -56,12 +56,13 @@ class HomeTabManViewController: TabmanViewController {
         bar.indicator.weight = .custom(value: 1)
         bar.indicator.overscrollBehavior = .bounce
         bar.indicator.tintColor = UIColor.black
-
+        
         addBar(bar, dataSource: self, at:.top)
     }
-
+    
 }
 
+//MARK: Extension Pageboy, TMBar
 extension HomeTabManViewController: PageboyViewControllerDataSource, TMBarDataSource {
     
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
@@ -74,10 +75,10 @@ extension HomeTabManViewController: PageboyViewControllerDataSource, TMBarDataSo
             return TMBarItem(title: "남/ 여 정렬")
         default:
             let title = "Page \(index)"
-           return TMBarItem(title: title)
+            return TMBarItem(title: title)
         }
     }
-
+    
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
         return viewControllers.count
     }

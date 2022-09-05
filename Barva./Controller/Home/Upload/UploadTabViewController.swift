@@ -26,7 +26,7 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
     private let maxCount = 99
     
     var images: [UIImage] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -35,11 +35,13 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
         self.pagerView.dataSource = self
         
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         countLabel.text = "0 / 100"
     }
     
+    //MARK: OBJC
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         // MARK: - 본의 photo picker 수정 부분
@@ -60,7 +62,7 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
         // MARK: 3.
         // 채택된 델리게이트 관련 메소드 (func picker) 아래에 정의함 ⬇️
     }
-
+    
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true, completion: nil)
         self.images.removeAll() // 이전 데이터 지워주기 위해서 배열 초기화
@@ -83,6 +85,7 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
         }
     }
     
+    //MARK: INNER FUNC
     private func setUI() {
         
         // 이미지뷰 탭
@@ -90,10 +93,11 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
         = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         pagerView.isUserInteractionEnabled = true //이미지뷰가 상호작용할 수 있게 설정
         pagerView.addGestureRecognizer(tapImageViewRecognizer) //이미지뷰에 제스처인식기 연결
-
+        
     }
 }
 
+//MARK: Extension FSPagerView
 extension UploadTabViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     
     //이미지 개수
@@ -109,10 +113,11 @@ extension UploadTabViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     }
 }
 
+//MARK: Extension UITextViewDelegate
 extension UploadTabViewController: UITextViewDelegate {
-   
+    
     private func setTextView(){
-                
+        
         countLabel.text = "0 / 100"
         
         //플레이스홀더 설정
@@ -188,5 +193,5 @@ extension UploadTabViewController: UITextViewDelegate {
         }
     }
     
-   
+    
 }

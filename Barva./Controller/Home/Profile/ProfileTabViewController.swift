@@ -8,7 +8,7 @@
 import UIKit
 
 class ProfileTabViewController: UIViewController {
-
+    
     @IBOutlet weak var profileImageView: UIImageView!
     
     override func viewDidLoad() {
@@ -18,16 +18,17 @@ class ProfileTabViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
     }
     
-    //OBJC
+    //MARK: OBJC
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         let modifyVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileModifyViewController") as! ProfileModifyViewController
         self.navigationController?.pushViewController(modifyVC, animated: true)
     }
-
+    
+    //MARK: INNER FUNC
     private func setUI(){
         
         // 이미지뷰 탭

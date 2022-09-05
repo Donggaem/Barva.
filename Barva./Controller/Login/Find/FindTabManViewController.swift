@@ -10,7 +10,7 @@ import Tabman
 import Pageboy
 
 class FindTabManViewController: TabmanViewController {
-
+    
     @IBOutlet weak var tabView: UIView!
     
     private var viewControllers: [UIViewController] = []
@@ -30,19 +30,19 @@ class FindTabManViewController: TabmanViewController {
         viewControllers.append(pwVC)
         
         self.dataSource = self
-                
+        
         let bar = TMBar.ButtonBar()
-                
+        
         //탭바 레이아웃 설정
         bar.layout.transitionStyle = .snap
         bar.layout.alignment = .centerDistributed
         bar.layout.contentMode = .fit
-
-                
+        
+        
         //배경색
         bar.backgroundView.style = .clear
         bar.backgroundColor = UIColor.white
-                                
+        
         //버튼 글시 커스텀
         bar.buttons.customize{(button) in
             button.tintColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
@@ -55,13 +55,14 @@ class FindTabManViewController: TabmanViewController {
         bar.indicator.weight = .custom(value: 3)
         bar.indicator.overscrollBehavior = .bounce
         bar.indicator.tintColor = UIColor.black
-
+        
         addBar(bar, dataSource: self, at:.top)
     }
-
-
+    
+    
 }
 
+//MARK: Extension Pageboy TMBar
 extension FindTabManViewController: PageboyViewControllerDataSource, TMBarDataSource {
     
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
@@ -72,10 +73,10 @@ extension FindTabManViewController: PageboyViewControllerDataSource, TMBarDataSo
             return TMBarItem(title: "비밀번호 찾기")
         default:
             let title = "Page \(index)"
-           return TMBarItem(title: title)
+            return TMBarItem(title: title)
         }
     }
-
+    
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
         return viewControllers.count
     }

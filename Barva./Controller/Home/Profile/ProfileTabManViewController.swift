@@ -10,7 +10,7 @@ import Tabman
 import Pageboy
 
 class ProfileTabManViewController: TabmanViewController {
-
+    
     private var viewControllers: [UIViewController] = []
     let myUpVC = UIStoryboard.init(name: "ProfileTab", bundle: nil).instantiateViewController(withIdentifier: "MyUpTabViewController") as! MyUpTabViewController
     
@@ -27,18 +27,18 @@ class ProfileTabManViewController: TabmanViewController {
         viewControllers.append(myUpVC)
         viewControllers.append(likeVC)
         viewControllers.append(StorVC)
-
+        
         
         self.dataSource = self
-                
+        
         let bar = TMBar.coustomBar()
-                
+        
         //탭바 레이아웃 설정
         bar.layout.transitionStyle = .snap
         bar.layout.alignment = .centerDistributed
         bar.layout.contentMode = .fit
         
-                
+        
         //배경색
         bar.backgroundView.style = .clear
         bar.backgroundColor = UIColor.white
@@ -52,44 +52,45 @@ class ProfileTabManViewController: TabmanViewController {
         bar.indicator.weight = .custom(value: 1)
         bar.indicator.overscrollBehavior = .bounce
         bar.indicator.tintColor = UIColor.black
-
+        
         addBar(bar, dataSource: self, at:.top)
     }
-
+    
 }
 
+//MARK: Extension Pageboy,TMBar
 extension ProfileTabManViewController: PageboyViewControllerDataSource, TMBarDataSource {
     
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
         switch index {
         case 0:
             let firstitem = TMBarItem(title: "")
-//            firstitem.image = UIImage(named: "grid_view-1")
-//            firstitem.selectedImage = UIImage(named: "grid_view")
+            //            firstitem.image = UIImage(named: "grid_view-1")
+            //            firstitem.selectedImage = UIImage(named: "grid_view")
             firstitem.image = UIImage(systemName: "square.grid.2x2")
             firstitem.selectedImage = UIImage(systemName: "square.grid.2x2.fill")
-           
+            
             return firstitem
         case 1:
             let seconditem = TMBarItem(title: "")
-//            seconditem.image = UIImage(named: "favorite-1")
-//            seconditem.selectedImage = UIImage(named: "favorite")
+            //            seconditem.image = UIImage(named: "favorite-1")
+            //            seconditem.selectedImage = UIImage(named: "favorite")
             seconditem.image = UIImage(systemName: "heart")
             seconditem.selectedImage = UIImage(systemName: "heart.fill")
             return seconditem
         case 2:
             let thirditem = TMBarItem(title: "")
-//            thirditem.image = UIImage(named: "bookmark-1")
-//            thirditem.selectedImage = UIImage(named: "bookmark")
+            //            thirditem.image = UIImage(named: "bookmark-1")
+            //            thirditem.selectedImage = UIImage(named: "bookmark")
             thirditem.image = UIImage(systemName: "bookmark")
             thirditem.selectedImage = UIImage(systemName: "bookmark.fill")
             return thirditem
         default:
             let title = "Page \(index)"
-           return TMBarItem(title: title)
+            return TMBarItem(title: title)
         }
     }
-
+    
     func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
         return viewControllers.count
     }

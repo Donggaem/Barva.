@@ -8,7 +8,7 @@
 import UIKit
 
 class PopupViewController: UIViewController {
-
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -16,16 +16,17 @@ class PopupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setUI()
         
     }
     
+    //MARK: IBACTION
     @IBAction func pageChanged(_ sender: UIPageControl) {
         imageView.image = UIImage(named: images[pageControl.currentPage])
     }
-
     
+    //MARK: INNER FUNC
     private func setUI() {
         view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.4)
         view.isOpaque = false
@@ -42,12 +43,13 @@ class PopupViewController: UIViewController {
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(PopupViewController.respondToSwipeGesture(_:)))
         swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(swipeLeft)
-
+        
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(PopupViewController.respondToSwipeGesture(_:)))
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
         self.view.addGestureRecognizer(swipeRight)
     }
     
+    //MARK: OBJC
     @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer) {
         // 만일 제스쳐가 있다면
         if let swipeGesture = gesture as? UISwipeGestureRecognizer{
@@ -66,6 +68,7 @@ class PopupViewController: UIViewController {
             }
         }
     }
+    
     //백그라운드 터치시 뷰컨 내리기
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -73,5 +76,5 @@ class PopupViewController: UIViewController {
             self.dismiss(animated: true, completion: nil)
         }
     }
-
+    
 }

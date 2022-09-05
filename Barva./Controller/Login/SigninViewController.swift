@@ -25,11 +25,13 @@ class SigninViewController: UIViewController {
         setUI()
         
     }
+    
+    //MARK: IBACTION
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
-    //MARK: SET UI
+    //MARK: INNER FUNC
     private func setUI() {
         
         //네비바 숨김
@@ -42,7 +44,7 @@ class SigninViewController: UIViewController {
         checkNumBtn.layer.cornerRadius = 14
         signinBtn.layer.cornerRadius = 5
         
-//        nickBtn.layer.cornerRedius = frame.height / 2
+        //        nickBtn.layer.cornerRedius = frame.height / 2
         
         //버튼 활성/비활성 액션
         self.nickNameTextField.addAction(UIAction(handler: { _ in

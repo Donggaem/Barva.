@@ -19,14 +19,14 @@ class ProfileModifyViewController: UIViewController {
         setUI()
     }
     
-    //IBAction
+    //MARK: IBAction
     @IBAction func backBtnPressed(_ sender: UIButton) {
         
         self.navigationController?.popViewController(animated: true)
         
     }
     
-    //OBJC
+    //MARK: OBJC
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         self.imagePickerController.delegate = self
@@ -34,6 +34,7 @@ class ProfileModifyViewController: UIViewController {
         present(self.imagePickerController, animated: true, completion: nil)
     }
     
+    //MARK: INNER FUNC
     private func setUI() {
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
@@ -47,9 +48,9 @@ class ProfileModifyViewController: UIViewController {
     }
 }
 
-//이미지뷰
+//MARK: Extension UIImagePicker
 extension ProfileModifyViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-   
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             profileImageView.image = image

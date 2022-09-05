@@ -8,7 +8,7 @@
 import UIKit
 
 class IDFindTabViewController: UIViewController {
-
+    
     @IBOutlet weak var emailBtn: UIButton!
     @IBOutlet weak var checkNumBtn: UIButton!
     @IBOutlet weak var idFindBtn: UIButton!
@@ -20,8 +20,8 @@ class IDFindTabViewController: UIViewController {
         super.viewDidLoad()
         setUI()
     }
-
-    //MARK: SET UI
+    
+    //MARK: INNER FUNC
     private func setUI() {
         
         //버튼 모서리
