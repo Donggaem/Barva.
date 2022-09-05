@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
         
         popupPresent()
         setUI()
+        
     }
     
     //MARK: INNER FUNC
