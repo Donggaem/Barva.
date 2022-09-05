@@ -29,6 +29,7 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUI()
         setTextView()
         self.pagerView.delegate = self
