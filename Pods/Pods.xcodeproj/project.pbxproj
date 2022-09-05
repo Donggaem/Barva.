@@ -542,21 +542,21 @@
 		05DB0E29C5A0F31424EDB7F298353422 /* PreviewViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreviewViewController.swift; path = Sources/Scene/Preview/PreviewViewController.swift; sourceTree = "<group>"; };
 		062EDD3C731DF7F709CA8A688AC50FF4 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		071AE16302908DDE638961E5A07F0C3A /* YPLoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPLoadingView.swift; path = Source/Helpers/YPLoadingView.swift; sourceTree = "<group>"; };
-		07F0427C44CF817EAA192414A7E4DAB2 /* fa.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fa.lproj; path = Source/Resources/fa.lproj; sourceTree = "<group>"; };
+		07F0427C44CF817EAA192414A7E4DAB2 /* fa.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fa.lproj; path = Source/Resources/fa.lproj; sourceTree = "<group>"; };
 		08404A3F10D9B241DDF858E6F3626DBB /* AssetsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssetsViewController.swift; path = Sources/Scene/Assets/AssetsViewController.swift; sourceTree = "<group>"; };
 		0843B5D548595B71C825DDF9E3339C79 /* IQKeyboardManagerSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.debug.xcconfig; sourceTree = "<group>"; };
 		093B1866080A79392DCFE3AD43D4A55D /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Sources/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		09AB263AE2858DACFB16B13980A578EF /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
 		0A32D26C87AC999A84DD70A33AF95A60 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Extensions.swift"; path = "Source/Helpers/Extensions/UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
-		0B2BAA98C57FBB284AD2D82DEDAECA48 /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = id.lproj; path = Source/Resources/id.lproj; sourceTree = "<group>"; };
+		0B2BAA98C57FBB284AD2D82DEDAECA48 /* id.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = id.lproj; path = Source/Resources/id.lproj; sourceTree = "<group>"; };
 		0B685FBBAA7509D0D02D549EF9CBD648 /* AVAsset+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AVAsset+Extensions.swift"; path = "Source/Helpers/Extensions/AVAsset+Extensions.swift"; sourceTree = "<group>"; };
 		0B8040C307D2229D8C232AA2E1D8A4E5 /* AlbumsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlbumsViewController.swift; path = Sources/Scene/Albums/AlbumsViewController.swift; sourceTree = "<group>"; };
 		0C42F8BA6E62F0E991374AB98C3710AE /* YPImagePicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPImagePicker.swift; path = Source/YPImagePicker.swift; sourceTree = "<group>"; };
 		0CC3E2E9F8F313F5592F7FE2298F9ADC /* Pageboy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pageboy-prefix.pch"; sourceTree = "<group>"; };
 		0D6AA3FAE7568D5473D3C1A405CE6B95 /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
 		0EAB5F4AFB545BC19FF317E3EEBED2CA /* BSImagePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BSImagePicker.release.xcconfig; sourceTree = "<group>"; };
-		0F47FB5E28EE8C8342B1776D813D1A4C /* FSPagerView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FSPagerView; path = FSPagerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FF570612AA198FB1E0C542866CCF1F3 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = Source/Resources/nl.lproj; sourceTree = "<group>"; };
+		0F47FB5E28EE8C8342B1776D813D1A4C /* FSPagerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSPagerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF570612AA198FB1E0C542866CCF1F3 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nl.lproj; path = Source/Resources/nl.lproj; sourceTree = "<group>"; };
 		100982D037288DEEF64604EB42984304 /* AlbumsTableViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlbumsTableViewDataSource.swift; path = Sources/Scene/Albums/AlbumsTableViewDataSource.swift; sourceTree = "<group>"; };
 		1042E3657962EE27E3E14A781175EE77 /* TMBarViewLayoutGrid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMBarViewLayoutGrid.swift; path = Sources/Tabman/Bar/BarView/TMBarViewLayoutGrid.swift; sourceTree = "<group>"; };
 		10CE4E0475F80324677AEA8E5F2E4E3B /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoCollectionViewCell.swift; path = Sources/Scene/Assets/VideoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -580,7 +580,7 @@
 		187AAC2DF59A1620B2E6CBD05C17C078 /* TMLineBarIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMLineBarIndicator.swift; path = Sources/Tabman/Bar/BarIndicator/Types/TMLineBarIndicator.swift; sourceTree = "<group>"; };
 		18F72414CA44B360A7B75660714622BE /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		19B95489C074BA88A4142D0A8CBF06C8 /* TMBarViewScrollHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMBarViewScrollHandler.swift; path = Sources/Tabman/Bar/BarView/TMBarViewScrollHandler.swift; sourceTree = "<group>"; };
-		1AE02C51E02015707A4EB2EE8A29038F /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "Source/Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
+		1AE02C51E02015707A4EB2EE8A29038F /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hant.lproj"; path = "Source/Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
 		1B035042D993D46FE80002F92891F432 /* TMBarLayoutParent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMBarLayoutParent.swift; path = Sources/Tabman/Bar/BarLayout/TMBarLayoutParent.swift; sourceTree = "<group>"; };
 		1B188A1A6CEFD0C417AC9C0B4BC51E70 /* TMHidingBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMHidingBar.swift; path = Sources/Tabman/Bar/BarExtensions/AutoHidingBar/TMHidingBar.swift; sourceTree = "<group>"; };
 		1B20A3F00BF0552EE8DF23609B6A8C6E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extensions.swift"; path = "Source/Helpers/Extensions/UIColor+Extensions.swift"; sourceTree = "<group>"; };
@@ -588,14 +588,14 @@
 		1B73EE0FD5D46334956E3DFE6D910580 /* TMDotBarIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMDotBarIndicator.swift; path = Sources/Tabman/Bar/BarIndicator/Types/TMDotBarIndicator.swift; sourceTree = "<group>"; };
 		1C2310FAD9326881691D526BA30AEF99 /* ZoomInteractionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZoomInteractionController.swift; path = Sources/Presentation/Zoom/ZoomInteractionController.swift; sourceTree = "<group>"; };
 		1E48C34784FA900A973AC5031B865C46 /* SteviaLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SteviaLayout.debug.xcconfig; sourceTree = "<group>"; };
-		1F08AE4B81A4E4ECE65672A185E38F78 /* BSImagePicker */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BSImagePicker; path = BSImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F08AE4B81A4E4ECE65672A185E38F78 /* BSImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BSImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FEB2EBDF5508AFC2BC7F578DA46222B /* UIView+LayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+LayoutGuide.swift"; path = "Sources/Tabman/Extensions/UIView+LayoutGuide.swift"; sourceTree = "<group>"; };
 		2185B555849C2155957B87F0AC33FB11 /* PageboyViewController+ScrollCalculations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PageboyViewController+ScrollCalculations.swift"; path = "Sources/Pageboy/PageboyViewController+ScrollCalculations.swift"; sourceTree = "<group>"; };
 		22C36C8D3733E44191D9A5C81FD649AB /* YPGridView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPGridView.swift; path = Source/Pages/Gallery/YPGridView.swift; sourceTree = "<group>"; };
 		22D373B178E83AAC368B640D0420544F /* FSPagerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSPagerView-umbrella.h"; sourceTree = "<group>"; };
 		230CD549D2DCBE9F890614D82C23E234 /* YPFilterCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPFilterCollectionViewCell.swift; path = Source/Filters/Photo/YPFilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		23AC184A3BDF5B59EAC93D7CF1C3B51B /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
-		23D5CD291D18F2187712FE6F84B6F1C6 /* Pageboy */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pageboy; path = Pageboy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23D5CD291D18F2187712FE6F84B6F1C6 /* Pageboy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pageboy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F83C6B2409646B63E10F6357F3912F /* PHCachingImageManager+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PHCachingImageManager+Extensions.swift"; path = "Source/Helpers/Extensions/PHCachingImageManager+Extensions.swift"; sourceTree = "<group>"; };
 		24286AD36A6A5C32A2F0DEE041AF71EB /* FSPagerView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSPagerView.debug.xcconfig; sourceTree = "<group>"; };
 		2475EBB75362B228DEC79491B77B27F3 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
@@ -625,10 +625,10 @@
 		305B6BC194C1C945FDA80EAA4AC7E9A9 /* AlbumCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlbumCell.swift; path = Sources/Scene/Albums/AlbumCell.swift; sourceTree = "<group>"; };
 		30AF8114D28E6899DDB70D13BFE2F8BC /* UIPageViewController+ScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPageViewController+ScrollView.swift"; path = "Sources/Pageboy/Utilities/Extensions/UIPageViewController+ScrollView.swift"; sourceTree = "<group>"; };
 		30BDAA740D0EADA77B1608203938652A /* Stevia+Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Size.swift"; path = "Source/Stevia+Size.swift"; sourceTree = "<group>"; };
-		313BE269BEA456CB50E880A708B80020 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pl.lproj; path = Source/Resources/pl.lproj; sourceTree = "<group>"; };
+		313BE269BEA456CB50E880A708B80020 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = pl.lproj; path = Source/Resources/pl.lproj; sourceTree = "<group>"; };
 		315B8DBCE8BA0C56FBF1F6BE6AAAEC3E /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Sources/ConstraintInsets.swift; sourceTree = "<group>"; };
 		317BB37FF5DF82396719E4525C82CCFD /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StringEncoding+Alamofire.swift"; path = "Source/StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
-		31C235201AD8205476A1E6618F52BA7B /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = Source/Resources/it.lproj; sourceTree = "<group>"; };
+		31C235201AD8205476A1E6618F52BA7B /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = it.lproj; path = Source/Resources/it.lproj; sourceTree = "<group>"; };
 		329A6565FFF64CB57D5BDAD42BF2AA17 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+AutoLayout.swift"; path = "Sources/Pageboy/Utilities/Extensions/UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		33A3B989879A9E8660F94D2194E53A40 /* AssetVideoScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssetVideoScrollView.swift; path = Sources/PryntTrimmerView/Parents/AssetVideoScrollView.swift; sourceTree = "<group>"; };
 		34BB5117E9082CA5522B5BB62DB33FB8 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
@@ -637,17 +637,17 @@
 		35AE8EB14CAA4C5854E13C14B54E06B9 /* PHFetchResult+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PHFetchResult+Extensions.swift"; path = "Source/Helpers/Extensions/PHFetchResult+Extensions.swift"; sourceTree = "<group>"; };
 		367916EB7E8D785B2F5DEC1E15A8BC55 /* AVCaptureSession+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AVCaptureSession+Extensions.swift"; path = "Source/Helpers/Extensions/AVCaptureSession+Extensions.swift"; sourceTree = "<group>"; };
 		3767E96731D291608C588A75072424E7 /* Stevia+Content.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Content.swift"; path = "Source/Stevia+Content.swift"; sourceTree = "<group>"; };
-		37EAA0157B34F19436826ABA2A03C2D5 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = Source/Resources/fr.lproj; sourceTree = "<group>"; };
+		37EAA0157B34F19436826ABA2A03C2D5 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = fr.lproj; path = Source/Resources/fr.lproj; sourceTree = "<group>"; };
 		3819B032F682EA39DA5BE7EA30F83604 /* SteviaLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SteviaLayout-umbrella.h"; sourceTree = "<group>"; };
 		390EAFA369C43F60B11A9B0508BBAAB8 /* AutoInsetSpec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoInsetSpec.swift; path = Sources/Tabman/AutoInsetter/AutoInsetSpec.swift; sourceTree = "<group>"; };
 		39F1D66D07E494C0C63F7FA2A59C45D9 /* NavigationDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationDirection.swift; path = Sources/Pageboy/Model/NavigationDirection.swift; sourceTree = "<group>"; };
 		3A2BBD8F1454428C71821EBEEF6189ED /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Sources/Constraint.swift; sourceTree = "<group>"; };
-		3A78E74BF7188FC0B7E262B2F6D7A4C2 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-PT.lproj"; path = "Source/Resources/pt-PT.lproj"; sourceTree = "<group>"; };
+		3A78E74BF7188FC0B7E262B2F6D7A4C2 /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "pt-PT.lproj"; path = "Source/Resources/pt-PT.lproj"; sourceTree = "<group>"; };
 		3B97FF19CC0795C1EC7AA233046B4316 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		3BB872D13F926324C4E465FA0957D17E /* TabmanViewController+Insets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TabmanViewController+Insets.swift"; path = "Sources/Tabman/TabmanViewController+Insets.swift"; sourceTree = "<group>"; };
 		3CC5B86220A011C6C333DCF18DD591D2 /* PageboyNavigationDirection+Tabman.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PageboyNavigationDirection+Tabman.swift"; path = "Sources/Tabman/Extensions/PageboyNavigationDirection+Tabman.swift"; sourceTree = "<group>"; };
 		3D7EEF134CEE2AE767CFD8225C1A9262 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Sources/ConstraintViewDSL.swift; sourceTree = "<group>"; };
-		3E9A730163364B4D023D2F6587003F5D /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ar.lproj; path = Source/Resources/ar.lproj; sourceTree = "<group>"; };
+		3E9A730163364B4D023D2F6587003F5D /* ar.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ar.lproj; path = Source/Resources/ar.lproj; sourceTree = "<group>"; };
 		3EABFE6CE4528BDAE653927941B1F789 /* YPMenuItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPMenuItem.swift; path = Source/Pages/Gallery/BottomPager/YPMenuItem.swift; sourceTree = "<group>"; };
 		3ECE8FEF69FD8E212A127471658BD9BF /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
 		3F1645AEE07F3B634CBE41922D3C21B3 /* IQKeyboardManager+Debug.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQKeyboardManager+Debug.swift"; path = "IQKeyboardManagerSwift/IQKeyboardManager+Debug.swift"; sourceTree = "<group>"; };
@@ -664,17 +664,17 @@
 		46C07D9CBB879FD481DB78A37948B581 /* YPDeviceOrientationHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPDeviceOrientationHelper.swift; path = Source/Helpers/YPDeviceOrientationHelper.swift; sourceTree = "<group>"; };
 		46C6C4D6BA8AECF912AEFC791B14E05A /* YPImagePicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YPImagePicker-prefix.pch"; sourceTree = "<group>"; };
 		477040599895691FF52379119F6D407E /* FSPagerViewObjcCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSPagerViewObjcCompat.m; path = Sources/FSPagerViewObjcCompat.m; sourceTree = "<group>"; };
-		477163A6643407617E9A01665B2CC9D9 /* km-KH.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "km-KH.lproj"; path = "Source/Resources/km-KH.lproj"; sourceTree = "<group>"; };
+		477163A6643407617E9A01665B2CC9D9 /* km-KH.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "km-KH.lproj"; path = "Source/Resources/km-KH.lproj"; sourceTree = "<group>"; };
 		49787746888A6EC10DCA656C335D9A3C /* TMHorizontalBarLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMHorizontalBarLayout.swift; path = Sources/Tabman/Bar/BarLayout/Types/TMHorizontalBarLayout.swift; sourceTree = "<group>"; };
 		4A2CF05247DD08F986AF9F1A127EAAD0 /* Stevia+DoubleDash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+DoubleDash.swift"; path = "Source/Stevia+DoubleDash.swift"; sourceTree = "<group>"; };
 		4A8D065DF1F77035D89CF28FDA847D03 /* PageboyViewController+RelativeCurrentPosition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PageboyViewController+RelativeCurrentPosition.swift"; path = "Sources/Tabman/Extensions/PageboyViewController+RelativeCurrentPosition.swift"; sourceTree = "<group>"; };
 		4AA4094984D02DBF3C11BD17691244E1 /* Tabman.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Tabman.h; path = Sources/Tabman/Tabman.h; sourceTree = "<group>"; };
-		4C1D3098DEF2E63762E1CEEFCC5130D5 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = Source/Resources/tr.lproj; sourceTree = "<group>"; };
+		4C1D3098DEF2E63762E1CEEFCC5130D5 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = tr.lproj; path = Source/Resources/tr.lproj; sourceTree = "<group>"; };
 		4C3C432A9B2701A039279F6C0E958929 /* BSImagePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BSImagePicker.modulemap; sourceTree = "<group>"; };
 		4D1FDEF138EC632ADC5AA606A98BEBE0 /* TMBarIndicatorLayoutHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMBarIndicatorLayoutHandler.swift; path = Sources/Tabman/Bar/BarIndicator/TMBarIndicatorLayoutHandler.swift; sourceTree = "<group>"; };
-		4D4799138F8AC5FFF2497DCB60AF4CBB /* Tabman */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Tabman; path = Tabman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D4799138F8AC5FFF2497DCB60AF4CBB /* Tabman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tabman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D507CE1408EF15503E523572675CB0D /* YPPhotoCaptureHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPPhotoCaptureHelper.swift; path = Source/Pages/Photo/YPPhotoCaptureHelper.swift; sourceTree = "<group>"; };
-		4DAADE75A404D5C333006C643152573F /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = Source/Resources/ja.lproj; sourceTree = "<group>"; };
+		4DAADE75A404D5C333006C643152573F /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ja.lproj; path = Source/Resources/ja.lproj; sourceTree = "<group>"; };
 		4E12F28768FDDDDC5FD4DA623CD35000 /* CGSize+Scale.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Scale.swift"; path = "Sources/View/CGSize+Scale.swift"; sourceTree = "<group>"; };
 		4F2CA3C4D9C0B9A7C9C16091995E0116 /* YPAlbumCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPAlbumCell.swift; path = Source/Pages/Gallery/Album/YPAlbumCell.swift; sourceTree = "<group>"; };
 		4F6FB924D28C6E1E5C86DD04C72DF638 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
@@ -689,7 +689,7 @@
 		54BBD07B9B8CF8B4F50FDEB9014806AC /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Sources/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		5505C3F09A897E68D05AA39D036F01CF /* YPCropVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPCropVC.swift; path = Source/Filters/Crop/YPCropVC.swift; sourceTree = "<group>"; };
 		5535AD6DD61693F0761A9F25E7D7FE3D /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
-		5578032265FD952C5823BE0CE825CAE8 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Source/Resources/en.lproj; sourceTree = "<group>"; };
+		5578032265FD952C5823BE0CE825CAE8 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = Source/Resources/en.lproj; sourceTree = "<group>"; };
 		559B0A11C5DAD58C064F6CE99FE52526 /* YPPagerMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPPagerMenu.swift; path = Source/Pages/Gallery/BottomPager/YPPagerMenu.swift; sourceTree = "<group>"; };
 		55BCF090D8EDBF8E90C6C02353AFFC7D /* YPPickerVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPPickerVC.swift; path = Source/YPPickerVC.swift; sourceTree = "<group>"; };
 		55C8EA3D0C5ECC4F451DA543548093FC /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Sources/ConstraintView.swift; sourceTree = "<group>"; };
@@ -699,7 +699,7 @@
 		5B645405D05D061B4E6AB77B546234E8 /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Session.swift; sourceTree = "<group>"; };
 		5C5D52F9A440E25A505BAEE12EAC8B0C /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Sources/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		5D5A371ED411645A99DEBE17A532B7F7 /* YPImagePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YPImagePicker-dummy.m"; sourceTree = "<group>"; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D9C2EA1C5788297233DBFD5CD25571B /* YPFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPFilter.swift; path = Source/Filters/Photo/YPFilter.swift; sourceTree = "<group>"; };
 		603DEB7D7FACEB6C3A60427C9144BEB1 /* BSImagePicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BSImagePicker-Info.plist"; sourceTree = "<group>"; };
 		60533EED8862350DEFDE8DB8ADD929C3 /* ConstraintDirectionalInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDirectionalInsetTarget.swift; path = Sources/ConstraintDirectionalInsetTarget.swift; sourceTree = "<group>"; };
@@ -712,7 +712,7 @@
 		66CBE61F5D1020E5D6F3A1547EA55E92 /* ZoomTransitionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZoomTransitionDelegate.swift; path = Sources/Presentation/Zoom/ZoomTransitionDelegate.swift; sourceTree = "<group>"; };
 		66D25EAB12266E5AB90990522B2B9EC6 /* SteviaLayout-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SteviaLayout-Info.plist"; sourceTree = "<group>"; };
 		67B0D65B7AC30FF198076DF81D832652 /* ArrowView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrowView.swift; path = Sources/View/ArrowView.swift; sourceTree = "<group>"; };
-		6850490F79D104D7CB1E0BA1D24A8EBB /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = da.lproj; path = Source/Resources/da.lproj; sourceTree = "<group>"; };
+		6850490F79D104D7CB1E0BA1D24A8EBB /* da.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = da.lproj; path = Source/Resources/da.lproj; sourceTree = "<group>"; };
 		687D0199C9A5A9E89131BA0DF3478F6B /* Stevia+Stacks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Stacks.swift"; path = "Source/Stevia+Stacks.swift"; sourceTree = "<group>"; };
 		691DD478CF94F0236387C706289B7C95 /* Stevia+Fill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Fill.swift"; path = "Source/Stevia+Fill.swift"; sourceTree = "<group>"; };
 		69E39E1B37ED4317CD4613F84913E373 /* YPPhotoFiltersVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPPhotoFiltersVC.swift; path = Source/Filters/Photo/YPPhotoFiltersVC.swift; sourceTree = "<group>"; };
@@ -731,7 +731,7 @@
 		70B9039C9716F2DA17938B7248042BDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		70BAEF2F3AB801A5EB73D03B8FC8A808 /* UIView+Localization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Localization.swift"; path = "Sources/Pageboy/Utilities/Extensions/UIView+Localization.swift"; sourceTree = "<group>"; };
 		72472DA53797060ECB23514B85B3D31D /* UIViewController+Tabman.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Tabman.swift"; path = "Sources/Tabman/Extensions/UIViewController+Tabman.swift"; sourceTree = "<group>"; };
-		72993E9EE22188D5F840CC245AC7F046 /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = th.lproj; path = Source/Resources/th.lproj; sourceTree = "<group>"; };
+		72993E9EE22188D5F840CC245AC7F046 /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = th.lproj; path = Source/Resources/th.lproj; sourceTree = "<group>"; };
 		7425B216A0DEACE6AB47DB9532E2632B /* CameraPreviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraPreviewView.swift; path = Sources/Scene/Camera/CameraPreviewView.swift; sourceTree = "<group>"; };
 		74CCC603687148B56E97D2F1382BF3D9 /* FSPageViewTransformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSPageViewTransformer.swift; path = Sources/FSPageViewTransformer.swift; sourceTree = "<group>"; };
 		759BB9FEE1FF5003299FD798BDB92706 /* ConstraintMakerRelatable+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintMakerRelatable+Extensions.swift"; path = "Sources/ConstraintMakerRelatable+Extensions.swift"; sourceTree = "<group>"; };
@@ -795,12 +795,12 @@
 		956F90C800578714E63A5289DCC67A26 /* YPBottomPager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPBottomPager.swift; path = Source/Pages/Gallery/BottomPager/YPBottomPager.swift; sourceTree = "<group>"; };
 		960CCDE3F38FA431FFB2D98E040089AB /* UIKit+TMBarItemable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+TMBarItemable.swift"; path = "Sources/Tabman/Bar/BarItem/UIKit+TMBarItemable.swift"; sourceTree = "<group>"; };
 		9676EED1EB9C454BF8422CF3C8913D30 /* YPPermissionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPPermissionManager.swift; path = Source/Helpers/Permissions/YPPermissionManager.swift; sourceTree = "<group>"; };
-		96A5B1D2C7E8CCE7259ED514942E319F /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = Source/Resources/de.lproj; sourceTree = "<group>"; };
+		96A5B1D2C7E8CCE7259ED514942E319F /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = de.lproj; path = Source/Resources/de.lproj; sourceTree = "<group>"; };
 		96D3B465C98244D43660C589689E0740 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Sources/ConstraintItem.swift; sourceTree = "<group>"; };
 		974D0489E76565A24AA3FBCC8C909BCD /* YPCameraVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPCameraVC.swift; path = Source/Pages/Photo/YPCameraVC.swift; sourceTree = "<group>"; };
 		97656CC734F5EDA40BE3AB7296697245 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		978DE755E48A95D039FDADE01DF92426 /* YPVideoFiltersVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPVideoFiltersVC.swift; path = Source/Filters/Video/YPVideoFiltersVC.swift; sourceTree = "<group>"; };
-		979486118B3E90C08386079D57962701 /* SnapKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		979BD0E5B809DF73E16B4CAE7E05B4B0 /* Tabman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tabman.debug.xcconfig; sourceTree = "<group>"; };
 		98C31F5CF1A8B780BD7F53FCA6482E17 /* IQKeyboardManager+Toolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQKeyboardManager+Toolbar.swift"; path = "IQKeyboardManagerSwift/IQKeyboardManager+Toolbar.swift"; sourceTree = "<group>"; };
 		9959EB17BC1C1776614631C1883FE408 /* TMBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMBar.swift; path = Sources/Tabman/Bar/TMBar.swift; sourceTree = "<group>"; };
@@ -812,24 +812,24 @@
 		9B9B2AC2A6997C1899917460CA80C39B /* YPLibraryViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPLibraryViewCell.swift; path = Source/Pages/Gallery/YPLibraryViewCell.swift; sourceTree = "<group>"; };
 		9C98B7C6F53179ADAB6930FFF459430F /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/RedirectHandler.swift; sourceTree = "<group>"; };
 		9D70B055B50222F6A09BA2290DDCDB3C /* UIViewController+ScrollViewDetection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+ScrollViewDetection.swift"; path = "Sources/Tabman/AutoInsetter/Utilities/UIViewController+ScrollViewDetection.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E04FD281DCB71EDA2E3456F8CE77B83 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Sources/ConstraintRelation.swift; sourceTree = "<group>"; };
 		9E4C8485891BFBDE4EC341F54A647AA8 /* TMBarIndicatorContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMBarIndicatorContainer.swift; path = Sources/Tabman/Bar/BarIndicator/TMBarIndicatorContainer.swift; sourceTree = "<group>"; };
 		9E6566903589C0BD5E68F0DEE251F84C /* PryntTrimmerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PryntTrimmerView-umbrella.h"; sourceTree = "<group>"; };
-		9F6A52495987FFA2841714CBCF5F5F54 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = vi.lproj; path = Source/Resources/vi.lproj; sourceTree = "<group>"; };
+		9F6A52495987FFA2841714CBCF5F5F54 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = vi.lproj; path = Source/Resources/vi.lproj; sourceTree = "<group>"; };
 		A00BC77551E077CEA87DE65D8AFA5D82 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
 		A07CF2C9DE527127CBE9C6876723E668 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIScrollView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		A0F2170A2DE6293A99F0BBB58E97CB9D /* YPLibraryVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPLibraryVC.swift; path = Source/Pages/Gallery/YPLibraryVC.swift; sourceTree = "<group>"; };
 		A12CF3B7AC1B19685E6EAE8B0BC59D8C /* YPAssetViewContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPAssetViewContainer.swift; path = Source/Pages/Gallery/YPAssetViewContainer.swift; sourceTree = "<group>"; };
 		A1BA6AAB8B67BD694DD4AF51C82693EE /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
-		A223F8031E4AE28931B1A90848008E07 /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nb.lproj; path = Source/Resources/nb.lproj; sourceTree = "<group>"; };
+		A223F8031E4AE28931B1A90848008E07 /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = nb.lproj; path = Source/Resources/nb.lproj; sourceTree = "<group>"; };
 		A335742BE602F18631A8280BE98F4910 /* HandlerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HandlerView.swift; path = Sources/PryntTrimmerView/Trimmer/HandlerView.swift; sourceTree = "<group>"; };
 		A3825F1927979CFF186402C0548948E5 /* AVPlayer+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AVPlayer+Extensions.swift"; path = "Source/Helpers/Extensions/AVPlayer+Extensions.swift"; sourceTree = "<group>"; };
 		A4444151BF24032629383AD6A2D2920E /* Pods-Barva.-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Barva.-frameworks.sh"; sourceTree = "<group>"; };
 		A4B2C1FF2C5395C62EA4607A4A4511D6 /* WeakContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WeakContainer.swift; path = Sources/Pageboy/Utilities/WeakContainer.swift; sourceTree = "<group>"; };
 		A71780A3BA390D81771E2FF7146A9DAE /* CachedResponseHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CachedResponseHandler.swift; path = Source/CachedResponseHandler.swift; sourceTree = "<group>"; };
 		A859E27563D1119F381CBF715197C54D /* YPLibraryVC+PanGesture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "YPLibraryVC+PanGesture.swift"; path = "Source/Pages/Gallery/YPLibraryVC+PanGesture.swift"; sourceTree = "<group>"; };
-		A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IQKeyboardManagerSwift; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9302E9DA3417C1B7A98B80BE286679F /* IndexSet+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IndexSet+Extensions.swift"; path = "Source/Helpers/Extensions/IndexSet+Extensions.swift"; sourceTree = "<group>"; };
 		A936CECE8921D9D2347DAFA7603D4035 /* YPMediaItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPMediaItem.swift; path = Source/Models/YPMediaItem.swift; sourceTree = "<group>"; };
 		A9E318E6CE7B8DE14948C11B775E2B4D /* Pods-Barva..debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Barva..debug.xcconfig"; sourceTree = "<group>"; };
@@ -850,7 +850,7 @@
 		AE568EF5CB5BC4C10371806F2B694170 /* Stevia+LayoutAnchors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+LayoutAnchors.swift"; path = "Source/Stevia+LayoutAnchors.swift"; sourceTree = "<group>"; };
 		AE9D310ED903288263007FFE61852DCA /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		AE9F77FD9D75E3B1A9440456F9B41F2B /* IndexedObjectMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndexedObjectMap.swift; path = Sources/Pageboy/Utilities/IndexedObjectMap.swift; sourceTree = "<group>"; };
-		AED00CABC6BB7FD88D935719CD14BA6C /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ko.lproj; path = Source/Resources/ko.lproj; sourceTree = "<group>"; };
+		AED00CABC6BB7FD88D935719CD14BA6C /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ko.lproj; path = Source/Resources/ko.lproj; sourceTree = "<group>"; };
 		AED73F26C173FA38587A2557B3B06ED1 /* PageboyAutoScroller.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageboyAutoScroller.swift; path = Sources/Pageboy/AutoScrolling/PageboyAutoScroller.swift; sourceTree = "<group>"; };
 		AEFB9759603BF4CB3E33BAF33BF9EBBA /* Pods-Barva. */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Barva."; path = Pods_Barva_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD5B90EE2EB10E78029A23BDCF6E5ED /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationInterceptor.swift; path = Source/AuthenticationInterceptor.swift; sourceTree = "<group>"; };
@@ -893,13 +893,13 @@
 		C3989481B1FF805BAA287B05D35C0044 /* SnapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.debug.xcconfig; sourceTree = "<group>"; };
 		C39EFAF2DE70AD3268032BFF4FFD829C /* UIImage+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Extensions.swift"; path = "Source/Helpers/Extensions/UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		C450E7FB0B6983CC3CDEF745BEC14732 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+Extensions.swift"; path = "Source/Helpers/Extensions/Bundle+Extensions.swift"; sourceTree = "<group>"; };
-		C5CD196EA1D77A64C6F8A3DD2FAED7CC /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sv.lproj; path = Source/Resources/sv.lproj; sourceTree = "<group>"; };
+		C5CD196EA1D77A64C6F8A3DD2FAED7CC /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = sv.lproj; path = Source/Resources/sv.lproj; sourceTree = "<group>"; };
 		C639FF88BCFD03EFB948DA7C652B666D /* TMBarButton+None.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TMBarButton+None.swift"; path = "Sources/Tabman/Bar/BarButton/Types/TMBarButton+None.swift"; sourceTree = "<group>"; };
 		C6AA84DB90D1597231D46051F12FC118 /* TMBarButtonController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMBarButtonController.swift; path = Sources/Tabman/Bar/BarButton/TMBarButtonController.swift; sourceTree = "<group>"; };
 		C6F223A15F5B1D3C7C379262A2734C80 /* CollectionViewInsetCalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewInsetCalculator.swift; path = Sources/Tabman/AutoInsetter/InsetCalculator/CollectionViewInsetCalculator.swift; sourceTree = "<group>"; };
 		C76C9C02372BC56F90B6C519D724872D /* SelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectionView.swift; path = Sources/Scene/Assets/SelectionView.swift; sourceTree = "<group>"; };
 		C8124F181B707C473016979E13357591 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		C81B2C5AA517B0DD151E4FF1B85B3FD8 /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ro.lproj; path = Source/Resources/ro.lproj; sourceTree = "<group>"; };
+		C81B2C5AA517B0DD151E4FF1B85B3FD8 /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ro.lproj; path = Source/Resources/ro.lproj; sourceTree = "<group>"; };
 		C8255A98F18EB04012EF4C3AB81BE86B /* PryntTrimmerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PryntTrimmerView.modulemap; sourceTree = "<group>"; };
 		C883DAC2DB824EF59B7DC2161D3CB268 /* TMHidingBar+Triggers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TMHidingBar+Triggers.swift"; path = "Sources/Tabman/Bar/BarExtensions/AutoHidingBar/TMHidingBar+Triggers.swift"; sourceTree = "<group>"; };
 		C90FA4BB522724EB40B4120DE117698C /* UIButton+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Extensions.swift"; path = "Source/Helpers/Extensions/UIButton+Extensions.swift"; sourceTree = "<group>"; };
@@ -919,7 +919,7 @@
 		CEF23C42E19F72B5C8B29404E6D745D1 /* YPAlbumView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPAlbumView.swift; path = Source/Pages/Gallery/Album/YPAlbumView.swift; sourceTree = "<group>"; };
 		CF1FFA1D893A700862A5C22A59038565 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		CFE1E67371DAEB99293C3900FEB3E89E /* ImagePickerControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePickerControllerDelegate.swift; path = Sources/Controller/ImagePickerControllerDelegate.swift; sourceTree = "<group>"; };
-		D09DB48D8145BFA029AAEA61818EC68B /* PryntTrimmerView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PryntTrimmerView; path = PryntTrimmerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09DB48D8145BFA029AAEA61818EC68B /* PryntTrimmerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PryntTrimmerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AAC40C44233725635B88781F14D855 /* CheckmarkView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckmarkView.swift; path = Sources/Scene/Assets/CheckmarkView.swift; sourceTree = "<group>"; };
 		D0C92F90ECE1E86745DFB8170BC0E9D7 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Sources/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
 		D0CA1B3CAF29D25D3030C83EF7AF173D /* YPPickerScreen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPPickerScreen.swift; path = Source/Configuration/YPPickerScreen.swift; sourceTree = "<group>"; };
@@ -934,7 +934,7 @@
 		D406C3E632CA1EC5B06144315583D7AD /* Pageboy-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pageboy-Info.plist"; sourceTree = "<group>"; };
 		D47AE5DFC89ADD0BDCE3437B2B6E2626 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		D5A3E0D0038940264A692A5B99B8593A /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
-		D5E37B88EF5882ADFD23277FD8CE28EC /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = Source/Resources/ru.lproj; sourceTree = "<group>"; };
+		D5E37B88EF5882ADFD23277FD8CE28EC /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ru.lproj; path = Source/Resources/ru.lproj; sourceTree = "<group>"; };
 		D5EEFC0D25BD19D30518EABA16777482 /* IQTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
 		D6FF371B7028957C7DA552E10D3ED75E /* YPImagePicker */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YPImagePicker; path = YPImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70AE219CB01E77665EFDAFB8FDFB184 /* ImageViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageViewLayout.swift; path = Sources/View/ImageViewLayout.swift; sourceTree = "<group>"; };
@@ -943,7 +943,7 @@
 		D9E6D49606E5ED90205E0A2DB3F1B143 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Sources/LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		D9E88E780CE92D1B0D9CEDA81DD1AB2F /* AVAssetTimeSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVAssetTimeSelector.swift; path = Sources/PryntTrimmerView/Parents/AVAssetTimeSelector.swift; sourceTree = "<group>"; };
 		DA8529DDD78B498824A73D30EA154C1D /* InsetCalculations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InsetCalculations.swift; path = Sources/Tabman/AutoInsetter/InsetCalculator/InsetCalculations.swift; sourceTree = "<group>"; };
-		DBE4CB7D60F2258A954A198BDCEF896E /* km.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = km.lproj; path = Source/Resources/km.lproj; sourceTree = "<group>"; };
+		DBE4CB7D60F2258A954A198BDCEF896E /* km.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = km.lproj; path = Source/Resources/km.lproj; sourceTree = "<group>"; };
 		DE08A3BC49F04D88BEE9F08435999927 /* TMBarLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMBarLayout.swift; path = Sources/Tabman/Bar/BarLayout/TMBarLayout.swift; sourceTree = "<group>"; };
 		DE46C55C9FC86D7DE5604DB1413578EC /* FSPagerView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSPagerView.release.xcconfig; sourceTree = "<group>"; };
 		DE8E6D5A164FDD0A785C5E97CFBB4D9A /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Sources/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
@@ -969,7 +969,7 @@
 		E7B14B117A3717D1F87547F6325A9059 /* YPLibraryVC+CollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "YPLibraryVC+CollectionView.swift"; path = "Source/Pages/Gallery/YPLibraryVC+CollectionView.swift"; sourceTree = "<group>"; };
 		E7B99326217451BD61870688DE3A7A78 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Sources/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
 		E889A50FB53E7B06A7A4EF2D882A8624 /* UIScrollView+Interaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+Interaction.swift"; path = "Sources/Pageboy/Utilities/Extensions/UIScrollView+Interaction.swift"; sourceTree = "<group>"; };
-		E8F7B9B50207F5550D8E75D4456D5D14 /* bg.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = bg.lproj; path = Source/Resources/bg.lproj; sourceTree = "<group>"; };
+		E8F7B9B50207F5550D8E75D4456D5D14 /* bg.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = bg.lproj; path = Source/Resources/bg.lproj; sourceTree = "<group>"; };
 		EA265BCC3F1699E8199BAAF4C18A0B82 /* YPPermissionDeniedPopup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPPermissionDeniedPopup.swift; path = Source/Helpers/Permissions/YPPermissionDeniedPopup.swift; sourceTree = "<group>"; };
 		EA9BB47DB617FB6D31998414D01FB15D /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		EB2A70AACCFC7A2F7516A85BE8AEB1F5 /* BarMath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarMath.swift; path = Sources/Tabman/Bar/Utility/BarMath.swift; sourceTree = "<group>"; };
@@ -978,7 +978,7 @@
 		EC7BE3DE6E400419EBC64FE7F457920F /* Tabman-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Tabman-Info.plist"; sourceTree = "<group>"; };
 		ED83E1730C1B872D018786B5F53B187D /* ImagePickerController+PresentationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImagePickerController+PresentationDelegate.swift"; path = "Sources/Controller/ImagePickerController+PresentationDelegate.swift"; sourceTree = "<group>"; };
 		EED857B49042F60299D83487FC8AD3DA /* VideoPreviewViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VideoPreviewViewController.swift; path = Sources/Scene/Preview/VideoPreviewViewController.swift; sourceTree = "<group>"; };
-		F03E039BBD403BA4F0C1E3E0ED2E8A7E /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-BR.lproj"; path = "Source/Resources/pt-BR.lproj"; sourceTree = "<group>"; };
+		F03E039BBD403BA4F0C1E3E0ED2E8A7E /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "pt-BR.lproj"; path = "Source/Resources/pt-BR.lproj"; sourceTree = "<group>"; };
 		F0E2277CBAD98D7F1964956189C270B2 /* SteviaLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SteviaLayout-prefix.pch"; sourceTree = "<group>"; };
 		F1F76414977EAE8E9BF024380C7C7966 /* TMBarViewFocusRect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMBarViewFocusRect.swift; path = Sources/Tabman/Bar/BarView/TMBarViewFocusRect.swift; sourceTree = "<group>"; };
 		F330BAC4BA55509665D29BFC9B48D66A /* Pageboy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pageboy.release.xcconfig; sourceTree = "<group>"; };
@@ -988,10 +988,10 @@
 		F649127457B26CD667807045C25FEA6A /* IQKeyboardManager+UIKeyboardNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQKeyboardManager+UIKeyboardNotification.swift"; path = "IQKeyboardManagerSwift/IQKeyboardManager+UIKeyboardNotification.swift"; sourceTree = "<group>"; };
 		F6AEA8D78FCE2D63533F29BE18E9A81C /* CGRect+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGRect+Extensions.swift"; path = "Source/Helpers/Extensions/CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		F6CF0F651E5372E440DEABFCC9B08D92 /* YPSelectionsGalleryVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YPSelectionsGalleryVC.swift; path = Source/SelectionsGallery/YPSelectionsGalleryVC.swift; sourceTree = "<group>"; };
-		F6EAA868E1B41FF9C979671FB57052CD /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Source/Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
-		F6FE96BB8222E8CFE648CADA1CAF837B /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = Source/Resources/es.lproj; sourceTree = "<group>"; };
+		F6EAA868E1B41FF9C979671FB57052CD /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hans.lproj"; path = "Source/Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
+		F6FE96BB8222E8CFE648CADA1CAF837B /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = es.lproj; path = Source/Resources/es.lproj; sourceTree = "<group>"; };
 		F714F143491A25B53B34F47CACE73E67 /* PageboyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageboyViewController.swift; path = Sources/Pageboy/PageboyViewController.swift; sourceTree = "<group>"; };
-		F8B3F5594DA4FC47A8E4851FA7157D88 /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = cs.lproj; path = Source/Resources/cs.lproj; sourceTree = "<group>"; };
+		F8B3F5594DA4FC47A8E4851FA7157D88 /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = cs.lproj; path = Source/Resources/cs.lproj; sourceTree = "<group>"; };
 		F90D214ACA1ECC7C68A89C2A8FD6865D /* AssetStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssetStore.swift; path = Sources/Model/AssetStore.swift; sourceTree = "<group>"; };
 		FA0152895DDFC3A0C99E5FA81D4FB03C /* Pods-Barva..modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Barva..modulemap"; sourceTree = "<group>"; };
 		FA404F736B74DD0397C1EE6C19502903 /* IQKeyboardManager+UITextFieldViewNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQKeyboardManager+UITextFieldViewNotification.swift"; path = "IQKeyboardManagerSwift/IQKeyboardManager+UITextFieldViewNotification.swift"; sourceTree = "<group>"; };
@@ -1147,7 +1147,6 @@
 				1519F2575FB6AA986D4BBE6D5FAA4B58 /* IQUIViewController+Additions.swift */,
 				4B2A7385C5CA334799226893777865D7 /* Support Files */,
 			);
-			name = IQKeyboardManagerSwift;
 			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
 		};
@@ -1258,7 +1257,6 @@
 				6AB713ECB1CFDC434CEDCFE330223862 /* Resources */,
 				6FA1790359136634A2CCBB311AC49B11 /* Support Files */,
 			);
-			name = YPImagePicker;
 			path = YPImagePicker;
 			sourceTree = "<group>";
 		};
@@ -1294,7 +1292,6 @@
 				6E5A6838AFB82F8F370BE28B8E1ADF8C /* Stevia+Style.swift */,
 				6D1FAC5BB3E9CFD73D87E24BE7247EBD /* Support Files */,
 			);
-			name = SteviaLayout;
 			path = SteviaLayout;
 			sourceTree = "<group>";
 		};
@@ -1361,7 +1358,6 @@
 				A4B2C1FF2C5395C62EA4607A4A4511D6 /* WeakContainer.swift */,
 				730BD9E389C82CA848A4CE4702CB1478 /* Support Files */,
 			);
-			name = Pageboy;
 			path = Pageboy;
 			sourceTree = "<group>";
 		};
@@ -1521,7 +1517,6 @@
 				2FA4161851C789A8D7D1AB15F293943C /* UILayoutSupport+Extensions.swift */,
 				DC10758F6951044C15238EB6371EE2D8 /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -1543,16 +1538,16 @@
 		9F9C248D04B977431C6149B410FEE6DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
-				1F08AE4B81A4E4ECE65672A185E38F78 /* BSImagePicker */,
-				0F47FB5E28EE8C8342B1776D813D1A4C /* FSPagerView */,
-				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift */,
-				23D5CD291D18F2187712FE6F84B6F1C6 /* Pageboy */,
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
+				1F08AE4B81A4E4ECE65672A185E38F78 /* BSImagePicker.framework */,
+				0F47FB5E28EE8C8342B1776D813D1A4C /* FSPagerView.framework */,
+				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */,
+				23D5CD291D18F2187712FE6F84B6F1C6 /* Pageboy.framework */,
 				AEFB9759603BF4CB3E33BAF33BF9EBBA /* Pods-Barva. */,
-				D09DB48D8145BFA029AAEA61818EC68B /* PryntTrimmerView */,
-				979486118B3E90C08386079D57962701 /* SnapKit */,
+				D09DB48D8145BFA029AAEA61818EC68B /* PryntTrimmerView.framework */,
+				979486118B3E90C08386079D57962701 /* SnapKit.framework */,
 				DE90CE8A0DA0F3A5364FCDD4803AD3EC /* SteviaLayout */,
-				4D4799138F8AC5FFF2497DCB60AF4CBB /* Tabman */,
+				4D4799138F8AC5FFF2497DCB60AF4CBB /* Tabman.framework */,
 				D6FF371B7028957C7DA552E10D3ED75E /* YPImagePicker */,
 			);
 			name = Products;
@@ -1571,7 +1566,6 @@
 				0529849B2BAAFF245FCDFDCBDEA2D3B6 /* VideoScrollView.swift */,
 				191C3C061ACF2AE59DEC57B7822000A1 /* Support Files */,
 			);
-			name = PryntTrimmerView;
 			path = PryntTrimmerView;
 			sourceTree = "<group>";
 		};
@@ -1589,7 +1583,6 @@
 				74CCC603687148B56E97D2F1382BF3D9 /* FSPageViewTransformer.swift */,
 				DF194B7B26BC260E3D39EFEBF035A078 /* Support Files */,
 			);
-			name = FSPagerView;
 			path = FSPagerView;
 			sourceTree = "<group>";
 		};
@@ -1638,7 +1631,6 @@
 				66CBE61F5D1020E5D6F3A1547EA55E92 /* ZoomTransitionDelegate.swift */,
 				68254D9C6E70DC4050E9F4C197FF6E5E /* Support Files */,
 			);
-			name = BSImagePicker;
 			path = BSImagePicker;
 			sourceTree = "<group>";
 		};
@@ -1747,7 +1739,6 @@
 				CF1FFA1D893A700862A5C22A59038565 /* Validation.swift */,
 				8E597BDA592FF99BAD56B5E92B52D6FE /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1824,7 +1815,6 @@
 				B5D58450C6BD67A87BB83D0DE8D303AE /* WeakContainer.swift */,
 				E72CD3CC7A04532F8BE201F4F559B9CC /* Support Files */,
 			);
-			name = Tabman;
 			path = Tabman;
 			sourceTree = "<group>";
 		};
@@ -1960,7 +1950,7 @@
 			);
 			name = Pageboy;
 			productName = Pageboy;
-			productReference = 23D5CD291D18F2187712FE6F84B6F1C6 /* Pageboy */;
+			productReference = 23D5CD291D18F2187712FE6F84B6F1C6 /* Pageboy.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */ = {
@@ -1978,7 +1968,7 @@
 			);
 			name = SnapKit;
 			productName = SnapKit;
-			productReference = 979486118B3E90C08386079D57962701 /* SnapKit */;
+			productReference = 979486118B3E90C08386079D57962701 /* SnapKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		377E69F20375EB612410D6BD87B4AF98 /* BSImagePicker */ = {
@@ -1996,7 +1986,7 @@
 			);
 			name = BSImagePicker;
 			productName = BSImagePicker;
-			productReference = 1F08AE4B81A4E4ECE65672A185E38F78 /* BSImagePicker */;
+			productReference = 1F08AE4B81A4E4ECE65672A185E38F78 /* BSImagePicker.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3EF26018CD886BA3143044A409D6D0B9 /* Tabman */ = {
@@ -2015,7 +2005,7 @@
 			);
 			name = Tabman;
 			productName = Tabman;
-			productReference = 4D4799138F8AC5FFF2497DCB60AF4CBB /* Tabman */;
+			productReference = 4D4799138F8AC5FFF2497DCB60AF4CBB /* Tabman.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		492A3F539D36426FFCED62F4F58F688B /* PryntTrimmerView */ = {
@@ -2033,7 +2023,7 @@
 			);
 			name = PryntTrimmerView;
 			productName = PryntTrimmerView;
-			productReference = D09DB48D8145BFA029AAEA61818EC68B /* PryntTrimmerView */;
+			productReference = D09DB48D8145BFA029AAEA61818EC68B /* PryntTrimmerView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		77106299210B0C0A603B79D7FF57E27F /* Pods-Barva. */ = {
@@ -2079,7 +2069,7 @@
 			);
 			name = IQKeyboardManagerSwift;
 			productName = IQKeyboardManagerSwift;
-			productReference = A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift */;
+			productReference = A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		CF263AB023E40C4315ED4A97C6D7829F /* SteviaLayout */ = {
@@ -2115,7 +2105,7 @@
 			);
 			name = FSPagerView;
 			productName = FSPagerView;
-			productReference = 0F47FB5E28EE8C8342B1776D813D1A4C /* FSPagerView */;
+			productReference = 0F47FB5E28EE8C8342B1776D813D1A4C /* FSPagerView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
@@ -2133,7 +2123,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -2143,7 +2133,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1340;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -2847,7 +2837,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Pageboy/Pageboy-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Pageboy/Pageboy-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2983,7 +2973,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/BSImagePicker/BSImagePicker-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/BSImagePicker/BSImagePicker-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3080,7 +3070,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/BSImagePicker/BSImagePicker-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/BSImagePicker/BSImagePicker-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3115,7 +3105,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FSPagerView/FSPagerView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FSPagerView/FSPagerView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3150,7 +3140,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FSPagerView/FSPagerView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FSPagerView/FSPagerView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3184,7 +3174,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/PryntTrimmerView/PryntTrimmerView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/PryntTrimmerView/PryntTrimmerView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3257,7 +3247,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3293,7 +3283,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3328,7 +3318,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3364,7 +3354,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3399,7 +3389,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3433,7 +3423,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Tabman/Tabman-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Tabman/Tabman-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3502,7 +3492,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/PryntTrimmerView/PryntTrimmerView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/PryntTrimmerView/PryntTrimmerView-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3574,7 +3564,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Pageboy/Pageboy-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Pageboy/Pageboy-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3643,7 +3633,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/IQKeyboardManagerSwift/IQKeyboardManagerSwift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3677,7 +3667,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Tabman/Tabman-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Tabman/Tabman-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
