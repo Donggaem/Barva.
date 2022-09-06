@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+struct AuthMailResponse: Decodable{
+    
+    var isSuccess: Bool
+    var code: Int
+    var message: String
+    var data:  authNumber?
+    
+}
+
+struct authNumber: Decodable {
+    
+    var authNumber: String
+    
+}

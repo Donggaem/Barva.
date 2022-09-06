@@ -192,7 +192,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dmr-rY-1pa">
-                                                <rect key="frame" x="30" y="876.66666666666663" width="330" height="45"/>
+                                                <rect key="frame" x="30" y="882.66666666666663" width="330" height="45"/>
                                                 <color key="backgroundColor" red="0.73333333333333328" green="0.73333333333333328" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="E5A-QD-wNs"/>
@@ -204,7 +204,7 @@
                                                 </state>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2eC-Uq-w2f">
-                                                <rect key="frame" x="30" y="115.66666666666663" width="330" height="551"/>
+                                                <rect key="frame" x="30" y="115.66666666666663" width="330" height="557"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="c9z-it-iif" userLabel="이름Stack View">
                                                         <rect key="frame" x="0.0" y="0.0" width="330" height="56.333333333333336"/>
@@ -449,6 +449,9 @@
                                                                                 <state key="normal" title="인증번호 발송">
                                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 </state>
+                                                                                <connections>
+                                                                                    <action selector="aurhMailBtnPressed:" destination="CHw-PK-Gr0" eventType="touchUpInside" id="4y6-q7-Lnf"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                     </stackView>
@@ -464,7 +467,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ugG-Me-jRV" userLabel="닉네임Stack View">
-                                                        <rect key="frame" x="0.0" y="466.66666666666674" width="330" height="84.333333333333371"/>
+                                                        <rect key="frame" x="0.0" y="466.66666666666674" width="330" height="90.333333333333371"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인증번호 입력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFv-aZ-mDm">
                                                                 <rect key="frame" x="0.0" y="0.0" width="330" height="14.666666666666666"/>
@@ -493,11 +496,14 @@
                                                                         <state key="normal" title="인증하기">
                                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="inspectMailBtnPressed:" destination="CHw-PK-Gr0" eventType="touchUpInside" id="21I-pg-a7T"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nJQ-Py-b6d">
-                                                                <rect key="frame" x="0.0" y="64.666666666666629" width="330" height="19.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="64.666666666666629" width="330" height="1"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTc-mV-z3M">
                                                                         <rect key="frame" x="0.0" y="0.0" width="330" height="1"/>
@@ -506,19 +512,19 @@
                                                                             <constraint firstAttribute="height" constant="1" id="Dnh-5a-QIn"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdS-eD-45h">
-                                                                        <rect key="frame" x="0.0" y="5.9999999999999991" width="330" height="13.666666666666664"/>
-                                                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="8"/>
-                                                                        <color key="tintColor" red="0.0" green="0.2784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                        <state key="normal" title="    사용가능한 닉네임입니다">
-                                                                            <color key="titleColor" red="0.0" green="0.2784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="default"/>
-                                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12"/>
-                                                                        </state>
-                                                                    </button>
                                                                 </subviews>
                                                             </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezx-rW-PFI">
+                                                                <rect key="frame" x="0.0" y="76.666666666666629" width="330" height="13.666666666666671"/>
+                                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="8"/>
+                                                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="    인증번호가 일치하지 않습니다">
+                                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <imageReference key="image" image="exclamationmark.circle" catalog="system" symbolScale="default"/>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12"/>
+                                                                </state>
+                                                            </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -594,6 +600,7 @@
                         <outlet property="emailTextField" destination="0F8-sK-YjS" id="tbE-pA-aRL"/>
                         <outlet property="idBtn" destination="qxj-Lq-05F" id="0Sf-lk-cRN"/>
                         <outlet property="idTextField" destination="OtH-l8-QCs" id="aIx-Hn-crg"/>
+                        <outlet property="msgCheckNumBtn" destination="Ezx-rW-PFI" id="DX9-ed-2LJ"/>
                         <outlet property="nickBtn" destination="v5Y-Rd-ngK" id="kbY-hk-YBG"/>
                         <outlet property="nickNameTextField" destination="TI9-ap-1W5" id="gIV-Jn-Iyg"/>
                         <outlet property="signinBtn" destination="Dmr-rY-1pa" id="Vk9-pb-7wK"/>
@@ -601,7 +608,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmc-pU-KYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5" y="-103"/>
+            <point key="canvasLocation" x="-6.1538461538461533" y="-103.08056872037915"/>
         </scene>
         <!--Find Tab View Controller-->
         <scene sceneID="aEG-0M-NTm">
@@ -1068,6 +1075,7 @@
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="exclamationmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

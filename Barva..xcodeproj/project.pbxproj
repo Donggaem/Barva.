@@ -55,7 +55,7 @@
 		EBF510DA28AFBD060098BD5A /* AuthMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D928AFBD060098BD5A /* AuthMailRequest.swift */; };
 		EBF510DC28AFBD1C0098BD5A /* AuthMailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510DB28AFBD1C0098BD5A /* AuthMailResponse.swift */; };
 		EBF510DE28AFBD890098BD5A /* InspectMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510DD28AFBD890098BD5A /* InspectMailRequest.swift */; };
-		EBF510E028AFBD980098BD5A /* InspectMailRewponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510DF28AFBD980098BD5A /* InspectMailRewponse.swift */; };
+		EBF510E028AFBD980098BD5A /* InspectMailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510DF28AFBD980098BD5A /* InspectMailResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,7 +112,7 @@
 		EBF510D928AFBD060098BD5A /* AuthMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMailRequest.swift; sourceTree = "<group>"; };
 		EBF510DB28AFBD1C0098BD5A /* AuthMailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMailResponse.swift; sourceTree = "<group>"; };
 		EBF510DD28AFBD890098BD5A /* InspectMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectMailRequest.swift; sourceTree = "<group>"; };
-		EBF510DF28AFBD980098BD5A /* InspectMailRewponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectMailRewponse.swift; sourceTree = "<group>"; };
+		EBF510DF28AFBD980098BD5A /* InspectMailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectMailResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -365,7 +365,7 @@
 				EBF510D928AFBD060098BD5A /* AuthMailRequest.swift */,
 				EBF510DB28AFBD1C0098BD5A /* AuthMailResponse.swift */,
 				EBF510DD28AFBD890098BD5A /* InspectMailRequest.swift */,
-				EBF510DF28AFBD980098BD5A /* InspectMailRewponse.swift */,
+				EBF510DF28AFBD980098BD5A /* InspectMailResponse.swift */,
 			);
 			path = EmailModel;
 			sourceTree = "<group>";
@@ -534,7 +534,7 @@
 				EBF510D328AFBC410098BD5A /* IDCheckResponse.swift in Sources */,
 				EBF510D728AFBC660098BD5A /* NickCheckResponse.swift in Sources */,
 				EBE4EDBC28A51255005C7516 /* UploadTabViewController.swift in Sources */,
-				EBF510E028AFBD980098BD5A /* InspectMailRewponse.swift in Sources */,
+				EBF510E028AFBD980098BD5A /* InspectMailResponse.swift in Sources */,
 				EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */,
 				EBB8F45C28BF9C430069D4E1 /* ProfileTabManViewController.swift in Sources */,
 				EBF510DC28AFBD1C0098BD5A /* AuthMailResponse.swift in Sources */,
