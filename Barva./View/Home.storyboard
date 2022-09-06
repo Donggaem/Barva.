@@ -279,11 +279,11 @@
             <objects>
                 <viewController storyboardIdentifier="LatestBoardTabViewController" id="7Op-4y-2St" customClass="LatestBoardTabViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2iG-Qd-JSC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="641"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mm3-QU-nqX">
-                                <rect key="frame" x="0.0" y="40" width="390" height="591"/>
+                                <rect key="frame" x="0.0" y="40" width="390" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VYL-5m-0e9">
                                     <size key="itemSize" width="128" height="128"/>
@@ -312,22 +312,22 @@
                             <constraint firstItem="Mm3-QU-nqX" firstAttribute="leading" secondItem="2iG-Qd-JSC" secondAttribute="leading" id="UcW-Vm-hpN"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="390" height="641"/>
+                    <size key="freeformSize" width="390" height="673"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3OP-rf-oYR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3498.4615384615386" y="-618.12796208530801"/>
+            <point key="canvasLocation" x="3489" y="-617"/>
         </scene>
         <!--Like Board Tab View Controller-->
         <scene sceneID="k2G-V6-hXm">
             <objects>
                 <viewController storyboardIdentifier="LikeBoardTabViewController" id="9AZ-9W-AVt" customClass="LikeBoardTabViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dmM-jD-GFx">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="641"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PsG-eT-JJW">
-                                <rect key="frame" x="0.0" y="40" width="390" height="591"/>
+                                <rect key="frame" x="0.0" y="40" width="390" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ckV-ZR-NVp">
                                     <size key="itemSize" width="128" height="128"/>
@@ -356,7 +356,7 @@
                             <constraint firstAttribute="bottom" secondItem="PsG-eT-JJW" secondAttribute="bottom" constant="10" id="mon-Fm-Pdg"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="390" height="641"/>
+                    <size key="freeformSize" width="390" height="673"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8J-Mg-3yp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -367,11 +367,11 @@
             <objects>
                 <viewController storyboardIdentifier="SexBoardTabViewController" id="Ga8-yy-6QA" customClass="SexBoardTabViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vyu-N7-i05">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="641"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CXB-pb-Lgl">
-                                <rect key="frame" x="0.0" y="40" width="390" height="591"/>
+                                <rect key="frame" x="0.0" y="40" width="390" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kei-Jf-vlP">
                                     <size key="itemSize" width="128" height="128"/>
@@ -400,7 +400,7 @@
                             <constraint firstItem="CXB-pb-Lgl" firstAttribute="top" secondItem="vyu-N7-i05" secondAttribute="top" constant="40" id="u9G-pR-Q2p"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="390" height="641"/>
+                    <size key="freeformSize" width="390" height="673"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSX-wp-0ah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

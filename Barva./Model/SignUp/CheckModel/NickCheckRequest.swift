@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NickCheckResponse: Encodable {
+struct NickCheckRequest: Encodable {
     
     var user_nick: String
     

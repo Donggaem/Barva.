@@ -16,6 +16,7 @@ class ColorTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUI()
     }
     
     //MARK: OBJC
@@ -24,6 +25,7 @@ class ColorTabViewController: UIViewController {
     {
         self.imagePickerController.delegate = self
         self.imagePickerController.sourceType = .photoLibrary
+        self.imagePickerController.allowsEditing = true
         present(self.imagePickerController, animated: true, completion: nil)
     }
     

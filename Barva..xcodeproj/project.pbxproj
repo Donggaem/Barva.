@@ -21,6 +21,7 @@
 		EB25AD0428A136500006C1F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB25AD0228A136500006C1F2 /* LaunchScreen.storyboard */; };
 		EB2EA2F928A1409800EC0685 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2EA2F828A1409800EC0685 /* SigninViewController.swift */; };
 		EB2EA2FB28A1410E00EC0685 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2EA2FA28A1410E00EC0685 /* Home.storyboard */; };
+		EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67743B28C72F2B001A6F55 /* BarvaURL.swift */; };
 		EB84731E28C2F53700638EE2 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB84731D28C2F53700638EE2 /* FeedTableViewCell.xib */; };
 		EB9CC95C28A40A1A003D9F22 /* UploadTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */; };
 		EB9CC95E28A40A53003D9F22 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */; };
@@ -77,6 +78,7 @@
 		EB2EA2F828A1409800EC0685 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		EB2EA2FA28A1410E00EC0685 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		EB2F99C628B0ABF10084EB7B /* YPImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YPImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB67743B28C72F2B001A6F55 /* BarvaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarvaURL.swift; sourceTree = "<group>"; };
 		EB84731D28C2F53700638EE2 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
@@ -203,6 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				EBF510CF28AFBBF40098BD5A /* Login */,
+				EB67743D28C73A3C001A6F55 /* SignUp */,
+				EB67743B28C72F2B001A6F55 /* BarvaURL.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,6 +231,16 @@
 				EB1751F228AA788A009FEFBF /* Home */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		EB67743D28C73A3C001A6F55 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				EBE4EDB028A4E670005C7516 /* SigninModel */,
+				EBF510CE28AFBBE60098BD5A /* CheckModel */,
+				EBF510D828AFBCE10098BD5A /* EmailModel */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		EB88611028ACCCA8003FD651 /* Find */ = {
@@ -341,9 +355,6 @@
 			isa = PBXGroup;
 			children = (
 				EBE4EDAF28A4E663005C7516 /* LoginModel */,
-				EBE4EDB028A4E670005C7516 /* SigninModel */,
-				EBF510CE28AFBBE60098BD5A /* CheckModel */,
-				EBF510D828AFBCE10098BD5A /* EmailModel */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -500,6 +511,7 @@
 				EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */,
 				EBF510D128AFBC2D0098BD5A /* IDCheckRequest.swift in Sources */,
 				EB1751FA28AA8D43009FEFBF /* FindViewController.swift in Sources */,
+				EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */,
 				EB1751F828AA7D7A009FEFBF /* IDFindTabViewController.swift in Sources */,
 				EBB8F46228BFA61E0069D4E1 /* StorageTabViewController.swift in Sources */,
 				EBB8F46028BFA5830069D4E1 /* MyUpTabViewController.swift in Sources */,
