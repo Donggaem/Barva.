@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController {
     
@@ -31,6 +32,12 @@ class LoginViewController: UIViewController {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let homeNav = storyBoard.instantiateViewController(identifier: "HomeNav")
         self.changeRootViewController(homeNav)
+        
+//        let id = idTextField.text ?? ""
+//        let pw = pwTextField.text ?? ""
+//
+//        let param = LoginRequest(user_id: id, user_pw: pw)
+//        postLogin(param)
     }
     
     @IBAction func idpwFindPressed(_ sender: UIButton) {
@@ -85,5 +92,40 @@ extension LoginViewController: UITextFieldDelegate {
             //다음 버튼 색 변경
             loginBtn.backgroundColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
         }
+    }
+    
+    //MARK: POST LOGIN
+    private func postLogin(_ parameters: LoginRequest){
+        AF.request(BarvaURL.loginURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+            .validate()
+            .responseDecodable(of: LoginResponse.self) { [self] response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        
+                        BarvaLog.debug("postLogin")
+                        
+                        UserDefaults.standard.set(response.data?.token, forKey: "data")
+                        
+                        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+                        let homeNav = storyBoard.instantiateViewController(identifier: "HomeNav")
+                        self.changeRootViewController(homeNav)
+                        
+                    } else {
+                        BarvaLog.error("postLogin")
+                        let loginFail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        loginFail_alert.addAction(okAction)
+                        present(loginFail_alert, animated: false, completion: nil)
+                        
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    let loginFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    loginFail_alert.addAction(okAction)
+                    present(loginFail_alert, animated: false, completion: nil)
+                }
+            }
     }
 }

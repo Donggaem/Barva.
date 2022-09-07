@@ -182,7 +182,7 @@
 				EB25AD0C28A137170006C1F2 /* Model */,
 				EB25AD0D28A1372A0006C1F2 /* View */,
 				EB25AD0B28A137060006C1F2 /* Delegate */,
-				EBA63E9628AB714E00144E3A /* Debug */,
+				EBA63E9628AB714E00144E3A /* BarvaLog */,
 				EBB8F45928BF9A060069D4E1 /* Font */,
 				EBE4EDC128A5148E005C7516 /* Extension */,
 				EB25AD0028A136500006C1F2 /* Assets.xcassets */,
@@ -270,12 +270,12 @@
 			path = Color;
 			sourceTree = "<group>";
 		};
-		EBA63E9628AB714E00144E3A /* Debug */ = {
+		EBA63E9628AB714E00144E3A /* BarvaLog */ = {
 			isa = PBXGroup;
 			children = (
 				EBA63E9728AB717100144E3A /* BarvaLog.swift */,
 			);
-			path = Debug;
+			path = BarvaLog;
 			sourceTree = "<group>";
 		};
 		EBB8F45928BF9A060069D4E1 /* Font */ = {

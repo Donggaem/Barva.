@@ -277,14 +277,14 @@
                                                                                     <constraint firstAttribute="height" constant="1" id="3ew-rd-nLc"/>
                                                                                 </constraints>
                                                                             </view>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRw-W2-Qjz">
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBi-Te-gfd">
                                                                                 <rect key="frame" x="0.0" y="5.9999999999999991" width="330" height="13.666666666666664"/>
                                                                                 <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="8"/>
-                                                                                <color key="tintColor" red="0.0" green="0.27843137254901962" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                                <state key="normal" title="    사용가능한 닉네임입니다">
-                                                                                    <color key="titleColor" red="0.0" green="0.27843137254901962" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="default"/>
+                                                                                <state key="normal" title="    중복된 닉네임입니다">
+                                                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <imageReference key="image" image="exclamationmark.circle" catalog="system" symbolScale="default"/>
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12"/>
                                                                                 </state>
                                                                             </button>
@@ -335,14 +335,14 @@
                                                                                     <constraint firstAttribute="height" constant="1" id="niM-hN-Mbe"/>
                                                                                 </constraints>
                                                                             </view>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZB-Pv-gWy">
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wci-Zu-l6n">
                                                                                 <rect key="frame" x="0.0" y="5.9999999999999991" width="330" height="13.666666666666664"/>
                                                                                 <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="8"/>
-                                                                                <color key="tintColor" red="0.0" green="0.2784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                                <state key="normal" title="    사용가능한 닉네임입니다">
-                                                                                    <color key="titleColor" red="0.0" green="0.2784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="default"/>
+                                                                                <state key="normal" title="    중복된 아이디입니다">
+                                                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <imageReference key="image" image="exclamationmark.circle" catalog="system" symbolScale="default"/>
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12"/>
                                                                                 </state>
                                                                             </button>
@@ -404,14 +404,14 @@
                                                                                     <constraint firstAttribute="height" constant="1" id="fcE-4H-BW5"/>
                                                                                 </constraints>
                                                                             </view>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnQ-en-gk9">
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00S-uX-BR6">
                                                                                 <rect key="frame" x="0.0" y="5.9999999999999991" width="330" height="13.666666666666664"/>
                                                                                 <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="8"/>
-                                                                                <color key="tintColor" red="0.0" green="0.2784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                                <state key="normal" title="    사용가능한 닉네임입니다">
-                                                                                    <color key="titleColor" red="0.0" green="0.2784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="default"/>
+                                                                                <state key="normal" title="    비밀번호가 일치하지 않습니다">
+                                                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <imageReference key="image" image="exclamationmark.circle" catalog="system" symbolScale="default"/>
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12"/>
                                                                                 </state>
                                                                             </button>
@@ -601,6 +601,9 @@
                         <outlet property="idBtn" destination="qxj-Lq-05F" id="0Sf-lk-cRN"/>
                         <outlet property="idTextField" destination="OtH-l8-QCs" id="aIx-Hn-crg"/>
                         <outlet property="msgCheckNumBtn" destination="Ezx-rW-PFI" id="DX9-ed-2LJ"/>
+                        <outlet property="msgIdBtn" destination="Wci-Zu-l6n" id="dYt-wG-Hzq"/>
+                        <outlet property="msgNickBtn" destination="rBi-Te-gfd" id="wnw-fP-Bis"/>
+                        <outlet property="msgPwBtn" destination="00S-uX-BR6" id="fKH-5V-72V"/>
                         <outlet property="nickBtn" destination="v5Y-Rd-ngK" id="kbY-hk-YBG"/>
                         <outlet property="nickNameTextField" destination="TI9-ap-1W5" id="gIV-Jn-Iyg"/>
                         <outlet property="signinBtn" destination="Dmr-rY-1pa" id="Vk9-pb-7wK"/>
