@@ -18,7 +18,7 @@
         <scene sceneID="pH1-ob-irK">
             <objects>
                 <navigationController id="bLV-al-Ned" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="home-1" selectedImage="home" id="5of-g3-ak1"/>
+                    <tabBarItem key="tabBarItem" title="" image="house.circle" catalog="system" selectedImage="house.circle.fill" id="5of-g3-ak1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kcm-q0-jrV">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -409,8 +409,8 @@
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
-        <image name="home" width="16" height="18"/>
-        <image name="home-1" width="16" height="18"/>
+        <image name="house.circle" catalog="system" width="128" height="121"/>
+        <image name="house.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="quaternarySystemFillColor">
             <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

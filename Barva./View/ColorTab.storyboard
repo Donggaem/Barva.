@@ -89,7 +89,7 @@
         <scene sceneID="Sko-ps-sCV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h2S-p8-1HK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="palette-1" selectedImage="palette" id="V91-HS-EBx"/>
+                    <tabBarItem key="tabBarItem" title="" image="pawprint.circle" catalog="system" selectedImage="pawprint.circle.fill" id="V91-HS-EBx"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lLV-g2-ZBs">
@@ -108,8 +108,8 @@
     </scenes>
     <resources>
         <image name="add_a_photo" width="40" height="40"/>
-        <image name="palette" width="20" height="20"/>
-        <image name="palette-1" width="20" height="20"/>
+        <image name="pawprint.circle" catalog="system" width="128" height="121"/>
+        <image name="pawprint.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
