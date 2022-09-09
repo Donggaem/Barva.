@@ -202,6 +202,9 @@
                                                 <state key="normal" title="가입하기">
                                                     <color key="titleColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="signinBtnPressed:" destination="CHw-PK-Gr0" eventType="touchUpInside" id="uEE-Ir-QIi"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2eC-Uq-w2f">
                                                 <rect key="frame" x="30" y="115.66666666666663" width="330" height="557"/>
@@ -264,6 +267,9 @@
                                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 </state>
                                                                                 <state key="disabled" title="중복확인"/>
+                                                                                <connections>
+                                                                                    <action selector="nickBtnPressed:" destination="CHw-PK-Gr0" eventType="touchUpInside" id="KFP-Uw-XhR"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                     </stackView>
@@ -322,6 +328,9 @@
                                                                                 <state key="normal" title="중복화인">
                                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 </state>
+                                                                                <connections>
+                                                                                    <action selector="idBtnPressed:" destination="CHw-PK-Gr0" eventType="touchUpInside" id="W7n-4y-fyZ"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                     </stackView>
@@ -604,8 +613,11 @@
                         <outlet property="msgIdBtn" destination="Wci-Zu-l6n" id="dYt-wG-Hzq"/>
                         <outlet property="msgNickBtn" destination="rBi-Te-gfd" id="wnw-fP-Bis"/>
                         <outlet property="msgPwBtn" destination="00S-uX-BR6" id="fKH-5V-72V"/>
+                        <outlet property="nameTextField" destination="J0j-RN-Wuh" id="ytN-1Z-gRt"/>
                         <outlet property="nickBtn" destination="v5Y-Rd-ngK" id="kbY-hk-YBG"/>
                         <outlet property="nickNameTextField" destination="TI9-ap-1W5" id="gIV-Jn-Iyg"/>
+                        <outlet property="pwCheckTextField" destination="Yvz-bX-GcF" id="Dw3-R4-bKf"/>
+                        <outlet property="pwTextField" destination="UPc-m3-ato" id="fHm-lD-WbD"/>
                         <outlet property="signinBtn" destination="Dmr-rY-1pa" id="Vk9-pb-7wK"/>
                     </connections>
                 </viewController>

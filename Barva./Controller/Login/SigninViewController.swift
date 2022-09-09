@@ -10,6 +10,7 @@ import Alamofire
 
 class SigninViewController: UIViewController {
     
+    //MARK: IBOutlet
     @IBOutlet weak var nickBtn: UIButton!
     @IBOutlet weak var idBtn: UIButton!
     @IBOutlet weak var emailBtn: UIButton!
@@ -21,22 +22,53 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var msgIdBtn: UIButton!
     @IBOutlet weak var msgPwBtn: UIButton!
     
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var nickNameTextField: UITextField!
     @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var pwTextField: UITextField!
+    @IBOutlet weak var pwCheckTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var checkNumTextField: UITextField!
     
     var authNumber = ""
+    var checkNum = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        checkNum = 0
         
     }
     
     //MARK: IBACTION
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nickBtnPressed(_ sender: UIButton) {
+        if nickNameTextField.text == "" {
+            let checkNil_alert = UIAlertController(title: "실패", message: "닉네임을 입력해주세요.", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "확인", style: .default)
+            checkNil_alert.addAction(okAction)
+            present(checkNil_alert, animated: false, completion: nil)
+        }else {
+            let nick = nickNameTextField.text ?? ""
+            let param = NickCheckRequest(user_nick: nick)
+            postNickCheck(param)
+        }
+    }
+    
+    @IBAction func idBtnPressed(_ sender: UIButton) {
+        if idTextField.text == "" {
+            let checkNil_alert = UIAlertController(title: "실패", message: "아이디를 입력해주세요.", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "확인", style: .default)
+            checkNil_alert.addAction(okAction)
+            present(checkNil_alert, animated: false, completion: nil)
+        }else {
+            let id = idTextField.text ?? ""
+            let param = IDCheckRequest(user_id: id)
+            postIDCheck(param)
+        }
     }
     
     @IBAction func aurhMailBtnPressed(_ sender: UIButton) {
@@ -75,6 +107,54 @@ class SigninViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func signinBtnPressed(_ sender: UIButton) {
+        let id = idTextField.text ?? ""
+        let pw = pwTextField.text ?? ""
+        let pwCheck = pwCheckTextField.text ?? ""
+        let nick = nickNameTextField.text ?? ""
+        let name = nameTextField.text ?? ""
+        let email = emailTextField.text ?? ""
+        
+        switch checkNum {
+        case 0: let check_alert = UIAlertController(title: "실패", message: "아이디, 닉네임 중복 체크를 해주세요", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "확인", style: .default)
+            check_alert.addAction(okAction)
+            present(check_alert, animated: false, completion: nil)
+            
+        case 1:
+            let check_alert = UIAlertController(title: "실패", message: "아이디 중복 체크를 해주세요", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "확인", style: .default)
+            check_alert.addAction(okAction)
+            present(check_alert, animated: false, completion: nil)
+            
+        case 2:
+            let check_alert = UIAlertController(title: "실패", message: "이메일 인증을 완료해주세요", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "확인", style: .default)
+            check_alert.addAction(okAction)
+            present(check_alert, animated: false, completion: nil)
+            
+        case 3:
+            print(nick)
+            print(name)
+            print(id)
+            print(pw)
+            print(pwCheck)
+            print(email)
+            
+            let param = SignRequest(user_name: name, user_nick: nick, user_id: id, user_pw: pw, user_confirmPw: pwCheck, user_email: email)
+            postSignin(param)
+            
+        default:
+            checkNum = 0
+            let check_alert = UIAlertController(title: "실패", message: "회원가입을 다시 시도해주세요", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "확인", style: .default)
+            check_alert.addAction(okAction)
+            present(check_alert, animated: false, completion: nil)
+        }
+    }
+    
+    
     //MARK: INNER FUNC
     //Set UI
     private func setUI() {
@@ -89,7 +169,28 @@ class SigninViewController: UIViewController {
         checkNumBtn.layer.cornerRadius = 14
         signinBtn.layer.cornerRadius = 5
         
+        msgIdBtn.isHidden = true
+        msgPwBtn.isHidden = true
+        msgNickBtn.isHidden = true
         msgCheckNumBtn.isHidden = true
+        
+        self.idTextField.delegate = self
+        self.nameTextField.delegate = self
+        self.nickNameTextField.delegate = self
+        self.pwTextField.delegate = self
+        self.pwCheckTextField.delegate = self
+        self.emailTextField.delegate = self
+        self.checkNumTextField.delegate = self
+        
+        //텍스트필드 입력값 변경 감지
+        self.idTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.nameTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.nickNameTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.pwTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.pwCheckTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.emailTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.checkNumTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        
         
         //버튼 활성/비활성 액션
         self.nickNameTextField.addAction(UIAction(handler: { _ in
@@ -133,6 +234,17 @@ class SigninViewController: UIViewController {
             }
         }), for: .editingChanged)
         
+        self.pwCheckTextField.addAction(UIAction(handler: { _ in
+            if self.pwCheckTextField.text?.isEmpty == true {
+                
+                self.msgCheckNumBtn.isHidden = true
+                
+            } else {
+                self.msgCheckNumBtn.isHidden = false
+
+            }
+        }), for: .editingChanged)
+        
     }
     
     //이메일 형식 확인
@@ -142,17 +254,19 @@ class SigninViewController: UIViewController {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
+        
     }
     
     //버튼 메세지
     private func btnMessage(msgBtn: UIButton) {
+        
         BarvaLog.debug("btnMessage")
         msgBtn.isHidden = false
         msgBtn.titleLabel?.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 8)
         msgBtn.tintColor = UIColor(red: 0, green: 0.28, blue: 1, alpha: 1)
         msgBtn.setTitleColor(UIColor(red: 0, green: 0.28, blue: 1, alpha: 1), for: .normal)
         msgBtn.setImage(UIImage(systemName: "checkmark.circle"), for: .normal)
-//        msgBtn.setTitle("    인증번호가 일치합니다", for: .normal)
+        //        msgBtn.setTitle("    인증번호가 일치합니다", for: .normal)
     }
     
     //MARK: POST NICKCHECK
@@ -163,9 +277,11 @@ class SigninViewController: UIViewController {
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess == true {
-                        //                        checkNum += 1
-                        //                        nameCkeckBtn.isUserInteractionEnabled = false
-                        //                        ninknameTextField.isUserInteractionEnabled = false
+                        BarvaLog.debug("PostNickCheck")
+                        
+                        checkNum += 1
+                        nickBtn.isUserInteractionEnabled = false
+                        nickNameTextField.isUserInteractionEnabled = false
                         
                         btnMessage(msgBtn: msgNickBtn)
                         msgNickBtn.setTitle("    사용가능한 닉네임입니다", for: .normal)
@@ -176,13 +292,15 @@ class SigninViewController: UIViewController {
                         present(nameCk_alert, animated: false, completion: nil)
                         
                     } else {
-                        print("닉네임 중복")
+                        BarvaLog.error("PostNickCheck")
                         let nameCkFail_alert = UIAlertController(title: "중복", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         nameCkFail_alert.addAction(okAction)
                         present(nameCkFail_alert, animated: false, completion: nil)
                     }
                 case .failure(let error):
+                    BarvaLog.error("PostNickCheck")
+                    
                     print(error.localizedDescription)
                     let nameCkFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
@@ -200,9 +318,12 @@ class SigninViewController: UIViewController {
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess == true {
-                        //                        checkNum += 1
-                        //                        idCheckBtn.isUserInteractionEnabled = false
-                        //                        idTextField.isUserInteractionEnabled = false
+                        BarvaLog.debug("PostIDCheck")
+                        
+                        checkNum += 1
+                        idBtn.isUserInteractionEnabled = false
+                        idTextField.isUserInteractionEnabled = false
+                        
                         
                         btnMessage(msgBtn: msgIdBtn)
                         msgIdBtn.setTitle("    사용가능한 아이디입니다", for: .normal)
@@ -213,13 +334,14 @@ class SigninViewController: UIViewController {
                         present(idCk_alert, animated: false, completion: nil)
                         
                     } else {
-                        print("아이디 중복")
+                        BarvaLog.error("PostIDCheck")
                         let idCkFail_alert = UIAlertController(title: "중복", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         idCkFail_alert.addAction(okAction)
                         present(idCkFail_alert, animated: false, completion: nil)
                     }
                 case .failure(let error):
+                    BarvaLog.error("PostIDCheck")
                     print(error.localizedDescription)
                     let idCkFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
@@ -281,6 +403,7 @@ class SigninViewController: UIViewController {
                         
                         BarvaLog.debug("PostInspectMAil")
                         
+                        checkNum += 1
                         checkNumTextField.isUserInteractionEnabled = false
                         checkNumBtn.isUserInteractionEnabled = false
                         
@@ -302,6 +425,7 @@ class SigninViewController: UIViewController {
                         
                     }
                 case .failure(let error):
+                    BarvaLog.error("PostInspectMAil")
                     print(error.localizedDescription)
                     let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
@@ -309,5 +433,91 @@ class SigninViewController: UIViewController {
                     present(fail_alert, animated: false, completion: nil)
                 }
             }
+    }
+    
+    //MARK: POST SIGNIN
+    private func postSignin(_ parameters: SignRequest){
+        AF.request(BarvaURL.signupURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+            .validate()
+            .responseDecodable(of: SigninResponse.self) { [self] response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        
+                        BarvaLog.debug("PostSignin")
+                        
+                        let signin_alert = UIAlertController(title: "성공", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default) {
+                            (action) in self.navigationController?.popViewController(animated: true)
+                        }
+                        signin_alert.addAction(okAction)
+                        present(signin_alert, animated: false, completion: nil)
+                        
+                        
+                    } else {
+                        BarvaLog.error("PostSignin")
+                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        fail_alert.addAction(okAction)
+                        present(fail_alert, animated: false, completion: nil)
+                        
+                    }
+                case .failure(let error):
+                    BarvaLog.error("PostSignin")
+                    print(error.localizedDescription)
+                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    fail_alert.addAction(okAction)
+                    present(fail_alert, animated: false, completion: nil)
+                }
+            }
+    }
+}
+
+extension SigninViewController: UITextFieldDelegate{
+    private func isSameBothTextField(_ first: UITextField,_ second: UITextField) -> Bool {
+        
+        if(first.text == second.text) {
+            
+            return true
+        } else {
+            
+            return false
+        }
+    }
+    
+    //텍스트 필드 입력값 변하면 유효성 검사
+    @objc func TFdidChanged(_ sender: UITextField) {
+        
+        print("텍스트 변경 감지")
+        if isSameBothTextField(pwTextField, pwCheckTextField) == true {
+            btnMessage(msgBtn: msgPwBtn)
+            msgPwBtn.setTitle("    비밀번호가 일치합니다", for: .normal)
+        }else if self.pwTextField.text?.isEmpty == true {
+            msgPwBtn.isHidden = true
+            
+        }else if self.pwCheckTextField.text?.isEmpty == true {
+            msgPwBtn.isHidden = true
+            
+        }else {
+            msgPwBtn.isHidden = false
+            msgPwBtn.titleLabel?.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 8)
+            msgPwBtn.tintColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+            msgPwBtn.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 1), for: .normal)
+            msgPwBtn.setImage(UIImage(systemName: "exclamationmark.circle"), for: .normal)
+            msgPwBtn.setTitle("    비밀번호가 일치하지 않습니다", for: .normal)
+        }
+        
+        //텍스트필드가 채워졌는지, 비밀번호가 일치하는 지 확인.
+        if !(self.idTextField.text?.isEmpty ?? true)
+            && !(self.pwTextField.text?.isEmpty ?? true) && !(self.pwCheckTextField.text?.isEmpty ?? true) && !(self.nickNameTextField.text?.isEmpty ?? true) && !(self.nameTextField.text?.isEmpty ?? true) && !(self.emailTextField.text?.isEmpty ?? true) && !(self.checkNumTextField.text?.isEmpty ?? true)
+            && isSameBothTextField(pwTextField, pwCheckTextField) {
+            signinBtn.isEnabled = true
+        }
+        else {
+            signinBtn.isEnabled = false
+            
+        }
+        
     }
 }
