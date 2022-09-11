@@ -91,7 +91,6 @@ class SigninViewController: UIViewController {
         
         if checkNumTextField.text == authNumber {
             
-            //            msgCheckNumBtn.isHidden = true
             let email = emailTextField.text ?? ""
             let checkNum = checkNumTextField.text ?? ""
             
@@ -99,7 +98,7 @@ class SigninViewController: UIViewController {
             postInspectMail(param)
             
         } else {
-            msgCheckNumBtn.isHidden = false
+            btnMessageF(msgBtn: msgCheckNumBtn)
             let fail_alert = UIAlertController(title: "실패", message: "인증번호를 다시 확인해주세요", preferredStyle: UIAlertController.Style.alert)
             let okAction = UIAlertAction(title: "확인", style: .default)
             fail_alert.addAction(okAction)
@@ -169,10 +168,14 @@ class SigninViewController: UIViewController {
         checkNumBtn.layer.cornerRadius = 14
         signinBtn.layer.cornerRadius = 5
         
-        msgIdBtn.isHidden = true
-        msgPwBtn.isHidden = true
-        msgNickBtn.isHidden = true
-        msgCheckNumBtn.isHidden = true
+        btnHidden(msgBtn: msgIdBtn)
+        btnHidden(msgBtn: msgPwBtn)
+        btnHidden(msgBtn: msgNickBtn)
+        btnHidden(msgBtn: msgCheckNumBtn)
+//        msgIdBtn.isHidden = true
+//        msgPwBtn.isHidden = true
+//        msgNickBtn.isHidden = true
+//        msgCheckNumBtn.isHidden = true
         
         self.idTextField.delegate = self
         self.nameTextField.delegate = self
@@ -225,7 +228,7 @@ class SigninViewController: UIViewController {
         
         self.checkNumTextField.addAction(UIAction(handler: { _ in
             if self.checkNumTextField.text?.isEmpty == true {
-                self.msgCheckNumBtn.isHidden = true
+                self.btnHidden(msgBtn: self.msgCheckNumBtn)
                 self.checkNumBtn.isEnabled = false
                 self.checkNumBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
             } else {
@@ -234,17 +237,7 @@ class SigninViewController: UIViewController {
             }
         }), for: .editingChanged)
         
-        self.pwCheckTextField.addAction(UIAction(handler: { _ in
-            if self.pwCheckTextField.text?.isEmpty == true {
-                
-                self.msgCheckNumBtn.isHidden = true
-                
-            } else {
-                self.msgCheckNumBtn.isHidden = false
 
-            }
-        }), for: .editingChanged)
-        
     }
     
     //이메일 형식 확인
@@ -258,15 +251,31 @@ class SigninViewController: UIViewController {
     }
     
     //버튼 메세지
-    private func btnMessage(msgBtn: UIButton) {
+    private func btnMessageT(msgBtn: UIButton) {
         
-        BarvaLog.debug("btnMessage")
-        msgBtn.isHidden = false
+        BarvaLog.debug("btnMessageT")
         msgBtn.titleLabel?.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 8)
         msgBtn.tintColor = UIColor(red: 0, green: 0.28, blue: 1, alpha: 1)
         msgBtn.setTitleColor(UIColor(red: 0, green: 0.28, blue: 1, alpha: 1), for: .normal)
         msgBtn.setImage(UIImage(systemName: "checkmark.circle"), for: .normal)
-        //        msgBtn.setTitle("    인증번호가 일치합니다", for: .normal)
+    }
+    
+    private func btnMessageF(msgBtn: UIButton) {
+        
+        BarvaLog.debug("btnMessageF")
+        msgBtn.titleLabel?.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 8)
+        msgBtn.tintColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+        msgBtn.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 1), for: .normal)
+        msgBtn.setImage(UIImage(systemName: "exclamationmark.circle"), for: .normal)
+    }
+    
+    private func btnHidden(msgBtn: UIButton) {
+        
+        BarvaLog.debug("btnHidden")
+        msgBtn.titleLabel?.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 8)
+        msgBtn.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        msgBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        
     }
     
     //MARK: POST NICKCHECK
@@ -283,7 +292,7 @@ class SigninViewController: UIViewController {
                         nickBtn.isUserInteractionEnabled = false
                         nickNameTextField.isUserInteractionEnabled = false
                         
-                        btnMessage(msgBtn: msgNickBtn)
+                        btnMessageT(msgBtn: msgNickBtn)
                         msgNickBtn.setTitle("    사용가능한 닉네임입니다", for: .normal)
                         
                         let nameCk_alert = UIAlertController(title: "가능", message: response.message, preferredStyle: UIAlertController.Style.alert)
@@ -293,6 +302,7 @@ class SigninViewController: UIViewController {
                         
                     } else {
                         BarvaLog.error("PostNickCheck")
+                        btnMessageF(msgBtn: msgNickBtn)
                         let nameCkFail_alert = UIAlertController(title: "중복", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         nameCkFail_alert.addAction(okAction)
@@ -325,7 +335,7 @@ class SigninViewController: UIViewController {
                         idTextField.isUserInteractionEnabled = false
                         
                         
-                        btnMessage(msgBtn: msgIdBtn)
+                        btnMessageT(msgBtn: msgIdBtn)
                         msgIdBtn.setTitle("    사용가능한 아이디입니다", for: .normal)
                         
                         let idCk_alert = UIAlertController(title: "가능", message: response.message, preferredStyle: UIAlertController.Style.alert)
@@ -335,6 +345,7 @@ class SigninViewController: UIViewController {
                         
                     } else {
                         BarvaLog.error("PostIDCheck")
+                        btnMessageF(msgBtn: msgIdBtn)
                         let idCkFail_alert = UIAlertController(title: "중복", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         idCkFail_alert.addAction(okAction)
@@ -375,6 +386,7 @@ class SigninViewController: UIViewController {
                         
                     } else {
                         BarvaLog.error("PostAuthMail")
+                        
                         let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         fail_alert.addAction(okAction)
@@ -407,7 +419,7 @@ class SigninViewController: UIViewController {
                         checkNumTextField.isUserInteractionEnabled = false
                         checkNumBtn.isUserInteractionEnabled = false
                         
-                        btnMessage(msgBtn: msgCheckNumBtn)
+                        btnMessageT(msgBtn: msgCheckNumBtn)
                         msgCheckNumBtn.setTitle("    인증번호가 일치합니다", for: .normal)
                         
                         let mail_alert = UIAlertController(title: "이메일 인증 완료", message: response.message, preferredStyle: UIAlertController.Style.alert)
@@ -418,6 +430,7 @@ class SigninViewController: UIViewController {
                         
                     } else {
                         BarvaLog.error("PostInspectMAil")
+                        btnMessageF(msgBtn: msgCheckNumBtn)
                         let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         fail_alert.addAction(okAction)
@@ -490,23 +503,19 @@ extension SigninViewController: UITextFieldDelegate{
     @objc func TFdidChanged(_ sender: UITextField) {
         
         print("텍스트 변경 감지")
-        if isSameBothTextField(pwTextField, pwCheckTextField) == true {
-            btnMessage(msgBtn: msgPwBtn)
-            msgPwBtn.setTitle("    비밀번호가 일치합니다", for: .normal)
-        }else if self.pwTextField.text?.isEmpty == true {
-            msgPwBtn.isHidden = true
-            
+        
+        if self.pwTextField.text?.isEmpty == true{
+            btnHidden(msgBtn: msgPwBtn)
         }else if self.pwCheckTextField.text?.isEmpty == true {
-            msgPwBtn.isHidden = true
-            
+            btnHidden(msgBtn: msgPwBtn)
+        }else if isSameBothTextField(pwTextField, pwCheckTextField) == true {
+            btnMessageT(msgBtn: msgPwBtn)
+            msgPwBtn.setTitle("    비밀번호가 일치합니다", for: .normal)
         }else {
-            msgPwBtn.isHidden = false
-            msgPwBtn.titleLabel?.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 8)
-            msgPwBtn.tintColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
-            msgPwBtn.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 1), for: .normal)
-            msgPwBtn.setImage(UIImage(systemName: "exclamationmark.circle"), for: .normal)
+            btnMessageF(msgBtn: msgPwBtn)
             msgPwBtn.setTitle("    비밀번호가 일치하지 않습니다", for: .normal)
         }
+        
         
         //텍스트필드가 채워졌는지, 비밀번호가 일치하는 지 확인.
         if !(self.idTextField.text?.isEmpty ?? true)

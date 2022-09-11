@@ -12,4 +12,9 @@ struct SigninResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
+    var data: err?
+}
+
+struct err: Decodable {
+    var err: String
 }

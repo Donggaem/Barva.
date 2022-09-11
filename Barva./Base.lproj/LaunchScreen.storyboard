@@ -21,10 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="barva." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdv-Dn-1M2">
-                                <rect key="frame" x="226" y="424" width="144" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="barva." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug6-eA-D25">
+                                <rect key="frame" x="250" y="380" width="120" height="49"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="VVE-T0-TY4"/>
+                                    <constraint firstAttribute="height" constant="49" id="Zlz-QF-kn8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MPLUS1Code-Regular" family="M PLUS 1 Code" pointSize="40"/>
                                 <nil key="textColor"/>
@@ -34,15 +34,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qdv-Dn-1M2" secondAttribute="trailing" constant="44" id="E2q-8n-P2b"/>
-                            <constraint firstItem="qdv-Dn-1M2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="380" id="uAc-WU-N83"/>
-                            <constraint firstItem="qdv-Dn-1M2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="226" id="uxT-1P-8gZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ug6-eA-D25" secondAttribute="trailing" constant="44" id="Ak8-pf-9ba"/>
+                            <constraint firstItem="Ug6-eA-D25" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="380" id="Cfz-nP-dCs"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
