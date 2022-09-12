@@ -10,8 +10,9 @@ import Foundation
 struct BarvaURL {
     
     static let loginURL = "http://3.34.183.110:3003/login"
-    static let signupURL = "http://3.34.183.110:3003/signup"
-    static let checkURL = "http://3.34.183.110:3003/duplicateCheck"
+    static let signupURL = "http://3.34.183.110:3003/enroll"
+    static let nickCheckURL = "http://3.34.183.110:3003/duplicatedNickCheck"
+    static let idCheckURL = "http://3.34.183.110:3003/duplicatedIdCheck"
     static let authMailURL = "http://3.34.183.110:3003/authMail"
     static let insepectMailURL = "http://3.34.183.110:3003/inspectMail"
 

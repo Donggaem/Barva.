@@ -30,8 +30,16 @@ class SigninViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var checkNumTextField: UITextField!
     
+    @IBOutlet weak var allCheckBtn: UIButton!
+    @IBOutlet weak var termsBtn: UIButton!
+    @IBOutlet weak var termsGoBtn: UIButton!
+    @IBOutlet weak var personalBtn: UIButton!
+    @IBOutlet weak var personalGoBtn: UIButton!
+    @IBOutlet weak var marketingBtn: UIButton!
+    
     var authNumber = ""
     var checkNum = 0
+    var marketingBool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,18 +48,30 @@ class SigninViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    
     //MARK: IBACTION
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func nickBtnPressed(_ sender: UIButton) {
+        let nick = nickNameTextField.text ?? ""
         if nickNameTextField.text == "" {
             let checkNil_alert = UIAlertController(title: "실패", message: "닉네임을 입력해주세요.", preferredStyle: UIAlertController.Style.alert)
             let okAction = UIAlertAction(title: "확인", style: .default)
             checkNil_alert.addAction(okAction)
             present(checkNil_alert, animated: false, completion: nil)
-        }else {
+            
+        }else if isValidNick(testStr: nick) == false {
+            let check_alert = UIAlertController(title: "실패", message: "닉네임형식을 확인해주세요.\n (한글, 영어 대소문자 사용 2~15자이내) ", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "확인", style: .default)
+            check_alert.addAction(okAction)
+            present(check_alert, animated: false, completion: nil)
+        }
+        else {
             let nick = nickNameTextField.text ?? ""
             let param = NickCheckRequest(user_nick: nick)
             postNickCheck(param)
@@ -59,13 +79,20 @@ class SigninViewController: UIViewController {
     }
     
     @IBAction func idBtnPressed(_ sender: UIButton) {
+        let id = idTextField.text ?? ""
         if idTextField.text == "" {
             let checkNil_alert = UIAlertController(title: "실패", message: "아이디를 입력해주세요.", preferredStyle: UIAlertController.Style.alert)
             let okAction = UIAlertAction(title: "확인", style: .default)
             checkNil_alert.addAction(okAction)
             present(checkNil_alert, animated: false, completion: nil)
-        }else {
-            let id = idTextField.text ?? ""
+            
+        }else if isValidID(testStr: id) == false {
+            let check_alert = UIAlertController(title: "실패", message: "아이디형식을 확인해주세요.\n (영어 대소문자, 숫자 사용 5~15자이내) ", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "확인", style: .default)
+            check_alert.addAction(okAction)
+            present(check_alert, animated: false, completion: nil)
+        }
+        else {
             let param = IDCheckRequest(user_id: id)
             postIDCheck(param)
         }
@@ -78,6 +105,7 @@ class SigninViewController: UIViewController {
         if isValidEmail(testStr: email) == true {
             let param = AuthMailRequest(user_email: email)
             postAuthMail(param)
+            
         }else {
             let fail_alert = UIAlertController(title: "실패", message: "이메일 형식이 잘못되었습니다", preferredStyle: UIAlertController.Style.alert)
             let okAction = UIAlertAction(title: "확인", style: .default)
@@ -106,6 +134,71 @@ class SigninViewController: UIViewController {
         }
         
     }
+    @IBAction func allCheckBtnPressed(_ sender: UIButton) {
+        if allCheckBtn.isSelected == false {
+            termsCheckColorT(checkBtn: allCheckBtn)
+            termsCheckColorT(checkBtn: termsBtn)
+            termsCheckColorT(checkBtn: termsGoBtn)
+            termsCheckColorT(checkBtn: personalBtn)
+            termsCheckColorT(checkBtn: personalGoBtn)
+            termsCheckColorT(checkBtn: marketingBtn)
+            allCheckBtn.isSelected = true
+        }else {
+            termsCheckColorF(checkBtn: allCheckBtn)
+            termsCheckColorF(checkBtn: termsBtn)
+            termsCheckColorF(checkBtn: termsGoBtn)
+            termsCheckColorF(checkBtn: personalBtn)
+            termsCheckColorF(checkBtn: personalGoBtn)
+            termsCheckColorF(checkBtn: marketingBtn)
+            allCheckBtn.isSelected = false
+        }
+        
+
+    }
+    @IBAction func termsBtnPressed(_ sender: UIButton) {
+        if termsBtn.isSelected == false {
+            termsCheckColorT(checkBtn: termsBtn)
+            termsCheckColorT(checkBtn: termsGoBtn)
+            termsBtn.isSelected = true
+            allCheck()
+        }else {
+            termsCheckColorF(checkBtn: termsBtn)
+            termsCheckColorF(checkBtn: termsGoBtn)
+            termsBtn.isSelected = false
+            allCheck()
+        }
+    }
+    @IBAction func termsGoBtnPressed(_ sender: UIButton) {
+        
+    }
+    @IBAction func personalBtnPressed(_ sender: UIButton) {
+        if personalBtn.isSelected == false {
+            termsCheckColorT(checkBtn: personalBtn)
+            termsCheckColorT(checkBtn: personalGoBtn)
+            personalBtn.isSelected = true
+            allCheck()
+        }else {
+            termsCheckColorF(checkBtn: personalBtn)
+            termsCheckColorF(checkBtn: personalGoBtn)
+            personalBtn.isSelected = false
+            allCheck()
+        }
+    }
+    @IBAction func personalGoBtnPressed(_ sender: UIButton) {
+    }
+    @IBAction func marketingBtnPressed(_ sender: UIButton) {
+        if marketingBtn.isSelected == false {
+            termsCheckColorT(checkBtn: marketingBtn)
+            marketingBool = true
+            marketingBtn.isSelected = true
+            allCheck()
+        }else {
+            termsCheckColorF(checkBtn: marketingBtn)
+            marketingBool = false
+            marketingBtn.isSelected = false
+            allCheck()
+        }
+    }
     
     @IBAction func signinBtnPressed(_ sender: UIButton) {
         let id = idTextField.text ?? ""
@@ -114,6 +207,7 @@ class SigninViewController: UIViewController {
         let nick = nickNameTextField.text ?? ""
         let name = nameTextField.text ?? ""
         let email = emailTextField.text ?? ""
+        let marketing = marketingBool
         
         switch checkNum {
         case 0: let check_alert = UIAlertController(title: "실패", message: "아이디, 닉네임 중복 체크를 해주세요", preferredStyle: UIAlertController.Style.alert)
@@ -140,8 +234,9 @@ class SigninViewController: UIViewController {
             print(pw)
             print(pwCheck)
             print(email)
+            print(marketing)
             
-            let param = SignRequest(user_name: name, user_nick: nick, user_id: id, user_pw: pw, user_confirmPw: pwCheck, user_email: email)
+            let param = SignRequest(user_name: name, user_nick: nick, user_id: id, user_pw: pw, user_confirmPw: pwCheck, user_email: email, marketing: marketing)
             postSignin(param)
             
         default:
@@ -157,7 +252,7 @@ class SigninViewController: UIViewController {
     //MARK: INNER FUNC
     //Set UI
     private func setUI() {
-        
+                
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
         
@@ -172,10 +267,6 @@ class SigninViewController: UIViewController {
         btnHidden(msgBtn: msgPwBtn)
         btnHidden(msgBtn: msgNickBtn)
         btnHidden(msgBtn: msgCheckNumBtn)
-//        msgIdBtn.isHidden = true
-//        msgPwBtn.isHidden = true
-//        msgNickBtn.isHidden = true
-//        msgCheckNumBtn.isHidden = true
         
         self.idTextField.delegate = self
         self.nameTextField.delegate = self
@@ -240,6 +331,34 @@ class SigninViewController: UIViewController {
 
     }
     
+    //이름 형식 확인
+    private func isValidName(testStr: String) -> Bool {
+        let nameRegEx = "[가-힣A-Za-z]{2,10}"
+        let nameTest = NSPredicate(format:"SELF MATCHES %@", nameRegEx)
+        return nameTest.evaluate(with: testStr)
+    }
+    
+    //닉네임 형식 확인
+    private func isValidNick(testStr: String) -> Bool {
+        let nickRegEx = "[가-힣A-Za-z0-9]{2,15}"
+        let nickTest = NSPredicate(format:"SELF MATCHES %@", nickRegEx)
+        return nickTest.evaluate(with: testStr)
+    }
+    
+    //아이디 형식 확인
+    private func isValidID(testStr: String) -> Bool {
+        let idRegEx = "[A-Za-z0-9]{5,15}"
+        let idTest = NSPredicate(format:"SELF MATCHES %@", idRegEx)
+        return idTest.evaluate(with: testStr)
+    }
+    
+    //비밀번호 형식 확인
+    private func isValidPW(testStr: String) -> Bool {
+        let pwRegEx = "[A-Za-z0-9!_@$%^&+=]{6,15}"
+        let pwTest = NSPredicate(format:"SELF MATCHES %@", pwRegEx)
+        return pwTest.evaluate(with: testStr)
+    }
+    
     //이메일 형식 확인
     private func isValidEmail(testStr:String) -> Bool {
         
@@ -254,6 +373,7 @@ class SigninViewController: UIViewController {
     private func btnMessageT(msgBtn: UIButton) {
         
         BarvaLog.debug("btnMessageT")
+        msgBtn.makeImageInset(margin: 4)
         msgBtn.titleLabel?.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 8)
         msgBtn.tintColor = UIColor(red: 0, green: 0.28, blue: 1, alpha: 1)
         msgBtn.setTitleColor(UIColor(red: 0, green: 0.28, blue: 1, alpha: 1), for: .normal)
@@ -263,6 +383,7 @@ class SigninViewController: UIViewController {
     private func btnMessageF(msgBtn: UIButton) {
         
         BarvaLog.debug("btnMessageF")
+        msgBtn.makeImageInset(margin: 4)
         msgBtn.titleLabel?.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 8)
         msgBtn.tintColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
         msgBtn.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 1), for: .normal)
@@ -278,9 +399,30 @@ class SigninViewController: UIViewController {
         
     }
     
+    //약관 색깔
+    private func termsCheckColorT(checkBtn: UIButton) {
+        BarvaLog.debug("termsCheckT")
+        checkBtn.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        checkBtn.setTitleColor(UIColor(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+    }
+    
+    private func termsCheckColorF(checkBtn: UIButton) {
+        BarvaLog.debug("termsCheckF")
+        checkBtn.tintColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+        checkBtn.setTitleColor(UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1), for: .normal)
+    }
+    
+    private func allCheck(){
+        if (termsBtn.isSelected == true) && (personalBtn.isSelected == true) && (marketingBtn.isSelected == true) {
+            termsCheckColorT(checkBtn: allCheckBtn)
+        }else {
+            termsCheckColorF(checkBtn: allCheckBtn)
+        }
+    }
+    
     //MARK: POST NICKCHECK
     private func postNickCheck(_ parameters: NickCheckRequest){
-        AF.request(BarvaURL.checkURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+        AF.request(BarvaURL.nickCheckURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
             .responseDecodable(of: NickCheckResponse.self) { [self] response in
                 switch response.result {
@@ -293,7 +435,7 @@ class SigninViewController: UIViewController {
                         nickNameTextField.isUserInteractionEnabled = false
                         
                         btnMessageT(msgBtn: msgNickBtn)
-                        msgNickBtn.setTitle("    사용가능한 닉네임입니다", for: .normal)
+                        msgNickBtn.setTitle("사용가능한 닉네임입니다", for: .normal)
                         
                         let nameCk_alert = UIAlertController(title: "가능", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
@@ -322,7 +464,7 @@ class SigninViewController: UIViewController {
     
     //MARK: POST IDCHECK
     private func postIDCheck(_ parameters: IDCheckRequest){
-        AF.request(BarvaURL.checkURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+        AF.request(BarvaURL.idCheckURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
             .responseDecodable(of: IDCheckResponse.self) { [self] response in
                 switch response.result {
@@ -336,7 +478,7 @@ class SigninViewController: UIViewController {
                         
                         
                         btnMessageT(msgBtn: msgIdBtn)
-                        msgIdBtn.setTitle("    사용가능한 아이디입니다", for: .normal)
+                        msgIdBtn.setTitle("사용가능한 아이디입니다", for: .normal)
                         
                         let idCk_alert = UIAlertController(title: "가능", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
@@ -420,7 +562,7 @@ class SigninViewController: UIViewController {
                         checkNumBtn.isUserInteractionEnabled = false
                         
                         btnMessageT(msgBtn: msgCheckNumBtn)
-                        msgCheckNumBtn.setTitle("    인증번호가 일치합니다", for: .normal)
+                        msgCheckNumBtn.setTitle("인증번호가 일치합니다", for: .normal)
                         
                         let mail_alert = UIAlertController(title: "이메일 인증 완료", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
@@ -510,10 +652,11 @@ extension SigninViewController: UITextFieldDelegate{
             btnHidden(msgBtn: msgPwBtn)
         }else if isSameBothTextField(pwTextField, pwCheckTextField) == true {
             btnMessageT(msgBtn: msgPwBtn)
-            msgPwBtn.setTitle("    비밀번호가 일치합니다", for: .normal)
+            msgPwBtn.setTitle("비밀번호가 일치합니다", for: .normal)
         }else {
             btnMessageF(msgBtn: msgPwBtn)
-            msgPwBtn.setTitle("    비밀번호가 일치하지 않습니다", for: .normal)
+            msgPwBtn.setTitle("비밀번호가 일치하지 않습니다", for: .normal)
+
         }
         
         
@@ -527,6 +670,43 @@ extension SigninViewController: UITextFieldDelegate{
             signinBtn.isEnabled = false
             
         }
-        
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == nameTextField {
+            if isValidName(testStr: nameTextField.text ?? "") == false {
+                let fail_alert = UIAlertController(title: "실패", message: "이름 형식이 잘못되었습니다\n 한글, 영어 대소문자 사용 2~10자 이내", preferredStyle: UIAlertController.Style.alert)
+                let okAction = UIAlertAction(title: "확인", style: .default)
+                fail_alert.addAction(okAction)
+                present(fail_alert, animated: false, completion: nil)
+            }
+        }else if textField == pwTextField {
+            if isValidPW(testStr: pwTextField.text ?? "") == false {
+                let fail_alert = UIAlertController(title: "실패", message: "비밀번호 형식이 잘못되었습니다\n 한글, 영어 대소문자,숫자, !_@$%^&+= 사용 6~15자 이내", preferredStyle: UIAlertController.Style.alert)
+                let okAction = UIAlertAction(title: "확인", style: .default)
+                fail_alert.addAction(okAction)
+                present(fail_alert, animated: false, completion: nil)
+            }
+        }
+    }
+}
+
+extension UIButton {
+  func makeImageInset(margin: CGFloat) {
+    let padding = margin / 2
+    imageEdgeInsets = UIEdgeInsets(top: 0, left: -padding, bottom: 0, right: padding)
+    titleEdgeInsets = UIEdgeInsets(top: 0, left: padding, bottom: 0, right: -padding)
+    contentEdgeInsets = UIEdgeInsets(top: 0, left: padding, bottom: 0, right: padding
+    )
+  }
+  
+  func setUnderLineButton() {
+    guard let title = title(for: .normal) else { return }
+    let attributedString = NSMutableAttributedString(string: title)
+    attributedString.addAttribute(.underlineStyle,
+                                  value: NSUnderlineStyle.single.rawValue,
+                                  range: NSRange(location: 0, length: title.count)
+    )
+    setAttributedTitle(attributedString, for: .normal)
+  }
 }

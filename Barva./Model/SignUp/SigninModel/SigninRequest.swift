@@ -15,5 +15,5 @@ struct SignRequest: Encodable {
     var user_pw: String
     var user_confirmPw: String
     var user_email: String
-    
+    var marketing: Bool
 }
