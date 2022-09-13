@@ -66,6 +66,8 @@ class SigninViewController: UIViewController {
             present(checkNil_alert, animated: false, completion: nil)
             
         }else if isValidNick(testStr: nick) == false {
+            btnMessageF(msgBtn: msgNickBtn)
+            msgNickBtn.setTitle("닉네임형식을 확인해주세요.\n (한글, 영어 대소문자 사용 2~15자이내) ", for: .normal)
             let check_alert = UIAlertController(title: "실패", message: "닉네임형식을 확인해주세요.\n (한글, 영어 대소문자 사용 2~15자이내) ", preferredStyle: UIAlertController.Style.alert)
             let okAction = UIAlertAction(title: "확인", style: .default)
             check_alert.addAction(okAction)
@@ -87,6 +89,8 @@ class SigninViewController: UIViewController {
             present(checkNil_alert, animated: false, completion: nil)
             
         }else if isValidID(testStr: id) == false {
+            btnMessageF(msgBtn: msgIdBtn)
+            msgIdBtn.setTitle("아이디형식을 확인해주세요.\n (영어 대소문자, 숫자 사용 5~15자이내) ", for: .normal)
             let check_alert = UIAlertController(title: "실패", message: "아이디형식을 확인해주세요.\n (영어 대소문자, 숫자 사용 5~15자이내) ", preferredStyle: UIAlertController.Style.alert)
             let okAction = UIAlertAction(title: "확인", style: .default)
             check_alert.addAction(okAction)
@@ -127,6 +131,7 @@ class SigninViewController: UIViewController {
             
         } else {
             btnMessageF(msgBtn: msgCheckNumBtn)
+            msgCheckNumBtn.setTitle("인증번호가 일치하지 않습니다", for: .normal)
             let fail_alert = UIAlertController(title: "실패", message: "인증번호를 다시 확인해주세요", preferredStyle: UIAlertController.Style.alert)
             let okAction = UIAlertAction(title: "확인", style: .default)
             fail_alert.addAction(okAction)
@@ -134,6 +139,7 @@ class SigninViewController: UIViewController {
         }
         
     }
+    
     @IBAction func allCheckBtnPressed(_ sender: UIButton) {
         if allCheckBtn.isSelected == false {
             termsCheckColorT(checkBtn: allCheckBtn)
@@ -188,14 +194,15 @@ class SigninViewController: UIViewController {
     }
     @IBAction func marketingBtnPressed(_ sender: UIButton) {
         if marketingBtn.isSelected == false {
+            print(marketingBtn.isSelected)
             termsCheckColorT(checkBtn: marketingBtn)
-            marketingBool = true
             marketingBtn.isSelected = true
+            marketingBool = true
             allCheck()
         }else {
             termsCheckColorF(checkBtn: marketingBtn)
-            marketingBool = false
             marketingBtn.isSelected = false
+            marketingBool = false
             allCheck()
         }
     }
@@ -236,8 +243,10 @@ class SigninViewController: UIViewController {
             print(email)
             print(marketing)
             
-            let param = SignRequest(user_name: name, user_nick: nick, user_id: id, user_pw: pw, user_confirmPw: pwCheck, user_email: email, marketing: marketing)
-            postSignin(param)
+                
+                let param = SignRequest(user_name: name, user_nick: nick, user_id: id, user_pw: pw, user_confirmPw: pwCheck, user_email: email, marketing: marketing)
+                postSignin(param)
+            
             
         default:
             checkNum = 0
@@ -291,6 +300,7 @@ class SigninViewController: UIViewController {
             if self.nickNameTextField.text?.isEmpty == true {
                 self.nickBtn.isEnabled = false
                 self.nickBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
+                self.btnHidden(msgBtn: self.msgNickBtn)
             } else {
                 self.nickBtn.isEnabled = true
                 self.nickBtn.backgroundColor = .black
@@ -301,6 +311,7 @@ class SigninViewController: UIViewController {
             if self.idTextField.text?.isEmpty == true {
                 self.idBtn.isEnabled = false
                 self.idBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
+                self.btnHidden(msgBtn: self.msgIdBtn)
             } else {
                 self.idBtn.isEnabled = true
                 self.idBtn.backgroundColor = .black
@@ -322,6 +333,7 @@ class SigninViewController: UIViewController {
                 self.btnHidden(msgBtn: self.msgCheckNumBtn)
                 self.checkNumBtn.isEnabled = false
                 self.checkNumBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
+                self.btnHidden(msgBtn: self.msgCheckNumBtn)
             } else {
                 self.checkNumBtn.isEnabled = true
                 self.checkNumBtn.backgroundColor = .black
@@ -445,7 +457,9 @@ class SigninViewController: UIViewController {
                     } else {
                         BarvaLog.error("PostNickCheck")
                         btnMessageF(msgBtn: msgNickBtn)
-                        let nameCkFail_alert = UIAlertController(title: "중복", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        print(response.data?.err)
+                        msgNickBtn.setTitle(response.message, for: .normal)
+                        let nameCkFail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         nameCkFail_alert.addAction(okAction)
                         present(nameCkFail_alert, animated: false, completion: nil)
@@ -488,6 +502,7 @@ class SigninViewController: UIViewController {
                     } else {
                         BarvaLog.error("PostIDCheck")
                         btnMessageF(msgBtn: msgIdBtn)
+                        msgIdBtn.setTitle(response.message, for: .normal)
                         let idCkFail_alert = UIAlertController(title: "중복", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         idCkFail_alert.addAction(okAction)
@@ -573,6 +588,8 @@ class SigninViewController: UIViewController {
                     } else {
                         BarvaLog.error("PostInspectMAil")
                         btnMessageF(msgBtn: msgCheckNumBtn)
+                        msgCheckNumBtn.setTitle(response.message, for: .normal)
+                        print(response.data?.err)
                         let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         fail_alert.addAction(okAction)
@@ -660,15 +677,16 @@ extension SigninViewController: UITextFieldDelegate{
         }
         
         
-        //텍스트필드가 채워졌는지, 비밀번호가 일치하는 지 확인.
+        //텍스트필드가 채워졌는지, 비밀번호가 일치하는 지 확인, 필수 약관을 동의 했는지
         if !(self.idTextField.text?.isEmpty ?? true)
             && !(self.pwTextField.text?.isEmpty ?? true) && !(self.pwCheckTextField.text?.isEmpty ?? true) && !(self.nickNameTextField.text?.isEmpty ?? true) && !(self.nameTextField.text?.isEmpty ?? true) && !(self.emailTextField.text?.isEmpty ?? true) && !(self.checkNumTextField.text?.isEmpty ?? true)
-            && isSameBothTextField(pwTextField, pwCheckTextField) {
+            && isSameBothTextField(pwTextField, pwCheckTextField) && (termsBtn.isSelected == true) && (personalBtn.isSelected == true) {
             signinBtn.isEnabled = true
+            signinBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         }
         else {
             signinBtn.isEnabled = false
-            
+            signinBtn.backgroundColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
         }
     }
     

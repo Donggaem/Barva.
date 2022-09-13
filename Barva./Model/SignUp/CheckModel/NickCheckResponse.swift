@@ -12,5 +12,9 @@ struct NickCheckResponse: Decodable{
     var isSuccess: Bool
     var code: Int
     var message: String
-    
+    var data: Nickerr?
+}
+
+struct Nickerr: Decodable{
+    var err: String
 }
