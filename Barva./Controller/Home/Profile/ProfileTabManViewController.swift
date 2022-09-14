@@ -14,8 +14,6 @@ class ProfileTabManViewController: TabmanViewController {
     private var viewControllers: [UIViewController] = []
     let myUpVC = UIStoryboard.init(name: "ProfileTab", bundle: nil).instantiateViewController(withIdentifier: "MyUpTabViewController") as! MyUpTabViewController
     
-    let likeVC = UIStoryboard.init(name: "ProfileTab", bundle: nil).instantiateViewController(withIdentifier: "LikeTabViewController") as! LikeTabViewController
-    
     let StorVC = UIStoryboard.init(name: "ProfileTab", bundle: nil).instantiateViewController(withIdentifier: "StorageTabViewController") as! StorageTabViewController
     
     override func viewDidLoad() {
@@ -26,7 +24,6 @@ class ProfileTabManViewController: TabmanViewController {
     
     func setTabView() {
         viewControllers.append(myUpVC)
-        viewControllers.append(likeVC)
         viewControllers.append(StorVC)
         
         
@@ -73,13 +70,6 @@ extension ProfileTabManViewController: PageboyViewControllerDataSource, TMBarDat
             
             return firstitem
         case 1:
-            let seconditem = TMBarItem(title: "")
-            //            seconditem.image = UIImage(named: "favorite-1")
-            //            seconditem.selectedImage = UIImage(named: "favorite")
-            seconditem.image = UIImage(systemName: "heart")
-            seconditem.selectedImage = UIImage(systemName: "heart.fill")
-            return seconditem
-        case 2:
             let thirditem = TMBarItem(title: "")
             //            thirditem.image = UIImage(named: "bookmark-1")
             //            thirditem.selectedImage = UIImage(named: "bookmark")

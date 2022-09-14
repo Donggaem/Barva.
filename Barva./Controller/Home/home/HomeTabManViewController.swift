@@ -15,7 +15,7 @@ class HomeTabManViewController: TabmanViewController {
     private var viewControllers: [UIViewController] = []
     let latestVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LatestBoardTabViewController") as! LatestBoardTabViewController
     
-    let likeVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LikeBoardTabViewController") as! LikeBoardTabViewController
+    let todayColorVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "todayColorTabViewController") as! todayColorTabViewController
     
     let sexVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SexBoardTabViewController") as! SexBoardTabViewController
     
@@ -26,7 +26,7 @@ class HomeTabManViewController: TabmanViewController {
     
     func setTabView() {
         viewControllers.append(latestVC)
-        viewControllers.append(likeVC)
+        viewControllers.append(todayColorVC)
         viewControllers.append(sexVC)
         
         
@@ -70,7 +70,7 @@ extension HomeTabManViewController: PageboyViewControllerDataSource, TMBarDataSo
         case 0:
             return TMBarItem(title: "최신순 보기")
         case 1:
-            return TMBarItem(title: "좋아요 게시물")
+            return TMBarItem(title: "오늘의 색상")
         case 2:
             return TMBarItem(title: "남/ 여 정렬")
         default:

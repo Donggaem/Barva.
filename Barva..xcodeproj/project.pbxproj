@@ -31,13 +31,12 @@
 		EBAEEF5D28B35A5A00744A4F /* SpoqaHanSans in Resources */ = {isa = PBXBuildFile; fileRef = EBAEEF5C28B35A5A00744A4F /* SpoqaHanSans */; };
 		EBB8F45828BF99FA0069D4E1 /* inter-cufonfonts in Resources */ = {isa = PBXBuildFile; fileRef = EBB8F45728BF99FA0069D4E1 /* inter-cufonfonts */; };
 		EBB8F45C28BF9C430069D4E1 /* ProfileTabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8F45B28BF9C430069D4E1 /* ProfileTabManViewController.swift */; };
-		EBB8F45E28BFA56C0069D4E1 /* LikeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8F45D28BFA56C0069D4E1 /* LikeTabViewController.swift */; };
 		EBB8F46028BFA5830069D4E1 /* MyUpTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8F45F28BFA5830069D4E1 /* MyUpTabViewController.swift */; };
 		EBB8F46228BFA61E0069D4E1 /* StorageTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8F46128BFA61E0069D4E1 /* StorageTabViewController.swift */; };
 		EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBC384E28A70DEE000D075D /* PopupViewController.swift */; };
 		EBC7609B28B5F32C006ED770 /* HomeTabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609A28B5F32C006ED770 /* HomeTabManViewController.swift */; };
 		EBC7609D28B5F385006ED770 /* LatestBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */; };
-		EBC7609F28B5F3CB006ED770 /* LikeBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609E28B5F3CB006ED770 /* LikeBoardViewController.swift */; };
+		EBC7609F28B5F3CB006ED770 /* todayColorTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609E28B5F3CB006ED770 /* todayColorTabViewController.swift */; };
 		EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC760A028B5F3FC006ED770 /* SexBoardViewController.swift */; };
 		EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */; };
 		EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */; };
@@ -88,13 +87,12 @@
 		EBAEEF5C28B35A5A00744A4F /* SpoqaHanSans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SpoqaHanSans; sourceTree = "<group>"; };
 		EBB8F45728BF99FA0069D4E1 /* inter-cufonfonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "inter-cufonfonts"; sourceTree = "<group>"; };
 		EBB8F45B28BF9C430069D4E1 /* ProfileTabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabManViewController.swift; sourceTree = "<group>"; };
-		EBB8F45D28BFA56C0069D4E1 /* LikeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTabViewController.swift; sourceTree = "<group>"; };
 		EBB8F45F28BFA5830069D4E1 /* MyUpTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUpTabViewController.swift; sourceTree = "<group>"; };
 		EBB8F46128BFA61E0069D4E1 /* StorageTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTabViewController.swift; sourceTree = "<group>"; };
 		EBBC384E28A70DEE000D075D /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		EBC7609A28B5F32C006ED770 /* HomeTabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabManViewController.swift; sourceTree = "<group>"; };
 		EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestBoardViewController.swift; sourceTree = "<group>"; };
-		EBC7609E28B5F3CB006ED770 /* LikeBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeBoardViewController.swift; sourceTree = "<group>"; };
+		EBC7609E28B5F3CB006ED770 /* todayColorTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayColorTabViewController.swift; sourceTree = "<group>"; };
 		EBC760A028B5F3FC006ED770 /* SexBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexBoardViewController.swift; sourceTree = "<group>"; };
 		EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -294,7 +292,6 @@
 				EBE4EDBD28A51288005C7516 /* ProfileTabViewController.swift */,
 				EBB8F45B28BF9C430069D4E1 /* ProfileTabManViewController.swift */,
 				EBB8F45F28BFA5830069D4E1 /* MyUpTabViewController.swift */,
-				EBB8F45D28BFA56C0069D4E1 /* LikeTabViewController.swift */,
 				EBB8F46128BFA61E0069D4E1 /* StorageTabViewController.swift */,
 				EBA45B3128C100B7007B95CC /* ProfileModifyViewController.swift */,
 			);
@@ -308,7 +305,7 @@
 				EBE4EDB928A51238005C7516 /* HomeViewController.swift */,
 				EBC7609A28B5F32C006ED770 /* HomeTabManViewController.swift */,
 				EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */,
-				EBC7609E28B5F3CB006ED770 /* LikeBoardViewController.swift */,
+				EBC7609E28B5F3CB006ED770 /* todayColorTabViewController.swift */,
 				EBC760A028B5F3FC006ED770 /* SexBoardViewController.swift */,
 			);
 			path = home;
@@ -517,10 +514,9 @@
 				EBB8F46028BFA5830069D4E1 /* MyUpTabViewController.swift in Sources */,
 				EBC7609B28B5F32C006ED770 /* HomeTabManViewController.swift in Sources */,
 				EBF510DA28AFBD060098BD5A /* AuthMailRequest.swift in Sources */,
-				EBB8F45E28BFA56C0069D4E1 /* LikeTabViewController.swift in Sources */,
 				EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */,
 				EB25ACF828A1364D0006C1F2 /* AppDelegate.swift in Sources */,
-				EBC7609F28B5F3CB006ED770 /* LikeBoardViewController.swift in Sources */,
+				EBC7609F28B5F3CB006ED770 /* todayColorTabViewController.swift in Sources */,
 				EBE4EDBA28A51238005C7516 /* HomeViewController.swift in Sources */,
 				EBF510DE28AFBD890098BD5A /* InspectMailRequest.swift in Sources */,
 				EBF510D528AFBC570098BD5A /* NickCheckRequest.swift in Sources */,

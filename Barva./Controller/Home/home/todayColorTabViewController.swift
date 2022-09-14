@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LikeBoardTabViewController: UIViewController {
+class todayColorTabViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
