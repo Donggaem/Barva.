@@ -15,5 +15,7 @@ struct BarvaURL {
     static let idCheckURL = "http://3.34.183.110:3003/duplicatedIdCheck"
     static let authMailURL = "http://3.34.183.110:3003/authMail"
     static let insepectMailURL = "http://3.34.183.110:3003/inspectMail"
+    
+    static let imgURL = "http://3.34.183.110:3003/img"
 
 }

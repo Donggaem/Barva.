@@ -9,6 +9,7 @@ import UIKit
 import Photos
 import PhotosUI
 import FSPagerView
+import Alamofire
 
 class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate {
     
@@ -26,6 +27,7 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
     private let maxCount = 99
     
     var images: [UIImage] = []
+    var imageData: [Data] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +80,7 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
                 guard let image = reading as? UIImage, error == nil else { return }
                 
                 self.images.append(image)
+                
             }
         }
         group.notify(queue: .main) {
@@ -96,6 +99,29 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
         pagerView.isUserInteractionEnabled = true //이미지뷰가 상호작용할 수 있게 설정
         pagerView.addGestureRecognizer(tapImageViewRecognizer) //이미지뷰에 제스처인식기 연결
         
+    }
+
+    
+    //MARK: POST IMG
+    func postIMG(images: [UIImage]) {
+        let headers: HTTPHeaders = ["Content-type": "multipart/form-data"]
+        AF.upload(multipartFormData: { (multipartFormData) in
+            
+        }, to: BarvaURL.imgURL, method: .post, headers: headers).responseJSON(completionHandler: { (response) in    //헤더와 응답 처리
+                        print(response)
+                        
+                        if let err = response.error{    //응답 에러
+                            print(err)
+                            return
+                        }
+                        print("success")        //응답 성공
+                        
+                        let json = response.data
+                        
+                        if (json != nil){
+                            print(json)
+                        }
+                    })
     }
 }
 
@@ -198,3 +224,4 @@ extension UploadTabViewController: UITextViewDelegate {
     
     
 }
+
