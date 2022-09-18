@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4XO-S2-OF2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4XO-S2-OF2">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -25,7 +26,7 @@
             <objects>
                 <navigationController id="4XO-S2-OF2" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="H2n-gk-n2r">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -180,7 +181,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCc-G6-01U">
-                                <rect key="frame" x="0.0" y="44" width="390" height="896"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="893"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVF-Ng-t1G">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="910"/>
@@ -673,7 +674,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="hfj-Kb-h8D"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVO-1c-xh9" userLabel="naviView">
-                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beL-qR-dgB">
                                         <rect key="frame" x="22" y="12" width="24" height="24"/>
@@ -749,7 +750,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gOQ-jT-sHf">
-                                <rect key="frame" x="30" y="91.000000000000014" width="330" height="238.33333333333337"/>
+                                <rect key="frame" x="30" y="90.999999999999986" width="330" height="128.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="ykr-bR-N8J" userLabel="이름Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="330" height="56.333333333333336"/>
@@ -776,7 +777,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="AQA-fO-Ig1" userLabel="이메일Stack View">
-                                        <rect key="frame" x="0.0" y="72.333333333333343" width="330" height="65.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="72.333333333333343" width="330" height="56.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5US-5v-TjO">
                                                 <rect key="frame" x="0.0" y="0.0" width="330" height="14.666666666666666"/>
@@ -785,94 +786,23 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="cJy-y1-6cd">
-                                                <rect key="frame" x="0.0" y="25.666666666666657" width="330" height="28"/>
+                                                <rect key="frame" x="0.0" y="25.666666666666657" width="330" height="18.666666666666671"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일 입력" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bjh-eu-iGi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="241" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="18.666666666666668"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rm6-Xc-fPQ">
-                                                        <rect key="frame" x="252" y="0.0" width="78" height="28"/>
-                                                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="78" id="N61-1E-7PC"/>
-                                                            <constraint firstAttribute="height" constant="28" id="v22-dp-jsH"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="10"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="인증번호 발송">
-                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                    </button>
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ej0-dj-74y">
-                                                <rect key="frame" x="0.0" y="64.666666666666657" width="330" height="1"/>
+                                                <rect key="frame" x="0.0" y="55.333333333333314" width="330" height="1"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="jH5-cP-HDr"/>
                                                 </constraints>
                                             </view>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="CJm-ut-arq" userLabel="닉네임Stack View">
-                                        <rect key="frame" x="0.0" y="154" width="330" height="84.333333333333314"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인증번호 입력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMA-5u-dPG">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="14.666666666666666"/>
-                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Lge-zX-H1U">
-                                                <rect key="frame" x="0.0" y="25.666666666666686" width="330" height="28"/>
-                                                <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="인증번호 입력" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="utn-2Z-BVI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="241" height="28"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                                    </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3u-xY-0Fs">
-                                                        <rect key="frame" x="252" y="0.0" width="78" height="28"/>
-                                                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="28" id="3u0-Sj-2WP"/>
-                                                            <constraint firstAttribute="width" constant="78" id="7EP-1Y-rHX"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="10"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="인증하기">
-                                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="R00-gJ-W1H">
-                                                <rect key="frame" x="0.0" y="64.666666666666686" width="330" height="19.666666666666671"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLY-Ih-yt3">
-                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="1"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="1" id="rYE-ug-5Lr"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vd3-rv-HA9">
-                                                        <rect key="frame" x="0.0" y="5.9999999999999991" width="330" height="13.666666666666664"/>
-                                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="8"/>
-                                                        <color key="tintColor" red="0.0" green="0.2784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="    사용가능한 닉네임입니다">
-                                                            <color key="titleColor" red="0.0" green="0.2784313725" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <imageReference key="image" image="checkmark.circle" catalog="system" symbolScale="default"/>
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -907,9 +837,6 @@
                     </view>
                     <size key="freeformSize" width="390" height="684"/>
                     <connections>
-                        <outlet property="checkNumBtn" destination="C3u-xY-0Fs" id="J2S-36-6r2"/>
-                        <outlet property="checkNumTextField" destination="utn-2Z-BVI" id="vtP-rU-kMm"/>
-                        <outlet property="emailBtn" destination="rm6-Xc-fPQ" id="cLR-Da-VtR"/>
                         <outlet property="emailTextField" destination="bjh-eu-iGi" id="NqN-tD-BTC"/>
                         <outlet property="idFindBtn" destination="WWH-Hi-8nY" id="RJ0-38-7NX"/>
                     </connections>
@@ -939,7 +866,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66y-69-XDd" userLabel="naviView">
-                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMs-XD-ffd">
                                         <rect key="frame" x="22" y="12" width="24" height="24"/>
@@ -1001,7 +928,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="13"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="비밀번호 찾기">
+                                <state key="normal" title="비밀번호 재설정">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -1201,16 +1128,176 @@
             </objects>
             <point key="canvasLocation" x="-110" y="571"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="fTo-Bk-kVg">
+            <objects>
+                <viewController id="ReR-Qa-Hsi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wAf-b0-9a8">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 재설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMB-mZ-Ea0">
+                                <rect key="frame" x="29.999999999999993" y="106" width="120.33333333333331" height="21.666666666666671"/>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gub-o0-f36" userLabel="naviView">
+                                <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GU6-xu-hkU">
+                                        <rect key="frame" x="22" y="12" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="3ID-Ke-ScL"/>
+                                            <constraint firstAttribute="height" constant="24" id="Fo1-Rw-1dn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" red="0.10980392160000001" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="CHw-PK-Gr0" eventType="touchUpInside" id="FFJ-2Y-bLN"/>
+                                            <action selector="backBtnPressed:" destination="ReR-Qa-Hsi" eventType="touchUpInside" id="X7c-zr-UiL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="0c3-FE-EzY"/>
+                                    <constraint firstAttribute="height" constant="44" id="10Y-Sa-a1F"/>
+                                    <constraint firstItem="GU6-xu-hkU" firstAttribute="leading" secondItem="gub-o0-f36" secondAttribute="leading" constant="22" id="S1t-9e-2VS"/>
+                                    <constraint firstItem="GU6-xu-hkU" firstAttribute="top" secondItem="gub-o0-f36" secondAttribute="top" constant="12" id="arm-fj-Lxb"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디 : ㅁㄴㅇㅁㄴ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-rq-ThQ">
+                                <rect key="frame" x="136" y="163.66666666666666" width="129" height="19.333333333333343"/>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="X1V-KN-UTI">
+                                <rect key="frame" x="30" y="231" width="330" height="144"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="goV-F5-nxs" userLabel="비밀번호Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="54.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHh-JO-69V">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="14.666666666666666"/>
+                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="okP-Lf-nbs">
+                                                <rect key="frame" x="0.0" y="25.666666666666686" width="330" height="17"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mfe-AW-6JZ">
+                                                <rect key="frame" x="0.0" y="53.666666666666686" width="330" height="1"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="Cp5-q1-qAo"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O7j-Ap-zAS" userLabel="비확일Stack View">
+                                        <rect key="frame" x="0.0" y="70.666666666666686" width="330" height="73.333333333333314"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="SFa-ca-1wK" userLabel="비밀번호 확Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="73.333333333333329"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새 비밀번호 확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFR-eK-Ekv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="14.666666666666666"/>
+                                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호 확인" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rjA-NV-D2j">
+                                                        <rect key="frame" x="0.0" y="25.666666666666629" width="330" height="17"/>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wab-lt-lI7">
+                                                        <rect key="frame" x="0.0" y="53.666666666666629" width="330" height="19.666666666666671"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4w-wS-V1f">
+                                                                <rect key="frame" x="0.0" y="0.0" width="330" height="1"/>
+                                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="rZT-Zs-EGZ"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXO-Fr-Qdh">
+                                                                <rect key="frame" x="0.0" y="5.9999999999999991" width="330" height="13.666666666666664"/>
+                                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="8"/>
+                                                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="    비밀번호가 일치하지 않습니다">
+                                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <imageReference key="image" image="exclamationmark.circle" catalog="system" symbolScale="default"/>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="12"/>
+                                                                </state>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ua0-nL-Hz0">
+                                <rect key="frame" x="30" y="765" width="330" height="45"/>
+                                <color key="backgroundColor" red="0.73333333329999995" green="0.73333333329999995" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="if9-rF-sAa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="13"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="비밀번호 재설정">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="htD-nY-cvl" eventType="touchUpInside" id="ie9-9l-nWr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZAF-Xt-tng"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nMB-mZ-Ea0" firstAttribute="leading" secondItem="ZAF-Xt-tng" secondAttribute="leading" constant="30" id="36V-wk-Xbb"/>
+                            <constraint firstAttribute="bottom" secondItem="Ua0-nL-Hz0" secondAttribute="bottom" constant="34" id="7AF-9k-N3E"/>
+                            <constraint firstAttribute="trailing" secondItem="X1V-KN-UTI" secondAttribute="trailing" constant="30" id="82O-1E-h1b"/>
+                            <constraint firstItem="Ugd-rq-ThQ" firstAttribute="top" secondItem="nMB-mZ-Ea0" secondAttribute="bottom" constant="36" id="8qq-pZ-xaf"/>
+                            <constraint firstAttribute="trailing" secondItem="gub-o0-f36" secondAttribute="trailing" id="FaQ-Jx-bgL"/>
+                            <constraint firstAttribute="trailing" secondItem="Ua0-nL-Hz0" secondAttribute="trailing" constant="30" id="FcF-Pi-cIX"/>
+                            <constraint firstItem="gub-o0-f36" firstAttribute="leading" secondItem="wAf-b0-9a8" secondAttribute="leading" id="G2c-Fd-bLd"/>
+                            <constraint firstItem="X1V-KN-UTI" firstAttribute="leading" secondItem="wAf-b0-9a8" secondAttribute="leading" constant="30" id="HdN-x1-FNv"/>
+                            <constraint firstItem="Ua0-nL-Hz0" firstAttribute="leading" secondItem="wAf-b0-9a8" secondAttribute="leading" constant="30" id="Q8H-bv-1BH"/>
+                            <constraint firstItem="gub-o0-f36" firstAttribute="top" secondItem="ZAF-Xt-tng" secondAttribute="top" id="SxD-Kr-zil"/>
+                            <constraint firstItem="nMB-mZ-Ea0" firstAttribute="top" secondItem="wAf-b0-9a8" secondAttribute="top" constant="106" id="UKa-hT-Q5D"/>
+                            <constraint firstItem="Ugd-rq-ThQ" firstAttribute="leading" secondItem="ZAF-Xt-tng" secondAttribute="leading" constant="136" id="ffI-un-bTy"/>
+                            <constraint firstItem="X1V-KN-UTI" firstAttribute="top" secondItem="Ugd-rq-ThQ" secondAttribute="bottom" constant="48" id="zOZ-ms-opU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wZa-gK-Xn8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2162" y="628"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
-        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="exclamationmark.circle" catalog="system" width="128" height="121"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="123"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="exclamationmark.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
