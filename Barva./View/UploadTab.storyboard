@@ -15,8 +15,8 @@
         <array key="Inter-SemiBold.otf">
             <string>Inter-SemiBold</string>
         </array>
-        <array key="SpoqaHanSansNeo-Medium.ttf">
-            <string>SpoqaHanSansNeo-Medium</string>
+        <array key="MPLUS1Code-Medium.ttf">
+            <string>MPLUS1Code-Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -143,12 +143,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DrO-B1-Y5M" userLabel="naviView">
                                 <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="업로드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhS-nc-TLv">
-                                        <rect key="frame" x="181.33333333333334" y="16" width="27.666666666666657" height="12"/>
-                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Medium" family="Spoqa Han Sans Neo" pointSize="10"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igN-i6-wn6">
                                         <rect key="frame" x="344" y="10" width="24" height="24"/>
                                         <constraints>
@@ -161,9 +155,9 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="업로드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drG-6d-2Z7">
-                                        <rect key="frame" x="296.66666666666669" y="14.666666666666664" width="33.333333333333314" height="14.666666666666664"/>
-                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Medium" family="Spoqa Han Sans Neo" pointSize="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="barva." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDv-r9-Ire">
+                                        <rect key="frame" x="22" y="9.9999999999999982" width="54" height="22.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="MPLUS1Code-Medium" family="M PLUS 1 Code" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -171,12 +165,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="igN-i6-wn6" firstAttribute="top" secondItem="DrO-B1-Y5M" secondAttribute="top" constant="10" id="3bf-9w-I0e"/>
+                                    <constraint firstItem="gDv-r9-Ire" firstAttribute="leading" secondItem="DrO-B1-Y5M" secondAttribute="leading" constant="22" id="M8A-bw-a8t"/>
+                                    <constraint firstItem="gDv-r9-Ire" firstAttribute="top" secondItem="DrO-B1-Y5M" secondAttribute="top" constant="10" id="Mod-Ic-ldZ"/>
                                     <constraint firstAttribute="trailing" secondItem="igN-i6-wn6" secondAttribute="trailing" constant="22" id="RRI-NL-pmc"/>
                                     <constraint firstAttribute="height" constant="44" id="b5R-nV-LWJ"/>
-                                    <constraint firstItem="igN-i6-wn6" firstAttribute="leading" secondItem="drG-6d-2Z7" secondAttribute="trailing" constant="14" id="kP2-Im-HbT"/>
-                                    <constraint firstItem="KhS-nc-TLv" firstAttribute="centerY" secondItem="igN-i6-wn6" secondAttribute="centerY" id="l4R-2s-piM"/>
-                                    <constraint firstItem="KhS-nc-TLv" firstAttribute="centerX" secondItem="DrO-B1-Y5M" secondAttribute="centerX" id="y8t-M4-wv9"/>
-                                    <constraint firstItem="drG-6d-2Z7" firstAttribute="centerY" secondItem="igN-i6-wn6" secondAttribute="centerY" id="yaI-PK-XQ6"/>
                                 </constraints>
                             </view>
                         </subviews>
