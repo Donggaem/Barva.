@@ -23,6 +23,14 @@
 		EB2EA2FB28A1410E00EC0685 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2EA2FA28A1410E00EC0685 /* Home.storyboard */; };
 		EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67743B28C72F2B001A6F55 /* BarvaURL.swift */; };
 		EB84731E28C2F53700638EE2 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB84731D28C2F53700638EE2 /* FeedTableViewCell.xib */; };
+		EB8D503628E15E1F0045C4D2 /* IDFindRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D503528E15E1F0045C4D2 /* IDFindRequest.swift */; };
+		EB8D503A28E15F450045C4D2 /* PWFindRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D503928E15F450045C4D2 /* PWFindRequest.swift */; };
+		EB8D503C28E1601A0045C4D2 /* PWFindResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D503B28E1601A0045C4D2 /* PWFindResponse.swift */; };
+		EB8D503E28E160B30045C4D2 /* UpdatePWRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D503D28E160B30045C4D2 /* UpdatePWRequest.swift */; };
+		EB8D504128E160FB0045C4D2 /* UpdatePWResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D504028E160FB0045C4D2 /* UpdatePWResponse.swift */; };
+		EB8D504328E16DAC0045C4D2 /* UpdatePWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D504228E16DAC0045C4D2 /* UpdatePWViewController.swift */; };
+		EB8D504528E17DF80045C4D2 /* IDCheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D504428E17DF80045C4D2 /* IDCheckResponse.swift */; };
+		EB8D504728E17E230045C4D2 /* IDFindResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D504628E17E230045C4D2 /* IDFindResponse.swift */; };
 		EB9CC95C28A40A1A003D9F22 /* UploadTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */; };
 		EB9CC95E28A40A53003D9F22 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */; };
 		EB9CC96028A40A6D003D9F22 /* ColorTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */; };
@@ -49,7 +57,6 @@
 		EBE4EDC028A5129A005C7516 /* ColorTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */; };
 		EBE4EDC328A514AF005C7516 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDC228A514AF005C7516 /* UIViewController+Extension.swift */; };
 		EBF510D128AFBC2D0098BD5A /* IDCheckRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D028AFBC2D0098BD5A /* IDCheckRequest.swift */; };
-		EBF510D328AFBC410098BD5A /* IDCheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D228AFBC410098BD5A /* IDCheckResponse.swift */; };
 		EBF510D528AFBC570098BD5A /* NickCheckRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D428AFBC570098BD5A /* NickCheckRequest.swift */; };
 		EBF510D728AFBC660098BD5A /* NickCheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D628AFBC660098BD5A /* NickCheckResponse.swift */; };
 		EBF510DA28AFBD060098BD5A /* AuthMailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D928AFBD060098BD5A /* AuthMailRequest.swift */; };
@@ -80,6 +87,14 @@
 		EB2F99C628B0ABF10084EB7B /* YPImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YPImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB67743B28C72F2B001A6F55 /* BarvaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarvaURL.swift; sourceTree = "<group>"; };
 		EB84731D28C2F53700638EE2 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		EB8D503528E15E1F0045C4D2 /* IDFindRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDFindRequest.swift; sourceTree = "<group>"; };
+		EB8D503928E15F450045C4D2 /* PWFindRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWFindRequest.swift; sourceTree = "<group>"; };
+		EB8D503B28E1601A0045C4D2 /* PWFindResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWFindResponse.swift; sourceTree = "<group>"; };
+		EB8D503D28E160B30045C4D2 /* UpdatePWRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePWRequest.swift; sourceTree = "<group>"; };
+		EB8D504028E160FB0045C4D2 /* UpdatePWResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePWResponse.swift; sourceTree = "<group>"; };
+		EB8D504228E16DAC0045C4D2 /* UpdatePWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePWViewController.swift; sourceTree = "<group>"; };
+		EB8D504428E17DF80045C4D2 /* IDCheckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCheckResponse.swift; sourceTree = "<group>"; };
+		EB8D504628E17E230045C4D2 /* IDFindResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDFindResponse.swift; sourceTree = "<group>"; };
 		EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorTab.storyboard; sourceTree = "<group>"; };
@@ -106,7 +121,6 @@
 		EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTabViewController.swift; sourceTree = "<group>"; };
 		EBE4EDC228A514AF005C7516 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		EBF510D028AFBC2D0098BD5A /* IDCheckRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCheckRequest.swift; sourceTree = "<group>"; };
-		EBF510D228AFBC410098BD5A /* IDCheckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCheckResponse.swift; sourceTree = "<group>"; };
 		EBF510D428AFBC570098BD5A /* NickCheckRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickCheckRequest.swift; sourceTree = "<group>"; };
 		EBF510D628AFBC660098BD5A /* NickCheckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickCheckResponse.swift; sourceTree = "<group>"; };
 		EBF510D928AFBD060098BD5A /* AuthMailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthMailRequest.swift; sourceTree = "<group>"; };
@@ -206,6 +220,7 @@
 			children = (
 				EBF510CF28AFBBF40098BD5A /* Login */,
 				EB67743D28C73A3C001A6F55 /* SignUp */,
+				EB8D503228E15DF30045C4D2 /* Find */,
 				EB67743B28C72F2B001A6F55 /* BarvaURL.swift */,
 			);
 			path = Model;
@@ -251,8 +266,46 @@
 				EB1751F728AA7D7A009FEFBF /* IDFindTabViewController.swift */,
 				EB1751F528AA78F8009FEFBF /* PWFindTabViewController.swift */,
 				EB1751F928AA8D43009FEFBF /* FindViewController.swift */,
+				EB8D504228E16DAC0045C4D2 /* UpdatePWViewController.swift */,
 			);
 			path = Find;
+			sourceTree = "<group>";
+		};
+		EB8D503228E15DF30045C4D2 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				EB8D503328E15E000045C4D2 /* ID */,
+				EB8D503428E15E050045C4D2 /* PW */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		EB8D503328E15E000045C4D2 /* ID */ = {
+			isa = PBXGroup;
+			children = (
+				EB8D503528E15E1F0045C4D2 /* IDFindRequest.swift */,
+				EB8D504628E17E230045C4D2 /* IDFindResponse.swift */,
+			);
+			path = ID;
+			sourceTree = "<group>";
+		};
+		EB8D503428E15E050045C4D2 /* PW */ = {
+			isa = PBXGroup;
+			children = (
+				EB8D503928E15F450045C4D2 /* PWFindRequest.swift */,
+				EB8D503B28E1601A0045C4D2 /* PWFindResponse.swift */,
+				EB8D503F28E160BB0045C4D2 /* Update */,
+			);
+			path = PW;
+			sourceTree = "<group>";
+		};
+		EB8D503F28E160BB0045C4D2 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				EB8D503D28E160B30045C4D2 /* UpdatePWRequest.swift */,
+				EB8D504028E160FB0045C4D2 /* UpdatePWResponse.swift */,
+			);
+			path = Update;
 			sourceTree = "<group>";
 		};
 		EBA45B2F28C0F94F007B95CC /* Upload */ = {
@@ -344,9 +397,9 @@
 			isa = PBXGroup;
 			children = (
 				EBF510D028AFBC2D0098BD5A /* IDCheckRequest.swift */,
-				EBF510D228AFBC410098BD5A /* IDCheckResponse.swift */,
 				EBF510D428AFBC570098BD5A /* NickCheckRequest.swift */,
 				EBF510D628AFBC660098BD5A /* NickCheckResponse.swift */,
+				EB8D504428E17DF80045C4D2 /* IDCheckResponse.swift */,
 			);
 			path = CheckModel;
 			sourceTree = "<group>";
@@ -503,11 +556,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8D503628E15E1F0045C4D2 /* IDFindRequest.swift in Sources */,
 				EBE4EDC028A5129A005C7516 /* ColorTabViewController.swift in Sources */,
 				EBE4EDC328A514AF005C7516 /* UIViewController+Extension.swift in Sources */,
+				EB8D504728E17E230045C4D2 /* IDFindResponse.swift in Sources */,
 				EB2EA2F928A1409800EC0685 /* SigninViewController.swift in Sources */,
 				EBE4EDB628A4E6C7005C7516 /* SigninRequest.swift in Sources */,
 				EBA45B3228C100B7007B95CC /* ProfileModifyViewController.swift in Sources */,
+				EB8D504128E160FB0045C4D2 /* UpdatePWResponse.swift in Sources */,
 				EB25ACFC28A1364D0006C1F2 /* LoginViewController.swift in Sources */,
 				EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */,
 				EBF510D128AFBC2D0098BD5A /* IDCheckRequest.swift in Sources */,
@@ -515,6 +571,10 @@
 				EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */,
 				EB1751F828AA7D7A009FEFBF /* IDFindTabViewController.swift in Sources */,
 				EBB8F46228BFA61E0069D4E1 /* StorageTabViewController.swift in Sources */,
+				EB8D503A28E15F450045C4D2 /* PWFindRequest.swift in Sources */,
+				EB8D503E28E160B30045C4D2 /* UpdatePWRequest.swift in Sources */,
+				EB8D504328E16DAC0045C4D2 /* UpdatePWViewController.swift in Sources */,
+				EB8D504528E17DF80045C4D2 /* IDCheckResponse.swift in Sources */,
 				EBB8F46028BFA5830069D4E1 /* MyUpTabViewController.swift in Sources */,
 				EBC7609B28B5F32C006ED770 /* HomeTabManViewController.swift in Sources */,
 				EBF510DA28AFBD060098BD5A /* AuthMailRequest.swift in Sources */,
@@ -531,7 +591,7 @@
 				EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */,
 				EB1751F628AA78F8009FEFBF /* PWFindTabViewController.swift in Sources */,
 				EB1751F428AA78EA009FEFBF /* FindTabManViewController.swift in Sources */,
-				EBF510D328AFBC410098BD5A /* IDCheckResponse.swift in Sources */,
+				EB8D503C28E1601A0045C4D2 /* PWFindResponse.swift in Sources */,
 				EBF510D728AFBC660098BD5A /* NickCheckResponse.swift in Sources */,
 				EBE4EDBC28A51255005C7516 /* UploadTabViewController.swift in Sources */,
 				EBF510E028AFBD980098BD5A /* InspectMailResponse.swift in Sources */,

@@ -457,7 +457,7 @@ class SigninViewController: UIViewController {
                     } else {
                         BarvaLog.error("PostNickCheck")
                         btnMessageF(msgBtn: msgNickBtn)
-                        print(response.data?.err)
+                        print(response.data?.err ?? "")
                         msgNickBtn.setTitle(response.message, for: .normal)
                         let nameCkFail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
@@ -466,7 +466,6 @@ class SigninViewController: UIViewController {
                     }
                 case .failure(let error):
                     BarvaLog.error("PostNickCheck")
-                    
                     print(error.localizedDescription)
                     let nameCkFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)

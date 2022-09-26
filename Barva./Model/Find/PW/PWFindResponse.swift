@@ -1,5 +1,5 @@
 //
-//  IDCheckResponse.swift
+//  PWFindResponse.swift
 //  Barva.
 //
 //  Created by 김동겸 on 2022/09/26.
@@ -7,14 +7,15 @@
 
 import Foundation
 
-struct IDCheckResponse: Decodable{
+struct PWFindResponse: Decodable {
     
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: IDerr?
+    var data: PWFinderr?
 }
 
-struct IDerr: Decodable {
+struct PWFinderr: Decodable {
+    
     var err: String
 }

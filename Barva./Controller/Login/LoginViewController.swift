@@ -51,6 +51,45 @@ class LoginViewController: UIViewController {
         
     }
     
+    //MARK: POST LOGIN
+    private func postLogin(_ parameters: LoginRequest){
+        AF.request(BarvaURL.loginURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+            .validate()
+            .responseDecodable(of: LoginResponse.self) { [self] response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        
+                        BarvaLog.debug("postLogin")
+                        
+                        if (response.data?.token) != nil {
+                            
+                            UserDefaults.standard.set(response.data?.token, forKey: "data")
+                        }
+                        
+                        
+                        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+                        let homeNav = storyBoard.instantiateViewController(identifier: "HomeNav")
+                        self.changeRootViewController(homeNav)
+                        
+                    } else {
+                        BarvaLog.error("postLogin")
+                        let loginFail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        loginFail_alert.addAction(okAction)
+                        present(loginFail_alert, animated: false, completion: nil)
+                        
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    let loginFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    loginFail_alert.addAction(okAction)
+                    present(loginFail_alert, animated: false, completion: nil)
+                }
+            }
+    }
+    
 }
 
 //MARK: UITextFiel
@@ -94,40 +133,5 @@ extension LoginViewController: UITextFieldDelegate {
         }
     }
     
-    //MARK: POST LOGIN
-    private func postLogin(_ parameters: LoginRequest){
-        AF.request(BarvaURL.loginURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
-            .validate()
-            .responseDecodable(of: LoginResponse.self) { [self] response in
-                switch response.result {
-                case .success(let response):
-                    if response.isSuccess == true {
-                        
-                        BarvaLog.debug("postLogin")
-                        
-                        UserDefaults.standard.set(response.data?.token, forKey: "data")
-                        
-                        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-                        let homeNav = storyBoard.instantiateViewController(identifier: "HomeNav")
-                        self.changeRootViewController(homeNav)
-                        
-                    } else {
-                        BarvaLog.error("postLogin")
-                        let loginFail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
-                        let okAction = UIAlertAction(title: "확인", style: .default)
-                        loginFail_alert.addAction(okAction)
-                        present(loginFail_alert, animated: false, completion: nil)
-                        
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
-                    let loginFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
-                    let okAction = UIAlertAction(title: "확인", style: .default)
-                    loginFail_alert.addAction(okAction)
-                    present(loginFail_alert, animated: false, completion: nil)
-                }
-            }
-        
-        
-    }
+   
 }
