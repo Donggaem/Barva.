@@ -13,7 +13,7 @@ class IDFindTabViewController: UIViewController {
 
     @IBOutlet weak var idFindBtn: UIButton!
     
-    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
     override func viewDidLoad() {
@@ -26,13 +26,30 @@ class IDFindTabViewController: UIViewController {
     //텍스트 필드 입력값 변하면 유효성 검사
     @objc func TFdidChanged(_ sender: UITextField) {
         
-        //2개 텍스트필드가 채워졌는지, 비밀번호가 일치하는 지 확인.
-        if !(self.idTextField.text?.isEmpty ?? true) && !(self.emailTextField.text?.isEmpty ?? true) {
+        //2개 텍스트필드가 채워졌는지.
+        if !(self.nameTextField.text?.isEmpty ?? true) && !(self.emailTextField.text?.isEmpty ?? true) {
             idFindBtn(willActive: true)
         }
         else {
             
             idFindBtn(willActive: false)
+        }
+        
+    }
+    //MARK: IBACTION
+    
+    @IBAction func idFindBtnPressed(_ sender: UIButton) {
+        
+        if isValidEmail(testStr: emailTextField.text ?? "") == true {
+            let email = emailTextField.text ?? ""
+            
+            let param = IDFindRequest(user_email: email)
+            postIDFind(param)
+        }else {
+            let Fail_alert = UIAlertController(title: "실패", message: "이메일 형식을 확인해주세요", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "확인", style: .default)
+            Fail_alert.addAction(okAction)
+            present(Fail_alert, animated: false, completion: nil)
         }
         
     }
@@ -57,6 +74,16 @@ class IDFindTabViewController: UIViewController {
         }
     }
     
+    //이메일 형식 검사
+    private func isValidEmail(testStr:String) -> Bool {
+        
+        BarvaLog.debug("isValidEmail")
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
+        
+    }
+    
     //MARK: POST IDFIND
     private func postIDFind(_ parameters: IDFindRequest){
         AF.request(BarvaURL.idFindURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
@@ -68,7 +95,13 @@ class IDFindTabViewController: UIViewController {
                         
                         BarvaLog.debug("postIDFind")
                         let Find_alert = UIAlertController(title: "성공", message: response.message, preferredStyle: UIAlertController.Style.alert)
-                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        let okAction = UIAlertAction(title: "확인", style: .default) { (action) in
+                            
+                            self.nameTextField.text = ""
+                            self.emailTextField.text = ""
+                            idFindBtn.backgroundColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
+
+                        }
                         Find_alert.addAction(okAction)
                         present(Find_alert, animated: false, completion: nil)
                         
@@ -97,11 +130,11 @@ class IDFindTabViewController: UIViewController {
 extension IDFindTabViewController: UITextFieldDelegate {
     
     private func setTextField() {
-        self.idTextField.delegate = self
+        self.nameTextField.delegate = self
         self.emailTextField.delegate = self
         
         //텍스트필드 입력값 변경 감지
-        self.idTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.nameTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
         self.emailTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
         
     }

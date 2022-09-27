@@ -142,36 +142,37 @@ class SigninViewController: UIViewController {
     
     @IBAction func allCheckBtnPressed(_ sender: UIButton) {
         if allCheckBtn.isSelected == false {
+            allCheckBtn.isSelected = true
             termsCheckColorT(checkBtn: allCheckBtn)
             termsCheckColorT(checkBtn: termsBtn)
             termsCheckColorT(checkBtn: termsGoBtn)
             termsCheckColorT(checkBtn: personalBtn)
             termsCheckColorT(checkBtn: personalGoBtn)
             termsCheckColorT(checkBtn: marketingBtn)
-            allCheckBtn.isSelected = true
+            
         }else {
+            allCheckBtn.isSelected = false
             termsCheckColorF(checkBtn: allCheckBtn)
             termsCheckColorF(checkBtn: termsBtn)
             termsCheckColorF(checkBtn: termsGoBtn)
             termsCheckColorF(checkBtn: personalBtn)
             termsCheckColorF(checkBtn: personalGoBtn)
             termsCheckColorF(checkBtn: marketingBtn)
-            allCheckBtn.isSelected = false
         }
         
 
     }
     @IBAction func termsBtnPressed(_ sender: UIButton) {
         if termsBtn.isSelected == false {
-            termsCheckColorT(checkBtn: termsBtn)
-            termsCheckColorT(checkBtn: termsGoBtn)
             termsBtn.isSelected = true
             allCheck()
+            termsCheckColorT(checkBtn: termsBtn)
+            termsCheckColorT(checkBtn: termsGoBtn)
         }else {
-            termsCheckColorF(checkBtn: termsBtn)
-            termsCheckColorF(checkBtn: termsGoBtn)
             termsBtn.isSelected = false
             allCheck()
+            termsCheckColorF(checkBtn: termsBtn)
+            termsCheckColorF(checkBtn: termsGoBtn)
         }
     }
     @IBAction func termsGoBtnPressed(_ sender: UIButton) {
@@ -179,31 +180,33 @@ class SigninViewController: UIViewController {
     }
     @IBAction func personalBtnPressed(_ sender: UIButton) {
         if personalBtn.isSelected == false {
-            termsCheckColorT(checkBtn: personalBtn)
-            termsCheckColorT(checkBtn: personalGoBtn)
             personalBtn.isSelected = true
             allCheck()
+            termsCheckColorT(checkBtn: personalBtn)
+            termsCheckColorT(checkBtn: personalGoBtn)
         }else {
-            termsCheckColorF(checkBtn: personalBtn)
-            termsCheckColorF(checkBtn: personalGoBtn)
             personalBtn.isSelected = false
             allCheck()
+            termsCheckColorF(checkBtn: personalBtn)
+            termsCheckColorF(checkBtn: personalGoBtn)
         }
     }
     @IBAction func personalGoBtnPressed(_ sender: UIButton) {
     }
     @IBAction func marketingBtnPressed(_ sender: UIButton) {
         if marketingBtn.isSelected == false {
-            print(marketingBtn.isSelected)
-            termsCheckColorT(checkBtn: marketingBtn)
-            marketingBtn.isSelected = true
             marketingBool = true
+            marketingBtn.isSelected = true
             allCheck()
+            termsCheckColorT(checkBtn: marketingBtn)
+            print(marketingBtn.isSelected)
+            
         }else {
-            termsCheckColorF(checkBtn: marketingBtn)
-            marketingBtn.isSelected = false
             marketingBool = false
+            marketingBtn.isSelected = false
             allCheck()
+            termsCheckColorF(checkBtn: marketingBtn)
+            print(marketingBtn.isSelected)
         }
     }
     
@@ -244,8 +247,8 @@ class SigninViewController: UIViewController {
             print(marketing)
             
                 
-                let param = SignRequest(user_name: name, user_nick: nick, user_id: id, user_pw: pw, user_confirmPw: pwCheck, user_email: email, marketing: marketing)
-                postSignin(param)
+            let param = SignRequest(user_name: name, user_nick: nick, user_id: id, user_pw: pw, user_confirmPw: pwCheck, user_email: email, marketing: marketing)
+            postSignin(param)
             
             
         default:
@@ -677,9 +680,8 @@ extension SigninViewController: UITextFieldDelegate{
         
         
         //텍스트필드가 채워졌는지, 비밀번호가 일치하는 지 확인, 필수 약관을 동의 했는지
-        if !(self.idTextField.text?.isEmpty ?? true)
-            && !(self.pwTextField.text?.isEmpty ?? true) && !(self.pwCheckTextField.text?.isEmpty ?? true) && !(self.nickNameTextField.text?.isEmpty ?? true) && !(self.nameTextField.text?.isEmpty ?? true) && !(self.emailTextField.text?.isEmpty ?? true) && !(self.checkNumTextField.text?.isEmpty ?? true)
-            && isSameBothTextField(pwTextField, pwCheckTextField) && (termsBtn.isSelected == true) && (personalBtn.isSelected == true) {
+        if  !(self.pwTextField.text?.isEmpty ?? true) && !(self.pwCheckTextField.text?.isEmpty ?? true) &&  !(self.nameTextField.text?.isEmpty ?? true)
+                && isSameBothTextField(pwTextField, pwCheckTextField) {
             signinBtn.isEnabled = true
             signinBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         }

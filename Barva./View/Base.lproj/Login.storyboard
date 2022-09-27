@@ -819,6 +819,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="idFindBtnPressed:" destination="wqD-MR-K9c" eventType="touchUpInside" id="aq2-ER-lU5"/>
                                     <action selector="loginBtnPressed:" destination="htD-nY-cvl" eventType="touchUpInside" id="u87-nn-XkT"/>
                                 </connections>
                             </button>
@@ -837,8 +838,9 @@
                     </view>
                     <size key="freeformSize" width="390" height="684"/>
                     <connections>
-                        <outlet property="emailTextField" destination="bjh-eu-iGi" id="NqN-tD-BTC"/>
+                        <outlet property="emailTextField" destination="bjh-eu-iGi" id="uvj-L0-B7h"/>
                         <outlet property="idFindBtn" destination="WWH-Hi-8nY" id="RJ0-38-7NX"/>
+                        <outlet property="nameTextField" destination="uK7-ci-sgH" id="wk1-3b-t68"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L36-Eq-hWO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

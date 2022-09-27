@@ -397,9 +397,9 @@
 			isa = PBXGroup;
 			children = (
 				EBF510D028AFBC2D0098BD5A /* IDCheckRequest.swift */,
+				EB8D504428E17DF80045C4D2 /* IDCheckResponse.swift */,
 				EBF510D428AFBC570098BD5A /* NickCheckRequest.swift */,
 				EBF510D628AFBC660098BD5A /* NickCheckResponse.swift */,
-				EB8D504428E17DF80045C4D2 /* IDCheckResponse.swift */,
 			);
 			path = CheckModel;
 			sourceTree = "<group>";
