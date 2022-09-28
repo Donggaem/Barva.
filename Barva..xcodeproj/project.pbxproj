@@ -265,8 +265,8 @@
 				EB1751F328AA78EA009FEFBF /* FindTabManViewController.swift */,
 				EB1751F728AA7D7A009FEFBF /* IDFindTabViewController.swift */,
 				EB1751F528AA78F8009FEFBF /* PWFindTabViewController.swift */,
-				EB1751F928AA8D43009FEFBF /* FindViewController.swift */,
 				EB8D504228E16DAC0045C4D2 /* UpdatePWViewController.swift */,
+				EB1751F928AA8D43009FEFBF /* FindViewController.swift */,
 			);
 			path = Find;
 			sourceTree = "<group>";

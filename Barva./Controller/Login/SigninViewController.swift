@@ -44,6 +44,7 @@ class SigninViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        setTextField()
         checkNum = 0
         
     }
@@ -102,7 +103,7 @@ class SigninViewController: UIViewController {
         }
     }
     
-    @IBAction func aurhMailBtnPressed(_ sender: UIButton) {
+    @IBAction func authMailBtnPressed(_ sender: UIButton) {
         
         let email = emailTextField.text ?? ""
         
@@ -279,24 +280,6 @@ class SigninViewController: UIViewController {
         btnHidden(msgBtn: msgPwBtn)
         btnHidden(msgBtn: msgNickBtn)
         btnHidden(msgBtn: msgCheckNumBtn)
-        
-        self.idTextField.delegate = self
-        self.nameTextField.delegate = self
-        self.nickNameTextField.delegate = self
-        self.pwTextField.delegate = self
-        self.pwCheckTextField.delegate = self
-        self.emailTextField.delegate = self
-        self.checkNumTextField.delegate = self
-        
-        //텍스트필드 입력값 변경 감지
-        self.idTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
-        self.nameTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
-        self.nickNameTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
-        self.pwTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
-        self.pwCheckTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
-        self.emailTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
-        self.checkNumTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
-        
         
         //버튼 활성/비활성 액션
         self.nickNameTextField.addAction(UIAction(handler: { _ in
@@ -591,7 +574,7 @@ class SigninViewController: UIViewController {
                         BarvaLog.error("PostInspectMAil")
                         btnMessageF(msgBtn: msgCheckNumBtn)
                         msgCheckNumBtn.setTitle(response.message, for: .normal)
-                        print(response.data?.err)
+                        print(response.data?.err ?? "")
                         let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         fail_alert.addAction(okAction)
@@ -649,6 +632,26 @@ class SigninViewController: UIViewController {
 }
 
 extension SigninViewController: UITextFieldDelegate{
+    
+    private func setTextField() {
+        
+        self.idTextField.delegate = self
+        self.nameTextField.delegate = self
+        self.nickNameTextField.delegate = self
+        self.pwTextField.delegate = self
+        self.pwCheckTextField.delegate = self
+        self.emailTextField.delegate = self
+        self.checkNumTextField.delegate = self
+        
+        //텍스트필드 입력값 변경 감지
+        self.idTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.nameTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.nickNameTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.pwTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.pwCheckTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.emailTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+        self.checkNumTextField.addTarget(self, action: #selector(self.TFdidChanged(_:)), for: .editingChanged)
+    }
     private func isSameBothTextField(_ first: UITextField,_ second: UITextField) -> Bool {
         
         if(first.text == second.text) {
