@@ -32,6 +32,11 @@ class UpdatePWViewController: UIViewController {
         let param = UpdatePWRequest(user_id: id)
         postUpdatePW(param)
     }
+    @IBAction func backBtnPressed(_ sender: UIButton) {
+        
+        self.navigationController?.popViewController(animated: true)
+
+    }
     
     //MARK: INNER FUNC
     
@@ -45,6 +50,7 @@ class UpdatePWViewController: UIViewController {
         idLabel.text = "아이디 : \(paramUserid)"
         
     }
+    
     //버튼 메세지
     private func btnMessageT(msgBtn: UIButton) {
         
