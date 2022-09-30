@@ -41,9 +41,10 @@ class IDFindTabViewController: UIViewController {
     @IBAction func idFindBtnPressed(_ sender: UIButton) {
         
         if isValidEmail(testStr: emailTextField.text ?? "") == true {
+            let name = nameTextField.text ?? ""
             let email = emailTextField.text ?? ""
             
-            let param = IDFindRequest(user_email: email)
+            let param = IDFindRequest(user_name: name, user_email: email)
             postIDFind(param)
         }else {
             let Fail_alert = UIAlertController(title: "실패", message: "이메일 형식을 확인해주세요", preferredStyle: UIAlertController.Style.alert)

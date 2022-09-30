@@ -24,7 +24,6 @@
 		EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67743B28C72F2B001A6F55 /* BarvaURL.swift */; };
 		EB834A9728E45662008A0706 /* HomeImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB834A9628E45662008A0706 /* HomeImageCollectionViewCell.xib */; };
 		EB834A9A28E45B5D008A0706 /* testImage in Resources */ = {isa = PBXBuildFile; fileRef = EB834A9928E45B5D008A0706 /* testImage */; };
-		EB84731E28C2F53700638EE2 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB84731D28C2F53700638EE2 /* FeedTableViewCell.xib */; };
 		EB8D503628E15E1F0045C4D2 /* IDFindRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D503528E15E1F0045C4D2 /* IDFindRequest.swift */; };
 		EB8D503A28E15F450045C4D2 /* PWFindRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D503928E15F450045C4D2 /* PWFindRequest.swift */; };
 		EB8D503C28E1601A0045C4D2 /* PWFindResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D503B28E1601A0045C4D2 /* PWFindResponse.swift */; };
@@ -61,6 +60,8 @@
 		EBE4EDBE28A51288005C7516 /* ProfileTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDBD28A51288005C7516 /* ProfileTabViewController.swift */; };
 		EBE4EDC028A5129A005C7516 /* ColorTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */; };
 		EBE4EDC328A514AF005C7516 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDC228A514AF005C7516 /* UIViewController+Extension.swift */; };
+		EBE6657928E6B28D007F3B48 /* FeedViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBE6657728E6B28D007F3B48 /* FeedViewCell.xib */; };
+		EBE6657D28E6C0EC007F3B48 /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE6657C28E6C0EC007F3B48 /* FeedViewCell.swift */; };
 		EBF510D128AFBC2D0098BD5A /* IDCheckRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D028AFBC2D0098BD5A /* IDCheckRequest.swift */; };
 		EBF510D528AFBC570098BD5A /* NickCheckRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D428AFBC570098BD5A /* NickCheckRequest.swift */; };
 		EBF510D728AFBC660098BD5A /* NickCheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D628AFBC660098BD5A /* NickCheckResponse.swift */; };
@@ -93,7 +94,6 @@
 		EB67743B28C72F2B001A6F55 /* BarvaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarvaURL.swift; sourceTree = "<group>"; };
 		EB834A9628E45662008A0706 /* HomeImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		EB834A9928E45B5D008A0706 /* testImage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = testImage; sourceTree = "<group>"; };
-		EB84731D28C2F53700638EE2 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		EB8D503528E15E1F0045C4D2 /* IDFindRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDFindRequest.swift; sourceTree = "<group>"; };
 		EB8D503928E15F450045C4D2 /* PWFindRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWFindRequest.swift; sourceTree = "<group>"; };
 		EB8D503B28E1601A0045C4D2 /* PWFindResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWFindResponse.swift; sourceTree = "<group>"; };
@@ -130,6 +130,8 @@
 		EBE4EDBD28A51288005C7516 /* ProfileTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabViewController.swift; sourceTree = "<group>"; };
 		EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTabViewController.swift; sourceTree = "<group>"; };
 		EBE4EDC228A514AF005C7516 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		EBE6657728E6B28D007F3B48 /* FeedViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FeedViewCell.xib; path = ../../Controller/Home/Feed_Chat/Feed/FeedViewCell.xib; sourceTree = "<group>"; };
+		EBE6657C28E6C0EC007F3B48 /* FeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewCell.swift; sourceTree = "<group>"; };
 		EBF510D028AFBC2D0098BD5A /* IDCheckRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCheckRequest.swift; sourceTree = "<group>"; };
 		EBF510D428AFBC570098BD5A /* NickCheckRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickCheckRequest.swift; sourceTree = "<group>"; };
 		EBF510D628AFBC660098BD5A /* NickCheckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickCheckResponse.swift; sourceTree = "<group>"; };
@@ -281,7 +283,7 @@
 		EB834A9828E45881008A0706 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				EB84731D28C2F53700638EE2 /* FeedTableViewCell.xib */,
+				EBE6657728E6B28D007F3B48 /* FeedViewCell.xib */,
 				EBB2A0F728DB2E55002AAF1E /* ChatTableCell.xib */,
 				EB834A9628E45662008A0706 /* HomeImageCollectionViewCell.xib */,
 			);
@@ -340,7 +342,7 @@
 		EB9BB21E28E4250300AD34B1 /* Feed_Chat */ = {
 			isa = PBXGroup;
 			children = (
-				EB9BB21F28E4254700AD34B1 /* FeedViewController.swift */,
+				EBADDB6728E6A36A003CC253 /* Feed */,
 				EB9BB22128E4255200AD34B1 /* ChatViewController.swift */,
 			);
 			path = Feed_Chat;
@@ -368,6 +370,15 @@
 				EBA63E9728AB717100144E3A /* BarvaLog.swift */,
 			);
 			path = BarvaLog;
+			sourceTree = "<group>";
+		};
+		EBADDB6728E6A36A003CC253 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				EB9BB21F28E4254700AD34B1 /* FeedViewController.swift */,
+				EBE6657C28E6C0EC007F3B48 /* FeedViewCell.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		EBB8F45928BF9A060069D4E1 /* Font */ = {
@@ -540,11 +551,11 @@
 				EB25ACFF28A1364D0006C1F2 /* Login.storyboard in Resources */,
 				EBAEEF5D28B35A5A00744A4F /* SpoqaHanSans in Resources */,
 				EB2EA2FB28A1410E00EC0685 /* Home.storyboard in Resources */,
-				EB84731E28C2F53700638EE2 /* FeedTableViewCell.xib in Resources */,
 				EBB8F45828BF99FA0069D4E1 /* inter-cufonfonts in Resources */,
 				EBB2A0F828DB2E55002AAF1E /* ChatTableCell.xib in Resources */,
 				EB834A9A28E45B5D008A0706 /* testImage in Resources */,
 				EB03C48428B262B700AECA53 /* MPLUS1Code in Resources */,
+				EBE6657928E6B28D007F3B48 /* FeedViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +618,7 @@
 				EB8D504128E160FB0045C4D2 /* UpdatePWResponse.swift in Sources */,
 				EB25ACFC28A1364D0006C1F2 /* LoginViewController.swift in Sources */,
 				EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */,
+				EBE6657D28E6C0EC007F3B48 /* FeedViewCell.swift in Sources */,
 				EBF510D128AFBC2D0098BD5A /* IDCheckRequest.swift in Sources */,
 				EB1751FA28AA8D43009FEFBF /* FindViewController.swift in Sources */,
 				EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */,

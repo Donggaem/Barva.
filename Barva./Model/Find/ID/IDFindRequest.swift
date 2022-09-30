@@ -9,5 +9,6 @@ import Foundation
 
 struct IDFindRequest: Encodable {
     
+    var user_name: String
     var user_email: String
 }

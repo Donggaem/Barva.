@@ -1,128 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="SpoqaHanSansNeo-Bold.ttf">
-            <string>SpoqaHanSansNeo-Bold</string>
-        </array>
-        <array key="SpoqaHanSansNeo-Regular.ttf">
-            <string>SpoqaHanSansNeo-Regular</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6Ui-u9-OZ1">
-            <rect key="frame" x="0.0" y="0.0" width="390" height="674"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Ui-u9-OZ1" id="uOZ-HT-CP1">
-                <rect key="frame" x="0.0" y="0.0" width="390" height="674"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FeedTableViewCell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cgE-45-9Nh">
-                        <rect key="frame" x="22" y="18" width="30" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="30" id="E0D-VQ-XDO"/>
-                            <constraint firstAttribute="height" constant="30" id="YXE-rS-tmJ"/>
-                        </constraints>
-                    </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMS-Xa-Wph">
-                        <rect key="frame" x="346" y="18" width="22" height="22"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="22" id="Dpe-Ow-L1w"/>
-                            <constraint firstAttribute="height" constant="22" id="hsK-lX-mk9"/>
-                        </constraints>
-                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" title="Button" image="ellipsis" catalog="system"/>
-                    </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bmB-Vb-cgD">
-                        <rect key="frame" x="0.0" y="59" width="390" height="390"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="390" id="CM3-LI-NaT"/>
-                            <constraint firstAttribute="height" constant="390" id="E4a-zX-5El"/>
-                        </constraints>
-                    </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3So-je-kTU">
-                        <rect key="frame" x="59.999999999999993" y="18.666666666666671" width="30.666666666666664" height="29.333333333333329"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZz-gW-FrH">
-                                <rect key="frame" x="0.0" y="0.0" width="30.666666666666668" height="14.666666666666666"/>
-                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqk-th-UAc">
-                                <rect key="frame" x="0.0" y="14.666666666666668" width="30.666666666666668" height="14.666666666666668"/>
-                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="12"/>
-                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </stackView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hux-yX-hEI">
-                        <rect key="frame" x="22" y="465" width="20" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="20" id="dvM-bf-lmz"/>
-                            <constraint firstAttribute="height" constant="18" id="yhe-rD-D4I"/>
-                        </constraints>
-                        <color key="tintColor" red="0.10980392160000001" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" image="heart" catalog="system"/>
-                    </button>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cl7-yW-AZq">
-                        <rect key="frame" x="22" y="499" width="346" height="70"/>
-                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="346" id="1TW-Ip-PIt"/>
-                            <constraint firstAttribute="height" constant="70" id="sVv-PL-WEm"/>
-                        </constraints>
-                        <color key="textColor" systemColor="labelColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hun-Dl-vWK">
-                        <rect key="frame" x="22" y="577" width="64" height="26"/>
-                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="11"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal" title="댓글 모두보기">
-                            <color key="titleColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
-                        </state>
-                    </button>
-                </subviews>
-                <constraints>
-                    <constraint firstItem="3So-je-kTU" firstAttribute="leading" secondItem="cgE-45-9Nh" secondAttribute="trailing" constant="8" id="6DX-KZ-JoI"/>
-                    <constraint firstItem="bmB-Vb-cgD" firstAttribute="top" secondItem="3So-je-kTU" secondAttribute="bottom" constant="11" id="DOJ-tx-7o4"/>
-                    <constraint firstItem="bmB-Vb-cgD" firstAttribute="leading" secondItem="uOZ-HT-CP1" secondAttribute="leading" id="IyJ-Y2-JEH"/>
-                    <constraint firstItem="Hun-Dl-vWK" firstAttribute="leading" secondItem="uOZ-HT-CP1" secondAttribute="leading" constant="22" id="MSF-nW-4Yw"/>
-                    <constraint firstItem="hux-yX-hEI" firstAttribute="leading" secondItem="uOZ-HT-CP1" secondAttribute="leading" constant="22" id="MeS-HW-sDN"/>
-                    <constraint firstAttribute="trailing" secondItem="KMS-Xa-Wph" secondAttribute="trailing" constant="22" id="bj0-IE-Lbg"/>
-                    <constraint firstAttribute="trailing" secondItem="bmB-Vb-cgD" secondAttribute="trailing" id="fjf-g5-cVZ"/>
-                    <constraint firstItem="Cl7-yW-AZq" firstAttribute="leading" secondItem="uOZ-HT-CP1" secondAttribute="leading" constant="22" id="fwO-kC-OiS"/>
-                    <constraint firstItem="bmB-Vb-cgD" firstAttribute="top" secondItem="cgE-45-9Nh" secondAttribute="bottom" constant="11" id="jYo-W7-xuL"/>
-                    <constraint firstItem="Hun-Dl-vWK" firstAttribute="top" secondItem="Cl7-yW-AZq" secondAttribute="bottom" constant="8" id="l9U-zV-Jvg"/>
-                    <constraint firstItem="cgE-45-9Nh" firstAttribute="top" secondItem="uOZ-HT-CP1" secondAttribute="top" constant="18" id="lgv-6g-jeb"/>
-                    <constraint firstItem="cgE-45-9Nh" firstAttribute="leading" secondItem="uOZ-HT-CP1" secondAttribute="leading" constant="22" id="qbZ-gC-pmT"/>
-                    <constraint firstItem="hux-yX-hEI" firstAttribute="top" secondItem="bmB-Vb-cgD" secondAttribute="bottom" constant="16" id="rum-t1-RB9"/>
-                    <constraint firstAttribute="trailing" secondItem="Cl7-yW-AZq" secondAttribute="trailing" constant="22" id="tp1-ks-ZU7"/>
-                    <constraint firstItem="Cl7-yW-AZq" firstAttribute="top" secondItem="hux-yX-hEI" secondAttribute="bottom" constant="16" id="uS5-92-7WA"/>
-                    <constraint firstItem="KMS-Xa-Wph" firstAttribute="top" secondItem="uOZ-HT-CP1" secondAttribute="top" constant="18" id="xAz-UV-tmF"/>
-                </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="155.38461538461539" y="75.355450236966817"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="ellipsis" catalog="system" width="128" height="37"/>
-        <image name="heart" catalog="system" width="128" height="107"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

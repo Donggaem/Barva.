@@ -18,6 +18,7 @@ struct AuthMailResponse: Decodable{
 
 struct authNumber: Decodable {
     
+    var err: String
     var authNumber: String
     
 }

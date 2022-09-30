@@ -192,7 +192,7 @@ class PWFindTabViewController: UIViewController {
     
     //MARK: POST AuthMAil
     private func postAuthMail(_ parameters: AuthMailRequest){
-        AF.request(BarvaURL.authMailURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+        AF.request(BarvaURL.pwFindEmailURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
             .responseDecodable(of: AuthMailResponse.self) { [self] response in
                 switch response.result {

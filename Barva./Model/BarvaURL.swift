@@ -20,6 +20,7 @@ struct BarvaURL {
     static let idFindURL = "http://3.34.183.110:3003/findId"
     static let pwFindURL = "http://3.34.183.110:3003/findPw"
     static let updatePWURL = "http://3.34.183.110:3003/updatePw"
+    static let pwFindEmailURL = "http://3.34.183.110:3003/findPwMail"
     
     static let imgURL = "http://3.34.183.110:3003/img"
 
