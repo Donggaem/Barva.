@@ -214,7 +214,6 @@ class SigninViewController: UIViewController {
     @IBAction func signinBtnPressed(_ sender: UIButton) {
         let id = idTextField.text ?? ""
         let pw = pwTextField.text ?? ""
-        let pwCheck = pwCheckTextField.text ?? ""
         let nick = nickNameTextField.text ?? ""
         let name = nameTextField.text ?? ""
         let email = emailTextField.text ?? ""
@@ -243,12 +242,11 @@ class SigninViewController: UIViewController {
             print(name)
             print(id)
             print(pw)
-            print(pwCheck)
             print(email)
             print(marketing)
             
                 
-            let param = SignRequest(user_name: name, user_nick: nick, user_id: id, user_pw: pw, user_confirmPw: pwCheck, user_email: email, marketing: marketing)
+            let param = SignRequest(user_name: name, user_nick: nick, user_id: id, user_pw: pw,  user_email: email, marketing: marketing)
             postSignin(param)
             
             
