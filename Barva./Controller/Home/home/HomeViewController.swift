@@ -35,5 +35,8 @@ class HomeViewController: UIViewController {
         self.tabBarController?.tabBar.layer.borderWidth = 1 //탭바 보더
         self.tabBarController?.tabBar.layer.borderColor = UIColor(red: 0.846, green: 0.846, blue: 0.846, alpha: 1).cgColor //탭바 보더 색
         
+        //네비바 숨김
+        self.navigationController?.navigationBar.isHidden = true
+
     }
 }

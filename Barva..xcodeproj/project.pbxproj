@@ -21,6 +21,8 @@
 		EB25AD0428A136500006C1F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB25AD0228A136500006C1F2 /* LaunchScreen.storyboard */; };
 		EB2EA2F928A1409800EC0685 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2EA2F828A1409800EC0685 /* SigninViewController.swift */; };
 		EB2EA2FB28A1410E00EC0685 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2EA2FA28A1410E00EC0685 /* Home.storyboard */; };
+		EB2F90B228E96D510098A3C1 /* UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F90B128E96D510098A3C1 /* UploadRequest.swift */; };
+		EB2F90B428E96D600098A3C1 /* UploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F90B328E96D600098A3C1 /* UploadResponse.swift */; };
 		EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67743B28C72F2B001A6F55 /* BarvaURL.swift */; };
 		EB834A9728E45662008A0706 /* HomeImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB834A9628E45662008A0706 /* HomeImageCollectionViewCell.xib */; };
 		EB834A9A28E45B5D008A0706 /* testImage in Resources */ = {isa = PBXBuildFile; fileRef = EB834A9928E45B5D008A0706 /* testImage */; };
@@ -90,6 +92,8 @@
 		EB25AD0528A136500006C1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB2EA2F828A1409800EC0685 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		EB2EA2FA28A1410E00EC0685 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		EB2F90B128E96D510098A3C1 /* UploadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRequest.swift; sourceTree = "<group>"; };
+		EB2F90B328E96D600098A3C1 /* UploadResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadResponse.swift; sourceTree = "<group>"; };
 		EB2F99C628B0ABF10084EB7B /* YPImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YPImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB67743B28C72F2B001A6F55 /* BarvaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarvaURL.swift; sourceTree = "<group>"; };
 		EB834A9628E45662008A0706 /* HomeImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeImageCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 				EBF510CF28AFBBF40098BD5A /* Login */,
 				EB67743D28C73A3C001A6F55 /* SignUp */,
 				EB8D503228E15DF30045C4D2 /* Find */,
+				EB2F90AF28E96C0A0098A3C1 /* Home */,
 				EB67743B28C72F2B001A6F55 /* BarvaURL.swift */,
 			);
 			path = Model;
@@ -260,6 +265,23 @@
 				EB1751F228AA788A009FEFBF /* Home */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		EB2F90AF28E96C0A0098A3C1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EB2F90B028E96C150098A3C1 /* Upload */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EB2F90B028E96C150098A3C1 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				EB2F90B128E96D510098A3C1 /* UploadRequest.swift */,
+				EB2F90B328E96D600098A3C1 /* UploadResponse.swift */,
+			);
+			path = Upload;
 			sourceTree = "<group>";
 		};
 		EB67743D28C73A3C001A6F55 /* SignUp */ = {
@@ -620,9 +642,11 @@
 				EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */,
 				EBE6657D28E6C0EC007F3B48 /* FeedViewCell.swift in Sources */,
 				EBF510D128AFBC2D0098BD5A /* IDCheckRequest.swift in Sources */,
+				EB2F90B228E96D510098A3C1 /* UploadRequest.swift in Sources */,
 				EB1751FA28AA8D43009FEFBF /* FindViewController.swift in Sources */,
 				EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */,
 				EB1751F828AA7D7A009FEFBF /* IDFindTabViewController.swift in Sources */,
+				EB2F90B428E96D600098A3C1 /* UploadResponse.swift in Sources */,
 				EBB8F46228BFA61E0069D4E1 /* StorageTabViewController.swift in Sources */,
 				EB8D503A28E15F450045C4D2 /* PWFindRequest.swift in Sources */,
 				EB8D503E28E160B30045C4D2 /* UpdatePWRequest.swift in Sources */,

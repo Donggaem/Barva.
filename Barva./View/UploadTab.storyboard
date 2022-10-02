@@ -21,9 +21,6 @@
         <array key="SpoqaHanSansNeo-Medium.ttf">
             <string>SpoqaHanSansNeo-Medium</string>
         </array>
-        <array key="SpoqaHanSansNeo-Regular.ttf">
-            <string>SpoqaHanSansNeo-Regular</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Item-->
@@ -80,15 +77,19 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyF-UA-jEM">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                                        <color key="backgroundColor" red="0.10980392160000001" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="6oo-aS-krL"/>
                                                             <constraint firstAttribute="width" constant="30" id="JSI-kF-GvZ"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="12"/>
-                                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="남"/>
+                                                        <state key="normal" title="남">
+                                                            <color key="titleColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="manBtnPressed:" destination="Gl7-9f-TQd" eventType="touchUpInside" id="x1X-TI-ApT"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klh-mb-j1Q">
                                                         <rect key="frame" x="38" y="0.0" width="30" height="30"/>
@@ -97,9 +98,13 @@
                                                             <constraint firstAttribute="width" constant="30" id="bCf-Tc-Guh"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="12"/>
-                                                        <color key="tintColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="여"/>
+                                                        <state key="normal" title="여">
+                                                            <color key="titleColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="womanBtnPressed:" destination="Gl7-9f-TQd" eventType="touchUpInside" id="JgD-cF-J6H"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -128,7 +133,8 @@
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="60" borderStyle="roundedRect" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="vpa-aA-oKQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
-                                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="14"/>
+                                                                <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Medium" family="Spoqa Han Sans Neo" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h5-21-wZb">
@@ -173,6 +179,9 @@
                                         <state key="normal" image="location" catalog="system">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="uploadBtnPressed:" destination="Gl7-9f-TQd" eventType="touchUpInside" id="056-YJ-Cd7"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="barva." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDv-r9-Ire">
                                         <rect key="frame" x="22" y="9.9999999999999982" width="54" height="22.333333333333329"/>
@@ -238,7 +247,11 @@
                     <connections>
                         <outlet property="UPloadtextView" destination="dqi-N8-zGU" id="W4u-pO-ZGn"/>
                         <outlet property="countLabel" destination="f3B-qy-ehR" id="U23-SD-ZyD"/>
+                        <outlet property="manBtn" destination="uyF-UA-jEM" id="1Yj-Gl-0AH"/>
                         <outlet property="pagerView" destination="GOL-w5-xZG" id="l5G-Nx-wf3"/>
+                        <outlet property="user_HeightTextField" destination="pUN-0n-xbq" id="IwB-uW-OAX"/>
+                        <outlet property="user_weightTextField" destination="vpa-aA-oKQ" id="YUx-z2-ktt"/>
+                        <outlet property="womanBtn" destination="klh-mb-j1Q" id="dW3-iQ-2kF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rMO-jt-ojn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

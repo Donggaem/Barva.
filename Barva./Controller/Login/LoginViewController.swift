@@ -49,6 +49,10 @@ class LoginViewController: UIViewController {
     private func setUI() {
         loginBtn.layer.cornerRadius = 5
         
+        //네비바 숨김
+        self.navigationController?.navigationBar.isHidden = true
+
+        
     }
     
     //MARK: POST LOGIN

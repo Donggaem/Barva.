@@ -11,7 +11,13 @@ import PhotosUI
 import FSPagerView
 import Alamofire
 
-class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate {
+class UploadTabViewController: UIViewController {
+    
+    @IBOutlet weak var manBtn: UIButton!
+    @IBOutlet weak var womanBtn: UIButton!
+    
+    @IBOutlet weak var user_HeightTextField: UITextField!
+    @IBOutlet weak var user_weightTextField: UITextField!
     
     @IBOutlet weak var UPloadtextView: UITextView!
     @IBOutlet weak var countLabel: UILabel!
@@ -26,7 +32,11 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
     private let textViewPlaceHolder = "착용한 아이템 및 스타일을 소개해 주세요."
     private let maxCount = 99
     
-    var images: [UIImage] = []
+    var user_Images: [UIImage] = []
+    var imageData: [Data] = []
+
+    
+    var userGender = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,28 +76,41 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
         // 채택된 델리게이트 관련 메소드 (func picker) 아래에 정의함 ⬇️
     }
     
-    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-        picker.dismiss(animated: true, completion: nil)
-        self.images.removeAll() // 이전 데이터 지워주기 위해서 배열 초기화
-        let group = DispatchGroup()
-        results.forEach { result in
-            group.enter()
-            result.itemProvider.loadObject(ofClass: UIImage.self) { [ weak self ] reading, error in
-                // weak self 는 '약한 참조'의 개념인데 순환 참조를 막기 위해 클로저 내부에서 많이 사용함 이건 나중에 찾아봐
-                defer { group.leave() }
-                guard let self = self else { return }
-                guard let image = reading as? UIImage, error == nil else { return }
-                
-                self.images.append(image)
-                
-            }
-        }
-        group.notify(queue: .main) {
-            print(self.images.count)
-            //self.pageControl.re
-            self.pagerView.reloadData()
-        }
+    //MARK: IBACTION
+    
+    @IBAction func manBtnPressed(_ sender: UIButton) {
+        
+        userGender = "male"
+        manBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        manBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        
+        womanBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
+        womanBtn.setTitleColor( UIColor(red: 0.431, green: 0.431, blue: 0.431, alpha: 1), for: .normal)
+        print(userGender)
     }
+    
+    @IBAction func womanBtnPressed(_ sender: UIButton) {
+        
+        userGender = "fmale"
+        womanBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        womanBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        
+        manBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
+        manBtn.setTitleColor( UIColor(red: 0.431, green: 0.431, blue: 0.431, alpha: 1), for: .normal)
+        print(userGender)
+    }
+    
+    @IBAction func uploadBtnPressed(_ sender: UIButton) {
+        let gender = self.userGender
+        let height = self.user_HeightTextField.text ?? ""
+        let weight = self.user_weightTextField.text ?? ""
+        let content = self.UPloadtextView.text ?? ""
+        let images = imageData
+        
+        let params = UploadRequest(gender: gender, user_height: height, user_weight: weight, content: content, userImg: images)
+        postUpload(params)
+    }
+    
     
     //MARK: INNER FUNC
     private func setUI() {
@@ -99,45 +122,107 @@ class UploadTabViewController: UIViewController, PHPickerViewControllerDelegate 
         pagerView.addGestureRecognizer(tapImageViewRecognizer) //이미지뷰에 제스처인식기 연결
         
     }
-
     
-//    //MARK: POST IMG
-//    func postIMG(images: [UIImage]) {
-//        let headers: HTTPHeaders = ["Content-type": "multipart/form-data"]
-//        AF.upload(multipartFormData: { (multipartFormData) in
-//
-//        }, to: BarvaURL.imgURL, method: .post, headers: headers).responseJSON(completionHandler: { (response) in    //헤더와 응답 처리
-//                        print(response)
-//
-//                        if let err = response.error{    //응답 에러
-//                            print(err)
-//                            return
-//                        }
-//                        print("success")        //응답 성공
-//
-//                        let json = response.data
-//
-//                        if (json != nil){
-//                            print(json)
-//                        }
-//                    })
-//    }
-    
-    
+    //MARK: POST IMGUPLOAD
+    func postUpload(_ parameters: UploadRequest) {
+        
+        let headers: HTTPHeaders = ["Content-type": "multipart/form-data"]
+        
+        AF.upload(multipartFormData: { (multipartFormData) in
+            for image in self.user_Images {
+                self.imageData.append(image.jpegData(compressionQuality: 0.9)!)
+            }
+            
+            let gender = self.userGender
+            let height = self.user_HeightTextField.text ?? ""
+            let weight = self.user_weightTextField.text ?? ""
+            let content = self.UPloadtextView.text ?? ""
+            
+            let parameters: [String : Any] = [
+                        "user_Gender": gender,
+                        "user_Height": height,
+                        "user_Weight": weight,
+                        "user_Content": content
+                    ]
+            
+            for (key, value) in parameters {
+                multipartFormData.append("\(value)".data(using: .utf8)!, withName: key)
+            }
+            
+            for images in self.imageData {
+                multipartFormData.append(images,
+                                         withName: "user_image",
+                                         fileName: "upload_image",
+                                         mimeType: "image/jpeg")
+            }
+            
+        }, to: BarvaURL.imgURL, method: .post, headers: headers).responseDecodable(of: UploadResponse.self) { [self] response in
+            switch response.result {
+            case .success(let response):
+                if response.isSuccess == true {
+                    BarvaLog.debug("PostUpload")
+                    
+                } else {
+                    BarvaLog.error("PostUpload")
+                    let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    fail_alert.addAction(okAction)
+                    present(fail_alert, animated: false, completion: nil)
+                    
+                }
+            case .failure(let error):
+                BarvaLog.error("PostUpload")
+                print(error.localizedDescription)
+                let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                let okAction = UIAlertAction(title: "확인", style: .default)
+                fail_alert.addAction(okAction)
+                present(fail_alert, animated: false, completion: nil)
+                
+            }
+        }
+    }
 }
+
+//MARK: Extension PICKER
+extension UploadTabViewController: PHPickerViewControllerDelegate {
+    
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true, completion: nil)
+        self.user_Images.removeAll() // 이전 데이터 지워주기 위해서 배열 초기화
+        let group = DispatchGroup()
+        results.forEach { result in
+            group.enter()
+            result.itemProvider.loadObject(ofClass: UIImage.self) { [ weak self ] reading, error in
+                // weak self 는 '약한 참조'의 개념인데 순환 참조를 막기 위해 클로저 내부에서 많이 사용함 이건 나중에 찾아봐
+                defer { group.leave() }
+                guard let self = self else { return }
+                guard let image = reading as? UIImage, error == nil else { return }
+                
+                self.user_Images.append(image)
+                
+            }
+        }
+        group.notify(queue: .main) {
+            print(self.user_Images.count)
+            //self.pageControl.re
+            self.pagerView.reloadData()
+        }
+    }
+}
+
 
 //MARK: Extension FSPagerView
 extension UploadTabViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     
     //이미지 개수
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return self.images.count
+        return self.user_Images.count
     }
     
     //각셀에 대한 설정
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
-        cell.imageView?.image = self.images[index]
+        cell.imageView?.image = self.user_Images[index]
         return cell
     }
 }

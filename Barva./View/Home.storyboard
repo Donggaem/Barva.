@@ -47,7 +47,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Faq-z8-fKf">
-                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="673"/>
                                 <connections>
                                     <segue destination="AB4-19-zK8" kind="embed" id="7gl-Qr-Ggg"/>
                                 </connections>
@@ -73,7 +73,7 @@
                         <viewLayoutGuide key="safeArea" id="zE3-lH-CiW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Faq-z8-fKf" firstAttribute="top" secondItem="zE3-lH-CiW" secondAttribute="top" id="5U2-Li-tlY"/>
+                            <constraint firstItem="Faq-z8-fKf" firstAttribute="top" secondItem="mSY-SH-Glr" secondAttribute="bottom" id="5U2-Li-tlY"/>
                             <constraint firstItem="mSY-SH-Glr" firstAttribute="top" secondItem="IQM-MC-AXg" secondAttribute="top" constant="44" id="8iT-bi-t5B"/>
                             <constraint firstAttribute="trailing" secondItem="Faq-z8-fKf" secondAttribute="trailing" id="GuS-oL-qaV"/>
                             <constraint firstItem="zE3-lH-CiW" firstAttribute="trailing" secondItem="mSY-SH-Glr" secondAttribute="trailing" id="Iq7-eP-dix"/>
@@ -209,7 +209,7 @@
             <objects>
                 <viewController id="AB4-19-zK8" customClass="HomeTabManViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ryt-6m-Ql0">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="670"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="673"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="BNu-ei-qcZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
