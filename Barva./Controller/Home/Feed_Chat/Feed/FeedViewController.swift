@@ -60,6 +60,7 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "FeedViewCell", at: index) as! FeedViewCell
         
         cell.feedImage.image = UIImage(named: paramImg)
+        cell.contentView.isUserInteractionEnabled = false
         
         return cell
     }

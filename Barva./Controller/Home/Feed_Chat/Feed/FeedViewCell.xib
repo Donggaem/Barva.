@@ -70,6 +70,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaB-1k-BXE">
                             <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
+                            <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="18" id="8fC-k2-1qq"/>
                                 <constraint firstAttribute="width" constant="20" id="ajY-Dh-agg"/>
@@ -79,6 +80,9 @@
                             <buttonConfiguration key="configuration" style="plain">
                                 <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="heartBtnPressed:" destination="9cz-Ha-a7l" eventType="touchUpInside" id="AvQ-Ha-VTK"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaL-7x-lw8">
                             <rect key="frame" x="38" y="0.0" width="18" height="18"/>
@@ -115,6 +119,9 @@
                     <state key="normal" title="댓글 모두보기">
                         <color key="titleColor" red="0.45098039220000002" green="0.45098039220000002" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="allChatBtnPressed:" destination="9cz-Ha-a7l" eventType="touchUpInside" id="wU0-dq-7CM"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="0Nf-c8-xCV"/>
@@ -139,6 +146,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="feedImage" destination="XL0-HW-Nup" id="YSu-YK-BS5"/>
+                <outlet property="heartBtn" destination="gaB-1k-BXE" id="PZa-1n-iqa"/>
             </connections>
             <point key="canvasLocation" x="348" y="25"/>
         </view>
@@ -151,6 +159,9 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
