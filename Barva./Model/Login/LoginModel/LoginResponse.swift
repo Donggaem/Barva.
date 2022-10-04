@@ -12,11 +12,12 @@ struct LoginResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: token?
+    var data: LoginData?
 }
 
-struct token: Decodable{
+struct LoginData: Decodable{
     
     var token: String
+    var err: String
     
 }

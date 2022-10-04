@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct AuthMailResponse: Decodable{
+struct SendMailResponse: Decodable{
     
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data:  authNumber?
+    var data:  SendMailData?
     
 }
 
-struct authNumber: Decodable {
+struct SendMailData: Decodable {
     
-    var err: String
+//    var err: String
     var authNumber: String
-    
+  
 }

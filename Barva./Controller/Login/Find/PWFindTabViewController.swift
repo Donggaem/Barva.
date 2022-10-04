@@ -37,7 +37,7 @@ class PWFindTabViewController: UIViewController {
         let email = emailTextField.text ?? ""
         
         if isValidEmail(testStr: email) == true {
-            let param = AuthMailRequest(user_email: email)
+            let param = SendMailRequest(user_email: email)
             postAuthMail(param)
             
         }else {
@@ -191,10 +191,10 @@ class PWFindTabViewController: UIViewController {
     }
     
     //MARK: POST AuthMAil
-    private func postAuthMail(_ parameters: AuthMailRequest){
+    private func postAuthMail(_ parameters: SendMailRequest){
         AF.request(BarvaURL.pwFindEmailURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
-            .responseDecodable(of: AuthMailResponse.self) { [self] response in
+            .responseDecodable(of: SendMailResponse.self) { [self] response in
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess == true {

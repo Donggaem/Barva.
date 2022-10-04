@@ -19,6 +19,7 @@ class FeedViewCell: FSPagerViewCell {
 //        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
 //        let signinVC = storyBoard.instantiateViewController(withIdentifier: "SigninViewController") as! SigninViewController
 //        self.navigationController?.pushViewController(signinVC, animated: true)
+
     }
     @IBAction func heartBtnPressed(_ sender: UIButton) {
         if heartBtn.isSelected == false {

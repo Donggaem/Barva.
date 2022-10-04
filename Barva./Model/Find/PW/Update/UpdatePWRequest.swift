@@ -10,4 +10,5 @@ import Foundation
 struct UpdatePWRequest: Encodable {
     
     var user_id: String
+    var user_updatePw: String
 }

@@ -9,18 +9,18 @@ import Foundation
 
 struct BarvaURL {
     
-    static let loginURL = "http://3.34.183.110:3003/login"
+    static let loginURL = "http://3.34.183.110:3003/auth/login"
     
-    static let signupURL = "http://3.34.183.110:3003/enroll"
-    static let nickCheckURL = "http://3.34.183.110:3003/duplicatedNickCheck"
-    static let idCheckURL = "http://3.34.183.110:3003/duplicatedIdCheck"
-    static let authMailURL = "http://3.34.183.110:3003/authMail"
-    static let insepectMailURL = "http://3.34.183.110:3003/inspectMail"
+    static let signupURL = "http://3.34.183.110:3003/auth/signup"
+    static let nickCheckURL = "http://3.34.183.110:3003/auth/isExistNick"
+    static let idCheckURL = "http://3.34.183.110:3003/auth/isExistId"
+    static let sendMailURL = "http://3.34.183.110:3003/auth/sendMail"
+    static let insepectMailURL = "http://3.34.183.110:3003/auth/authMail"
     
-    static let idFindURL = "http://3.34.183.110:3003/findId"
-    static let pwFindURL = "http://3.34.183.110:3003/findPw"
-    static let updatePWURL = "http://3.34.183.110:3003/updatePw"
-    static let pwFindEmailURL = "http://3.34.183.110:3003/findPwMail"
+    static let idFindURL = "http://3.34.183.110:3003/auth/findId"
+    static let pwFindURL = "http://3.34.183.110:3003/auth/findPw"
+    static let updatePWURL = "http://3.34.183.110:3003/auth/updatePw"
+    static let pwFindEmailURL = "http://3.34.183.110:3003/auth/findPwMail"
     
     static let imgURL = "http://3.34.183.110:3003/img"
 

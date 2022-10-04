@@ -12,9 +12,9 @@ struct IDCheckResponse: Decodable{
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: IDerr?
+    var data: IDData?
 }
 
-struct IDerr: Decodable {
+struct IDData: Decodable {
     var err: String
 }

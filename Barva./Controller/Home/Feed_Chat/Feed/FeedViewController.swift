@@ -62,8 +62,11 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.feedImage.image = UIImage(named: paramImg)
         cell.contentView.isUserInteractionEnabled = false
         
+        
+        
         return cell
     }
+    
     
     
 }

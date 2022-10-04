@@ -29,7 +29,8 @@ class UpdatePWViewController: UIViewController {
     //MARK: IBACTION
     @IBAction func resetPWBtnPressed(_ sender: UIButton) {
         let id = paramUserid
-        let param = UpdatePWRequest(user_id: id)
+        let pw = pwCheckTextField.text ?? ""
+        let param = UpdatePWRequest(user_id: id, user_updatePw: pw)
         postUpdatePW(param)
     }
     @IBAction func backBtnPressed(_ sender: UIButton) {

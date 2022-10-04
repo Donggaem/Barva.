@@ -108,8 +108,8 @@ class SigninViewController: UIViewController {
         let email = emailTextField.text ?? ""
         
         if isValidEmail(testStr: email) == true {
-            let param = AuthMailRequest(user_email: email)
-            postAuthMail(param)
+            let param = SendMailRequest(user_email: email)
+            postSendMail(param)
             
         }else {
             let fail_alert = UIAlertController(title: "실패", message: "이메일 형식이 잘못되었습니다", preferredStyle: UIAlertController.Style.alert)
@@ -213,7 +213,7 @@ class SigninViewController: UIViewController {
     
     @IBAction func signinBtnPressed(_ sender: UIButton) {
         let id = idTextField.text ?? ""
-        let pw = pwTextField.text ?? ""
+        let pw = pwCheckTextField.text ?? ""
         let nick = nickNameTextField.text ?? ""
         let name = nameTextField.text ?? ""
         let email = emailTextField.text ?? ""
@@ -238,8 +238,8 @@ class SigninViewController: UIViewController {
             present(check_alert, animated: false, completion: nil)
             
         case 3:
-            print(nick)
             print(name)
+            print(nick)
             print(id)
             print(pw)
             print(email)
@@ -505,10 +505,10 @@ class SigninViewController: UIViewController {
     
     
     //MARK: POST AuthMAil
-    private func postAuthMail(_ parameters: AuthMailRequest){
-        AF.request(BarvaURL.authMailURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+    private func postSendMail(_ parameters: SendMailRequest){
+        AF.request(BarvaURL.sendMailURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
-            .responseDecodable(of: AuthMailResponse.self) { [self] response in
+            .responseDecodable(of: SendMailResponse.self) { [self] response in
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess == true {
@@ -611,6 +611,7 @@ class SigninViewController: UIViewController {
                         
                     } else {
                         BarvaLog.error("PostSignin")
+                        print(response.data?.err ?? "")
                         let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         fail_alert.addAction(okAction)

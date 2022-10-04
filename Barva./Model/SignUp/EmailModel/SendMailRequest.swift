@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AuthMailRequest: Encodable {
+struct SendMailRequest: Encodable {
     
     var user_email: String
     

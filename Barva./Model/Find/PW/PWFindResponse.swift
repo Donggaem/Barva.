@@ -12,10 +12,10 @@ struct PWFindResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: PWFinderr?
+    var data: PWFindData?
 }
 
-struct PWFinderr: Decodable {
+struct PWFindData: Decodable {
     
     var err: String
 }

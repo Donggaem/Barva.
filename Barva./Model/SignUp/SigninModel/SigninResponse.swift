@@ -12,9 +12,9 @@ struct SigninResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: Signerr?
+    var data: SignData?
 }
 
-struct Signerr: Decodable {
+struct SignData: Decodable {
     var err: String
 }

@@ -12,10 +12,10 @@ struct IDFindResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: IDFinderr?
+    var data: IDFindData?
 }
 
-struct IDFinderr: Decodable {
+struct IDFindData: Decodable {
     
     var err: String
 }

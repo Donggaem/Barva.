@@ -12,9 +12,9 @@ struct InspectMailResponse: Decodable{
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: Inspecterr?
+    var data: InspectData?
 }
 
-struct Inspecterr: Decodable {
+struct InspectData: Decodable {
     var err: String
 }
