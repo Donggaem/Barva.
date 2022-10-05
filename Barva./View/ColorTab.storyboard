@@ -80,6 +80,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="colorImageView" destination="ORw-6A-54a" id="wFK-GT-x9q"/>
+                        <outlet property="photoIcon" destination="ged-Oc-1P0" id="rKq-zQ-biN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
