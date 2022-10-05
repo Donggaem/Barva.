@@ -17,7 +17,7 @@ struct LoginResponse: Decodable {
 
 struct LoginData: Decodable{
     
-    var token: String
-    var err: String
+    var token: String?
+    var err: String?
     
 }

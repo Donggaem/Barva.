@@ -18,7 +18,7 @@ struct SendMailResponse: Decodable{
 
 struct SendMailData: Decodable {
     
-//    var err: String
-    var authNumber: String
+    var err: String?
+    var authNumber: String?
   
 }
