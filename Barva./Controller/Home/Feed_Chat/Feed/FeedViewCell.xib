@@ -146,9 +146,11 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="feedImage" destination="XL0-HW-Nup" id="YSu-YK-BS5"/>
+                <outlet property="feedNameLabel" destination="bvK-Ha-wgh" id="ZbM-AT-Q6T"/>
+                <outlet property="feedSpecLabel" destination="Jrv-BT-BMm" id="lhr-93-65H"/>
                 <outlet property="heartBtn" destination="gaB-1k-BXE" id="PZa-1n-iqa"/>
             </connections>
-            <point key="canvasLocation" x="348" y="25"/>
+            <point key="canvasLocation" x="347.69230769230768" y="24.526066350710899"/>
         </view>
     </objects>
     <resources>

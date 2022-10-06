@@ -9,9 +9,8 @@ import UIKit
 import FSPagerView
 
 class FeedViewController: UIViewController {
-
-    var paramImg = ""
     
+
     @IBOutlet weak var feedPagerView: FSPagerView!{
         didSet {
             self.feedPagerView.register(UINib(nibName:"FeedViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "FeedViewCell")
@@ -24,9 +23,13 @@ class FeedViewController: UIViewController {
         }
     }
     
+    var paramImg = ""
+    var feedName = ""
+    var feedSpec = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setUI()
         
         feedPagerView.dataSource = self
@@ -36,7 +39,7 @@ class FeedViewController: UIViewController {
     //MARK: IBACTION
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-
+        
     }
     
     //MARK: INNER FUNC
@@ -45,7 +48,7 @@ class FeedViewController: UIViewController {
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
     }
-
+    
 }
 
 extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
@@ -61,12 +64,21 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         
         cell.feedImage.image = UIImage(named: paramImg)
         cell.contentView.isUserInteractionEnabled = false
-        
-        
+        cell.delegate = self
+        feedName = cell.feedNameLabel.text ?? ""
+        feedSpec = cell.feedSpecLabel.text ?? ""
         
         return cell
     }
-    
-    
-    
+}
+
+extension FeedViewController: NaviAction {
+    func moveChatVC() {
+        
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let chatVC = storyBoard.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+        self.navigationController?.pushViewController(chatVC, animated: true)
+        chatVC.paramFeedName = feedName
+        chatVC.paraFeedSpec = feedSpec
+    }
 }

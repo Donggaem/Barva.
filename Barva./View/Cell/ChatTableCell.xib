@@ -17,7 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FxD-DN-1K8">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ChatTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FxD-DN-1K8" customClass="ChatTableViewCell" customModule="Barva_" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="346" height="31"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FxD-DN-1K8" id="dpK-hm-u9y">
@@ -25,14 +25,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gtI-NA-KgX">
-                        <rect key="frame" x="0.0" y="0.66666666666666607" width="30" height="30"/>
+                        <rect key="frame" x="12" y="0.66666666666666607" width="30" height="30"/>
+                        <color key="backgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="tta-38-Na6"/>
                             <constraint firstAttribute="height" constant="30" id="vV7-Jf-o82"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="5lW-r3-gim">
-                        <rect key="frame" x="40" y="2.0000000000000009" width="62.333333333333343" height="13.333333333333336"/>
+                        <rect key="frame" x="52" y="2.0000000000000009" width="62.333333333333343" height="13.333333333333336"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBy-1H-dyW">
                                 <rect key="frame" x="0.0" y="0.0" width="30" height="13.333333333333334"/>
@@ -49,7 +50,7 @@
                         </subviews>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="답글달기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zky-HU-gAZ">
-                        <rect key="frame" x="40" y="21.333333333333332" width="33.333333333333343" height="10.999999999999996"/>
+                        <rect key="frame" x="52" y="21.333333333333332" width="33.333333333333343" height="10.999999999999996"/>
                         <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="9"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -60,10 +61,13 @@
                     <constraint firstItem="zky-HU-gAZ" firstAttribute="top" secondItem="5lW-r3-gim" secondAttribute="bottom" constant="6" id="DzS-XM-nnh"/>
                     <constraint firstItem="5lW-r3-gim" firstAttribute="top" secondItem="dpK-hm-u9y" secondAttribute="top" constant="2" id="JZa-pC-ZX8"/>
                     <constraint firstItem="zky-HU-gAZ" firstAttribute="leading" secondItem="gtI-NA-KgX" secondAttribute="trailing" constant="10" id="Skp-P9-pFw"/>
-                    <constraint firstItem="gtI-NA-KgX" firstAttribute="leading" secondItem="dpK-hm-u9y" secondAttribute="leading" id="V2A-C5-GPH"/>
+                    <constraint firstItem="gtI-NA-KgX" firstAttribute="leading" secondItem="dpK-hm-u9y" secondAttribute="leading" constant="12" id="V2A-C5-GPH"/>
                     <constraint firstItem="5lW-r3-gim" firstAttribute="leading" secondItem="gtI-NA-KgX" secondAttribute="trailing" constant="10" id="dNB-4S-fP8"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="chatLabel" destination="8Db-oD-2M8" id="OQC-IN-BPl"/>
+            </connections>
             <point key="canvasLocation" x="165" y="-152"/>
         </tableViewCell>
     </objects>

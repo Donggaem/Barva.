@@ -379,6 +379,9 @@
                                         <color key="tintColor" red="0.10980392160000001" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="LXk-ba-etS" eventType="touchUpInside" id="oDL-6Y-u10"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="barva." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAQ-yf-Hqt">
                                         <rect key="frame" x="54" y="10.000000000000002" width="57" height="23.666666666666671"/>
@@ -518,6 +521,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="4rz-Q1-aY7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="chatTableView" destination="9tF-nq-xub" id="YtX-ND-rYr"/>
+                        <outlet property="feedUesrSpecLabel" destination="N3D-8j-dql" id="t0v-ee-bs4"/>
+                        <outlet property="feedUserNameLabel" destination="HsE-nN-gu0" id="BCi-uQ-zbT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JxU-ak-m9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

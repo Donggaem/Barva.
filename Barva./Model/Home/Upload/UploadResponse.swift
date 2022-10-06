@@ -11,4 +11,9 @@ struct UploadResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
+//    var data: UploadInfo?
 }
+
+//struct UploadInfo: Decodable {
+//
+//}

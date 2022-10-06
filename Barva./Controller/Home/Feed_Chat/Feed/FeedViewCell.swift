@@ -8,19 +8,26 @@
 import Foundation
 import FSPagerView
 
+protocol NaviAction: AnyObject {
+    func moveChatVC()
+}
+
 class FeedViewCell: FSPagerViewCell {
     
+    @IBOutlet weak var feedNameLabel: UILabel!
+    @IBOutlet weak var feedSpecLabel: UILabel!
     @IBOutlet weak var feedImage: UIImageView!
     
     @IBOutlet weak var heartBtn: UIButton!
     
+    weak var delegate: NaviAction?
+    
     //MARK: IBACTION
     @IBAction func allChatBtnPressed(_ sender: UIButton) {
-//        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-//        let signinVC = storyBoard.instantiateViewController(withIdentifier: "SigninViewController") as! SigninViewController
-//        self.navigationController?.pushViewController(signinVC, animated: true)
 
+        self.delegate?.moveChatVC()
     }
+    
     @IBAction func heartBtnPressed(_ sender: UIButton) {
         if heartBtn.isSelected == false {
             heartBtn.isSelected = true

@@ -101,6 +101,7 @@ class UploadTabViewController: UIViewController {
     }
     
     @IBAction func uploadBtnPressed(_ sender: UIButton) {
+        print("cleck")
         let gender = self.userGender
         let height = self.user_HeightTextField.text ?? ""
         let weight = self.user_weightTextField.text ?? ""
@@ -114,6 +115,9 @@ class UploadTabViewController: UIViewController {
     
     //MARK: INNER FUNC
     private func setUI() {
+        
+        //네비바 숨김
+        self.navigationController?.navigationBar.isHidden = true
         
         // 이미지뷰 탭
         let tapImageViewRecognizer
@@ -151,8 +155,8 @@ class UploadTabViewController: UIViewController {
             
             for images in self.imageData {
                 multipartFormData.append(images,
-                                         withName: "user_image",
-                                         fileName: "upload_image",
+                                         withName: "img",
+                                         fileName: "test.jpeg",
                                          mimeType: "image/jpeg")
             }
             
@@ -160,10 +164,10 @@ class UploadTabViewController: UIViewController {
             switch response.result {
             case .success(let response):
                 if response.isSuccess == true {
-                    BarvaLog.debug("PostUpload")
+                    BarvaLog.debug("PostUpload Success")
                     
                 } else {
-                    BarvaLog.error("PostUpload")
+                    BarvaLog.error("PostUpload fail")
                     let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
                     fail_alert.addAction(okAction)
@@ -171,7 +175,7 @@ class UploadTabViewController: UIViewController {
                     
                 }
             case .failure(let error):
-                BarvaLog.error("PostUpload")
+                BarvaLog.error("PostUpload err")
                 print(error.localizedDescription)
                 let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                 let okAction = UIAlertAction(title: "확인", style: .default)
