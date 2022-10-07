@@ -168,7 +168,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DrO-B1-Y5M" userLabel="naviView">
                                 <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igN-i6-wn6">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e72-6u-Qar">
+                                        <rect key="frame" x="295" y="10" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="XOg-F4-Hen"/>
+                                            <constraint firstAttribute="height" constant="24" id="hs4-5e-Ulz"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="figure.core.training" catalog="system">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="testBtnPressed:" destination="Gl7-9f-TQd" eventType="touchUpInside" id="Mpn-56-w1K"/>
+                                            <action selector="uploadBtnPressed:" destination="Gl7-9f-TQd" eventType="touchUpInside" id="IzV-v0-Ilb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igN-i6-wn6" userLabel="UploadButton">
                                         <rect key="frame" x="344" y="10" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="VUt-Vz-yHI"/>
@@ -197,6 +213,8 @@
                                     <constraint firstItem="gDv-r9-Ire" firstAttribute="top" secondItem="DrO-B1-Y5M" secondAttribute="top" constant="10" id="Mod-Ic-ldZ"/>
                                     <constraint firstAttribute="trailing" secondItem="igN-i6-wn6" secondAttribute="trailing" constant="22" id="RRI-NL-pmc"/>
                                     <constraint firstAttribute="height" constant="44" id="b5R-nV-LWJ"/>
+                                    <constraint firstItem="igN-i6-wn6" firstAttribute="leading" secondItem="e72-6u-Qar" secondAttribute="trailing" constant="25" id="eD1-b6-LKV"/>
+                                    <constraint firstItem="e72-6u-Qar" firstAttribute="top" secondItem="DrO-B1-Y5M" secondAttribute="top" constant="10" id="qTt-qD-7ah"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P9n-Uv-4mf">
@@ -258,6 +276,38 @@
             </objects>
             <point key="canvasLocation" x="1563.0769230769231" y="33.412322274881518"/>
         </scene>
+        <!--Test Upload View Controller-->
+        <scene sceneID="bog-e8-LBz">
+            <objects>
+                <viewController storyboardIdentifier="TestUploadViewController" id="D3C-SN-8Kw" customClass="TestUploadViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EIO-Je-Mc0">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="diB-v9-ROE">
+                                <rect key="frame" x="0.0" y="47" width="390" height="390"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="390" id="hKe-EJ-O7o"/>
+                                    <constraint firstAttribute="width" constant="390" id="ntj-Wm-iJH"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Wee-43-uiA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="diB-v9-ROE" firstAttribute="trailing" secondItem="Wee-43-uiA" secondAttribute="trailing" id="TXe-3A-PyN"/>
+                            <constraint firstItem="diB-v9-ROE" firstAttribute="leading" secondItem="Wee-43-uiA" secondAttribute="leading" id="fgY-vc-Tm4"/>
+                            <constraint firstItem="diB-v9-ROE" firstAttribute="top" secondItem="Wee-43-uiA" secondAttribute="top" id="fti-DM-nQF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="testimage" destination="diB-v9-ROE" id="3KK-pi-Ct2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l1X-K0-sxH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2289.2307692307691" y="32.701421800947863"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="uOi-ze-AsL">
             <objects>
@@ -284,6 +334,7 @@
     </scenes>
     <resources>
         <image name="add_a_photo" width="40" height="40"/>
+        <image name="figure.core.training" catalog="system" width="128" height="48"/>
         <image name="location" catalog="system" width="128" height="121"/>
         <image name="plus.circle" catalog="system" width="128" height="123"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
