@@ -34,7 +34,7 @@ class UploadTabViewController: UIViewController {
     
     var user_Images: [UIImage] = []
     var imageData: [Data] = []
-
+    var testImg: [String] = []
     
     var userGender = ""
     
@@ -82,6 +82,7 @@ class UploadTabViewController: UIViewController {
         let testVC = self.storyboard?.instantiateViewController(withIdentifier: "TestUploadViewController") as! TestUploadViewController
         self.navigationController?.pushViewController(testVC, animated: true)
         
+        testVC.paramImg = testImg
         
     }
     @IBAction func manBtnPressed(_ sender: UIButton) {
@@ -140,7 +141,8 @@ class UploadTabViewController: UIViewController {
         
         AF.upload(multipartFormData: { (multipartFormData) in
             for image in self.user_Images {
-                self.imageData.append(image.jpegData(compressionQuality: 0.9)!)
+                self.imageData.append(image.jpegData(compressionQuality: 0.5)!)
+            
             }
             
             let gender = self.userGender
@@ -164,13 +166,17 @@ class UploadTabViewController: UIViewController {
                                          withName: "img",
                                          fileName: "test.jpeg",
                                          mimeType: "image/jpeg")
+                
             }
             
-        }, to: BarvaURL.imgURL, method: .post, headers: headers).responseDecodable(of: UploadResponse.self) { [self] response in
+        }, to: BarvaURL.imgsURL, method: .post, headers: headers).responseDecodable(of: UploadResponse.self) { [self] response in
             switch response.result {
             case .success(let response):
                 if response.isSuccess == true {
                     BarvaLog.debug("PostUpload Success")
+
+                    print(response.data)
+                    testImg = response.data 
                     
                 } else {
                     BarvaLog.error("PostUpload fail")

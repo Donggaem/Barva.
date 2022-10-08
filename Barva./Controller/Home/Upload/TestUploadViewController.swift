@@ -13,11 +13,13 @@ class TestUploadViewController: UIViewController {
     
     @IBOutlet weak var testimage: UIImageView!
     
+    var paramImg: [String] = []
+    var imageArray: [UIImageView] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "https://barva-dot.s3.ap-northeast-2.amazonaws.com/7721665045675137.png")
+        let url = URL(string: paramImg[0])
         testimage.kf.setImage(with: url)
         
     }

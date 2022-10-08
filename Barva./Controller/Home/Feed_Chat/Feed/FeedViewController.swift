@@ -8,6 +8,7 @@
 import UIKit
 import FSPagerView
 
+
 class FeedViewController: UIViewController {
     
 
@@ -26,6 +27,7 @@ class FeedViewController: UIViewController {
     var paramImg = ""
     var feedName = ""
     var feedSpec = ""
+    var imgArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,7 @@ class FeedViewController: UIViewController {
         
         feedPagerView.dataSource = self
         feedPagerView.delegate = self
+        print(paramImg)
     }
     
     //MARK: IBACTION
@@ -62,9 +65,10 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "FeedViewCell", at: index) as! FeedViewCell
         
-        cell.feedImage.image = UIImage(named: paramImg)
         cell.contentView.isUserInteractionEnabled = false
         cell.delegate = self
+//        cell.feedImage.image = UIImage(named: paramImg)
+        cell.feedImage.reloadData()
         feedName = cell.feedNameLabel.text ?? ""
         feedSpec = cell.feedSpecLabel.text ?? ""
         
@@ -80,5 +84,12 @@ extension FeedViewController: NaviAction {
         self.navigationController?.pushViewController(chatVC, animated: true)
         chatVC.paramFeedName = feedName
         chatVC.paraFeedSpec = feedSpec
+    }
+}
+
+extension FeedViewController: ImageArray {
+    var feedImages: [String] {
+        imgArray.append(paramImg)
+        return imgArray
     }
 }
