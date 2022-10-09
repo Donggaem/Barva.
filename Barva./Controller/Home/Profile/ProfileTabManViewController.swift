@@ -64,19 +64,17 @@ extension ProfileTabManViewController: PageboyViewControllerDataSource, TMBarDat
         switch index {
         case 0:
             let firstitem = TMBarItem(title: "")
-            //            firstitem.image = UIImage(named: "grid_view-1")
-            //            firstitem.selectedImage = UIImage(named: "grid_view")
+
             firstitem.image = UIImage(systemName: "square.grid.2x2")
             firstitem.selectedImage = UIImage(systemName: "square.grid.2x2.fill")
-            
             return firstitem
         case 1:
             let thirditem = TMBarItem(title: "")
-            //            thirditem.image = UIImage(named: "bookmark-1")
-            //            thirditem.selectedImage = UIImage(named: "bookmark")
+
             thirditem.image = UIImage(systemName: "bookmark")
             thirditem.selectedImage = UIImage(systemName: "bookmark.fill")
             return thirditem
+            
         default:
             let title = "Page \(index)"
             return TMBarItem(title: title)

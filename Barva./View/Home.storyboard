@@ -76,7 +76,7 @@
                             <constraint firstItem="Faq-z8-fKf" firstAttribute="top" secondItem="mSY-SH-Glr" secondAttribute="bottom" id="5U2-Li-tlY"/>
                             <constraint firstItem="mSY-SH-Glr" firstAttribute="top" secondItem="IQM-MC-AXg" secondAttribute="top" constant="44" id="8iT-bi-t5B"/>
                             <constraint firstAttribute="trailing" secondItem="Faq-z8-fKf" secondAttribute="trailing" id="GuS-oL-qaV"/>
-                            <constraint firstItem="zE3-lH-CiW" firstAttribute="trailing" secondItem="mSY-SH-Glr" secondAttribute="trailing" id="Iq7-eP-dix"/>
+                            <constraint firstAttribute="trailing" secondItem="mSY-SH-Glr" secondAttribute="trailing" id="Iq7-eP-dix"/>
                             <constraint firstItem="Faq-z8-fKf" firstAttribute="bottom" secondItem="zE3-lH-CiW" secondAttribute="bottom" id="TI0-fC-DUH"/>
                             <constraint firstItem="Faq-z8-fKf" firstAttribute="leading" secondItem="IQM-MC-AXg" secondAttribute="leading" id="fgr-7w-2dN"/>
                             <constraint firstItem="mSY-SH-Glr" firstAttribute="leading" secondItem="IQM-MC-AXg" secondAttribute="leading" id="z61-vD-TYE"/>
@@ -228,7 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Mm3-QU-nqX">
-                                <rect key="frame" x="0.0" y="40" width="390" height="623"/>
+                                <rect key="frame" x="0.0" y="40" width="390" height="633"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VYL-5m-0e9">
                                     <size key="itemSize" width="128" height="128"/>
@@ -257,7 +257,7 @@
                         <constraints>
                             <constraint firstItem="Mm3-QU-nqX" firstAttribute="top" secondItem="2iG-Qd-JSC" secondAttribute="top" constant="40" id="04Y-IA-tfZ"/>
                             <constraint firstAttribute="trailing" secondItem="Mm3-QU-nqX" secondAttribute="trailing" id="0uA-Je-W2i"/>
-                            <constraint firstAttribute="bottom" secondItem="Mm3-QU-nqX" secondAttribute="bottom" constant="10" id="DGe-eu-Rkc"/>
+                            <constraint firstAttribute="bottom" secondItem="Mm3-QU-nqX" secondAttribute="bottom" id="DGe-eu-Rkc"/>
                             <constraint firstItem="Mm3-QU-nqX" firstAttribute="leading" secondItem="2iG-Qd-JSC" secondAttribute="leading" id="UcW-Vm-hpN"/>
                         </constraints>
                     </view>
@@ -279,7 +279,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PsG-eT-JJW">
-                                <rect key="frame" x="0.0" y="40" width="390" height="623"/>
+                                <rect key="frame" x="0.0" y="40" width="390" height="633"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ckV-ZR-NVp">
                                     <size key="itemSize" width="128" height="128"/>
@@ -305,10 +305,13 @@
                             <constraint firstItem="PsG-eT-JJW" firstAttribute="top" secondItem="dmM-jD-GFx" secondAttribute="top" constant="40" id="Gou-sW-Hcj"/>
                             <constraint firstItem="PsG-eT-JJW" firstAttribute="leading" secondItem="dmM-jD-GFx" secondAttribute="leading" id="ZAW-89-wEK"/>
                             <constraint firstAttribute="trailing" secondItem="PsG-eT-JJW" secondAttribute="trailing" id="i76-x4-6bH"/>
-                            <constraint firstAttribute="bottom" secondItem="PsG-eT-JJW" secondAttribute="bottom" constant="10" id="mon-Fm-Pdg"/>
+                            <constraint firstAttribute="bottom" secondItem="PsG-eT-JJW" secondAttribute="bottom" id="mon-Fm-Pdg"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="390" height="673"/>
+                    <connections>
+                        <outlet property="todayColorCollectionView" destination="PsG-eT-JJW" id="koa-Ch-lI5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8J-Mg-3yp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -323,7 +326,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CXB-pb-Lgl">
-                                <rect key="frame" x="0.0" y="40" width="390" height="623"/>
+                                <rect key="frame" x="0.0" y="40" width="390" height="633"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kei-Jf-vlP">
                                     <size key="itemSize" width="128" height="128"/>
@@ -348,11 +351,14 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="CXB-pb-Lgl" secondAttribute="trailing" id="CIT-c3-eat"/>
                             <constraint firstItem="CXB-pb-Lgl" firstAttribute="leading" secondItem="vyu-N7-i05" secondAttribute="leading" id="iE2-fV-9Ev"/>
-                            <constraint firstAttribute="bottom" secondItem="CXB-pb-Lgl" secondAttribute="bottom" constant="10" id="qPm-Da-PqM"/>
+                            <constraint firstAttribute="bottom" secondItem="CXB-pb-Lgl" secondAttribute="bottom" id="qPm-Da-PqM"/>
                             <constraint firstItem="CXB-pb-Lgl" firstAttribute="top" secondItem="vyu-N7-i05" secondAttribute="top" constant="40" id="u9G-pR-Q2p"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="390" height="673"/>
+                    <connections>
+                        <outlet property="sexBoardCollectionView" destination="CXB-pb-Lgl" id="LKa-xN-E1x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SSX-wp-0ah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

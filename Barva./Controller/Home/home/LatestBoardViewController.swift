@@ -13,6 +13,8 @@ class LatestBoardTabViewController: UIViewController {
 
     var arrImageName: [String] = ["common","common (1)","common (2)","common (3)","common (4)","common (5)","common (6)","common (7)","common (8)","common (9)","common (10)","common (11)","common (12)","common (13)","common (14)","common (15)","common (16)","common (17)","common (18)","common (19)","common (20)","common (21)","common (22)","common (23)","common (24)","common (25)","common (26)","common (27)","common (28)","common (29)","common (30)","common (31)","common (32)","common (33)","common (34)","common (35)","common (36)","common (37)"]
 
+    var latestImageArray: [String] = []
+                          
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
