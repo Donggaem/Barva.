@@ -29,6 +29,7 @@ class FeedViewController: UIViewController {
     var feedSpec = ""
     var imgArray: [String] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,7 +73,13 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         feedName = cell.feedNameLabel.text ?? ""
         feedSpec = cell.feedSpecLabel.text ?? ""
         
+        cell.paramImg = ["common","common (1)"]
+        
         return cell
+    }
+    
+    func pagerViewDidScroll(_ pagerView: FSPagerView) {
+        print(pagerView.currentIndex)
     }
 }
 
@@ -84,12 +91,5 @@ extension FeedViewController: NaviAction {
         self.navigationController?.pushViewController(chatVC, animated: true)
         chatVC.paramFeedName = feedName
         chatVC.paraFeedSpec = feedSpec
-    }
-}
-
-extension FeedViewController: ImageArray {
-    var feedImages: [String] {
-        imgArray.append(paramImg)
-        return imgArray
     }
 }

@@ -7,13 +7,10 @@
 
 import Foundation
 import FSPagerView
+import Kingfisher
 
 protocol NaviAction: AnyObject {
     func moveChatVC()
-}
-
-protocol ImageArray: Any {
-    var feedImages: [String] { get }
 }
 
 class FeedViewCell: FSPagerViewCell {
@@ -31,8 +28,11 @@ class FeedViewCell: FSPagerViewCell {
     @IBOutlet weak var heartBtn: UIButton!
     
     weak var delegate: NaviAction?
-    var delegateImg: ImageArray?
-    
+    var paramImg: [String]? {
+        didSet {
+            self.feedImage.reloadData()
+        }
+    }
     
     //MARK: IBACTION
     @IBAction func allChatBtnPressed(_ sender: UIButton) {
@@ -72,13 +72,15 @@ extension FeedViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
     
     //이미지 개수
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return self.delegateImg?.feedImages.count ?? 0
+        return self.paramImg?.count ?? 0
     }
     
     //각셀에 대한 설정
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = feedImage.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
-        cell.imageView?.image = UIImage(named: self.delegateImg?.feedImages[index] ?? "")
+//        cell.imageView?.image = UIImage(named: self.delegateImg?.feedImages[index] ?? "")
+        
+        cell.imageView?.image = UIImage(named: paramImg?[index] ?? "")
         
 //        let url = URL(string: self.delegateImg?.feedImages[index] ?? "")
 //        cell.imageView?.kf.setImage(with: url)
