@@ -21,12 +21,12 @@ class PopupViewController: UIViewController {
         
     }
     
-    //MARK: IBACTION
+    //MARK: - IBACTION
     @IBAction func pageChanged(_ sender: UIPageControl) {
         imageView.image = UIImage(named: images[pageControl.currentPage])
     }
     
-    //MARK: INNER FUNC
+    //MARK: - INNER FUNC
     private func setUI() {
         view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.4)
         view.isOpaque = false
@@ -49,7 +49,7 @@ class PopupViewController: UIViewController {
         self.view.addGestureRecognizer(swipeRight)
     }
     
-    //MARK: OBJC
+    //MARK: - OBJC
     @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer) {
         // 만일 제스쳐가 있다면
         if let swipeGesture = gesture as? UISwipeGestureRecognizer{

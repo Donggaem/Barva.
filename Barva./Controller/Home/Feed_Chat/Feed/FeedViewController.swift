@@ -40,13 +40,13 @@ class FeedViewController: UIViewController {
         print(paramImg)
     }
     
-    //MARK: IBACTION
+    //MARK: - IBACTION
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
         
     }
     
-    //MARK: INNER FUNC
+    //MARK: - INNER FUNC
     private func setUI(){
         
         //네비바 숨김
@@ -55,6 +55,7 @@ class FeedViewController: UIViewController {
     
 }
 
+//MARK: - Extension FSPagerView
 extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
     
     //이미지 갯수
@@ -83,6 +84,7 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
     }
 }
 
+//MARK: - Extension NaviAction
 extension FeedViewController: NaviAction {
     func moveChatVC() {
         

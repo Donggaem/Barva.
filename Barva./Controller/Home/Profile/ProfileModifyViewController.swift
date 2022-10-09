@@ -19,7 +19,7 @@ class ProfileModifyViewController: UIViewController {
         setUI()
     }
     
-    //MARK: IBAction
+    //MARK: - IBACTION
     @IBAction func backBtnPressed(_ sender: UIButton) {
         
         self.navigationController?.popViewController(animated: true)
@@ -34,7 +34,7 @@ class ProfileModifyViewController: UIViewController {
         present(self.imagePickerController, animated: true, completion: nil)
     }
     
-    //MARK: INNER FUNC
+    //MARK: - INNER FUNC
     private func setUI() {
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
@@ -48,7 +48,7 @@ class ProfileModifyViewController: UIViewController {
     }
 }
 
-//MARK: Extension UIImagePicker
+//MARK: - Extension UIImagePicker
 extension ProfileModifyViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

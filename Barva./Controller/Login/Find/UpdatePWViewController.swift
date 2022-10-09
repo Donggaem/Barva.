@@ -26,7 +26,7 @@ class UpdatePWViewController: UIViewController {
         setUI()
         setTextField()
     }
-    //MARK: IBACTION
+    //MARK: - IBACTION
     @IBAction func resetPWBtnPressed(_ sender: UIButton) {
         let id = paramUserid
         let pw = pwCheckTextField.text ?? ""
@@ -39,7 +39,7 @@ class UpdatePWViewController: UIViewController {
 
     }
     
-    //MARK: INNER FUNC
+    //MARK: - INNER FUNC
     
     //SET UI
     private func setUI(){
@@ -90,7 +90,7 @@ class UpdatePWViewController: UIViewController {
     }
     
     
-    //MARK: POST PWUPDATE
+    //MARK: - POST PWUPDATE
     private func postUpdatePW(_ parameters: UpdatePWRequest){
         AF.request(BarvaURL.pwFindURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
@@ -131,6 +131,7 @@ class UpdatePWViewController: UIViewController {
     }
 }
 
+//MARK: Extension UITextField
 extension UpdatePWViewController: UITextFieldDelegate{
     
     private func setTextField() {

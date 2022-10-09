@@ -22,7 +22,7 @@ class IDFindTabViewController: UIViewController {
         setTextField()
     }
     
-    //MARK: OBJC
+    //MARK: - OBJC
     //텍스트 필드 입력값 변하면 유효성 검사
     @objc func TFdidChanged(_ sender: UITextField) {
         
@@ -36,7 +36,7 @@ class IDFindTabViewController: UIViewController {
         }
         
     }
-    //MARK: IBACTION
+    //MARK: - IBACTION
     
     @IBAction func idFindBtnPressed(_ sender: UIButton) {
         
@@ -55,7 +55,7 @@ class IDFindTabViewController: UIViewController {
         
     }
     
-    //MARK: INNER FUNC
+    //MARK: - INNER FUNC
     private func setUI() {
         
         //버튼 모서리
@@ -85,7 +85,7 @@ class IDFindTabViewController: UIViewController {
         
     }
     
-    //MARK: POST IDFIND
+    //MARK: - POST IDFIND
     private func postIDFind(_ parameters: IDFindRequest){
         AF.request(BarvaURL.idFindURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
@@ -127,7 +127,7 @@ class IDFindTabViewController: UIViewController {
     }
 }
 
-//MARK: UITextFiel
+//MARK: - UITextFiel
 extension IDFindTabViewController: UITextFieldDelegate {
     
     private func setTextField() {

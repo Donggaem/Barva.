@@ -25,7 +25,7 @@ class ColorTabViewController: UIViewController {
         enrollAlertEvent()
     }
     
-    //MARK: OBJC
+    //MARK: - OBJC
     //이미지 탭 제스쳐
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
@@ -33,7 +33,7 @@ class ColorTabViewController: UIViewController {
     }
     
     
-    //MARK: INNER func
+    //MARK: - INNER func
     private func setUI() {
         
         self.imagePickerController.delegate = self
@@ -91,7 +91,7 @@ extension ColorTabViewController: UIPopoverPresentationControllerDelegate {
     }
 }
 
-//MARK: Extension UIImagePicker
+//MARK: - Extension UIImagePicker
 extension ColorTabViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //앨범 띄우기

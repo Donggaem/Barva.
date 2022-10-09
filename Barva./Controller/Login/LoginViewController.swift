@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
         setTextField()
     }
     
-    //MARK: IBACTION
+    //MARK: - IBACTION
     @IBAction func siginBtnPressed(_ sender: UIButton) {
         let signinVC = self.storyboard?.instantiateViewController(withIdentifier: "SigninViewController") as! SigninViewController
         self.navigationController?.pushViewController(signinVC, animated: true)
@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(findVC, animated: true)
     }
     
-    //MARK: INNER FUNC
+    //MARK: - INNER FUNC
     private func setUI() {
         loginBtn.layer.cornerRadius = 5
         
@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    //MARK: POST LOGIN
+    //MARK: - POST LOGIN
     private func postLogin(_ parameters: LoginRequest){
         AF.request(BarvaURL.loginURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
@@ -96,7 +96,7 @@ class LoginViewController: UIViewController {
     
 }
 
-//MARK: UITextFiel
+//MARK: - UITextFiel
 extension LoginViewController: UITextFieldDelegate {
     
     private func setTextField() {
@@ -109,7 +109,7 @@ extension LoginViewController: UITextFieldDelegate {
         
     }
     
-    //MARK: OBJC
+    //MARK: - OBJC
     //텍스트 필드 입력값 변하면 유효성 검사
     @objc func TFdidChanged(_ sender: UITextField) {
         
@@ -124,7 +124,7 @@ extension LoginViewController: UITextFieldDelegate {
         
     }
     
-    //MARK: INNER FUNC
+    //MARK: - INNER FUNC
     //버튼 활성화/비활성화
     func loginBtn(willActive: Bool) {
         

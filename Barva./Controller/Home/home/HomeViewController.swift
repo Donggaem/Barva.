@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
         
     }
     
-    //MARK: INNER FUNC
+    //MARK: - INNER FUNC
     private func popupPresent() {
         let storyboard = UIStoryboard.init(name: "Home", bundle: nil)
         let popUp = storyboard.instantiateViewController(identifier: "PopupViewController")

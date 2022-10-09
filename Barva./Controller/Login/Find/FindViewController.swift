@@ -14,7 +14,7 @@ class FindViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-    //MARK: IBACTION
+    //MARK: - IBACTION
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }

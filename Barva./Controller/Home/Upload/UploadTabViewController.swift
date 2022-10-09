@@ -54,7 +54,7 @@ class UploadTabViewController: UIViewController {
         countLabel.text = "0 / 100"
     }
     
-    //MARK: OBJC
+    //MARK: - OBJC
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         // MARK: - 본의 photo picker 수정 부분
@@ -76,7 +76,7 @@ class UploadTabViewController: UIViewController {
         // 채택된 델리게이트 관련 메소드 (func picker) 아래에 정의함 ⬇️
     }
     
-    //MARK: IBACTION
+    //MARK: - IBACTION
     
     @IBAction func testBtnPressed(_ sender: UIButton) {
         let testVC = self.storyboard?.instantiateViewController(withIdentifier: "TestUploadViewController") as! TestUploadViewController
@@ -120,7 +120,7 @@ class UploadTabViewController: UIViewController {
     }
     
     
-    //MARK: INNER FUNC
+    //MARK: - INNER FUNC
     private func setUI() {
         
         //네비바 숨김
@@ -134,7 +134,7 @@ class UploadTabViewController: UIViewController {
         
     }
     
-    //MARK: POST IMGUPLOAD
+    //MARK: - POST IMGUPLOAD
     func postUpload(_ parameters: UploadRequest) {
         
         let headers: HTTPHeaders = ["Content-type": "multipart/form-data"]
@@ -199,7 +199,7 @@ class UploadTabViewController: UIViewController {
     }
 }
 
-//MARK: Extension PICKER
+//MARK: - Extension PICKER
 extension UploadTabViewController: PHPickerViewControllerDelegate {
     
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
@@ -227,7 +227,7 @@ extension UploadTabViewController: PHPickerViewControllerDelegate {
 }
 
 
-//MARK: Extension FSPagerView
+//MARK: - Extension FSPagerView
 extension UploadTabViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     
     //이미지 개수
@@ -243,7 +243,7 @@ extension UploadTabViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     }
 }
 
-//MARK: Extension UITextViewDelegate
+//MARK: - Extension UITextViewDelegate
 extension UploadTabViewController: UITextViewDelegate {
     
     private func setTextView(){

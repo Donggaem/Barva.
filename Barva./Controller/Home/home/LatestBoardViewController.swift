@@ -21,6 +21,7 @@ class LatestBoardTabViewController: UIViewController {
 
 }
 
+//MARK: - Extension UICollectionView
 extension LatestBoardTabViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     // CollectionView 셋팅

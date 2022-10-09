@@ -31,7 +31,7 @@ class PWFindTabViewController: UIViewController {
         setTextField()
     }
     
-    //MARK: IBACTION
+    //MARK: - IBACTION
 
     @IBAction func authMailBtnPressed(_ sender: UIButton) {
         let email = emailTextField.text ?? ""
@@ -83,7 +83,7 @@ class PWFindTabViewController: UIViewController {
         }
     }
     
-    //MARK: INNER FUNC
+    //MARK: - INNER FUNC
     private func setUI() {
         
         //버튼 모서리
@@ -155,7 +155,7 @@ class PWFindTabViewController: UIViewController {
         
     }
     
-    //MARK: POST PWFIND
+    //MARK: - POST PWFIND
     private func postPWFind(_ parameters: PWFindRequest){
         AF.request(BarvaURL.pwFindURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()

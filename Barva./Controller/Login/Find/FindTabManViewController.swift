@@ -25,6 +25,7 @@ class FindTabManViewController: TabmanViewController {
         setTabView()
     }
     
+    //MARK: - INNER FUNC
     func setTabView() {
         viewControllers.append(idVC)
         viewControllers.append(pwVC)
@@ -62,7 +63,7 @@ class FindTabManViewController: TabmanViewController {
     
 }
 
-//MARK: Extension Pageboy TMBar
+//MARK: - Extension Pageboy TMBar
 extension FindTabManViewController: PageboyViewControllerDataSource, TMBarDataSource {
     
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {

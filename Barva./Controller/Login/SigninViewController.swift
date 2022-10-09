@@ -10,7 +10,7 @@ import Alamofire
 
 class SigninViewController: UIViewController {
     
-    //MARK: IBOutlet
+    //MARK: - IBOutlet
     @IBOutlet weak var nickBtn: UIButton!
     @IBOutlet weak var idBtn: UIButton!
     @IBOutlet weak var emailBtn: UIButton!
@@ -53,7 +53,7 @@ class SigninViewController: UIViewController {
         super.viewWillAppear(true)
     }
     
-    //MARK: IBACTION
+    //MARK: - IBACTION
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -260,7 +260,7 @@ class SigninViewController: UIViewController {
     }
     
     
-    //MARK: INNER FUNC
+    //MARK: - INNER FUNC
     //Set UI
     private func setUI() {
                 
@@ -416,7 +416,7 @@ class SigninViewController: UIViewController {
         }
     }
     
-    //MARK: POST NICKCHECK
+    //MARK: - POST NICKCHECK
     private func postNickCheck(_ parameters: NickCheckRequest){
         AF.request(BarvaURL.nickCheckURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
@@ -459,7 +459,7 @@ class SigninViewController: UIViewController {
             }
     }
     
-    //MARK: POST IDCHECK
+    //MARK: - POST IDCHECK
     private func postIDCheck(_ parameters: IDCheckRequest){
         AF.request(BarvaURL.idCheckURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
@@ -504,7 +504,7 @@ class SigninViewController: UIViewController {
     
     
     
-    //MARK: POST AuthMAil
+    //MARK: - POST AuthMAil
     private func postSendMail(_ parameters: SendMailRequest){
         AF.request(BarvaURL.sendMailURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
@@ -544,7 +544,7 @@ class SigninViewController: UIViewController {
             }
     }
     
-    //MARK: POST InspectMAil
+    //MARK: - POST InspectMAil
     private func postInspectMail(_ parameters: InspectMailRequest){
         AF.request(BarvaURL.insepectMailURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
@@ -590,7 +590,7 @@ class SigninViewController: UIViewController {
             }
     }
     
-    //MARK: POST SIGNIN
+    //MARK: - POST SIGNIN
     private func postSignin(_ parameters: SignRequest){
         AF.request(BarvaURL.signupURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
@@ -630,6 +630,7 @@ class SigninViewController: UIViewController {
     }
 }
 
+//MARK: - Extension UITextField
 extension SigninViewController: UITextFieldDelegate{
     
     private func setTextField() {
@@ -712,6 +713,7 @@ extension SigninViewController: UITextFieldDelegate{
     }
 }
 
+//MARK: - Extension UIBUTTON
 extension UIButton {
   func makeImageInset(margin: CGFloat) {
     let padding = margin / 2

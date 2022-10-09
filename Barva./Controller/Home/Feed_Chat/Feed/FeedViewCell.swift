@@ -34,7 +34,7 @@ class FeedViewCell: FSPagerViewCell {
         }
     }
     
-    //MARK: IBACTION
+    //MARK: -IBACTION
     @IBAction func allChatBtnPressed(_ sender: UIButton) {
 
         self.delegate?.moveChatVC()
@@ -51,7 +51,7 @@ class FeedViewCell: FSPagerViewCell {
         }
     }
     
-    //INNER FUNC
+    //MARK: - INNER FUNC
     //좋아요 버튼 색 변경
     private func heartBtnColorT(checkBtn: UIButton) {
         BarvaLog.debug("termsCheckT")
@@ -67,7 +67,7 @@ class FeedViewCell: FSPagerViewCell {
     }
     
 }
-//MARK: Extension FSPagerView
+//MARK: - Extension FSPagerView
 extension FeedViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
     
     //이미지 개수

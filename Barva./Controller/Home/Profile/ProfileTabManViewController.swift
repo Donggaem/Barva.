@@ -22,6 +22,7 @@ class ProfileTabManViewController: TabmanViewController {
         setTabView()
     }
     
+    //MARK: - INNER FUNC
     func setTabView() {
         viewControllers.append(myUpVC)
         viewControllers.append(StorVC)
@@ -56,7 +57,7 @@ class ProfileTabManViewController: TabmanViewController {
     
 }
 
-//MARK: Extension Pageboy,TMBar
+//MARK: - Extension Pageboy,TMBar
 extension ProfileTabManViewController: PageboyViewControllerDataSource, TMBarDataSource {
     
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {

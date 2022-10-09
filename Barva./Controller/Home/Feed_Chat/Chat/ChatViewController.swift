@@ -26,13 +26,13 @@ class ChatViewController: UIViewController {
         setTable()
     }
     
-    //MARK: IBACTION
+    //MARK: - IBACTION
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
         
     }
     
-    //MARK: INNER FUNC
+    //MARK: - INNER FUNC
     private func setUI(){
         feedUserNameLabel.text = paramFeedName
         feedUesrSpecLabel.text = paraFeedSpec
@@ -43,7 +43,7 @@ class ChatViewController: UIViewController {
 
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
-    //MARK: SET TABLEVIEW
+    //MARK: - SET TABLEVIEW
     func setTable() {
         chatTableView.delegate = self
         chatTableView.dataSource = self
