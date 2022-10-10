@@ -36,6 +36,11 @@ class ProfileModifyViewController: UIViewController {
     
     //MARK: - INNER FUNC
     private func setUI() {
+        
+        //프사 이미지 둥글게
+        profileImageView.layer.cornerRadius = profileImageView.frame.width/8
+        profileImageView.clipsToBounds = true
+        
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
         

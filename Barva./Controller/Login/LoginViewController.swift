@@ -29,15 +29,17 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginBtnPressed(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let homeNav = storyBoard.instantiateViewController(identifier: "HomeNav")
-        self.changeRootViewController(homeNav)
+//        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+//        let homeNav = storyBoard.instantiateViewController(identifier: "HomeNav")
+//        self.changeRootViewController(homeNav)
         
-//        let id = idTextField.text ?? ""
-//        let pw = pwTextField.text ?? ""
-//
-//        let param = LoginRequest(user_id: id, user_pw: pw)
-//        postLogin(param)
+        print("클릭")
+        let id = idTextField.text ?? ""
+        let pw = pwTextField.text ?? ""
+
+        let param = LoginRequest(user_id: id, user_pw: pw)
+        postLogin(param)
+        
     }
     
     @IBAction func idpwFindPressed(_ sender: UIButton) {
@@ -48,11 +50,12 @@ class LoginViewController: UIViewController {
     //MARK: - INNER FUNC
     private func setUI() {
         loginBtn.layer.cornerRadius = 5
+        loginBtn.isEnabled = false
+        
         
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
 
-        
     }
     
     //MARK: - POST LOGIN
@@ -66,11 +69,12 @@ class LoginViewController: UIViewController {
                         
                         BarvaLog.debug("postLogin")
                         
-                        if (response.data?.token) != nil {
-                            
-                            UserDefaults.standard.set(response.data?.token, forKey: "data")
+                        if response.data != nil {
+                            if response.data?.token != nil {
+                                print(response.data?.token ?? "")
+                                UserDefaults.standard.set(response.data?.token, forKey: "data")
+                            }
                         }
-                        
                         
                         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
                         let homeNav = storyBoard.instantiateViewController(identifier: "HomeNav")
@@ -131,9 +135,11 @@ extension LoginViewController: UITextFieldDelegate {
         if(willActive == true) {
             //다음 버튼 색 변경
             loginBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            loginBtn.isEnabled = true
         } else {
             //다음 버튼 색 변경
             loginBtn.backgroundColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
+            loginBtn.isEnabled = false
         }
     }
     

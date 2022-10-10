@@ -6,16 +6,49 @@
 //
 
 import UIKit
+import Alamofire
 
 class MyUpTabViewController: UIViewController {
     
     @IBOutlet weak var myUpCollectionView: UICollectionView!
     
-    var myUpImageArray: [String] = ["common (16)","common (17)","common (18)","common (19)","common (20)","common (21)","common (22)","common (23)","common (24)","common (25)","common (26)","common (27)","common (28)","common (29)","common (30)","common (31)","common (32)","common (33)"]
+    var myUpImageArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
+    }
+    
+    //MARK: - GET PROFILE
+    let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
+    private func getMyUpImages() {
+        AF.request(BarvaURL.myUpImagesURL, method: .get, headers: header)
+            .validate()
+            .responseDecodable(of: MyUpImagesResponse.self) { response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        print(BarvaLog.debug("getMyUpImages-success"))
+                        
+                        self.myUpImageArray = response.data?.myFeedInfo ?? []
+
+
+                    } else {
+                        print(BarvaLog.error("getMyUpImages-fail"))
+                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        fail_alert.addAction(okAction)
+                        self.present(fail_alert, animated: false, completion: nil)
+                    }
+                case .failure(let error):
+                    print(BarvaLog.error("getMyUpImages-err"))
+                    print("failure: \(error.localizedDescription)")
+                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    fail_alert.addAction(okAction)
+                    self.present(fail_alert, animated: false, completion: nil)
+                }
+            }
     }
     
 }
@@ -39,8 +72,12 @@ extension MyUpTabViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeImageCollectionViewCell", for: indexPath) as! HomeImageCollectionViewCell
 
-        cell.image.image = UIImage(named: myUpImageArray[indexPath.row]) ?? UIImage()
+//        cell.image.image = UIImage(named: myUpImageArray[indexPath.row]) ?? UIImage()
 
+        //킹피셔로 이미지 띄우기
+        let url = URL(string: myUpImageArray[indexPath.row])
+        cell.image.kf.setImage(with: url)
+        
         return cell
     }
     

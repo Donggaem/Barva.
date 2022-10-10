@@ -164,7 +164,7 @@ class PWFindTabViewController: UIViewController {
                 case .success(let response):
                     if response.isSuccess == true {
                         
-                        BarvaLog.debug("postPWFind")
+                        BarvaLog.debug("postPWFind-success")
                         pwFindBtn.isEnabled = true
                         let updateVC = self.storyboard?.instantiateViewController(withIdentifier: "UpdatePWViewController") as! UpdatePWViewController
                         self.navigationController?.pushViewController(updateVC, animated: true)
@@ -172,7 +172,7 @@ class PWFindTabViewController: UIViewController {
                         updateVC.paramUserid = idTextField.text ?? ""
                         
                     } else {
-                        BarvaLog.error("postPWFind")
+                        BarvaLog.error("postPWFind-fail")
                         let Fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         Fail_alert.addAction(okAction)
@@ -180,7 +180,7 @@ class PWFindTabViewController: UIViewController {
                         
                     }
                 case .failure(let error):
-                    BarvaLog.error("postPWFind")
+                    BarvaLog.error("postPWFind-err")
                     print(error.localizedDescription)
                     let Fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
@@ -199,7 +199,7 @@ class PWFindTabViewController: UIViewController {
                 case .success(let response):
                     if response.isSuccess == true {
                         
-                        BarvaLog.debug("PostAuthMail")
+                        BarvaLog.debug("PostAuthMail-success")
                         
                         authNumber = response.data?.authNumber ?? ""
                         
@@ -211,7 +211,7 @@ class PWFindTabViewController: UIViewController {
                         
                         
                     } else {
-                        BarvaLog.error("PostAuthMail")
+                        BarvaLog.error("PostAuthMail-fail")
                         
                         let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
@@ -220,7 +220,7 @@ class PWFindTabViewController: UIViewController {
                         
                     }
                 case .failure(let error):
-                    BarvaLog.error("PostAuthMail")
+                    BarvaLog.error("PostAuthMail-err")
                     print(error.localizedDescription)
                     let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
@@ -239,7 +239,7 @@ class PWFindTabViewController: UIViewController {
                 case .success(let response):
                     if response.isSuccess == true {
                         
-                        BarvaLog.debug("PostInspectMAil")
+                        BarvaLog.debug("PostInspectMAil-succedd")
                         
                         checkNum += 1
                         checkNumTextField.isUserInteractionEnabled = false
@@ -255,7 +255,7 @@ class PWFindTabViewController: UIViewController {
                         
                         
                     } else {
-                        BarvaLog.error("PostInspectMAil")
+                        BarvaLog.error("PostInspectMAil-fail")
                         btnMessageF(msgBtn: msgCheckNumBtn)
                         msgCheckNumBtn.setTitle(response.message, for: .normal)
                         print(response.data?.err ?? "")
@@ -266,7 +266,7 @@ class PWFindTabViewController: UIViewController {
                         
                     }
                 case .failure(let error):
-                    BarvaLog.error("PostInspectMAil")
+                    BarvaLog.error("PostInspectMAil-err")
                     print(error.localizedDescription)
                     let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)

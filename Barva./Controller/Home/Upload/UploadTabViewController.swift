@@ -173,13 +173,13 @@ class UploadTabViewController: UIViewController {
             switch response.result {
             case .success(let response):
                 if response.isSuccess == true {
-                    BarvaLog.debug("PostUpload Success")
+                    BarvaLog.debug("PostUpload-success")
 
                     print(response.data)
                     testImg = response.data 
                     
                 } else {
-                    BarvaLog.error("PostUpload fail")
+                    BarvaLog.error("PostUpload-fail")
                     let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
                     fail_alert.addAction(okAction)
@@ -187,7 +187,7 @@ class UploadTabViewController: UIViewController {
                     
                 }
             case .failure(let error):
-                BarvaLog.error("PostUpload err")
+                BarvaLog.error("PostUpload-err")
                 print(error.localizedDescription)
                 let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                 let okAction = UIAlertAction(title: "확인", style: .default)

@@ -424,7 +424,7 @@ class SigninViewController: UIViewController {
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess == true {
-                        BarvaLog.debug("PostNickCheck")
+                        BarvaLog.debug("PostNickCheck-success")
                         
                         checkNum += 1
                         nickBtn.isUserInteractionEnabled = false
@@ -439,7 +439,7 @@ class SigninViewController: UIViewController {
                         present(nameCk_alert, animated: false, completion: nil)
                         
                     } else {
-                        BarvaLog.error("PostNickCheck")
+                        BarvaLog.error("PostNickCheck-fail")
                         btnMessageF(msgBtn: msgNickBtn)
                         print(response.data?.err ?? "")
                         msgNickBtn.setTitle(response.message, for: .normal)
@@ -449,7 +449,7 @@ class SigninViewController: UIViewController {
                         present(nameCkFail_alert, animated: false, completion: nil)
                     }
                 case .failure(let error):
-                    BarvaLog.error("PostNickCheck")
+                    BarvaLog.error("PostNickCheck-err")
                     print(error.localizedDescription)
                     let nameCkFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
@@ -467,7 +467,7 @@ class SigninViewController: UIViewController {
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess == true {
-                        BarvaLog.debug("PostIDCheck")
+                        BarvaLog.debug("PostIDCheck-success")
                         
                         checkNum += 1
                         idBtn.isUserInteractionEnabled = false
@@ -483,7 +483,7 @@ class SigninViewController: UIViewController {
                         present(idCk_alert, animated: false, completion: nil)
                         
                     } else {
-                        BarvaLog.error("PostIDCheck")
+                        BarvaLog.error("PostIDCheck-fail")
                         btnMessageF(msgBtn: msgIdBtn)
                         msgIdBtn.setTitle(response.message, for: .normal)
                         let idCkFail_alert = UIAlertController(title: "중복", message: response.message, preferredStyle: UIAlertController.Style.alert)
@@ -492,7 +492,7 @@ class SigninViewController: UIViewController {
                         present(idCkFail_alert, animated: false, completion: nil)
                     }
                 case .failure(let error):
-                    BarvaLog.error("PostIDCheck")
+                    BarvaLog.error("PostIDCheck-err")
                     print(error.localizedDescription)
                     let idCkFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
@@ -513,7 +513,7 @@ class SigninViewController: UIViewController {
                 case .success(let response):
                     if response.isSuccess == true {
                         
-                        BarvaLog.debug("PostAuthMail")
+                        BarvaLog.debug("PostAuthMail-success")
                         
                         authNumber = response.data?.authNumber ?? ""
                         
@@ -525,7 +525,7 @@ class SigninViewController: UIViewController {
                         
                         
                     } else {
-                        BarvaLog.error("PostAuthMail")
+                        BarvaLog.error("PostAuthMail-fail")
                         
                         let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
@@ -534,7 +534,7 @@ class SigninViewController: UIViewController {
                         
                     }
                 case .failure(let error):
-                    BarvaLog.error("PostAuthMail")
+                    BarvaLog.error("PostAuthMail-err")
                     print(error.localizedDescription)
                     let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
@@ -553,7 +553,7 @@ class SigninViewController: UIViewController {
                 case .success(let response):
                     if response.isSuccess == true {
                         
-                        BarvaLog.debug("PostInspectMAil")
+                        BarvaLog.debug("PostInspectMAil-success")
                         
                         checkNum += 1
                         checkNumTextField.isUserInteractionEnabled = false
@@ -569,7 +569,7 @@ class SigninViewController: UIViewController {
                         
                         
                     } else {
-                        BarvaLog.error("PostInspectMAil")
+                        BarvaLog.error("PostInspectMAil-fail")
                         btnMessageF(msgBtn: msgCheckNumBtn)
                         msgCheckNumBtn.setTitle(response.message, for: .normal)
                         print(response.data?.err ?? "")
@@ -580,7 +580,7 @@ class SigninViewController: UIViewController {
                         
                     }
                 case .failure(let error):
-                    BarvaLog.error("PostInspectMAil")
+                    BarvaLog.error("PostInspectMAil-err")
                     print(error.localizedDescription)
                     let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
@@ -599,7 +599,7 @@ class SigninViewController: UIViewController {
                 case .success(let response):
                     if response.isSuccess == true {
                         
-                        BarvaLog.debug("PostSignin")
+                        BarvaLog.debug("PostSignin-success")
                         
                         let signin_alert = UIAlertController(title: "성공", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default) {
@@ -610,7 +610,7 @@ class SigninViewController: UIViewController {
                         
                         
                     } else {
-                        BarvaLog.error("PostSignin")
+                        BarvaLog.error("PostSignin-fail")
                         print(response.data?.err ?? "")
                         let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
@@ -619,7 +619,7 @@ class SigninViewController: UIViewController {
                         
                     }
                 case .failure(let error):
-                    BarvaLog.error("PostSignin")
+                    BarvaLog.error("PostSignin-err")
                     print(error.localizedDescription)
                     let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)

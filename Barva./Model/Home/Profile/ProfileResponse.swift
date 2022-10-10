@@ -12,9 +12,18 @@ struct ProfileResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
+    var data: ProfileInfo?
     
-    var user_name: String
-    var proflieImg: String
-    var intro: String
-    var imgData: [String]
+}
+
+struct ProfileInfo: Decodable {
+    
+    var myProfileInfo: Userdata?
+    var err: String?
+}
+
+struct Userdata: Decodable {
+    var user_nick: String?
+    var profile_url: String?
+    var user_introduce: String?
 }
