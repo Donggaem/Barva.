@@ -32,6 +32,6 @@ struct BarvaURL {
     //MARK: - 프로필
     static let profileURL = "http://3.34.183.110:3003/main/myProfile"
     static let myUpImagesURL = "http://3.34.183.110:3003/main/myFeed"
-    static let setProfileImageURL = "3.34.183.110:3003/main/setProfileImg"
-    
+    static let setProfileImageURL = "http://3.34.183.110:3003/main/setProfileImg"
+    static let setProfileURL = "http://3.34.183.110:3003/main/setProfileIntro"
 }

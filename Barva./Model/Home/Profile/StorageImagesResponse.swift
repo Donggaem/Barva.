@@ -9,4 +9,17 @@ import Foundation
 
 struct StorageImagesResponse: Decodable {
     
+    var isSuccess: Bool
+    var code: Int
+    var message: String
+    var data: Storagedata?
 }
+
+struct Storagedata:Decodable {
+    
+    var StorageInfo: [String]?
+    
+    var err: String?
+}
+
+

@@ -29,8 +29,19 @@ class MyUpTabViewController: UIViewController {
                 case .success(let response):
                     if response.isSuccess == true {
                         print(BarvaLog.debug("getMyUpImages-success"))
-                        
-                        self.myUpImageArray = response.data?.myFeedInfo ?? []
+                       
+                        if response.data != nil {
+                            if let imgArray = response.data?.myFeedInfo {
+                                self.myUpImageArray = imgArray
+                            } else {
+                                print("올린 사진없음")
+                                self.myUpImageArray = []
+                            }
+                        }else {
+                            print("옵셔널 에러")
+                        }
+
+//                        self.myUpImageArray = response.data?.myFeedInfo ?? []
 
 
                     } else {

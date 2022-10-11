@@ -33,6 +33,11 @@ class ProfileTabViewController: UIViewController {
     {
         let modifyVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileModifyViewController") as! ProfileModifyViewController
         self.navigationController?.pushViewController(modifyVC, animated: true)
+        
+        modifyVC.paramNick = profileNickLabel.text ?? ""
+        modifyVC.paramIntro = profileIntroLabel.text ?? ""
+        modifyVC.paramProfileImg = profileImageView.image ?? UIImage()
+        
     }
     
     //MARK: - INNER FUNC
@@ -69,11 +74,15 @@ class ProfileTabViewController: UIViewController {
                                     print(nick)
                                     self.profileNickLabel.text = nick
                                 }
+                                
                                 if let intro = response.data?.myProfileInfo?.user_introduce {
                                     print("dd")
                                     print(intro)
                                     self.profileIntroLabel.text = intro
+                                }else {
+                                    self.profileIntroLabel.text = ""
                                 }
+                                
                                 if response.data?.myProfileInfo?.profile_url == "" || response.data?.myProfileInfo?.profile_url == nil {
                                     print("기본 이미지")
                                     

@@ -14,6 +14,7 @@ struct MyUpImagesResponse: Decodable {
     var message: String
     var data: MyUpdata?
 }
+
 struct MyUpdata:Decodable {
     
     var myFeedInfo: [String]?

@@ -49,17 +49,20 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6y-tk-kJ1">
-                    <rect key="frame" x="346" y="5" width="22" height="22"/>
+                    <rect key="frame" x="346" y="10" width="22" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="22" id="CeU-mE-vhd"/>
                         <constraint firstAttribute="height" constant="22" id="QwH-Rl-vxP"/>
                     </constraints>
                     <color key="tintColor" red="0.10980392160000001" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system"/>
+                    <buttonConfiguration key="configuration" style="plain" image="bookmark" catalog="system"/>
+                    <connections>
+                        <action selector="bookmarkBtnPressed:" destination="9cz-Ha-a7l" eventType="touchUpInside" id="yxt-E9-UL7"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="V6P-Rr-NSa" userLabel="좋아요, 메세지Stack View">
-                    <rect key="frame" x="22" y="450.66666666666669" width="56" height="18"/>
+                    <rect key="frame" x="22" y="450.66666666666669" width="20" height="18"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaB-1k-BXE">
                             <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
@@ -76,18 +79,6 @@
                             <connections>
                                 <action selector="heartBtnPressed:" destination="9cz-Ha-a7l" eventType="touchUpInside" id="AvQ-Ha-VTK"/>
                             </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaL-7x-lw8">
-                            <rect key="frame" x="38" y="0.0" width="18" height="18"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="18" id="HUu-y7-1Nh"/>
-                                <constraint firstAttribute="height" constant="18" id="ZQD-ox-oLb"/>
-                            </constraints>
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain">
-                                <imageReference key="image" image="message" catalog="system" symbolScale="large"/>
-                            </buttonConfiguration>
                         </button>
                     </subviews>
                 </stackView>
@@ -139,7 +130,7 @@
                 <constraint firstItem="mK4-tM-wlE" firstAttribute="leading" secondItem="0Nf-c8-xCV" secondAttribute="leading" id="FOh-2S-ilt"/>
                 <constraint firstItem="Esr-2c-6iP" firstAttribute="top" secondItem="AfA-ij-y3g" secondAttribute="bottom" constant="8" id="O3E-mb-IYf"/>
                 <constraint firstItem="pxy-47-fr1" firstAttribute="leading" secondItem="ptj-Al-5Rh" secondAttribute="trailing" constant="8" id="UqW-Gx-7w6"/>
-                <constraint firstItem="P6y-tk-kJ1" firstAttribute="top" secondItem="9cz-Ha-a7l" secondAttribute="top" constant="5" id="f29-FL-g3Q"/>
+                <constraint firstItem="P6y-tk-kJ1" firstAttribute="top" secondItem="9cz-Ha-a7l" secondAttribute="top" constant="10" id="f29-FL-g3Q"/>
                 <constraint firstItem="V6P-Rr-NSa" firstAttribute="leading" secondItem="0Nf-c8-xCV" secondAttribute="leading" constant="22" id="fxj-0e-Y5S"/>
                 <constraint firstItem="mK4-tM-wlE" firstAttribute="top" secondItem="pxy-47-fr1" secondAttribute="bottom" constant="11" id="gmZ-gN-hIT"/>
                 <constraint firstItem="Esr-2c-6iP" firstAttribute="leading" secondItem="0Nf-c8-xCV" secondAttribute="leading" constant="22" id="ohH-eX-Q9W"/>
@@ -150,6 +141,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="bookmarkBtn" destination="P6y-tk-kJ1" id="dLw-cs-TkE"/>
                 <outlet property="feedImage" destination="mK4-tM-wlE" id="pw5-J8-JyO"/>
                 <outlet property="feedNameLabel" destination="bvK-Ha-wgh" id="ZbM-AT-Q6T"/>
                 <outlet property="feedSpecLabel" destination="Jrv-BT-BMm" id="lhr-93-65H"/>
@@ -159,9 +151,8 @@
         </view>
     </objects>
     <resources>
-        <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="message" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

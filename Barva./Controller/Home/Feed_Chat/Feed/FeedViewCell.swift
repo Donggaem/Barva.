@@ -26,6 +26,7 @@ class FeedViewCell: FSPagerViewCell {
     }
     
     @IBOutlet weak var heartBtn: UIButton!
+    @IBOutlet weak var bookmarkBtn: UIButton!
     
     weak var delegate: NaviAction?
     var paramImg: [String]? {
@@ -33,6 +34,8 @@ class FeedViewCell: FSPagerViewCell {
             self.feedImage.reloadData()
         }
     }
+    
+    var bookmarkBool = false
     
     //MARK: -IBACTION
     @IBAction func allChatBtnPressed(_ sender: UIButton) {
@@ -48,6 +51,15 @@ class FeedViewCell: FSPagerViewCell {
         }else{
             heartBtn.isSelected = false
             heartBtnColorF(checkBtn: heartBtn)
+        }
+    }
+    @IBAction func bookmarkBtnPressed(_ sender: UIButton) {
+        if bookmarkBool == false {
+            bookmarkBool = true
+            bookmarkBtn.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+        }else {
+            bookmarkBool = false
+            bookmarkBtn.setImage(UIImage(systemName: "bookmark"), for: .normal)
         }
     }
     

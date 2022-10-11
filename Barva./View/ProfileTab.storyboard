@@ -138,7 +138,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kX2-H9-UJy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kX2-H9-UJy">
                                 <rect key="frame" x="74" y="298" width="242" height="9.6666666666666856"/>
                                 <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="8"/>
                                 <nil key="textColor"/>
@@ -254,12 +254,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkf-bg-UkC">
-                                <rect key="frame" x="184.66666666666666" y="260" width="20.666666666666657" height="10"/>
-                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="8"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wU0-Ll-iIj">
                                 <rect key="frame" x="30" y="332" width="330" height="45"/>
                                 <color key="backgroundColor" red="0.73333333333333328" green="0.73333333333333328" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
@@ -271,40 +265,56 @@
                                 <buttonConfiguration key="configuration" style="plain" title="변경사항 저장하기">
                                     <fontDescription key="titleFontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="13"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="setProfileBtnPressed:" destination="7wJ-8B-No6" eventType="touchUpInside" id="aZk-F4-Nm3"/>
+                                </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WLq-qb-S9w">
+                                <rect key="frame" x="74" y="260" width="242" height="20"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="u68-Kz-6TN"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="8"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ydg-M1-jGN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wU0-Ll-iIj" firstAttribute="leading" secondItem="ydg-M1-jGN" secondAttribute="leading" constant="30" id="0dE-pL-Gem"/>
                             <constraint firstItem="om8-at-xBe" firstAttribute="leading" secondItem="ydg-M1-jGN" secondAttribute="leading" id="2vc-Ef-rA0"/>
+                            <constraint firstItem="WLq-qb-S9w" firstAttribute="top" secondItem="nHQ-5k-k7y" secondAttribute="bottom" constant="22" id="87n-TD-iGJ"/>
                             <constraint firstItem="nHQ-5k-k7y" firstAttribute="centerX" secondItem="l9O-mS-GLX" secondAttribute="centerX" id="EJb-LA-2PD"/>
                             <constraint firstItem="ydg-M1-jGN" firstAttribute="trailing" secondItem="wU0-Ll-iIj" secondAttribute="trailing" constant="30" id="EXC-QJ-WhL"/>
                             <constraint firstItem="om8-at-xBe" firstAttribute="top" secondItem="ydg-M1-jGN" secondAttribute="top" id="F2l-6D-pre"/>
                             <constraint firstItem="bMi-mU-nSm" firstAttribute="top" secondItem="om8-at-xBe" secondAttribute="bottom" constant="20" id="RmO-K4-syL"/>
-                            <constraint firstItem="zkf-bg-UkC" firstAttribute="top" secondItem="nHQ-5k-k7y" secondAttribute="bottom" constant="22" id="dSn-ic-mKU"/>
-                            <constraint firstItem="zkf-bg-UkC" firstAttribute="centerX" secondItem="l9O-mS-GLX" secondAttribute="centerX" id="hlO-QW-ZPl"/>
+                            <constraint firstItem="WLq-qb-S9w" firstAttribute="leading" secondItem="l9O-mS-GLX" secondAttribute="leading" constant="74" id="c4e-w9-Yr6"/>
+                            <constraint firstItem="wU0-Ll-iIj" firstAttribute="top" secondItem="WLq-qb-S9w" secondAttribute="bottom" constant="52" id="eZq-gE-0ae"/>
                             <constraint firstItem="nHQ-5k-k7y" firstAttribute="top" secondItem="bMi-mU-nSm" secondAttribute="bottom" constant="22" id="iir-W2-WQf"/>
                             <constraint firstItem="om8-at-xBe" firstAttribute="trailing" secondItem="ydg-M1-jGN" secondAttribute="trailing" id="itd-8C-GmX"/>
-                            <constraint firstItem="wU0-Ll-iIj" firstAttribute="top" secondItem="zkf-bg-UkC" secondAttribute="bottom" constant="62" id="nIu-QN-Eqr"/>
+                            <constraint firstAttribute="trailing" secondItem="WLq-qb-S9w" secondAttribute="trailing" constant="74" id="nMr-yO-Wy4"/>
                             <constraint firstItem="bMi-mU-nSm" firstAttribute="centerX" secondItem="l9O-mS-GLX" secondAttribute="centerX" id="riz-VG-aE8"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nameLabel" destination="nHQ-5k-k7y" id="Gr7-uh-xha"/>
+                        <outlet property="introTextView" destination="WLq-qb-S9w" id="Bnl-2H-XeW"/>
+                        <outlet property="nickLabel" destination="nHQ-5k-k7y" id="Xja-x4-D97"/>
                         <outlet property="profileImageView" destination="bMi-mU-nSm" id="ugl-eC-22y"/>
+                        <outlet property="setProfileBtn" destination="wU0-Ll-iIj" id="NOS-Ng-JaX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0s-5g-bWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1591" y="-559"/>
+            <point key="canvasLocation" x="1590.7692307692307" y="-559.47867298578194"/>
         </scene>
         <!--Profile Tab Man View Controller-->
         <scene sceneID="mYq-ER-Z7b">
             <objects>
                 <viewController storyboardIdentifier="ProfileTabManViewController" id="Uds-MI-MFj" customClass="ProfileTabManViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uxV-6Q-Quy">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="433.66666666666669"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="MdL-2T-pGT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

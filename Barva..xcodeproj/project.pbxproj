@@ -55,6 +55,9 @@
 		EBB8F46028BFA5830069D4E1 /* MyUpTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8F45F28BFA5830069D4E1 /* MyUpTabViewController.swift */; };
 		EBB8F46228BFA61E0069D4E1 /* StorageTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8F46128BFA61E0069D4E1 /* StorageTabViewController.swift */; };
 		EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBC384E28A70DEE000D075D /* PopupViewController.swift */; };
+		EBBC40B328F4291F0014F949 /* ProfileSetImgResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBC40B228F4291F0014F949 /* ProfileSetImgResponse.swift */; };
+		EBBC40B728F429620014F949 /* ProfileSetIntroRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBC40B628F429620014F949 /* ProfileSetIntroRequest.swift */; };
+		EBBC40B928F4298A0014F949 /* ProfileSetIntroResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBC40B828F4298A0014F949 /* ProfileSetIntroResponse.swift */; };
 		EBBF4CF228EEFAD900B3AA42 /* TestUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBF4CF128EEFAD900B3AA42 /* TestUploadViewController.swift */; };
 		EBC7609B28B5F32C006ED770 /* HomeTabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609A28B5F32C006ED770 /* HomeTabManViewController.swift */; };
 		EBC7609D28B5F385006ED770 /* LatestBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */; };
@@ -134,6 +137,9 @@
 		EBB8F45F28BFA5830069D4E1 /* MyUpTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUpTabViewController.swift; sourceTree = "<group>"; };
 		EBB8F46128BFA61E0069D4E1 /* StorageTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTabViewController.swift; sourceTree = "<group>"; };
 		EBBC384E28A70DEE000D075D /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		EBBC40B228F4291F0014F949 /* ProfileSetImgResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetImgResponse.swift; sourceTree = "<group>"; };
+		EBBC40B628F429620014F949 /* ProfileSetIntroRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetIntroRequest.swift; sourceTree = "<group>"; };
+		EBBC40B828F4298A0014F949 /* ProfileSetIntroResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetIntroResponse.swift; sourceTree = "<group>"; };
 		EBBF4CF128EEFAD900B3AA42 /* TestUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUploadViewController.swift; sourceTree = "<group>"; };
 		EBC7609A28B5F32C006ED770 /* HomeTabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabManViewController.swift; sourceTree = "<group>"; };
 		EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestBoardViewController.swift; sourceTree = "<group>"; };
@@ -331,6 +337,7 @@
 		EB84F2E728F26F75002921D6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				EBBC40B128F428E30014F949 /* Modify */,
 				EB84F2E828F26F9A002921D6 /* ProfileResponse.swift */,
 				EB83748128F2B6A900518A09 /* MyUpImagesResponse.swift */,
 				EB83748328F2B70E00518A09 /* StorageImagesResponse.swift */,
@@ -460,6 +467,16 @@
 				EBA45B3128C100B7007B95CC /* ProfileModifyViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		EBBC40B128F428E30014F949 /* Modify */ = {
+			isa = PBXGroup;
+			children = (
+				EBBC40B628F429620014F949 /* ProfileSetIntroRequest.swift */,
+				EBBC40B828F4298A0014F949 /* ProfileSetIntroResponse.swift */,
+				EBBC40B228F4291F0014F949 /* ProfileSetImgResponse.swift */,
+			);
+			path = Modify;
 			sourceTree = "<group>";
 		};
 		EBC7609928B5F30B006ED770 /* home */ = {
@@ -695,6 +712,7 @@
 				EB8D504528E17DF80045C4D2 /* IDCheckResponse.swift in Sources */,
 				EBB8F46028BFA5830069D4E1 /* MyUpTabViewController.swift in Sources */,
 				EB82BA6E28EEBF1D000CA4D1 /* ReChatTableViewCell.swift in Sources */,
+				EBBC40B728F429620014F949 /* ProfileSetIntroRequest.swift in Sources */,
 				EBC7609B28B5F32C006ED770 /* HomeTabManViewController.swift in Sources */,
 				EBF510DA28AFBD060098BD5A /* SendMailRequest.swift in Sources */,
 				EB83748228F2B6A900518A09 /* MyUpImagesResponse.swift in Sources */,
@@ -707,6 +725,7 @@
 				EB97FA0528E47F0700A43CEA /* HomeImageCollectionViewCell.swift in Sources */,
 				EB83748428F2B70E00518A09 /* StorageImagesResponse.swift in Sources */,
 				EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */,
+				EBBC40B328F4291F0014F949 /* ProfileSetImgResponse.swift in Sources */,
 				EBE4EDBE28A51288005C7516 /* ProfileTabViewController.swift in Sources */,
 				EBE4EDB828A4E6D5005C7516 /* SigninResponse.swift in Sources */,
 				EBA63E9828AB717100144E3A /* BarvaLog.swift in Sources */,
@@ -720,6 +739,7 @@
 				EBF510E028AFBD980098BD5A /* InspectMailResponse.swift in Sources */,
 				EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */,
 				EBB8F45C28BF9C430069D4E1 /* ProfileTabManViewController.swift in Sources */,
+				EBBC40B928F4298A0014F949 /* ProfileSetIntroResponse.swift in Sources */,
 				EBF510DC28AFBD1C0098BD5A /* SendMailResponse.swift in Sources */,
 				EB9BB22228E4255200AD34B1 /* ChatViewController.swift in Sources */,
 				EBC7609D28B5F385006ED770 /* LatestBoardViewController.swift in Sources */,
