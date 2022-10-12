@@ -63,6 +63,7 @@
 		EBC7609D28B5F385006ED770 /* LatestBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */; };
 		EBC7609F28B5F3CB006ED770 /* todayColorTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609E28B5F3CB006ED770 /* todayColorTabViewController.swift */; };
 		EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC760A028B5F3FC006ED770 /* SexBoardViewController.swift */; };
+		EBD10B9228F6E80100CC7EDA /* ProfileSetImgRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD10B9128F6E80100CC7EDA /* ProfileSetImgRequest.swift */; };
 		EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */; };
 		EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */; };
 		EBE4EDB628A4E6C7005C7516 /* SigninRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB528A4E6C7005C7516 /* SigninRequest.swift */; };
@@ -145,6 +146,7 @@
 		EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestBoardViewController.swift; sourceTree = "<group>"; };
 		EBC7609E28B5F3CB006ED770 /* todayColorTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayColorTabViewController.swift; sourceTree = "<group>"; };
 		EBC760A028B5F3FC006ED770 /* SexBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexBoardViewController.swift; sourceTree = "<group>"; };
+		EBD10B9128F6E80100CC7EDA /* ProfileSetImgRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetImgRequest.swift; sourceTree = "<group>"; };
 		EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		EBE4EDB528A4E6C7005C7516 /* SigninRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninRequest.swift; sourceTree = "<group>"; };
@@ -472,9 +474,10 @@
 		EBBC40B128F428E30014F949 /* Modify */ = {
 			isa = PBXGroup;
 			children = (
+				EBD10B9128F6E80100CC7EDA /* ProfileSetImgRequest.swift */,
+				EBBC40B228F4291F0014F949 /* ProfileSetImgResponse.swift */,
 				EBBC40B628F429620014F949 /* ProfileSetIntroRequest.swift */,
 				EBBC40B828F4298A0014F949 /* ProfileSetIntroResponse.swift */,
-				EBBC40B228F4291F0014F949 /* ProfileSetImgResponse.swift */,
 			);
 			path = Modify;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				EB2F90B428E96D600098A3C1 /* UploadResponse.swift in Sources */,
 				EBB8F46228BFA61E0069D4E1 /* StorageTabViewController.swift in Sources */,
 				EB8D503A28E15F450045C4D2 /* PWFindRequest.swift in Sources */,
+				EBD10B9228F6E80100CC7EDA /* ProfileSetImgRequest.swift in Sources */,
 				EB8D503E28E160B30045C4D2 /* UpdatePWRequest.swift in Sources */,
 				EB8D504328E16DAC0045C4D2 /* UpdatePWViewController.swift in Sources */,
 				EB9BB22028E4254700AD34B1 /* FeedViewController.swift in Sources */,

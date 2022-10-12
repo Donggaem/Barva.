@@ -17,9 +17,10 @@ class MyUpTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
+        getMyUpImages()
     }
     
-    //MARK: - GET PROFILE
+    //MARK: - GET MYUPIMAGES
     let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
     private func getMyUpImages() {
         AF.request(BarvaURL.myUpImagesURL, method: .get, headers: header)

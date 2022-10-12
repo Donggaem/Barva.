@@ -19,6 +19,8 @@ class ProfileModifyViewController: UIViewController {
     var paramIntro = ""
     var paramProfileImg = UIImage()
     
+    var setprofileImg = Data()
+    
     let imagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -34,7 +36,23 @@ class ProfileModifyViewController: UIViewController {
     }
     
     @IBAction func setProfileBtnPressed(_ sender: UIButton) {
+        let intro = introTextView.text ?? ""
         
+        let param = ProfileSetIntroRequest(user_introduce: intro)
+        postSetProfile(param)
+        
+        let paramImg = ProfileSetImgRequest(profileImg: setprofileImg)
+        postSetProfileImg(paramImg)
+        
+        let setProfile_alert = UIAlertController(title: "성공", message: " 프로필 수정이 완료 되었습니다", preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "확인", style: .default){(action) in self.navigationController?.popViewController(animated: true)
+            
+        }
+        
+        setProfile_alert.addAction(okAction)
+        present(setProfile_alert, animated: false, completion: nil)
+        
+        self.navigationController?.popViewController(animated: true)
     }
     //MARK:  - OBJC
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
@@ -82,10 +100,10 @@ class ProfileModifyViewController: UIViewController {
                     if response.isSuccess == true {
                         
                         BarvaLog.debug("postSetProfile - Success")
-                        let setProfile_alert = UIAlertController(title: "성공", message: response.message, preferredStyle: UIAlertController.Style.alert)
-                        let okAction = UIAlertAction(title: "확인", style: .default)
-                        setProfile_alert.addAction(okAction)
-                        present(setProfile_alert, animated: false, completion: nil)
+//                        let setProfile_alert = UIAlertController(title: "성공", message: response.message, preferredStyle: UIAlertController.Style.alert)
+//                        let okAction = UIAlertAction(title: "확인", style: .default)
+//                        setProfile_alert.addAction(okAction)
+//                        present(setProfile_alert, animated: false, completion: nil)
 
                         
                     } else {
@@ -105,6 +123,46 @@ class ProfileModifyViewController: UIViewController {
                     present(fail_alert, animated: false, completion: nil)
                 }
             }
+    }
+    
+    //MARK: - POST SETPRPFILEIMG
+    func postSetProfileImg(_ parameters: ProfileSetImgRequest) {
+        
+        let headers: HTTPHeaders = ["Content-type": "multipart/form-data", "authorization": UserDefaults.standard.string(forKey: "data")!]
+        
+        AF.upload(multipartFormData: { (multipartFormData) in
+            
+            if let image = self.profileImageView.image?.jpegData(compressionQuality: 0.5)! {
+                multipartFormData.append(image, withName: "img", fileName: "test.jpeg", mimeType: "image/jpeg")
+                self.setprofileImg = image
+            }
+            		
+        }, to: BarvaURL.setProfileImageURL, method: .post, headers: headers).responseDecodable(of: ProfileSetImgResponse.self) { [self] response in
+            switch response.result {
+            case .success(let response):
+                if response.isSuccess == true {
+                    BarvaLog.debug("postSetProfileImg-success")
+
+                   
+                    
+                } else {
+                    BarvaLog.error("postSetProfileImg-fail")
+                    let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    fail_alert.addAction(okAction)
+                    present(fail_alert, animated: false, completion: nil)
+                    
+                }
+            case .failure(let error):
+                BarvaLog.error("postSetProfileImg-err")
+                print(error.localizedDescription)
+                let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                let okAction = UIAlertAction(title: "확인", style: .default)
+                fail_alert.addAction(okAction)
+                present(fail_alert, animated: false, completion: nil)
+                
+            }
+        }
     }
 }
 
