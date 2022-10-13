@@ -70,8 +70,10 @@ class ProfileModifyViewController: UIViewController {
         profileImageView.image = paramProfileImg
         
         //프사 이미지 둥글게
-        profileImageView.layer.cornerRadius = profileImageView.frame.width/8
+        profileImageView.layer.cornerRadius = profileImageView.frame.height/2
         profileImageView.clipsToBounds = true
+//        profileImageView.layer.borderWidth = 1
+//        profileImageView.layer.borderColor = UIColor.clear.cgColor
         
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
@@ -85,7 +87,7 @@ class ProfileModifyViewController: UIViewController {
         
         introTextView.layer.borderWidth = 1.0
         introTextView.layer.borderColor = UIColor.black.cgColor
-        introTextView.layer.cornerRadius = 10
+        introTextView.layer.cornerRadius = 5
         
     }
     

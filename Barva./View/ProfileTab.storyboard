@@ -38,7 +38,7 @@
                                     <segue destination="Uds-MI-MFj" kind="embed" id="YSb-B3-HCs"/>
                                 </connections>
                             </containerView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aWo-ff-SzC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aWo-ff-SzC">
                                 <rect key="frame" x="154" y="102" width="82" height="80.666666666666671"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
@@ -207,7 +207,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bMi-mU-nSm">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bMi-mU-nSm">
                                 <rect key="frame" x="154" y="112" width="82" height="80.666666666666671"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
@@ -314,7 +314,7 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileTabManViewController" id="Uds-MI-MFj" customClass="ProfileTabManViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uxV-6Q-Quy">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="433.66666666666669"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="431.33333333333331"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="MdL-2T-pGT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

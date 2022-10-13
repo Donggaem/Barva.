@@ -44,7 +44,7 @@ class ProfileTabViewController: UIViewController {
     private func setUI(){
         
         //프사 이미지 둥글게
-        profileImageView.layer.cornerRadius = profileImageView.frame.width/8
+        profileImageView.layer.cornerRadius = profileImageView.frame.height/2
         profileImageView.clipsToBounds = true
         
         // 이미지뷰 탭
@@ -76,7 +76,6 @@ class ProfileTabViewController: UIViewController {
                                 }
                                 
                                 if let intro = response.data?.myProfileInfo?.user_introduce {
-                                    print("dd")
                                     print(intro)
                                     self.profileIntroLabel.text = intro
                                 }else {
@@ -90,7 +89,9 @@ class ProfileTabViewController: UIViewController {
 
                                 }else {
                                     print("이미지")
-                                    let url = URL(string: response.data?.myProfileInfo?.profile_url ?? "")
+                                    print(response.data?.myProfileInfo?.profile_url ?? "")
+//                                    let url = URL(string: response.data?.myProfileInfo?.profile_url ?? "")
+                                    let url = URL(string: "https://barva-dot.s3.ap-northeast-2.amazonaws.com")
                                     self.profileImageView.kf.setImage(with: url)
                                     
                                 }
