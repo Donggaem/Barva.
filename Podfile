@@ -11,10 +11,9 @@ pod 'IQKeyboardManagerSwift'
 pod 'SnapKit'
 pod 'Tabman'
 pod 'Pageboy'
-pod 'YPImagePicker'
-pod 'BSImagePicker'
 pod 'FSPagerView'
 pod 'Kingfisher'
+pod 'DropDown'
 
   # Workaround for Cocoapods issue #7606
   post_install do |installer|

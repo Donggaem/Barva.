@@ -52,20 +52,6 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         self.chatTableView.register(UINib(nibName: "ReChatTableCell", bundle: nil),  forCellReuseIdentifier: "ReChatTableViewCell")
     }
 
-//    // MARK: - Section
-//
-//    // 몇개의 Cell을 반환할지 Return하는 메소드
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return chatList.count
-//    }
-//
-//    private func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> UITableViewCell {
-//        let chatCell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell") as! ChatTableViewCell
-//        chatCell.chatLabel.text = chatList[0]
-//        return chatCell
-//    }
-
-
     // MARK: - Row Cell
 
     // 몇개의 Cell을 반환할지 Return하는 메소드
