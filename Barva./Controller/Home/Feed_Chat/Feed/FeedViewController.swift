@@ -92,6 +92,6 @@ extension FeedViewController: NaviAction {
         let chatVC = storyBoard.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
         self.navigationController?.pushViewController(chatVC, animated: true)
         chatVC.paramFeedName = feedName
-        chatVC.paraFeedSpec = feedSpec
+        chatVC.paramFeedSpec = feedSpec
     }
 }

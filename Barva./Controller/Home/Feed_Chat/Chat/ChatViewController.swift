@@ -9,12 +9,22 @@ import UIKit
 
 class ChatViewController: UIViewController {
     
+    @IBOutlet weak var feedUserProfileImg: UIImageView!
     @IBOutlet weak var feedUserNameLabel: UILabel!
     @IBOutlet weak var feedUesrSpecLabel: UILabel!
+    @IBOutlet weak var feedUserText: UILabel!
     
     @IBOutlet weak var chatTableView: UITableView!
+    
+    @IBOutlet weak var userProfileImg: UIImageView!
+    @IBOutlet weak var sendBtn: UIButton!
+    @IBOutlet weak var sendTextField: UITextField!
+    
+    var paramFeedImg = UIImage()
     var paramFeedName = ""
-    var paraFeedSpec = ""
+    var paramFeedSpec = ""
+    var paramFeedText = ""
+    
     
     var chatList: [String] = ["test", "test1", "test2", "test3","test4", "test5", "test6"]
     var reChatList: [String] = ["test7", "test8", "test9", "test10","test11", "test12", "test13"]
@@ -32,15 +42,19 @@ class ChatViewController: UIViewController {
         
     }
     
+    @IBAction func sendBtnPressed(_ sender: UIButton) {
+        
+    }
     //MARK: - INNER FUNC
     private func setUI(){
         feedUserNameLabel.text = paramFeedName
-        feedUesrSpecLabel.text = paraFeedSpec
+        feedUesrSpecLabel.text = paramFeedSpec
         
         
     }
 }
 
+//MARK: - Extension UITableView
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
     //MARK: - SET TABLEVIEW
