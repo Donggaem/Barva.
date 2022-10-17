@@ -58,7 +58,6 @@
 		EBBC40B328F4291F0014F949 /* ProfileSetImgResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBC40B228F4291F0014F949 /* ProfileSetImgResponse.swift */; };
 		EBBC40B728F429620014F949 /* ProfileSetIntroRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBC40B628F429620014F949 /* ProfileSetIntroRequest.swift */; };
 		EBBC40B928F4298A0014F949 /* ProfileSetIntroResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBC40B828F4298A0014F949 /* ProfileSetIntroResponse.swift */; };
-		EBBF4CF228EEFAD900B3AA42 /* TestUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBF4CF128EEFAD900B3AA42 /* TestUploadViewController.swift */; };
 		EBC7609B28B5F32C006ED770 /* HomeTabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609A28B5F32C006ED770 /* HomeTabManViewController.swift */; };
 		EBC7609D28B5F385006ED770 /* LatestBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */; };
 		EBC7609F28B5F3CB006ED770 /* todayColorTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609E28B5F3CB006ED770 /* todayColorTabViewController.swift */; };
@@ -141,7 +140,6 @@
 		EBBC40B228F4291F0014F949 /* ProfileSetImgResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetImgResponse.swift; sourceTree = "<group>"; };
 		EBBC40B628F429620014F949 /* ProfileSetIntroRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetIntroRequest.swift; sourceTree = "<group>"; };
 		EBBC40B828F4298A0014F949 /* ProfileSetIntroResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetIntroResponse.swift; sourceTree = "<group>"; };
-		EBBF4CF128EEFAD900B3AA42 /* TestUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUploadViewController.swift; sourceTree = "<group>"; };
 		EBC7609A28B5F32C006ED770 /* HomeTabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabManViewController.swift; sourceTree = "<group>"; };
 		EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestBoardViewController.swift; sourceTree = "<group>"; };
 		EBC7609E28B5F3CB006ED770 /* todayColorTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayColorTabViewController.swift; sourceTree = "<group>"; };
@@ -419,7 +417,6 @@
 			isa = PBXGroup;
 			children = (
 				EBE4EDBB28A51255005C7516 /* UploadTabViewController.swift */,
-				EBBF4CF128EEFAD900B3AA42 /* TestUploadViewController.swift */,
 			);
 			path = Upload;
 			sourceTree = "<group>";
@@ -701,7 +698,6 @@
 				EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */,
 				EBE6657D28E6C0EC007F3B48 /* FeedViewCell.swift in Sources */,
 				EBF510D128AFBC2D0098BD5A /* IDCheckRequest.swift in Sources */,
-				EBBF4CF228EEFAD900B3AA42 /* TestUploadViewController.swift in Sources */,
 				EB2F90B228E96D510098A3C1 /* UploadRequest.swift in Sources */,
 				EB1751FA28AA8D43009FEFBF /* FindViewController.swift in Sources */,
 				EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */,

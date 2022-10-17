@@ -59,6 +59,7 @@ class ProfileModifyViewController: UIViewController {
     {
         self.imagePickerController.delegate = self
         self.imagePickerController.sourceType = .photoLibrary
+//        self.imagePickerController.allowsEditing = true
         present(self.imagePickerController, animated: true, completion: nil)
     }
     

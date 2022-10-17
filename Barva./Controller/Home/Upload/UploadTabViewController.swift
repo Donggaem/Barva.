@@ -137,7 +137,7 @@ class UploadTabViewController: UIViewController {
     //MARK: - POST IMGUPLOAD
     func postUpload(_ parameters: UploadRequest) {
         
-        let headers: HTTPHeaders = ["Content-type": "multipart/form-data"]
+        let headers: HTTPHeaders = ["Content-type": "multipart/form-data", "authorization": UserDefaults.standard.string(forKey: "data")!]
         
         AF.upload(multipartFormData: { (multipartFormData) in
             for image in self.user_Images {
@@ -147,14 +147,14 @@ class UploadTabViewController: UIViewController {
             
             let gender = self.userGender
             let height = self.user_HeightTextField.text ?? ""
-            let weight = self.user_weightTextField.text ?? ""
+//            let weight = self.user_weightTextField.text ?? ""
             let content = self.UPloadtextView.text ?? ""
             
             let parameters: [String : Any] = [
-                        "user_Gender": gender,
-                        "user_Height": height,
-                        "user_Weight": weight,
-                        "user_Content": content
+                        "user_gender": gender,
+                        "user_tall": height,
+//                        "user_Weight": weight,
+                        "post_content": content
                     ]
             
             for (key, value) in parameters {
@@ -169,14 +169,14 @@ class UploadTabViewController: UIViewController {
                 
             }
             
-        }, to: BarvaURL.imgsURL, method: .post, headers: headers).responseDecodable(of: UploadResponse.self) { [self] response in
+        }, to: BarvaURL.uploadFeedURL, method: .post, headers: headers).responseDecodable(of: UploadResponse.self) { [self] response in
             switch response.result {
             case .success(let response):
                 if response.isSuccess == true {
                     BarvaLog.debug("PostUpload-success")
 
-                    print(response.data)
-                    testImg = response.data 
+                    print(response.data?.err ?? "")
+//                    testImg = response.data
                     
                 } else {
                     BarvaLog.error("PostUpload-fail")

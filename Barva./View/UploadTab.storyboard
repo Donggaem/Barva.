@@ -275,38 +275,6 @@
             </objects>
             <point key="canvasLocation" x="1563.0769230769231" y="33.412322274881518"/>
         </scene>
-        <!--Test Upload View Controller-->
-        <scene sceneID="bog-e8-LBz">
-            <objects>
-                <viewController storyboardIdentifier="TestUploadViewController" id="D3C-SN-8Kw" customClass="TestUploadViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EIO-Je-Mc0">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="diB-v9-ROE">
-                                <rect key="frame" x="0.0" y="47" width="390" height="390"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="390" id="hKe-EJ-O7o"/>
-                                    <constraint firstAttribute="width" constant="390" id="ntj-Wm-iJH"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Wee-43-uiA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="diB-v9-ROE" firstAttribute="trailing" secondItem="Wee-43-uiA" secondAttribute="trailing" id="TXe-3A-PyN"/>
-                            <constraint firstItem="diB-v9-ROE" firstAttribute="leading" secondItem="Wee-43-uiA" secondAttribute="leading" id="fgY-vc-Tm4"/>
-                            <constraint firstItem="diB-v9-ROE" firstAttribute="top" secondItem="Wee-43-uiA" secondAttribute="top" id="fti-DM-nQF"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="testimage" destination="diB-v9-ROE" id="3KK-pi-Ct2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l1X-K0-sxH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2289.2307692307691" y="32.701421800947863"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="uOi-ze-AsL">
             <objects>

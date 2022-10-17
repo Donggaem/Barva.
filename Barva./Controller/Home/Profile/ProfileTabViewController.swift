@@ -90,8 +90,8 @@ class ProfileTabViewController: UIViewController {
                                 }else {
                                     print("이미지")
                                     print(response.data?.myProfileInfo?.profile_url ?? "")
-//                                    let url = URL(string: response.data?.myProfileInfo?.profile_url ?? "")
-                                    let url = URL(string: "https://barva-dot.s3.ap-northeast-2.amazonaws.com")
+                                    let url = URL(string: response.data?.myProfileInfo?.profile_url ?? "")
+//                                    let url = URL(string: "https://barva-dot.s3.ap-northeast-2.amazonaws.com")
                                     self.profileImageView.kf.setImage(with: url)
                                     
                                 }
