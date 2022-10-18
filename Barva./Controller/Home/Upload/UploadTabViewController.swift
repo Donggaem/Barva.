@@ -78,13 +78,6 @@ class UploadTabViewController: UIViewController {
     
     //MARK: - IBACTION
     
-    @IBAction func testBtnPressed(_ sender: UIButton) {
-        let testVC = self.storyboard?.instantiateViewController(withIdentifier: "TestUploadViewController") as! TestUploadViewController
-        self.navigationController?.pushViewController(testVC, animated: true)
-        
-        testVC.paramImg = testImg
-        
-    }
     @IBAction func manBtnPressed(_ sender: UIButton) {
         
         userGender = "male"

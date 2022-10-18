@@ -11,6 +11,8 @@ import Kingfisher
 
 protocol NaviAction: AnyObject {
     func moveChatVC()
+    
+    func moveOthereVC()
 }
 
 class FeedViewCell: FSPagerViewCell {
@@ -29,6 +31,7 @@ class FeedViewCell: FSPagerViewCell {
     @IBOutlet weak var bookmarkBtn: UIButton!
     
     weak var delegate: NaviAction?
+    
     var paramImg: [String]? {
         didSet {
             self.feedImage.reloadData()
@@ -37,7 +40,8 @@ class FeedViewCell: FSPagerViewCell {
     
     var bookmarkBool = false
     
-    //MARK: -IBACTION
+    
+    //MARK: - IBACTION
     @IBAction func allChatBtnPressed(_ sender: UIButton) {
 
         self.delegate?.moveChatVC()
@@ -61,6 +65,10 @@ class FeedViewCell: FSPagerViewCell {
             bookmarkBool = false
             bookmarkBtn.setImage(UIImage(systemName: "bookmark"), for: .normal)
         }
+    }
+    @IBAction func othereProfile(_ sender: UIButton) {
+        print("click")
+        self.delegate?.moveOthereVC()
     }
     
     //MARK: - INNER FUNC

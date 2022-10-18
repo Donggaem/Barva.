@@ -73,6 +73,9 @@ class ProfileTabViewController: UIViewController {
                                 if let nick = response.data?.myProfileInfo?.user_nick {
                                     print(nick)
                                     self.profileNickLabel.text = nick
+                                }else {
+                                    self.profileNickLabel.text = "이름없음"
+                                    
                                 }
                                 
                                 if let intro = response.data?.myProfileInfo?.user_introduce {

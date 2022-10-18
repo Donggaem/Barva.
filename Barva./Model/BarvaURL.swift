@@ -35,4 +35,6 @@ struct BarvaURL {
     static let storageImagesURL = ""
     static let setProfileImageURL = "http://3.34.183.110:3003/main/setProfileImg"
     static let setProfileURL = "http://3.34.183.110:3003/main/setProfileIntro"
+    
+    static let othereUpImagesURL = ""
 }

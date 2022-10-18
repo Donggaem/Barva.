@@ -94,4 +94,11 @@ extension FeedViewController: NaviAction {
         chatVC.paramFeedName = feedName
         chatVC.paramFeedSpec = feedSpec
     }
+    
+    func moveOthereVC() {
+        let storyBoard = UIStoryboard(name: "ProfileTab", bundle: nil)
+        let othereVC = storyBoard.instantiateViewController(withIdentifier: "OthereUserProfileViewController") as! OthereUserProfileViewController
+        self.navigationController?.pushViewController(othereVC, animated: true)
+    }
+    
 }

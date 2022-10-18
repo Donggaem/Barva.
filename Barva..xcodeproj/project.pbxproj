@@ -63,6 +63,10 @@
 		EBC7609F28B5F3CB006ED770 /* todayColorTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609E28B5F3CB006ED770 /* todayColorTabViewController.swift */; };
 		EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC760A028B5F3FC006ED770 /* SexBoardViewController.swift */; };
 		EBD10B9228F6E80100CC7EDA /* ProfileSetImgRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD10B9128F6E80100CC7EDA /* ProfileSetImgRequest.swift */; };
+		EBDA2BFF28FE7B4000652D33 /* OthereUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA2BFE28FE7B4000652D33 /* OthereUserProfileViewController.swift */; };
+		EBDA2C0128FE7C9000652D33 /* OUProfileTabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA2C0028FE7C9000652D33 /* OUProfileTabManViewController.swift */; };
+		EBDA2C0328FE7CB500652D33 /* OUUpTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA2C0228FE7CB500652D33 /* OUUpTabViewController.swift */; };
+		EBDA2C0528FE87DC00652D33 /* OthereUpImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA2C0428FE87DC00652D33 /* OthereUpImagesResponse.swift */; };
 		EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */; };
 		EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */; };
 		EBE4EDB628A4E6C7005C7516 /* SigninRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB528A4E6C7005C7516 /* SigninRequest.swift */; };
@@ -145,6 +149,10 @@
 		EBC7609E28B5F3CB006ED770 /* todayColorTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayColorTabViewController.swift; sourceTree = "<group>"; };
 		EBC760A028B5F3FC006ED770 /* SexBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexBoardViewController.swift; sourceTree = "<group>"; };
 		EBD10B9128F6E80100CC7EDA /* ProfileSetImgRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetImgRequest.swift; sourceTree = "<group>"; };
+		EBDA2BFE28FE7B4000652D33 /* OthereUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthereUserProfileViewController.swift; sourceTree = "<group>"; };
+		EBDA2C0028FE7C9000652D33 /* OUProfileTabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUProfileTabManViewController.swift; sourceTree = "<group>"; };
+		EBDA2C0228FE7CB500652D33 /* OUUpTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUUpTabViewController.swift; sourceTree = "<group>"; };
+		EBDA2C0428FE87DC00652D33 /* OthereUpImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthereUpImagesResponse.swift; sourceTree = "<group>"; };
 		EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		EBE4EDB528A4E6C7005C7516 /* SigninRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninRequest.swift; sourceTree = "<group>"; };
@@ -341,6 +349,7 @@
 				EB84F2E828F26F9A002921D6 /* ProfileResponse.swift */,
 				EB83748128F2B6A900518A09 /* MyUpImagesResponse.swift */,
 				EB83748328F2B70E00518A09 /* StorageImagesResponse.swift */,
+				EBDA2C0428FE87DC00652D33 /* OthereUpImagesResponse.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -459,6 +468,7 @@
 		EBB8F45A28BF9BEE0069D4E1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				EBDA2BFD28FE7AD300652D33 /* OthereUserProfile */,
 				EBE4EDBD28A51288005C7516 /* ProfileTabViewController.swift */,
 				EBB8F45B28BF9C430069D4E1 /* ProfileTabManViewController.swift */,
 				EBB8F45F28BFA5830069D4E1 /* MyUpTabViewController.swift */,
@@ -491,6 +501,16 @@
 				EBC760A028B5F3FC006ED770 /* SexBoardViewController.swift */,
 			);
 			path = home;
+			sourceTree = "<group>";
+		};
+		EBDA2BFD28FE7AD300652D33 /* OthereUserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				EBDA2BFE28FE7B4000652D33 /* OthereUserProfileViewController.swift */,
+				EBDA2C0028FE7C9000652D33 /* OUProfileTabManViewController.swift */,
+				EBDA2C0228FE7CB500652D33 /* OUUpTabViewController.swift */,
+			);
+			path = OthereUserProfile;
 			sourceTree = "<group>";
 		};
 		EBE4EDAF28A4E663005C7516 /* LoginModel */ = {
@@ -686,6 +706,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB8D503628E15E1F0045C4D2 /* IDFindRequest.swift in Sources */,
+				EBDA2C0128FE7C9000652D33 /* OUProfileTabManViewController.swift in Sources */,
 				EBE4EDC028A5129A005C7516 /* ColorTabViewController.swift in Sources */,
 				EBE4EDC328A514AF005C7516 /* UIViewController+Extension.swift in Sources */,
 				EB8D504728E17E230045C4D2 /* IDFindResponse.swift in Sources */,
@@ -696,9 +717,11 @@
 				EB8D504128E160FB0045C4D2 /* UpdatePWResponse.swift in Sources */,
 				EB25ACFC28A1364D0006C1F2 /* LoginViewController.swift in Sources */,
 				EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */,
+				EBDA2C0328FE7CB500652D33 /* OUUpTabViewController.swift in Sources */,
 				EBE6657D28E6C0EC007F3B48 /* FeedViewCell.swift in Sources */,
 				EBF510D128AFBC2D0098BD5A /* IDCheckRequest.swift in Sources */,
 				EB2F90B228E96D510098A3C1 /* UploadRequest.swift in Sources */,
+				EBDA2C0528FE87DC00652D33 /* OthereUpImagesResponse.swift in Sources */,
 				EB1751FA28AA8D43009FEFBF /* FindViewController.swift in Sources */,
 				EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */,
 				EB1751F828AA7D7A009FEFBF /* IDFindTabViewController.swift in Sources */,
@@ -727,6 +750,7 @@
 				EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */,
 				EBBC40B328F4291F0014F949 /* ProfileSetImgResponse.swift in Sources */,
 				EBE4EDBE28A51288005C7516 /* ProfileTabViewController.swift in Sources */,
+				EBDA2BFF28FE7B4000652D33 /* OthereUserProfileViewController.swift in Sources */,
 				EBE4EDB828A4E6D5005C7516 /* SigninResponse.swift in Sources */,
 				EBA63E9828AB717100144E3A /* BarvaLog.swift in Sources */,
 				EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */,
