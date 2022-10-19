@@ -13,6 +13,7 @@
 		EB1751F628AA78F8009FEFBF /* PWFindTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1751F528AA78F8009FEFBF /* PWFindTabViewController.swift */; };
 		EB1751F828AA7D7A009FEFBF /* IDFindTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1751F728AA7D7A009FEFBF /* IDFindTabViewController.swift */; };
 		EB1751FA28AA8D43009FEFBF /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1751F928AA8D43009FEFBF /* FindViewController.swift */; };
+		EB1E7D6428FEE0CD00FE7737 /* UserCheckerBoardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E7D6328FEE0CD00FE7737 /* UserCheckerBoardResponse.swift */; };
 		EB25ACF828A1364D0006C1F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25ACF728A1364D0006C1F2 /* AppDelegate.swift */; };
 		EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25ACF928A1364D0006C1F2 /* SceneDelegate.swift */; };
 		EB25ACFC28A1364D0006C1F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25ACFB28A1364D0006C1F2 /* LoginViewController.swift */; };
@@ -96,6 +97,7 @@
 		EB1751F528AA78F8009FEFBF /* PWFindTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWFindTabViewController.swift; sourceTree = "<group>"; };
 		EB1751F728AA7D7A009FEFBF /* IDFindTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDFindTabViewController.swift; sourceTree = "<group>"; };
 		EB1751F928AA8D43009FEFBF /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
+		EB1E7D6328FEE0CD00FE7737 /* UserCheckerBoardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCheckerBoardResponse.swift; sourceTree = "<group>"; };
 		EB25ACF428A1364D0006C1F2 /* Barva..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Barva..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB25ACF728A1364D0006C1F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB25ACF928A1364D0006C1F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 			children = (
 				EB2F90B028E96C150098A3C1 /* Upload */,
 				EB84F2E728F26F75002921D6 /* Profile */,
+				EB1E7D6328FEE0CD00FE7737 /* UserCheckerBoardResponse.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 				EBC7609B28B5F32C006ED770 /* HomeTabManViewController.swift in Sources */,
 				EBF510DA28AFBD060098BD5A /* SendMailRequest.swift in Sources */,
 				EB83748228F2B6A900518A09 /* MyUpImagesResponse.swift in Sources */,
+				EB1E7D6428FEE0CD00FE7737 /* UserCheckerBoardResponse.swift in Sources */,
 				EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */,
 				EB25ACF828A1364D0006C1F2 /* AppDelegate.swift in Sources */,
 				EBC7609F28B5F3CB006ED770 /* todayColorTabViewController.swift in Sources */,

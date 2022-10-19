@@ -279,6 +279,10 @@ class SigninViewController: UIViewController {
         btnHidden(msgBtn: msgNickBtn)
         btnHidden(msgBtn: msgCheckNumBtn)
         
+        termsBtn.makeImageInset(margin: 8)
+        personalBtn.makeImageInset(margin: 8)
+        marketingBtn.makeImageInset(margin: 8)
+        
         //버튼 활성/비활성 액션
         self.nickNameTextField.addAction(UIAction(handler: { _ in
             if self.nickNameTextField.text?.isEmpty == true {

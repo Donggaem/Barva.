@@ -26,7 +26,7 @@ struct BarvaURL {
     static let pwFindEmailURL = "http://3.34.183.110:3003/auth/findPwMail"
     
     //MARK: - 이미지
-    static let imgURL = "http://3.34.183.110:3003/upload/test"
+    static let checkerBoardURL = "http://3.34.183.110:3003/main/userCheckerboard"
     static let uploadFeedURL = "http://3.34.183.110:3003/main/uploadPost"
 
     //MARK: - 프로필
