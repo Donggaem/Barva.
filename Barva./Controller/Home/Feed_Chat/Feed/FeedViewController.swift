@@ -7,6 +7,7 @@
 
 import UIKit
 import FSPagerView
+import Alamofire
 
 
 class FeedViewController: UIViewController {
@@ -24,10 +25,12 @@ class FeedViewController: UIViewController {
         }
     }
     
-    var paramImg = ""
+//    var paramImg = ""
+    var paramSeletIndex = 0
     var feedName = ""
     var feedSpec = ""
     var imgArray: [String] = []
+    var feedArray: [FeedArray] = []
     
     
     override func viewDidLoad() {
@@ -37,7 +40,6 @@ class FeedViewController: UIViewController {
         
         feedPagerView.dataSource = self
         feedPagerView.delegate = self
-        print(paramImg)
     }
     
     //MARK: - IBACTION
@@ -53,6 +55,42 @@ class FeedViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
+    //MARK: - GET FEED
+    let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
+    private func getFeed() {
+        AF.request(BarvaURL.getFeedURL, method: .get, headers: header)
+            .validate()
+            .responseDecodable(of: GetFeedPesponse.self) { response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        print(BarvaLog.debug("getFeed-success"))
+                        if response.data != nil {
+                            if let feedObject = response.data?.singleResult {
+                                self.feedArray = feedObject
+                            }
+                        }
+                        
+                    } else {
+                        print(BarvaLog.error("getFeed-fail"))
+                        
+                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        fail_alert.addAction(okAction)
+                        self.present(fail_alert, animated: false, completion: nil)
+                    }
+                case .failure(let error):
+                    BarvaLog.error("getFeed-err")
+                    print(error.localizedDescription)
+                    
+                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    fail_alert.addAction(okAction)
+                    self.present(fail_alert, animated: false, completion: nil)
+                }
+            }
+    }
+    
 }
 
 //MARK: - Extension FSPagerView
@@ -60,7 +98,7 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
     
     //이미지 갯수
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return paramImg.count
+        return feedArray.count
     }
     
     //각셀의 대한 설정
@@ -69,12 +107,12 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         
         cell.contentView.isUserInteractionEnabled = false
         cell.delegate = self
-//        cell.feedImage.image = UIImage(named: paramImg)
         cell.feedImage.reloadData()
+//        cell.feedImage.image = UIImage(named: paramImg)
         feedName = cell.feedNameLabel.text ?? ""
         feedSpec = cell.feedSpecLabel.text ?? ""
         
-        cell.paramImg = ["common","common (1)"]
+//        cell.paramImg = ["common","common (1)"]
         
         return cell
     }

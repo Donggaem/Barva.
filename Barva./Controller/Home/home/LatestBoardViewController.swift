@@ -24,50 +24,50 @@ class LatestBoardTabViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        getCheckBoard()
+//        getCheckBoard()
         latestCollectionView.reloadData()
     }
     
-    //MARK: - GET CHECKERBOARD
-    let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
-    private func getCheckBoard() {
-        AF.request(BarvaURL.checkerBoardURL, method: .get, headers: header)
-            .validate()
-            .responseDecodable(of: UserCheckerBoardResponse.self) { response in
-                switch response.result {
-                case .success(let response):
-                    if response.isSuccess == true {
-                        print(BarvaLog.debug("getCheckBoard-success"))
-//                        print(response.data?.checkerboardArr)
-//                        self.latestImageArray = response.data?.checkerboardArr?.compactMap{$0} ?? []
-                        
-                        if response.data != nil {
-                            if let imgarry = response.data?.checkerboardArr?.compactMap({$0}) {
-                                self.latestImageArray = imgarry
-                                print(self.latestImageArray)
-
-                            }
-                        }
-                        
-                    } else {
-                        print(BarvaLog.error("getCheckBoard-fail"))
-                        
-                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
-                        let okAction = UIAlertAction(title: "확인", style: .default)
-                        fail_alert.addAction(okAction)
-                        self.present(fail_alert, animated: false, completion: nil)
-                    }
-                case .failure(let error):
-                    BarvaLog.error("getCheckBoard-err")
-                    print(error.localizedDescription)
-                    
-                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
-                    let okAction = UIAlertAction(title: "확인", style: .default)
-                    fail_alert.addAction(okAction)
-                    self.present(fail_alert, animated: false, completion: nil)
-                }
-            }
-    }
+//    //MARK: - GET CHECKERBOARD
+//    let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
+//    private func getCheckBoard() {
+//        AF.request(BarvaURL.checkerBoardURL, method: .get, headers: header)
+//            .validate()
+//            .responseDecodable(of: UserCheckerBoardResponse.self) { response in
+//                switch response.result {
+//                case .success(let response):
+//                    if response.isSuccess == true {
+//                        print(BarvaLog.debug("getCheckBoard-success"))
+////                        print(response.data?.checkerboardArr)
+////                        self.latestImageArray = response.data?.checkerboardArr?.compactMap{$0} ?? []
+//
+//                        if response.data != nil {
+//                            if let imgarry = response.data?.checkerboardArr?.compactMap({$0}) {
+//                                self.latestImageArray = imgarry
+//                                print(self.latestImageArray)
+//
+//                            }
+//                        }
+//
+//                    } else {
+//                        print(BarvaLog.error("getCheckBoard-fail"))
+//
+//                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+//                        let okAction = UIAlertAction(title: "확인", style: .default)
+//                        fail_alert.addAction(okAction)
+//                        self.present(fail_alert, animated: false, completion: nil)
+//                    }
+//                case .failure(let error):
+//                    BarvaLog.error("getCheckBoard-err")
+//                    print(error.localizedDescription)
+//
+//                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+//                    let okAction = UIAlertAction(title: "확인", style: .default)
+//                    fail_alert.addAction(okAction)
+//                    self.present(fail_alert, animated: false, completion: nil)
+//                }
+//            }
+//    }
     
     
 }
@@ -108,7 +108,11 @@ extension LatestBoardTabViewController: UICollectionViewDataSource, UICollection
         let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
         self.navigationController?.pushViewController(feedVC, animated: true)
         
-        feedVC.paramImg = self.latestImageArray[indexPath.row]
+        print(indexPath.row)
+        feedVC.paramSeletIndex = indexPath.row
+        
+//        feedVC.paramImg = self.latestImageArray[indexPath.row]
+        
     }
     
     // CollectionView Cell의 Size

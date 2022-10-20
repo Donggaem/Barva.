@@ -24,12 +24,12 @@
 		EB2EA2FB28A1410E00EC0685 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2EA2FA28A1410E00EC0685 /* Home.storyboard */; };
 		EB2F90B228E96D510098A3C1 /* UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F90B128E96D510098A3C1 /* UploadRequest.swift */; };
 		EB2F90B428E96D600098A3C1 /* UploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F90B328E96D600098A3C1 /* UploadResponse.swift */; };
+		EB67130F2901336D00B8F8FC /* GetFeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67130E2901336D00B8F8FC /* GetFeedResponse.swift */; };
 		EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67743B28C72F2B001A6F55 /* BarvaURL.swift */; };
 		EB82BA6C28EEB75E000CA4D1 /* ReChatTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB82BA6B28EEB75E000CA4D1 /* ReChatTableCell.xib */; };
 		EB82BA6E28EEBF1D000CA4D1 /* ReChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB82BA6D28EEBF1D000CA4D1 /* ReChatTableViewCell.swift */; };
 		EB834A9728E45662008A0706 /* HomeImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB834A9628E45662008A0706 /* HomeImageCollectionViewCell.xib */; };
 		EB834A9A28E45B5D008A0706 /* testImage in Resources */ = {isa = PBXBuildFile; fileRef = EB834A9928E45B5D008A0706 /* testImage */; };
-		EB83748228F2B6A900518A09 /* MyUpImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83748128F2B6A900518A09 /* MyUpImagesResponse.swift */; };
 		EB83748428F2B70E00518A09 /* StorageImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83748328F2B70E00518A09 /* StorageImagesResponse.swift */; };
 		EB84F2E928F26F9A002921D6 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84F2E828F26F9A002921D6 /* ProfileResponse.swift */; };
 		EB8D503628E15E1F0045C4D2 /* IDFindRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D503528E15E1F0045C4D2 /* IDFindRequest.swift */; };
@@ -111,12 +111,12 @@
 		EB2F90B128E96D510098A3C1 /* UploadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRequest.swift; sourceTree = "<group>"; };
 		EB2F90B328E96D600098A3C1 /* UploadResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadResponse.swift; sourceTree = "<group>"; };
 		EB2F99C628B0ABF10084EB7B /* YPImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YPImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB67130E2901336D00B8F8FC /* GetFeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFeedResponse.swift; sourceTree = "<group>"; };
 		EB67743B28C72F2B001A6F55 /* BarvaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarvaURL.swift; sourceTree = "<group>"; };
 		EB82BA6B28EEB75E000CA4D1 /* ReChatTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReChatTableCell.xib; sourceTree = "<group>"; };
 		EB82BA6D28EEBF1D000CA4D1 /* ReChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReChatTableViewCell.swift; sourceTree = "<group>"; };
 		EB834A9628E45662008A0706 /* HomeImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		EB834A9928E45B5D008A0706 /* testImage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = testImage; sourceTree = "<group>"; };
-		EB83748128F2B6A900518A09 /* MyUpImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUpImagesResponse.swift; sourceTree = "<group>"; };
 		EB83748328F2B70E00518A09 /* StorageImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageImagesResponse.swift; sourceTree = "<group>"; };
 		EB84F2E828F26F9A002921D6 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		EB8D503528E15E1F0045C4D2 /* IDFindRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDFindRequest.swift; sourceTree = "<group>"; };
@@ -300,9 +300,9 @@
 		EB2F90AF28E96C0A0098A3C1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EB67130B290132E700B8F8FC /* Feed */,
 				EB2F90B028E96C150098A3C1 /* Upload */,
 				EB84F2E728F26F75002921D6 /* Profile */,
-				EB1E7D6328FEE0CD00FE7737 /* UserCheckerBoardResponse.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -314,6 +314,14 @@
 				EB2F90B328E96D600098A3C1 /* UploadResponse.swift */,
 			);
 			path = Upload;
+			sourceTree = "<group>";
+		};
+		EB67130B290132E700B8F8FC /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				EB67130E2901336D00B8F8FC /* GetFeedResponse.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		EB67743D28C73A3C001A6F55 /* SignUp */ = {
@@ -350,7 +358,7 @@
 			children = (
 				EBBC40B128F428E30014F949 /* Modify */,
 				EB84F2E828F26F9A002921D6 /* ProfileResponse.swift */,
-				EB83748128F2B6A900518A09 /* MyUpImagesResponse.swift */,
+				EB1E7D6328FEE0CD00FE7737 /* UserCheckerBoardResponse.swift */,
 				EB83748328F2B70E00518A09 /* StorageImagesResponse.swift */,
 				EBDA2C0428FE87DC00652D33 /* OthereUpImagesResponse.swift */,
 			);
@@ -741,7 +749,6 @@
 				EBBC40B728F429620014F949 /* ProfileSetIntroRequest.swift in Sources */,
 				EBC7609B28B5F32C006ED770 /* HomeTabManViewController.swift in Sources */,
 				EBF510DA28AFBD060098BD5A /* SendMailRequest.swift in Sources */,
-				EB83748228F2B6A900518A09 /* MyUpImagesResponse.swift in Sources */,
 				EB1E7D6428FEE0CD00FE7737 /* UserCheckerBoardResponse.swift in Sources */,
 				EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */,
 				EB25ACF828A1364D0006C1F2 /* AppDelegate.swift in Sources */,
@@ -758,6 +765,7 @@
 				EBE4EDB828A4E6D5005C7516 /* SigninResponse.swift in Sources */,
 				EBA63E9828AB717100144E3A /* BarvaLog.swift in Sources */,
 				EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */,
+				EB67130F2901336D00B8F8FC /* GetFeedResponse.swift in Sources */,
 				EB1751F628AA78F8009FEFBF /* PWFindTabViewController.swift in Sources */,
 				EB1751F428AA78EA009FEFBF /* FindTabManViewController.swift in Sources */,
 				EB8D503C28E1601A0045C4D2 /* PWFindResponse.swift in Sources */,

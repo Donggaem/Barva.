@@ -88,7 +88,7 @@ extension SexBoardTabViewController: UICollectionViewDataSource, UICollectionVie
         let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
         self.navigationController?.pushViewController(feedVC, animated: true)
         
-        feedVC.paramImg = self.sexBoardImageArray[indexPath.row]
+//        feedVC.paramImg = self.sexBoardImageArray[indexPath.row]
     }
 
     // CollectionView Cell의 Size

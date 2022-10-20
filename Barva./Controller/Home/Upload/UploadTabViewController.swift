@@ -140,13 +140,13 @@ class UploadTabViewController: UIViewController {
             
             let gender = self.userGender
             let height = self.user_HeightTextField.text ?? ""
-//            let weight = self.user_weightTextField.text ?? ""
+            let weight = self.user_weightTextField.text ?? ""
             let content = self.UPloadtextView.text ?? ""
             
             let parameters: [String : Any] = [
                         "user_gender": gender,
                         "user_tall": height,
-//                        "user_Weight": weight,
+                        "user_weight": weight,
                         "post_content": content
                     ]
             
@@ -167,12 +167,22 @@ class UploadTabViewController: UIViewController {
             case .success(let response):
                 if response.isSuccess == true {
                     BarvaLog.debug("PostUpload-success")
-
-                    print(response.data?.err ?? "")
-//                    testImg = response.data
+                    
+                    let upload_alert = UIAlertController(title: "성공", message: "업로드가 완료 되었습니다.", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default) { (action) in
+                        
+                        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+                        let homeNav = storyBoard.instantiateViewController(identifier: "HomeNav")
+                        self.changeRootViewController(homeNav)
+                    }
+                    upload_alert.addAction(okAction)
+                    present(upload_alert, animated: false, completion: nil)
+                    
+                    
                     
                 } else {
                     BarvaLog.error("PostUpload-fail")
+                    print(response.data?.err)
                     let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
                     fail_alert.addAction(okAction)

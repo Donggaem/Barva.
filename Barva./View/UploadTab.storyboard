@@ -52,7 +52,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wCR-0n-R9H" userLabel="몸무게Stack View">
                                 <rect key="frame" x="276.66666666666669" y="530" width="78.333333333333314" height="34"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="60" borderStyle="roundedRect" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="vpa-aA-oKQ">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="vpa-aA-oKQ">
                                         <rect key="frame" x="0.0" y="0.0" width="54" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="54" id="Spg-Bz-0hl"/>
@@ -153,7 +153,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wMy-LJ-8xV" userLabel="키Stack View">
                                 <rect key="frame" x="178" y="530" width="82.666666666666686" height="34"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="170" borderStyle="roundedRect" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="pUN-0n-xbq">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="pUN-0n-xbq">
                                         <rect key="frame" x="0.0" y="0.0" width="54" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="54" id="zPn-Ch-kDZ"/>
@@ -233,6 +233,7 @@
                             <constraint firstItem="P9n-Uv-4mf" firstAttribute="leading" secondItem="Wbg-Ze-45S" secondAttribute="leading" constant="10" id="a8k-Po-3Pc"/>
                             <constraint firstItem="wMy-LJ-8xV" firstAttribute="top" secondItem="kL4-cb-GJB" secondAttribute="bottom" constant="19" id="dOB-eX-NJc"/>
                             <constraint firstItem="Ey2-b6-aj1" firstAttribute="top" secondItem="kL4-cb-GJB" secondAttribute="bottom" constant="16" id="pX3-BB-Ml1"/>
+                            <constraint firstItem="rC2-3Q-BJD" firstAttribute="top" secondItem="wCR-0n-R9H" secondAttribute="bottom" constant="29" id="tAQ-7T-kKz"/>
                             <constraint firstItem="rC2-3Q-BJD" firstAttribute="leading" secondItem="Wbg-Ze-45S" secondAttribute="leading" constant="10" id="u8m-dR-LlU"/>
                             <constraint firstItem="kL4-cb-GJB" firstAttribute="top" secondItem="GOL-w5-xZG" secondAttribute="bottom" constant="16" id="y3R-xc-NNz"/>
                         </constraints>

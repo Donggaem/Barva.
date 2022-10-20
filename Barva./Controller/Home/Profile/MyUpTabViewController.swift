@@ -12,37 +12,40 @@ class MyUpTabViewController: UIViewController {
     
     @IBOutlet weak var myUpCollectionView: UICollectionView!
     
-    var myUpImageArray: [String] = []
+    var userCheckerBoardArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
-        getMyUpImages()
+        getuserCheckerBoard()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        getuserCheckerBoard()
+        setCollectionView()
     }
     
     //MARK: - GET MYUPIMAGES
     let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
-    private func getMyUpImages() {
-        AF.request(BarvaURL.myUpImagesURL, method: .get, headers: header)
+    private func getuserCheckerBoard() {
+        AF.request(BarvaURL.yourCheckerBoardURL, method: .get, headers: header)
             .validate()
-            .responseDecodable(of: MyUpImagesResponse.self) { response in
+            .responseDecodable(of: UserCheckerBoardResponse.self) { response in
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess == true {
                         print(BarvaLog.debug("getMyUpImages-success"))
-                       
+                        //                        print(response.data?.checkerboardArr)
+                        //                        self.latestImageArray = response.data?.checkerboardArr?.compactMap{$0} ?? []
+                        
                         if response.data != nil {
-                            if let imgArray = response.data?.myFeedInfo {
-                                self.myUpImageArray = imgArray
-                            } else {
-                                print("올린 사진없음")
-                                self.myUpImageArray = []
+                            if let imgarry = response.data?.checkerboardArr?.compactMap({$0}) {
+                                self.userCheckerBoardArray = imgarry
+                                print(self.userCheckerBoardArray)
+                                
                             }
-                        }else {
-                            print("옵셔널 에러")
                         }
-
-//                        self.myUpImageArray = response.data?.myFeedInfo ?? []
 
 
                     } else {
@@ -70,6 +73,7 @@ extension MyUpTabViewController: UICollectionViewDataSource, UICollectionViewDel
 
     // CollectionView 셋팅
     func setCollectionView() {
+        self.myUpCollectionView.reloadData()
         self.myUpCollectionView.delegate = self
         self.myUpCollectionView.dataSource = self
         self.myUpCollectionView.register(UINib(nibName: "HomeImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeImageCollectionViewCell")
@@ -77,7 +81,7 @@ extension MyUpTabViewController: UICollectionViewDataSource, UICollectionViewDel
 
     // CollectionView item 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return myUpImageArray.count
+        return userCheckerBoardArray.count
     }
 
     // CollectionView Cell의 Object
@@ -87,7 +91,7 @@ extension MyUpTabViewController: UICollectionViewDataSource, UICollectionViewDel
 //        cell.image.image = UIImage(named: myUpImageArray[indexPath.row]) ?? UIImage()
 
         //킹피셔로 이미지 띄우기
-        let url = URL(string: myUpImageArray[indexPath.row])
+        let url = URL(string: userCheckerBoardArray[indexPath.row])
         cell.image.kf.setImage(with: url)
         
         return cell
@@ -97,6 +101,12 @@ extension MyUpTabViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        let cell = collectionView.cellForItem(at: indexPath) as? HomeImageCollectionViewCell
         
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let feedVC = storyBoard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
+        self.navigationController?.pushViewController(feedVC, animated: true)
+        
+        print(indexPath.row)
+        feedVC.paramSeletIndex = indexPath.row
     }
 
     // CollectionView Cell의 Size
