@@ -55,41 +55,41 @@ class FeedViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-    //MARK: - GET FEED
-    let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
-    private func getFeed() {
-        AF.request(BarvaURL.getFeedURL, method: .get, headers: header)
-            .validate()
-            .responseDecodable(of: GetFeedPesponse.self) { response in
-                switch response.result {
-                case .success(let response):
-                    if response.isSuccess == true {
-                        print(BarvaLog.debug("getFeed-success"))
-                        if response.data != nil {
-                            if let feedObject = response.data?.singleResult {
-                                self.feedArray = feedObject
-                            }
-                        }
-                        
-                    } else {
-                        print(BarvaLog.error("getFeed-fail"))
-                        
-                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
-                        let okAction = UIAlertAction(title: "확인", style: .default)
-                        fail_alert.addAction(okAction)
-                        self.present(fail_alert, animated: false, completion: nil)
-                    }
-                case .failure(let error):
-                    BarvaLog.error("getFeed-err")
-                    print(error.localizedDescription)
-                    
-                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
-                    let okAction = UIAlertAction(title: "확인", style: .default)
-                    fail_alert.addAction(okAction)
-                    self.present(fail_alert, animated: false, completion: nil)
-                }
-            }
-    }
+//    //MARK: - GET FEED
+//    let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
+//    private func getFeed() {
+//        AF.request(BarvaURL.getFeedURL, method: .get, headers: header)
+//            .validate()
+//            .responseDecodable(of: GetFeedPesponse.self) { response in
+//                switch response.result {
+//                case .success(let response):
+//                    if response.isSuccess == true {
+//                        print(BarvaLog.debug("getFeed-success"))
+//                        if response.data != nil {
+//                            if let feedObject = response.data?.singleResult {
+//                                self.feedArray = feedObject
+//                            }
+//                        }
+//
+//                    } else {
+//                        print(BarvaLog.error("getFeed-fail"))
+//
+//                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+//                        let okAction = UIAlertAction(title: "확인", style: .default)
+//                        fail_alert.addAction(okAction)
+//                        self.present(fail_alert, animated: false, completion: nil)
+//                    }
+//                case .failure(let error):
+//                    BarvaLog.error("getFeed-err")
+//                    print(error.localizedDescription)
+//
+//                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+//                    let okAction = UIAlertAction(title: "확인", style: .default)
+//                    fail_alert.addAction(okAction)
+//                    self.present(fail_alert, animated: false, completion: nil)
+//                }
+//            }
+//    }
     
 }
 

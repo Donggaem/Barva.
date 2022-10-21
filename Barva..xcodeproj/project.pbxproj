@@ -24,7 +24,7 @@
 		EB2EA2FB28A1410E00EC0685 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2EA2FA28A1410E00EC0685 /* Home.storyboard */; };
 		EB2F90B228E96D510098A3C1 /* UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F90B128E96D510098A3C1 /* UploadRequest.swift */; };
 		EB2F90B428E96D600098A3C1 /* UploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F90B328E96D600098A3C1 /* UploadResponse.swift */; };
-		EB67130F2901336D00B8F8FC /* GetFeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67130E2901336D00B8F8FC /* GetFeedResponse.swift */; };
+		EB67130F2901336D00B8F8FC /* GetUserFeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67130E2901336D00B8F8FC /* GetUserFeedResponse.swift */; };
 		EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67743B28C72F2B001A6F55 /* BarvaURL.swift */; };
 		EB82BA6C28EEB75E000CA4D1 /* ReChatTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB82BA6B28EEB75E000CA4D1 /* ReChatTableCell.xib */; };
 		EB82BA6E28EEBF1D000CA4D1 /* ReChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB82BA6D28EEBF1D000CA4D1 /* ReChatTableViewCell.swift */; };
@@ -79,6 +79,9 @@
 		EBE4EDC328A514AF005C7516 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDC228A514AF005C7516 /* UIViewController+Extension.swift */; };
 		EBE6657928E6B28D007F3B48 /* FeedViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBE6657728E6B28D007F3B48 /* FeedViewCell.xib */; };
 		EBE6657D28E6C0EC007F3B48 /* FeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE6657C28E6C0EC007F3B48 /* FeedViewCell.swift */; };
+		EBEF5EA32902A5D000C4B475 /* UserFeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF5EA22902A5D000C4B475 /* UserFeedViewCell.swift */; };
+		EBEF5EA52902A5E500C4B475 /* UserFeedViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBEF5EA42902A5E500C4B475 /* UserFeedViewCell.xib */; };
+		EBEF5EA72902C14300C4B475 /* UserFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEF5EA62902C14300C4B475 /* UserFeedViewController.swift */; };
 		EBF510D128AFBC2D0098BD5A /* IDCheckRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D028AFBC2D0098BD5A /* IDCheckRequest.swift */; };
 		EBF510D528AFBC570098BD5A /* NickCheckRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D428AFBC570098BD5A /* NickCheckRequest.swift */; };
 		EBF510D728AFBC660098BD5A /* NickCheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF510D628AFBC660098BD5A /* NickCheckResponse.swift */; };
@@ -111,7 +114,7 @@
 		EB2F90B128E96D510098A3C1 /* UploadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRequest.swift; sourceTree = "<group>"; };
 		EB2F90B328E96D600098A3C1 /* UploadResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadResponse.swift; sourceTree = "<group>"; };
 		EB2F99C628B0ABF10084EB7B /* YPImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YPImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB67130E2901336D00B8F8FC /* GetFeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFeedResponse.swift; sourceTree = "<group>"; };
+		EB67130E2901336D00B8F8FC /* GetUserFeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserFeedResponse.swift; sourceTree = "<group>"; };
 		EB67743B28C72F2B001A6F55 /* BarvaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarvaURL.swift; sourceTree = "<group>"; };
 		EB82BA6B28EEB75E000CA4D1 /* ReChatTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReChatTableCell.xib; sourceTree = "<group>"; };
 		EB82BA6D28EEBF1D000CA4D1 /* ReChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -166,6 +169,9 @@
 		EBE4EDC228A514AF005C7516 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		EBE6657728E6B28D007F3B48 /* FeedViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FeedViewCell.xib; path = ../../Controller/Home/Feed_Chat/Feed/FeedViewCell.xib; sourceTree = "<group>"; };
 		EBE6657C28E6C0EC007F3B48 /* FeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewCell.swift; sourceTree = "<group>"; };
+		EBEF5EA22902A5D000C4B475 /* UserFeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedViewCell.swift; sourceTree = "<group>"; };
+		EBEF5EA42902A5E500C4B475 /* UserFeedViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserFeedViewCell.xib; sourceTree = "<group>"; };
+		EBEF5EA62902C14300C4B475 /* UserFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFeedViewController.swift; sourceTree = "<group>"; };
 		EBF510D028AFBC2D0098BD5A /* IDCheckRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCheckRequest.swift; sourceTree = "<group>"; };
 		EBF510D428AFBC570098BD5A /* NickCheckRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickCheckRequest.swift; sourceTree = "<group>"; };
 		EBF510D628AFBC660098BD5A /* NickCheckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickCheckResponse.swift; sourceTree = "<group>"; };
@@ -319,7 +325,7 @@
 		EB67130B290132E700B8F8FC /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				EB67130E2901336D00B8F8FC /* GetFeedResponse.swift */,
+				EB67130E2901336D00B8F8FC /* GetUserFeedResponse.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 				EBB2A0F728DB2E55002AAF1E /* ChatTableCell.xib */,
 				EB82BA6B28EEB75E000CA4D1 /* ReChatTableCell.xib */,
 				EB834A9628E45662008A0706 /* HomeImageCollectionViewCell.xib */,
+				EBEF5EA42902A5E500C4B475 /* UserFeedViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -462,6 +469,8 @@
 			children = (
 				EB9BB21F28E4254700AD34B1 /* FeedViewController.swift */,
 				EBE6657C28E6C0EC007F3B48 /* FeedViewCell.swift */,
+				EBEF5EA62902C14300C4B475 /* UserFeedViewController.swift */,
+				EBEF5EA22902A5D000C4B475 /* UserFeedViewCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -652,6 +661,7 @@
 				EB9CC96028A40A6D003D9F22 /* ColorTab.storyboard in Resources */,
 				EB9CC95E28A40A53003D9F22 /* ProfileTab.storyboard in Resources */,
 				EB25AD0428A136500006C1F2 /* LaunchScreen.storyboard in Resources */,
+				EBEF5EA52902A5E500C4B475 /* UserFeedViewCell.xib in Resources */,
 				EB9CC95C28A40A1A003D9F22 /* UploadTab.storyboard in Resources */,
 				EB834A9728E45662008A0706 /* HomeImageCollectionViewCell.xib in Resources */,
 				EB25AD0128A136500006C1F2 /* Assets.xcassets in Resources */,
@@ -747,8 +757,10 @@
 				EBB8F46028BFA5830069D4E1 /* MyUpTabViewController.swift in Sources */,
 				EB82BA6E28EEBF1D000CA4D1 /* ReChatTableViewCell.swift in Sources */,
 				EBBC40B728F429620014F949 /* ProfileSetIntroRequest.swift in Sources */,
+				EBEF5EA32902A5D000C4B475 /* UserFeedViewCell.swift in Sources */,
 				EBC7609B28B5F32C006ED770 /* HomeTabManViewController.swift in Sources */,
 				EBF510DA28AFBD060098BD5A /* SendMailRequest.swift in Sources */,
+				EBEF5EA72902C14300C4B475 /* UserFeedViewController.swift in Sources */,
 				EB1E7D6428FEE0CD00FE7737 /* UserCheckerBoardResponse.swift in Sources */,
 				EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */,
 				EB25ACF828A1364D0006C1F2 /* AppDelegate.swift in Sources */,
@@ -765,7 +777,7 @@
 				EBE4EDB828A4E6D5005C7516 /* SigninResponse.swift in Sources */,
 				EBA63E9828AB717100144E3A /* BarvaLog.swift in Sources */,
 				EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */,
-				EB67130F2901336D00B8F8FC /* GetFeedResponse.swift in Sources */,
+				EB67130F2901336D00B8F8FC /* GetUserFeedResponse.swift in Sources */,
 				EB1751F628AA78F8009FEFBF /* PWFindTabViewController.swift in Sources */,
 				EB1751F428AA78EA009FEFBF /* FindTabManViewController.swift in Sources */,
 				EB8D503C28E1601A0045C4D2 /* PWFindResponse.swift in Sources */,

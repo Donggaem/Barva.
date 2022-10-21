@@ -28,14 +28,16 @@ struct BarvaURL {
     //MARK: - 이미지
     static let uploadFeedURL = "http://3.34.183.110:3003/main/uploadPost"
     
-    static let getFeedURL = "http://3.34.183.110:3003/main/userSingle"
 
     //MARK: - 프로필
     static let profileURL = "http://3.34.183.110:3003/main/myProfile"
     static let yourCheckerBoardURL = "http://3.34.183.110:3003/main/userCheckerboard"
     static let storageImagesURL = ""
+    
     static let setProfileImageURL = "http://3.34.183.110:3003/main/setProfileImg"
     static let setProfileURL = "http://3.34.183.110:3003/main/setProfileIntro"
     
+    static let getUserFeedURL = "http://3.34.183.110:3003/main/userSingle"
+
     static let othereUpImagesURL = ""
 }

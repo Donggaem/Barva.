@@ -101,8 +101,7 @@ extension MyUpTabViewController: UICollectionViewDataSource, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        let cell = collectionView.cellForItem(at: indexPath) as? HomeImageCollectionViewCell
         
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let feedVC = storyBoard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
+        let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "UserFeedViewController") as! UserFeedViewController
         self.navigationController?.pushViewController(feedVC, animated: true)
         
         print(indexPath.row)
