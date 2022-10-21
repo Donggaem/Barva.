@@ -36,9 +36,6 @@ class UserFeedViewCell: FSPagerViewCell {
         }
     }
     
-    var paramCount = 0
-    
-    
     //MARK: - IBACTION
     @IBAction func modifyBtnPressed(_ sender: UIButton) {
         
@@ -79,7 +76,7 @@ extension UserFeedViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
     
     //이미지 개수
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return paramCount
+        return paramImg!.count
     }
     
     //각셀에 대한 설정

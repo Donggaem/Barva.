@@ -31,7 +31,8 @@ class MyUpTabViewController: UIViewController {
     private func getuserCheckerBoard() {
         AF.request(BarvaURL.yourCheckerBoardURL, method: .get, headers: header)
             .validate()
-            .responseDecodable(of: UserCheckerBoardResponse.self) { response in
+            .responseDecodable(of: UserCheckerBoardResponse.self) { [weak self] response in
+                guard let self = self else {return}
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess == true {
@@ -42,7 +43,7 @@ class MyUpTabViewController: UIViewController {
                         if response.data != nil {
                             if let imgarry = response.data?.checkerboardArr?.compactMap({$0}) {
                                 self.userCheckerBoardArray = imgarry
-                                print(self.userCheckerBoardArray)
+                                self.myUpCollectionView.reloadData()
                                 
                             }
                         }

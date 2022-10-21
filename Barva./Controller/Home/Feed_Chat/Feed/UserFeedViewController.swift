@@ -18,10 +18,17 @@ class UserFeedViewController: UIViewController{
             self.userFeedFagerView.itemSize = FSPagerView.automaticSize
             
             //무한 스크롤
-            self.userFeedFagerView.isInfinite = true
+            self.userFeedFagerView.isInfinite = false
             self.userFeedFagerView.scrollDirection = .vertical
         }
     }
+    @IBOutlet weak var pageControl: FSPageControl! {
+        didSet {
+            self.pageControl.currentPage = self.paramSeletIndex
+        }
+    }
+    
+    
         var paramSeletIndex = 0
         var userFeedName = ""
         var userFeedSpec = ""
@@ -34,8 +41,7 @@ class UserFeedViewController: UIViewController{
         setUI()
         getUserFeed()
         
-        userFeedFagerView.dataSource = self
-        userFeedFagerView.delegate = self
+        
         
     }
 
@@ -50,7 +56,15 @@ class UserFeedViewController: UIViewController{
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
         userFeedFagerView.reloadData()
+        
+        userFeedFagerView.dataSource = self
+        userFeedFagerView.delegate = self
     }
+    
+    func settest() {
+        
+    }
+    
     //MARK: - GET USERFEED
     let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
     private func getUserFeed() {
@@ -64,6 +78,12 @@ class UserFeedViewController: UIViewController{
                         if response.data != nil {
                             if let feedObject = response.data?.singleResult {
                                 self.userFeedArray = feedObject
+                                self.userFeedFagerView.reloadData()
+                                self.pageControl.numberOfPages = feedObject.count
+                                
+                                DispatchQueue.main.async {
+                                    self.userFeedFagerView.scrollToItem(at: self.pageControl.currentPage, animated: false)
+                                }
                             }
                         }
                         
@@ -104,13 +124,10 @@ extension UserFeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.contentView.isUserInteractionEnabled = false
         cell.delegate = self
         cell.userFeedImg.reloadData()
-        
-        cell.paramCount = userFeedArray.count
-        
+                
 //        cell.userSpec_Feed.text = "\(userFeedArray[paramSeletIndex].user_gender) | \(userFeedArray[paramSeletIndex].user_tall) | \(userFeedArray[paramSeletIndex])"
-        cell.textView_Feed.text = userFeedArray[paramSeletIndex].post_content
-        cell.paramImg = userFeedArray[paramSeletIndex].post_url
-        
+        cell.textView_Feed.text = userFeedArray[index].post_content
+        cell.paramImg = userFeedArray[index].post_url
         userFeedName = cell.userName_Feed.text ?? ""
         userFeedSpec = cell.userSpec_Feed.text ?? ""
                 
@@ -118,8 +135,16 @@ extension UserFeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
     }
     
     func pagerViewDidScroll(_ pagerView: FSPagerView) {
-        print(pagerView.currentIndex)
+//        print("디드 스크롤\(pagerView.currentIndex)")
+
+
     }
+    
+    func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
+//        print("드래깅 \(targetIndex), \(pagerView.currentIndex)")
+        self.pageControl.currentPage = targetIndex
+    }
+
 }
 
 //MARK: - Extension NaviAction

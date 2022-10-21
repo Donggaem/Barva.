@@ -20,12 +20,12 @@ class FeedViewController: UIViewController {
             self.feedPagerView.itemSize = FSPagerView.automaticSize
             
             //무한 스크롤
-            self.feedPagerView.isInfinite = true
+            self.feedPagerView.isInfinite = false
             self.feedPagerView.scrollDirection = .vertical
         }
     }
     
-//    var paramImg = ""
+    var paramImg = ""
     var paramSeletIndex = 0
     var feedName = ""
     var feedSpec = ""
@@ -109,10 +109,10 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.delegate = self
         cell.feedImage.reloadData()
 //        cell.feedImage.image = UIImage(named: paramImg)
-        feedName = cell.feedNameLabel.text ?? ""
-        feedSpec = cell.feedSpecLabel.text ?? ""
+//        feedName = cell.feedNameLabel.text ?? ""
+//        feedSpec = cell.feedSpecLabel.text ?? ""
         
-//        cell.paramImg = ["common","common (1)"]
+        cell.paramImg = ["common","common (1)"]
         
         return cell
     }

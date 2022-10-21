@@ -51,7 +51,7 @@ extension todayColorTabViewController: UICollectionViewDataSource, UICollectionV
         let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
         self.navigationController?.pushViewController(feedVC, animated: true)
         
-//        feedVC.paramImg = self.todayColorImageArray[indexPath.row]
+        feedVC.paramImg = self.todayColorImageArray[indexPath.row]
     }
 
     // CollectionView Cell의 Size
