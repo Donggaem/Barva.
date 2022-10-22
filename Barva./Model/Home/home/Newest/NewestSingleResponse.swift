@@ -1,27 +1,26 @@
 //
-//  GetFeedResponse.swift
+//  NewestSingleResponse.swift
 //  Barva.
 //
-//  Created by 김동겸 on 2022/10/20.
+//  Created by 김동겸 on 2022/10/22.
 //
 
 import Foundation
 
-struct GetUserFeedResponse: Decodable {
-    
+struct NewestSingleResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: UserFeedData?
+    var data: NewestFeedData?
 }
 
-struct UserFeedData: Decodable {
+struct NewestFeedData: Decodable {
     
-    var singleResult: [UserFeedArray]?
+    var singleResult: [NewestFeedArray]?
     var err: String?
 }
 
-struct UserFeedArray: Decodable {
+struct NewestFeedArray: Decodable {
     
     var post_content: String
     var likeCount: Int
@@ -30,11 +29,13 @@ struct UserFeedArray: Decodable {
     var user_weight: String
     var created_at: String
     var post_url: [String]
-    var post_users: User_Data
+    var post_users: Newest_Data
     
 }
 
-struct User_Data: Decodable {
+struct Newest_Data: Decodable {
+    
     var user_nick: String
     var profile_url: String
 }
+

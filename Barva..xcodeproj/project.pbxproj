@@ -63,6 +63,12 @@
 		EBC7609D28B5F385006ED770 /* LatestBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */; };
 		EBC7609F28B5F3CB006ED770 /* todayColorTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609E28B5F3CB006ED770 /* todayColorTabViewController.swift */; };
 		EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC760A028B5F3FC006ED770 /* SexBoardViewController.swift */; };
+		EBCCD5522903E3E600B6BAA6 /* NewestSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCD5512903E3E600B6BAA6 /* NewestSingleResponse.swift */; };
+		EBCCD5542903E52600B6BAA6 /* GenderCheckboardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCD5532903E52600B6BAA6 /* GenderCheckboardRequest.swift */; };
+		EBCCD55E2903E6F400B6BAA6 /* NewestCheckboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCD55D2903E6F400B6BAA6 /* NewestCheckboardResponse.swift */; };
+		EBCCD5602903E73600B6BAA6 /* GenderCheckboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCD55F2903E73600B6BAA6 /* GenderCheckboardResponse.swift */; };
+		EBCCD5622903E75A00B6BAA6 /* GenderSingleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCD5612903E75A00B6BAA6 /* GenderSingleRequest.swift */; };
+		EBCCD5642903E76C00B6BAA6 /* GenderSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCD5632903E76C00B6BAA6 /* GenderSingleResponse.swift */; };
 		EBD10B9228F6E80100CC7EDA /* ProfileSetImgRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD10B9128F6E80100CC7EDA /* ProfileSetImgRequest.swift */; };
 		EBDA2BFF28FE7B4000652D33 /* OthereUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA2BFE28FE7B4000652D33 /* OthereUserProfileViewController.swift */; };
 		EBDA2C0128FE7C9000652D33 /* OUProfileTabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA2C0028FE7C9000652D33 /* OUProfileTabManViewController.swift */; };
@@ -153,6 +159,12 @@
 		EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestBoardViewController.swift; sourceTree = "<group>"; };
 		EBC7609E28B5F3CB006ED770 /* todayColorTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayColorTabViewController.swift; sourceTree = "<group>"; };
 		EBC760A028B5F3FC006ED770 /* SexBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexBoardViewController.swift; sourceTree = "<group>"; };
+		EBCCD5512903E3E600B6BAA6 /* NewestSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewestSingleResponse.swift; sourceTree = "<group>"; };
+		EBCCD5532903E52600B6BAA6 /* GenderCheckboardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCheckboardRequest.swift; sourceTree = "<group>"; };
+		EBCCD55D2903E6F400B6BAA6 /* NewestCheckboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewestCheckboardResponse.swift; sourceTree = "<group>"; };
+		EBCCD55F2903E73600B6BAA6 /* GenderCheckboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCheckboardResponse.swift; sourceTree = "<group>"; };
+		EBCCD5612903E75A00B6BAA6 /* GenderSingleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSingleRequest.swift; sourceTree = "<group>"; };
+		EBCCD5632903E76C00B6BAA6 /* GenderSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSingleResponse.swift; sourceTree = "<group>"; };
 		EBD10B9128F6E80100CC7EDA /* ProfileSetImgRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetImgRequest.swift; sourceTree = "<group>"; };
 		EBDA2BFE28FE7B4000652D33 /* OthereUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthereUserProfileViewController.swift; sourceTree = "<group>"; };
 		EBDA2C0028FE7C9000652D33 /* OUProfileTabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUProfileTabManViewController.swift; sourceTree = "<group>"; };
@@ -306,6 +318,7 @@
 		EB2F90AF28E96C0A0098A3C1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EBCCD5552903E53C00B6BAA6 /* home */,
 				EB67130B290132E700B8F8FC /* Feed */,
 				EB2F90B028E96C150098A3C1 /* Upload */,
 				EB84F2E728F26F75002921D6 /* Profile */,
@@ -523,6 +536,35 @@
 			path = home;
 			sourceTree = "<group>";
 		};
+		EBCCD5552903E53C00B6BAA6 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				EBCCD55C2903E6D200B6BAA6 /* Gender */,
+				EBCCD5562903E54200B6BAA6 /* Newest */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		EBCCD5562903E54200B6BAA6 /* Newest */ = {
+			isa = PBXGroup;
+			children = (
+				EBCCD55D2903E6F400B6BAA6 /* NewestCheckboardResponse.swift */,
+				EBCCD5512903E3E600B6BAA6 /* NewestSingleResponse.swift */,
+			);
+			path = Newest;
+			sourceTree = "<group>";
+		};
+		EBCCD55C2903E6D200B6BAA6 /* Gender */ = {
+			isa = PBXGroup;
+			children = (
+				EBCCD5532903E52600B6BAA6 /* GenderCheckboardRequest.swift */,
+				EBCCD55F2903E73600B6BAA6 /* GenderCheckboardResponse.swift */,
+				EBCCD5612903E75A00B6BAA6 /* GenderSingleRequest.swift */,
+				EBCCD5632903E76C00B6BAA6 /* GenderSingleResponse.swift */,
+			);
+			path = Gender;
+			sourceTree = "<group>";
+		};
 		EBDA2BFD28FE7AD300652D33 /* OthereUserProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -732,7 +774,9 @@
 				EBE4EDC328A514AF005C7516 /* UIViewController+Extension.swift in Sources */,
 				EB8D504728E17E230045C4D2 /* IDFindResponse.swift in Sources */,
 				EB2EA2F928A1409800EC0685 /* SigninViewController.swift in Sources */,
+				EBCCD5602903E73600B6BAA6 /* GenderCheckboardResponse.swift in Sources */,
 				EBE4EDB628A4E6C7005C7516 /* SigninRequest.swift in Sources */,
+				EBCCD5642903E76C00B6BAA6 /* GenderSingleResponse.swift in Sources */,
 				EBA45B3228C100B7007B95CC /* ProfileModifyViewController.swift in Sources */,
 				EB9A223928EEB68800B13DB4 /* ChatTableViewCell.swift in Sources */,
 				EB8D504128E160FB0045C4D2 /* UpdatePWResponse.swift in Sources */,
@@ -769,6 +813,7 @@
 				EBF510DE28AFBD890098BD5A /* InspectMailRequest.swift in Sources */,
 				EBF510D528AFBC570098BD5A /* NickCheckRequest.swift in Sources */,
 				EB97FA0528E47F0700A43CEA /* HomeImageCollectionViewCell.swift in Sources */,
+				EBCCD5622903E75A00B6BAA6 /* GenderSingleRequest.swift in Sources */,
 				EB83748428F2B70E00518A09 /* StorageImagesResponse.swift in Sources */,
 				EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */,
 				EBBC40B328F4291F0014F949 /* ProfileSetImgResponse.swift in Sources */,
@@ -778,9 +823,12 @@
 				EBA63E9828AB717100144E3A /* BarvaLog.swift in Sources */,
 				EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */,
 				EB67130F2901336D00B8F8FC /* GetUserFeedResponse.swift in Sources */,
+				EBCCD5542903E52600B6BAA6 /* GenderCheckboardRequest.swift in Sources */,
 				EB1751F628AA78F8009FEFBF /* PWFindTabViewController.swift in Sources */,
 				EB1751F428AA78EA009FEFBF /* FindTabManViewController.swift in Sources */,
 				EB8D503C28E1601A0045C4D2 /* PWFindResponse.swift in Sources */,
+				EBCCD55E2903E6F400B6BAA6 /* NewestCheckboardResponse.swift in Sources */,
+				EBCCD5522903E3E600B6BAA6 /* NewestSingleResponse.swift in Sources */,
 				EBF510D728AFBC660098BD5A /* NickCheckResponse.swift in Sources */,
 				EBE4EDBC28A51255005C7516 /* UploadTabViewController.swift in Sources */,
 				EB84F2E928F26F9A002921D6 /* ProfileResponse.swift in Sources */,

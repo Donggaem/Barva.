@@ -47,9 +47,10 @@ class ChatViewController: UIViewController {
     }
     //MARK: - INNER FUNC
     private func setUI(){
+        
+        feedUserProfileImg.image = paramFeedImg
         feedUserNameLabel.text = paramFeedName
         feedUesrSpecLabel.text = paramFeedSpec
-        
         
     }
 }

@@ -1,27 +1,27 @@
 //
-//  GetFeedResponse.swift
+//  GenderSingleResponse.swift
 //  Barva.
 //
-//  Created by 김동겸 on 2022/10/20.
+//  Created by 김동겸 on 2022/10/22.
 //
 
 import Foundation
 
-struct GetUserFeedResponse: Decodable {
+struct GenderSingleResponse: Decodable {
     
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: UserFeedData?
+    var data: GenderFeedData?
 }
 
-struct UserFeedData: Decodable {
+struct GenderFeedData: Decodable {
     
-    var singleResult: [UserFeedArray]?
+    var singleResult: [GenderFeedArray]?
     var err: String?
 }
 
-struct UserFeedArray: Decodable {
+struct GenderFeedArray: Decodable {
     
     var post_content: String
     var likeCount: Int
@@ -30,11 +30,11 @@ struct UserFeedArray: Decodable {
     var user_weight: String
     var created_at: String
     var post_url: [String]
-    var post_users: User_Data
+    var post_users: Gender_Data
     
 }
 
-struct User_Data: Decodable {
+struct Gender_Data: Decodable {
     var user_nick: String
     var profile_url: String
 }

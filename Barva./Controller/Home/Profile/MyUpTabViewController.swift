@@ -29,7 +29,7 @@ class MyUpTabViewController: UIViewController {
     //MARK: - GET MYUPIMAGES
     let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
     private func getuserCheckerBoard() {
-        AF.request(BarvaURL.yourCheckerBoardURL, method: .get, headers: header)
+        AF.request(BarvaURL.userCheckerboardURL, method: .get, headers: header)
             .validate()
             .responseDecodable(of: UserCheckerBoardResponse.self) { [weak self] response in
                 guard let self = self else {return}

@@ -84,7 +84,6 @@
                 </stackView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AfA-ij-y3g">
                     <rect key="frame" x="22" y="484.66666666666674" width="346" height="70"/>
-                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="GbJ-lw-HJc"/>
                         <constraint firstAttribute="width" constant="346" id="OM9-FN-PrE"/>

@@ -10,7 +10,7 @@ import FSPagerView
 import Alamofire
 
 class UserFeedViewController: UIViewController{
-
+    
     @IBOutlet weak var userFeedFagerView: FSPagerView!{
         didSet {
             self.userFeedFagerView.register(UINib(nibName:"UserFeedViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "UserFeedViewCell")
@@ -29,25 +29,26 @@ class UserFeedViewController: UIViewController{
     }
     
     
-        var paramSeletIndex = 0
-        var userFeedName = ""
-        var userFeedSpec = ""
-        var imgArray: [String] = []
-        var userFeedArray: [FeedArray] = []
+    var paramSeletIndex = 0
+    var userFeedName = ""
+    var userFeedSpec = ""
+    var userFeedImg = UIImage()
+    var imgArray: [String] = []
+    var userFeedArray: [FeedArray] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setUI()
         getUserFeed()
         
         
         
     }
-
+    
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-
+        
     }
     
     //MARK: - INNER FUNC
@@ -68,7 +69,7 @@ class UserFeedViewController: UIViewController{
     //MARK: - GET USERFEED
     let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
     private func getUserFeed() {
-        AF.request(BarvaURL.getUserFeedURL, method: .get, headers: header)
+        AF.request(BarvaURL.userSingleURL, method: .get, headers: header)
             .validate()
             .responseDecodable(of: GetUserFeedResponse.self) { response in
                 switch response.result {
@@ -124,27 +125,27 @@ extension UserFeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.contentView.isUserInteractionEnabled = false
         cell.delegate = self
         cell.userFeedImg.reloadData()
-                
-//        cell.userSpec_Feed.text = "\(userFeedArray[paramSeletIndex].user_gender) | \(userFeedArray[paramSeletIndex].user_tall) | \(userFeedArray[paramSeletIndex])"
+        
+        let url = URL(string: userFeedArray[index].post_users.profile_url)
+        cell.userImg_Feed.kf.setImage(with: url)
+        
+        cell.userName_Feed.text = userFeedArray[index].post_users.user_nick
+        cell.userSpec_Feed.text = "\(userFeedArray[index].user_gender) | \(userFeedArray[index].user_tall)cm | \(userFeedArray[index].user_weight)kg"
         cell.textView_Feed.text = userFeedArray[index].post_content
         cell.paramImg = userFeedArray[index].post_url
+        
         userFeedName = cell.userName_Feed.text ?? ""
         userFeedSpec = cell.userSpec_Feed.text ?? ""
-                
+        userFeedImg = cell.userImg_Feed.image ?? UIImage(systemName: "person.crop.circle")!
+        
         return cell
     }
     
-    func pagerViewDidScroll(_ pagerView: FSPagerView) {
-//        print("디드 스크롤\(pagerView.currentIndex)")
-
-
-    }
-    
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
-//        print("드래깅 \(targetIndex), \(pagerView.currentIndex)")
+        //        print("드래깅 \(targetIndex), \(pagerView.currentIndex)")
         self.pageControl.currentPage = targetIndex
     }
-
+    
 }
 
 //MARK: - Extension NaviAction
@@ -154,6 +155,8 @@ extension UserFeedViewController: UserFeedNaviAction {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let chatVC = storyBoard.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
         self.navigationController?.pushViewController(chatVC, animated: true)
+        
+        chatVC.paramFeedImg = userFeedImg
         chatVC.paramFeedName = userFeedName
         chatVC.paramFeedSpec = userFeedSpec
     }

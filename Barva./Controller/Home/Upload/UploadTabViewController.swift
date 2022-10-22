@@ -162,7 +162,7 @@ class UploadTabViewController: UIViewController {
                 
             }
             
-        }, to: BarvaURL.uploadFeedURL, method: .post, headers: headers).responseDecodable(of: UploadResponse.self) { [self] response in
+        }, to: BarvaURL.uploadPostURL, method: .post, headers: headers).responseDecodable(of: UploadResponse.self) { [self] response in
             switch response.result {
             case .success(let response):
                 if response.isSuccess == true {

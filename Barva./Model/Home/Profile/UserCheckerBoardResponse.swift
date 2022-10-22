@@ -12,11 +12,11 @@ struct UserCheckerBoardResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: CheckerboardData?
+    var data: UserCheckerboardData?
     
 }
 
-struct CheckerboardData: Decodable {
+struct UserCheckerboardData: Decodable {
     
     var checkerboardArr: [String?]?
     

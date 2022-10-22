@@ -25,19 +25,29 @@ struct BarvaURL {
     static let updatePWURL = "http://3.34.183.110:3003/auth/updatePw"
     static let pwFindEmailURL = "http://3.34.183.110:3003/auth/findPwMail"
     
-    //MARK: - 이미지
-    static let uploadFeedURL = "http://3.34.183.110:3003/main/uploadPost"
+    
+    //MARK: - 홈
+    static let newestCheckerboardURL = "http://3.34.183.110:3003/main/newestCheckerboard"
+    static let newestSingleURL = "http://3.34.183.110:3003/main/newestSingle"
+    
+    static let genderCheckerboardURL = "http://3.34.183.110:3003/main/genderCheckerboard"
+    static let genderSingleURL = "http://3.34.183.110:3003/main/genderSingle"
+    
+    //MARK: - 업로드
+    static let uploadPostURL = "http://3.34.183.110:3003/main/uploadPost"
     
 
     //MARK: - 프로필
     static let profileURL = "http://3.34.183.110:3003/main/myProfile"
-    static let yourCheckerBoardURL = "http://3.34.183.110:3003/main/userCheckerboard"
+    
+    static let userCheckerboardURL = "http://3.34.183.110:3003/main/userCheckerboard"
+    static let userSingleURL = "http://3.34.183.110:3003/main/userSingle"
+    
     static let storageImagesURL = ""
     
     static let setProfileImageURL = "http://3.34.183.110:3003/main/setProfileImg"
     static let setProfileURL = "http://3.34.183.110:3003/main/setProfileIntro"
     
-    static let getUserFeedURL = "http://3.34.183.110:3003/main/userSingle"
-
+    
     static let othereUpImagesURL = ""
 }

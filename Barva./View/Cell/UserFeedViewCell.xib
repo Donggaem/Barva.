@@ -32,16 +32,16 @@
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="LRl-Co-PA0" userLabel="이름, 신체Stack View">
-                    <rect key="frame" x="60.000000000000007" y="6" width="84.666666666666686" height="28"/>
+                    <rect key="frame" x="60" y="5.6666666666666679" width="87" height="29.000000000000004"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbh-Tl-q4R">
-                            <rect key="frame" x="0.0" y="0.0" width="21" height="14"/>
+                            <rect key="frame" x="0.0" y="0.0" width="22.333333333333332" height="14.666666666666666"/>
                             <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남 | 170cm | 60kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOj-sv-bFw">
-                            <rect key="frame" x="0.0" y="15" width="84.666666666666671" height="13"/>
+                            <rect key="frame" x="0.0" y="15.666666666666664" width="87" height="13.333333333333336"/>
                             <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="11"/>
                             <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="l15-xC-Gna" userLabel="좋아요, 메세지Stack View">
-                    <rect key="frame" x="22" y="450" width="20" height="18"/>
+                    <rect key="frame" x="22" y="450.66666666666669" width="20" height="18"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbs-55-1Hf">
                             <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
@@ -84,8 +84,7 @@
                     </subviews>
                 </stackView>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a7r-kn-fXc">
-                    <rect key="frame" x="22" y="484" width="346" height="70"/>
-                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="22" y="484.66666666666674" width="346" height="70"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="346" id="OYo-DK-FS6"/>
                         <constraint firstAttribute="height" constant="70" id="ymf-nm-VKc"/>
@@ -95,7 +94,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GM-Sr-VUa">
-                    <rect key="frame" x="22" y="562" width="61" height="12"/>
+                    <rect key="frame" x="22" y="562.66666666666663" width="64" height="12"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="12" id="exb-uy-n6W"/>
                     </constraints>
@@ -109,7 +108,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tq8-XL-NNK" customClass="FSPagerView" customModule="FSPagerView">
-                    <rect key="frame" x="0.0" y="45" width="390" height="390"/>
+                    <rect key="frame" x="0.0" y="45.666666666666657" width="390" height="390"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="390" id="Ey8-UQ-R6f"/>
