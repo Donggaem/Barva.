@@ -314,7 +314,7 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileTabManViewController" id="Uds-MI-MFj" customClass="ProfileTabManViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uxV-6Q-Quy">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="431.33333333333331"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="MdL-2T-pGT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -594,7 +594,7 @@
             <objects>
                 <viewController storyboardIdentifier="OUProfileTabManViewController" id="yrO-e7-P4x" customClass="OUProfileTabManViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Osr-n1-h1O">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="431"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="431.33333333333331"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="I8U-1i-HZS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -717,7 +717,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="pageControl" destination="jXy-cN-A7P" id="FkI-6J-z6M"/>
-                        <outlet property="userFeedFagerView" destination="Mnf-jA-Ixe" id="JRm-f6-lpU"/>
+                        <outlet property="userFeedPagerView" destination="Mnf-jA-Ixe" id="uKB-7p-2OU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ap0-FJ-uTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

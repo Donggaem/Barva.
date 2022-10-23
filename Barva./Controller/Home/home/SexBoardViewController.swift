@@ -7,6 +7,7 @@
 
 import UIKit
 import DropDown
+import Alamofire
 
 class SexBoardTabViewController: UIViewController {
     
@@ -19,21 +20,27 @@ class SexBoardTabViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setUI()
+        setCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         setDropDown()
+        setCollectionView()
+        self.sexBoardCollectionView.reloadData()
+
     }
     
     private func setUI() {
 
     }
     
-    private func setDropDown() {
+    func setDropDown() {
         
+        print("셋드랍")
         dropDown.dataSource = ["남", "여"]
         dropDown.show()
         dropDown.textColor = UIColor.gray
@@ -41,20 +48,71 @@ class SexBoardTabViewController: UIViewController {
         dropDown.backgroundColor = UIColor.white
         dropDown.cornerRadius = 10
         dropDown.anchorView = sortBTn
-        dropDown.bottomOffset = CGPoint(x: 0, y: (dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.bottomOffset = CGPoint(x: 0, y: (dropDown.anchorView?.plainView.bounds.height) ?? 35.0)
         dropDown.textFont = UIFont(name: "SpoqaHanSansNeo-Medium", size: 14) ?? UIFont.systemFont(ofSize: 14)
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             print("선택한 아이템 : \(item)")
-            print("인덱스 : \(index)")
+            
+            if item == "남" {
+                let man = item
+                
+                let param = GenderCheckboardRequest(user_gender: man)
+                postGenderCheckerboard(param)
+
+            }else {
+                let woman = item
+                
+                let param = GenderCheckboardRequest(user_gender: woman)
+                postGenderCheckerboard(param)
+
+            }
         }
     }
     
     
     @IBAction func sortBtnPressed(_ sender: UIButton) {
-        setDropDown()
+//        setDropDown()
 
     }
     
+    //MARK: - POST GENDERCHECKBOARD
+    let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
+    private func postGenderCheckerboard(_ parameters: GenderCheckboardRequest){
+        AF.request(BarvaURL.genderCheckerboardURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
+            .validate()
+            .responseDecodable(of: GenderCheckboardResponse.self) { [self] response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        
+                        BarvaLog.debug("postGenderCheckerboard - Success")
+                        
+                        if response.data != nil {
+                            if let imgarry = response.data?.checkerboardArr?.compactMap({$0}) {
+                                self.sexBoardImageArray = imgarry
+                                self.sexBoardCollectionView.reloadData()
+                                
+                            }
+                        }
+                        
+                    } else {
+                        BarvaLog.error("postGenderCheckerboard - fail")
+                        let loginFail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        loginFail_alert.addAction(okAction)
+                        present(loginFail_alert, animated: false, completion: nil)
+                        
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    BarvaLog.error("postGenderCheckerboard - err")
+                    let loginFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    loginFail_alert.addAction(okAction)
+                    present(loginFail_alert, animated: false, completion: nil)
+                }
+            }
+    }
 }
 
 //MARK: - Extension UICollectionView
@@ -76,7 +134,8 @@ extension SexBoardTabViewController: UICollectionViewDataSource, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeImageCollectionViewCell", for: indexPath) as! HomeImageCollectionViewCell
 
-        cell.image.image = UIImage(named: sexBoardImageArray[indexPath.row]) ?? UIImage()
+        let url = URL(string: sexBoardImageArray[indexPath.row])
+        cell.image.kf.setImage(with: url)
 
         return cell
     }
@@ -88,7 +147,8 @@ extension SexBoardTabViewController: UICollectionViewDataSource, UICollectionVie
         let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
         self.navigationController?.pushViewController(feedVC, animated: true)
         
-//        feedVC.paramImg = self.sexBoardImageArray[indexPath.row]
+        feedVC.paramImg = self.sexBoardImageArray[indexPath.row]
+
     }
 
     // CollectionView Cell의 Size
@@ -109,3 +169,4 @@ extension SexBoardTabViewController: UICollectionViewDataSource, UICollectionVie
         return 1.0
     }
 }
+

@@ -15,7 +15,13 @@ protocol UserFeedNaviAction: AnyObject {
 
 class UserFeedViewCell: FSPagerViewCell {
     
-    @IBOutlet weak var userImg_Feed: UIImageView!
+    @IBOutlet weak var userImg_Feed: UIImageView!{
+        didSet {
+            //프사 이미지 둥글게
+            userImg_Feed.layer.cornerRadius = userImg_Feed.frame.height/2
+            userImg_Feed.clipsToBounds = true
+        }
+    }
     @IBOutlet weak var userName_Feed: UILabel!
     @IBOutlet weak var userSpec_Feed: UILabel!
     @IBOutlet weak var userFeedImg: FSPagerView!{

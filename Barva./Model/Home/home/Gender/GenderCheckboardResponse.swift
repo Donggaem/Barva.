@@ -19,5 +19,5 @@ struct GenderCheckboardResponse: Decodable {
 struct GenderCheckboardData: Decodable {
     
     var checkerboardArr: [String]?
-    var err: String
+    var err: String?
 }

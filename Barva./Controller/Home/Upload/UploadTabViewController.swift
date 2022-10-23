@@ -80,7 +80,7 @@ class UploadTabViewController: UIViewController {
     
     @IBAction func manBtnPressed(_ sender: UIButton) {
         
-        userGender = "male"
+        userGender = "남"
         manBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         manBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         
@@ -91,7 +91,7 @@ class UploadTabViewController: UIViewController {
     
     @IBAction func womanBtnPressed(_ sender: UIButton) {
         
-        userGender = "fmale"
+        userGender = "여"
         womanBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         womanBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         
@@ -182,7 +182,7 @@ class UploadTabViewController: UIViewController {
                     
                 } else {
                     BarvaLog.error("PostUpload-fail")
-                    print(response.data?.err)
+                    print(response.data?.err ?? "")
                     let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
                     fail_alert.addAction(okAction)

@@ -159,7 +159,9 @@
                 <outlet property="bookmarkBtn" destination="P6y-tk-kJ1" id="dLw-cs-TkE"/>
                 <outlet property="feedImage" destination="mK4-tM-wlE" id="pw5-J8-JyO"/>
                 <outlet property="feedNameLabel" destination="bvK-Ha-wgh" id="ZbM-AT-Q6T"/>
+                <outlet property="feedProfileImg" destination="ptj-Al-5Rh" id="J3j-Nm-igH"/>
                 <outlet property="feedSpecLabel" destination="Jrv-BT-BMm" id="lhr-93-65H"/>
+                <outlet property="feedTextView" destination="AfA-ij-y3g" id="W2g-RV-ODF"/>
                 <outlet property="heartBtn" destination="gaB-1k-BXE" id="PZa-1n-iqa"/>
             </connections>
             <point key="canvasLocation" x="347.69230769230768" y="24.526066350710899"/>

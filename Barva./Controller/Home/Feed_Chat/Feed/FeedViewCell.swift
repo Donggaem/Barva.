@@ -10,15 +10,24 @@ import FSPagerView
 import Kingfisher
 
 protocol NaviAction: AnyObject {
-    func moveChatVC()
     
+    func moveChatVC()
     func moveOthereVC()
+    
 }
 
 class FeedViewCell: FSPagerViewCell {
     
+    @IBOutlet weak var feedProfileImg: UIImageView! {
+        didSet {
+            //프사 이미지 둥글게
+            feedProfileImg.layer.cornerRadius = feedProfileImg.frame.height/2
+            feedProfileImg.clipsToBounds = true
+        }
+    }
     @IBOutlet weak var feedNameLabel: UILabel!
     @IBOutlet weak var feedSpecLabel: UILabel!
+    @IBOutlet weak var feedTextView: UITextView!
     
     @IBOutlet weak var feedImage: FSPagerView!{
         didSet {
@@ -92,18 +101,16 @@ extension FeedViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
     
     //이미지 개수
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return self.paramImg?.count ?? 0
+        return self.paramImg!.count
     }
     
     //각셀에 대한 설정
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = feedImage.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
 //        cell.imageView?.image = UIImage(named: self.delegateImg?.feedImages[index] ?? "")
-        
-        cell.imageView?.image = UIImage(named: paramImg?[index] ?? "")
-        
-//        let url = URL(string: self.delegateImg?.feedImages[index] ?? "")
-//        cell.imageView?.kf.setImage(with: url)
+                
+        let url = URL(string: paramImg?[index] ?? "")
+        cell.imageView?.kf.setImage(with: url)
         
         return cell
     }

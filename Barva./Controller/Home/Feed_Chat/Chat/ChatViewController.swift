@@ -20,7 +20,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var sendBtn: UIButton!
     @IBOutlet weak var sendTextField: UITextField!
     
-    var paramFeedImg = UIImage()
+    var paramFeedImg = ""
     var paramFeedName = ""
     var paramFeedSpec = ""
     var paramFeedText = ""
@@ -48,9 +48,16 @@ class ChatViewController: UIViewController {
     //MARK: - INNER FUNC
     private func setUI(){
         
-        feedUserProfileImg.image = paramFeedImg
+        let url = URL(string: paramFeedImg)
+        feedUserProfileImg.kf.setImage(with: url)
+        
         feedUserNameLabel.text = paramFeedName
         feedUesrSpecLabel.text = paramFeedSpec
+        feedUserText.text = paramFeedText
+        
+        //프사 이미지 둥글게
+        feedUserProfileImg.layer.cornerRadius = feedUserProfileImg.frame.height/2
+        feedUserProfileImg.clipsToBounds = true
         
     }
 }

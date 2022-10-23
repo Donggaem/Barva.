@@ -11,15 +11,15 @@ import Alamofire
 
 class UserFeedViewController: UIViewController{
     
-    @IBOutlet weak var userFeedFagerView: FSPagerView!{
+    @IBOutlet weak var userFeedPagerView: FSPagerView!{
         didSet {
-            self.userFeedFagerView.register(UINib(nibName:"UserFeedViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "UserFeedViewCell")
+            self.userFeedPagerView.register(UINib(nibName:"UserFeedViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "UserFeedViewCell")
             //아이템 크기설정
-            self.userFeedFagerView.itemSize = FSPagerView.automaticSize
+            self.userFeedPagerView.itemSize = FSPagerView.automaticSize
             
             //무한 스크롤
-            self.userFeedFagerView.isInfinite = false
-            self.userFeedFagerView.scrollDirection = .vertical
+            self.userFeedPagerView.isInfinite = false
+            self.userFeedPagerView.scrollDirection = .vertical
         }
     }
     @IBOutlet weak var pageControl: FSPageControl! {
@@ -30,9 +30,12 @@ class UserFeedViewController: UIViewController{
     
     
     var paramSeletIndex = 0
+    
     var userFeedName = ""
     var userFeedSpec = ""
-    var userFeedImg = UIImage()
+    var userFeedText = ""
+    var userFeedProfilImg = ""
+    
     var imgArray: [String] = []
     var userFeedArray: [FeedArray] = []
     
@@ -41,9 +44,7 @@ class UserFeedViewController: UIViewController{
         
         setUI()
         getUserFeed()
-        
-        
-        
+
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
@@ -56,15 +57,12 @@ class UserFeedViewController: UIViewController{
         
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
-        userFeedFagerView.reloadData()
+        userFeedPagerView.reloadData()
         
-        userFeedFagerView.dataSource = self
-        userFeedFagerView.delegate = self
+        userFeedPagerView.dataSource = self
+        userFeedPagerView.delegate = self
     }
     
-    func settest() {
-        
-    }
     
     //MARK: - GET USERFEED
     let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
@@ -79,11 +77,18 @@ class UserFeedViewController: UIViewController{
                         if response.data != nil {
                             if let feedObject = response.data?.singleResult {
                                 self.userFeedArray = feedObject
-                                self.userFeedFagerView.reloadData()
+                                self.userFeedPagerView.reloadData()
                                 self.pageControl.numberOfPages = feedObject.count
                                 
                                 DispatchQueue.main.async {
-                                    self.userFeedFagerView.scrollToItem(at: self.pageControl.currentPage, animated: false)
+                                    
+                                    self.userFeedPagerView.reloadData()
+                                    self.pageControl.numberOfPages = self.userFeedArray.count
+                                    self.pageControl.currentPage = self.paramSeletIndex
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.03){
+                                        self.userFeedPagerView.scrollToItem(at: self.pageControl.currentPage, animated: false)
+                                    }
                                 }
                             }
                         }
@@ -134,9 +139,10 @@ extension UserFeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.textView_Feed.text = userFeedArray[index].post_content
         cell.paramImg = userFeedArray[index].post_url
         
-        userFeedName = cell.userName_Feed.text ?? ""
-        userFeedSpec = cell.userSpec_Feed.text ?? ""
-        userFeedImg = cell.userImg_Feed.image ?? UIImage(systemName: "person.crop.circle")!
+        userFeedName = userFeedArray[index].post_users.user_nick
+        userFeedSpec = "\(userFeedArray[index].user_gender) | \(userFeedArray[index].user_tall)cm | \(userFeedArray[index].user_weight)kg"
+        userFeedText = userFeedArray[index].post_content
+        userFeedProfilImg = userFeedArray[index].post_users.profile_url
         
         return cell
     }
@@ -156,9 +162,10 @@ extension UserFeedViewController: UserFeedNaviAction {
         let chatVC = storyBoard.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
         self.navigationController?.pushViewController(chatVC, animated: true)
         
-        chatVC.paramFeedImg = userFeedImg
+        chatVC.paramFeedImg = userFeedProfilImg
         chatVC.paramFeedName = userFeedName
         chatVC.paramFeedSpec = userFeedSpec
+        chatVC.paramFeedText = userFeedText
     }
     
 }

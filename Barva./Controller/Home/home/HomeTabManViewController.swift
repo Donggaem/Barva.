@@ -10,8 +10,7 @@ import Tabman
 import Pageboy
 
 class HomeTabManViewController: TabmanViewController {
-    
-    
+        
     private var viewControllers: [UIViewController] = []
     let latestVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LatestBoardTabViewController") as! LatestBoardTabViewController
     
@@ -85,6 +84,10 @@ extension HomeTabManViewController: PageboyViewControllerDataSource, TMBarDataSo
     }
     
     func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
+        
+        if (index == 2) {
+            sexVC.setDropDown()
+        }
         return viewControllers[index]
     }
     

@@ -7,13 +7,20 @@
 
 import UIKit
 
+
 class HomeViewController: UIViewController {
-        
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         
         popupPresent()
         setUI()
+        
+    }
+    
+    //MARK: - IBACTION
+    
+    @IBAction func sortBtnPressed(_ sender: UIButton) {
         
     }
     
@@ -27,7 +34,7 @@ class HomeViewController: UIViewController {
     }
     
     private func setUI() {
-        
+                
         //탭바 설정
         self.tabBarController?.tabBar.tintColor = UIColor(red: 0.262, green: 0.262, blue: 0.262, alpha: 1) //탭바 선택 아이템 색
         self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(red: 0.262, green: 0.262, blue: 0.262, alpha: 1) //탭바 미선택 아이템 색

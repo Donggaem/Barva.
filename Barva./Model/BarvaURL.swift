@@ -27,27 +27,26 @@ struct BarvaURL {
     
     
     //MARK: - 홈
-    static let newestCheckerboardURL = "http://3.34.183.110:3003/main/newestCheckerboard"
-    static let newestSingleURL = "http://3.34.183.110:3003/main/newestSingle"
+    static let newestCheckerboardURL = "http://3.34.183.110:3003/sort/newestCheckerboard"
+    static let newestSingleURL = "http://3.34.183.110:3003/sort/newestSingle"
     
-    static let genderCheckerboardURL = "http://3.34.183.110:3003/main/genderCheckerboard"
-    static let genderSingleURL = "http://3.34.183.110:3003/main/genderSingle"
+    static let genderCheckerboardURL = "http://3.34.183.110:3003/sort/genderCheckerboard"
+    static let genderSingleURL = "http://3.34.183.110:3003/sort/genderSingle"
     
     //MARK: - 업로드
-    static let uploadPostURL = "http://3.34.183.110:3003/main/uploadPost"
+    static let uploadPostURL = "http://3.34.183.110:3003/upload/uploadPost"
     
 
     //MARK: - 프로필
-    static let profileURL = "http://3.34.183.110:3003/main/myProfile"
+    static let profileURL = "http://3.34.183.110:3003/user/myProfile"
     
-    static let userCheckerboardURL = "http://3.34.183.110:3003/main/userCheckerboard"
-    static let userSingleURL = "http://3.34.183.110:3003/main/userSingle"
+    static let setProfileImageURL = "http://3.34.183.110:3003/upload/setProfileImg"
+    static let setProfileURL = "http://3.34.183.110:3003/user/setProfileIntro"
+    
+    static let userCheckerboardURL = "http://3.34.183.110:3003/user/userCheckerboard"
+    static let userSingleURL = "http://3.34.183.110:3003/user/userSingle"
     
     static let storageImagesURL = ""
-    
-    static let setProfileImageURL = "http://3.34.183.110:3003/main/setProfileImg"
-    static let setProfileURL = "http://3.34.183.110:3003/main/setProfileIntro"
-    
-    
+
     static let othereUpImagesURL = ""
 }
