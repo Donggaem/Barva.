@@ -12,8 +12,12 @@ import Kingfisher
 class ProfileTabViewController: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var profileNickLabel: UILabel!
-    @IBOutlet weak var profileIntroLabel: UILabel!
+    @IBOutlet weak var userNick: UILabel!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var userIntro: UILabel!
+    
+    @IBOutlet weak var modifyBtn: UIButton!
+    @IBOutlet weak var settingBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +32,29 @@ class ProfileTabViewController: UIViewController {
         
     }
     
-    //MARK: - OBJC
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-    {
+    //MARK: - IBACTION
+    
+    @IBAction func followerBtnPressed(_ sender: UIButton) {
+        let followVC = self.storyboard?.instantiateViewController(withIdentifier: "FollowViewController") as! FollowViewController
+        self.navigationController?.pushViewController(followVC, animated: true)
+    }
+    
+    @IBAction func followingBtnPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func modifyBtnPressed(_ sender: UIButton) {
         let modifyVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileModifyViewController") as! ProfileModifyViewController
         self.navigationController?.pushViewController(modifyVC, animated: true)
         
-        modifyVC.paramNick = profileNickLabel.text ?? ""
-        modifyVC.paramIntro = profileIntroLabel.text ?? ""
+        modifyVC.paramNick = userNick.text ?? ""
+        modifyVC.paramIntro = userIntro.text ?? ""
         modifyVC.paramProfileImg = profileImageView.image ?? UIImage()
+    }
+    
+    @IBAction func settingBtnPressed(_ sender: UIButton) {
+        let settingVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileSettingViewController") as! ProfileSettingViewController
+        self.navigationController?.pushViewController(settingVC, animated: true)
         
     }
     
@@ -47,13 +65,17 @@ class ProfileTabViewController: UIViewController {
         profileImageView.layer.cornerRadius = profileImageView.frame.height/2
         profileImageView.clipsToBounds = true
         
-        // 이미지뷰 탭
-        let tapImageViewRecognizer
-        = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        //이미지뷰가 상호작용할 수 있게 설정
-        profileImageView.isUserInteractionEnabled = true
-        //이미지뷰에 제스처인식기 연결
-        profileImageView.addGestureRecognizer(tapImageViewRecognizer)
+        //프로필 편집 버튼 조정
+        modifyBtn.layer.cornerRadius = 3
+        modifyBtn.layer.borderWidth = 1
+        modifyBtn.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1).cgColor
+        
+        //프로필 설정 버튼 조정
+        settingBtn.layer.cornerRadius = 3
+        settingBtn.layer.borderWidth = 1
+        settingBtn.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1).cgColor
+
+
         
     }
     
@@ -72,17 +94,17 @@ class ProfileTabViewController: UIViewController {
                             if response.data?.myProfileInfo != nil{
                                 if let nick = response.data?.myProfileInfo?.user_nick {
                                     print(nick)
-                                    self.profileNickLabel.text = nick
+                                    self.userNick.text = nick
                                 }else {
-                                    self.profileNickLabel.text = "이름없음"
+                                    self.userNick.text = "이름없음"
                                     
                                 }
                                 
                                 if let intro = response.data?.myProfileInfo?.user_introduce {
                                     print(intro)
-                                    self.profileIntroLabel.text = intro
+                                    self.userIntro.text = intro
                                 }else {
-                                    self.profileIntroLabel.text = ""
+                                    self.userIntro.text = ""
                                 }
                                 
                                 if response.data?.myProfileInfo?.profile_url == "" || response.data?.myProfileInfo?.profile_url == nil {

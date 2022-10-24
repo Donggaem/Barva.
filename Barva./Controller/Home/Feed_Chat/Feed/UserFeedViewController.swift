@@ -69,7 +69,7 @@ class UserFeedViewController: UIViewController{
     private func getUserFeed() {
         AF.request(BarvaURL.userSingleURL, method: .get, headers: header)
             .validate()
-            .responseDecodable(of: GetUserFeedResponse.self) { response in
+            .responseDecodable(of: UserSingleResponse.self) { response in
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess == true {

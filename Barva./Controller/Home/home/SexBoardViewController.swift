@@ -17,12 +17,16 @@ class SexBoardTabViewController: UIViewController {
     var sexBoardImageArray: [String] = []
     
     let dropDown = DropDown()
+    var selectGender = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUI()
         setCollectionView()
+        self.sexBoardCollectionView.reloadData()
+
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,7 +44,6 @@ class SexBoardTabViewController: UIViewController {
     
     func setDropDown() {
         
-        print("셋드랍")
         dropDown.dataSource = ["남", "여"]
         dropDown.show()
         dropDown.textColor = UIColor.gray
@@ -54,15 +57,15 @@ class SexBoardTabViewController: UIViewController {
             print("선택한 아이템 : \(item)")
             
             if item == "남" {
-                let man = item
+                selectGender = item
                 
-                let param = GenderCheckboardRequest(user_gender: man)
+                let param = GenderCheckboardRequest(user_gender: selectGender)
                 postGenderCheckerboard(param)
 
             }else {
-                let woman = item
+                selectGender = item
                 
-                let param = GenderCheckboardRequest(user_gender: woman)
+                let param = GenderCheckboardRequest(user_gender: selectGender)
                 postGenderCheckerboard(param)
 
             }
@@ -147,7 +150,10 @@ extension SexBoardTabViewController: UICollectionViewDataSource, UICollectionVie
         let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
         self.navigationController?.pushViewController(feedVC, animated: true)
         
-        feedVC.paramImg = self.sexBoardImageArray[indexPath.row]
+        print("남여\(indexPath.row)")
+        feedVC.paramSeletIndex = indexPath.row
+        feedVC.paramSort = "Gender"
+        feedVC.paramGender = selectGender
 
     }
 

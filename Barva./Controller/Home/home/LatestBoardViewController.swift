@@ -103,10 +103,8 @@ extension LatestBoardTabViewController: UICollectionViewDataSource, UICollection
         let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
         self.navigationController?.pushViewController(feedVC, animated: true)
         
-        print(indexPath.row)
+        print("최신순\(indexPath.row)")
         feedVC.paramSeletIndex = indexPath.row
-        
-        feedVC.paramImg = self.latestImageArray[indexPath.row]
         feedVC.paramSort = "Newest"
     }
     

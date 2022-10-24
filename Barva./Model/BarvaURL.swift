@@ -33,6 +33,10 @@ struct BarvaURL {
     static let genderCheckerboardURL = "http://3.34.183.110:3003/sort/genderCheckerboard"
     static let genderSingleURL = "http://3.34.183.110:3003/sort/genderSingle"
     
+    
+    //MARK: - 피드 저장
+    static let savePostURL = "http://3.34.183.110:3003/user/savePost"
+    
     //MARK: - 업로드
     static let uploadPostURL = "http://3.34.183.110:3003/upload/uploadPost"
     
@@ -48,5 +52,4 @@ struct BarvaURL {
     
     static let storageImagesURL = ""
 
-    static let othereUpImagesURL = ""
 }

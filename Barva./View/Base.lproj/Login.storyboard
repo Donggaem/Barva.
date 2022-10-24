@@ -106,7 +106,7 @@
                                     <constraint firstAttribute="height" constant="70" id="gtK-y4-X2c"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MPLUS1Code-Medium" family="M PLUS 1 Code" pointSize="55"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.4823529412" green="0.83529411760000005" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-0l-T8p" userLabel="회가,아비찾Stack View">

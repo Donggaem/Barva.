@@ -12,7 +12,7 @@ import Alamofire
 
 class FeedViewController: UIViewController {
     
-
+    
     @IBOutlet weak var feedPagerView: FSPagerView!{
         didSet {
             self.feedPagerView.register(UINib(nibName:"FeedViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "FeedViewCell")
@@ -31,9 +31,9 @@ class FeedViewController: UIViewController {
         }
     }
     
-    var paramImg = ""
     var paramSeletIndex = 0
     var paramSort = ""
+    var paramGender = ""
     
     var feedName = ""
     var feedSpec = ""
@@ -47,24 +47,23 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUI()
-        
         feedPagerView.dataSource = self
         feedPagerView.delegate = self
+        
+        setUI()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-                
-        if paramSort == "Newest" {
-            getNewestFeed()
-        }
+        
         
     }
     
     //MARK: - IBACTION
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+        
         
     }
     
@@ -74,7 +73,16 @@ class FeedViewController: UIViewController {
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
         
-
+        if paramSort == "Newest" {
+            getNewestFeed()
+            feedPagerView.reloadData()
+        } else if paramSort == "Gender" {
+            print(paramGender)
+            let gender = paramGender
+            let param = GenderSingleRequest(user_gender: gender)
+            postGenderFeed(param)
+            feedPagerView.reloadData()
+        }
     }
     
     //MARK: - GET NEWESTFEED
@@ -87,11 +95,13 @@ class FeedViewController: UIViewController {
                 case .success(let response):
                     if response.isSuccess == true {
                         print(BarvaLog.debug("getNewestFeed-success"))
+                        self.feedArray.removeAll()
+                        self.feedPagerView.reloadData()
                         if response.data != nil {
-                            if let feedObject = response.data?.singleResult {
-                                self.feedArray = feedObject
+                            if let newestFeedObject = response.data?.singleResult {
+                                self.feedArray = newestFeedObject
                                 self.feedPagerView.reloadData()
-                                self.feedPageControl.numberOfPages = feedObject.count
+                                self.feedPageControl.numberOfPages = newestFeedObject.count
                                 
                                 DispatchQueue.main.async {
                                     
@@ -106,10 +116,10 @@ class FeedViewController: UIViewController {
                                 }
                             }
                         }
-
+                        
                     } else {
                         print(BarvaLog.error("getNewestFeed-fail"))
-
+                        
                         let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         fail_alert.addAction(okAction)
@@ -118,7 +128,7 @@ class FeedViewController: UIViewController {
                 case .failure(let error):
                     BarvaLog.error("getNewestFeed-err")
                     print(error.localizedDescription)
-
+                    
                     let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
                     fail_alert.addAction(okAction)
@@ -127,6 +137,56 @@ class FeedViewController: UIViewController {
             }
     }
     
+    //MARK: - POST GENDERFEED
+    private func postGenderFeed(_ parameters: GenderSingleRequest){
+        AF.request(BarvaURL.genderSingleURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
+            .validate()
+            .responseDecodable(of: GenderSingleResponse.self) { [self] response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        
+                        BarvaLog.debug("postGenderFeed - Success")
+                        self.feedArray.removeAll()
+                        self.feedPagerView.reloadData()
+                        
+                        if response.data != nil {
+                            if let GenderFeedObject = response.data?.singleResult {
+                                self.feedArray = GenderFeedObject
+                                self.feedPagerView.reloadData()
+                                self.feedPageControl.numberOfPages = GenderFeedObject.count
+                                
+                                DispatchQueue.main.async {
+                                    self.feedPagerView.reloadData()
+                                    self.feedPageControl.numberOfPages = self.feedArray.count
+                                    self.feedPageControl.currentPage = self.paramSeletIndex
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.03){
+                                        self.feedPagerView.scrollToItem(at: self.feedPageControl.currentPage, animated: false)
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
+                    } else {
+                        BarvaLog.error("postGenderFeed - fail")
+                        let loginFail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        loginFail_alert.addAction(okAction)
+                        present(loginFail_alert, animated: false, completion: nil)
+                        
+                    }
+                case .failure(let error):
+                    BarvaLog.error("postGenderFeed - err")
+                    print(error.localizedDescription)
+                    let loginFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    loginFail_alert.addAction(okAction)
+                    present(loginFail_alert, animated: false, completion: nil)
+                }
+            }
+    }
 }
 
 //MARK: - Extension FSPagerView

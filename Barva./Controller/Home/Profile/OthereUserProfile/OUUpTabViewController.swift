@@ -19,48 +19,48 @@ class OUUpTabViewController: UIViewController {
 
     }
     
-    //MARK: - GET OTHEREUPIMAGES
-    let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
-    private func getOthereUpImages() {
-        AF.request(BarvaURL.othereUpImagesURL, method: .get, headers: header)
-            .validate()
-            .responseDecodable(of: OthereUpImagesResponse.self) { response in
-                switch response.result {
-                case .success(let response):
-                    if response.isSuccess == true {
-                        print(BarvaLog.debug("getOthereUpImages-success"))
-                       
-                        if response.data != nil {
-                            if let imgArray = response.data?.othereFeedInfo {
-                                self.othereImageArray = imgArray
-                            } else {
-                                print("올린 사진없음")
-                                self.othereImageArray = []
-                            }
-                        }else {
-                            print("옵셔널 에러")
-                        }
-
-//                        self.myUpImageArray = response.data?.myFeedInfo ?? []
-
-
-                    } else {
-                        print(BarvaLog.error("getOthereUpImages-fail"))
-                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
-                        let okAction = UIAlertAction(title: "확인", style: .default)
-                        fail_alert.addAction(okAction)
-                        self.present(fail_alert, animated: false, completion: nil)
-                    }
-                case .failure(let error):
-                    print(BarvaLog.error("getOthereUpImages-err"))
-                    print("failure: \(error.localizedDescription)")
-                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
-                    let okAction = UIAlertAction(title: "확인", style: .default)
-                    fail_alert.addAction(okAction)
-                    self.present(fail_alert, animated: false, completion: nil)
-                }
-            }
-    }
+//    //MARK: - GET OTHEREUPIMAGES
+//    let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
+//    private func getOthereUpImages() {
+//        AF.request(BarvaURL.othereUpImagesURL, method: .get, headers: header)
+//            .validate()
+//            .responseDecodable(of: OthereUpImagesResponse.self) { response in
+//                switch response.result {
+//                case .success(let response):
+//                    if response.isSuccess == true {
+//                        print(BarvaLog.debug("getOthereUpImages-success"))
+//                       
+//                        if response.data != nil {
+//                            if let imgArray = response.data?.othereFeedInfo {
+//                                self.othereImageArray = imgArray
+//                            } else {
+//                                print("올린 사진없음")
+//                                self.othereImageArray = []
+//                            }
+//                        }else {
+//                            print("옵셔널 에러")
+//                        }
+//
+////                        self.myUpImageArray = response.data?.myFeedInfo ?? []
+//
+//
+//                    } else {
+//                        print(BarvaLog.error("getOthereUpImages-fail"))
+//                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+//                        let okAction = UIAlertAction(title: "확인", style: .default)
+//                        fail_alert.addAction(okAction)
+//                        self.present(fail_alert, animated: false, completion: nil)
+//                    }
+//                case .failure(let error):
+//                    print(BarvaLog.error("getOthereUpImages-err"))
+//                    print("failure: \(error.localizedDescription)")
+//                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+//                    let okAction = UIAlertAction(title: "확인", style: .default)
+//                    fail_alert.addAction(okAction)
+//                    self.present(fail_alert, animated: false, completion: nil)
+//                }
+//            }
+//    }
 
 }
 

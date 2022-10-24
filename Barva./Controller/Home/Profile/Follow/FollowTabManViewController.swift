@@ -1,34 +1,32 @@
 //
-//  HomeTabManViewController.swift
+//  FollowTabManViewController.swift
 //  Barva.
 //
-//  Created by 김동겸 on 2022/08/24.
+//  Created by 김동겸 on 2022/10/24.
 //
 
 import UIKit
 import Tabman
 import Pageboy
 
-class HomeTabManViewController: TabmanViewController {
-        
+class FollowTabManViewController: TabmanViewController {
+
     private var viewControllers: [UIViewController] = []
-    let latestVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LatestBoardTabViewController") as! LatestBoardTabViewController
+    let followerVC = UIStoryboard.init(name: "ProfileTab", bundle: nil).instantiateViewController(withIdentifier: "FollowerTabViewController") as! FollowerTabViewController
     
-    let todayColorVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "todayColorTabViewController") as! todayColorTabViewController
-    
-    let sexVC = UIStoryboard.init(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SexBoardTabViewController") as! SexBoardTabViewController
+    let followingVC = UIStoryboard.init(name: "ProfileTab", bundle: nil).instantiateViewController(withIdentifier: "FollowingTabViewController") as! FollowingTabViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTabView()
+
     }
-    
+
     //MARK: - INNER FUNC
     func setTabView() {
-        viewControllers.append(latestVC)
-        viewControllers.append(todayColorVC)
-        viewControllers.append(sexVC)
-        
+        viewControllers.append(followerVC)
+        viewControllers.append(followingVC)
+
         
         self.dataSource = self
         
@@ -59,20 +57,18 @@ class HomeTabManViewController: TabmanViewController {
         
         addBar(bar, dataSource: self, at:.top)
     }
-    
 }
 
 //MARK: - Extension Pageboy, TMBar
-extension HomeTabManViewController: PageboyViewControllerDataSource, TMBarDataSource {
+extension FollowTabManViewController: PageboyViewControllerDataSource, TMBarDataSource {
     
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
         switch index {
         case 0:
-            return TMBarItem(title: "최신순 보기")
+            return TMBarItem(title: "팔로워")
         case 1:
-            return TMBarItem(title: "오늘의 색상")
-        case 2:
-            return TMBarItem(title: "남/ 여 정렬")
+            return TMBarItem(title: "팔로잉")
+        
         default:
             let title = "Page \(index)"
             return TMBarItem(title: title)
@@ -85,11 +81,6 @@ extension HomeTabManViewController: PageboyViewControllerDataSource, TMBarDataSo
     
     func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
         
-        if (index == 2) {
-            print("2")
-            sexVC.setDropDown()
-
-        }
         return viewControllers[index]
     }
     

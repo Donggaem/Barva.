@@ -11,7 +11,7 @@ import Alamofire
 class ProfileModifyViewController: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var nickLabel: UILabel!
+    @IBOutlet weak var nickTextField: UITextField!
     @IBOutlet weak var introTextView: UITextView!
     @IBOutlet weak var setProfileBtn: UIButton!
     
@@ -54,19 +54,19 @@ class ProfileModifyViewController: UIViewController {
         
         self.navigationController?.popViewController(animated: true)
     }
-    //MARK:  - OBJC
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-    {
+    
+    @IBAction func profileChangeBtnPressed(_ sender: UIButton) {
         self.imagePickerController.delegate = self
         self.imagePickerController.sourceType = .photoLibrary
 //        self.imagePickerController.allowsEditing = true
         present(self.imagePickerController, animated: true, completion: nil)
     }
     
+    
     //MARK: - INNER FUNC
     private func setUI() {
         
-        nickLabel.text = paramNick
+        nickTextField.text = paramNick
         introTextView.text = paramIntro
         profileImageView.image = paramProfileImg
         
@@ -78,13 +78,6 @@ class ProfileModifyViewController: UIViewController {
         
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
-        
-        let tapImageViewRecognizer
-        = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        //이미지뷰가 상호작용할 수 있게 설정
-        profileImageView.isUserInteractionEnabled = true
-        //이미지뷰에 제스처인식기 연결
-        profileImageView.addGestureRecognizer(tapImageViewRecognizer)
         
         introTextView.layer.borderWidth = 1.0
         introTextView.layer.borderColor = UIColor.black.cgColor

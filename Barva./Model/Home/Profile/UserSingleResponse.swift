@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GetUserFeedResponse: Decodable {
+struct UserSingleResponse: Decodable {
     
     var isSuccess: Bool
     var code: Int

@@ -9,6 +9,7 @@ import Foundation
 
 struct FeedArray: Decodable {
     
+    var post_id: Int
     var post_content: String
     var likeCount: Int
     var user_gender: String
