@@ -13,6 +13,7 @@ protocol NaviAction: AnyObject {
     
     func moveChatVC()
     func moveOthereVC()
+    func checkBookmark(bookmark: Bool)
     
 }
 
@@ -50,8 +51,17 @@ class FeedViewCell: FSPagerViewCell {
         }
     }
     
-    var bookmarkBool = false
-    
+    var bookmarkBool = false {
+        didSet {
+            if bookmarkBool == false {
+                bookmarkBtn.setImage(UIImage(systemName: "bookmark"), for: .normal)
+
+            }else {
+                bookmarkBtn.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
+
+            }
+        }
+    }
     
     //MARK: - IBACTION
     @IBAction func allChatBtnPressed(_ sender: UIButton) {
@@ -71,15 +81,14 @@ class FeedViewCell: FSPagerViewCell {
     }
     @IBAction func bookmarkBtnPressed(_ sender: UIButton) {
         if bookmarkBool == false {
+            delegate?.checkBookmark(bookmark: bookmarkBool)
             bookmarkBool = true
-            bookmarkBtn.setImage(UIImage(systemName: "bookmark.fill"), for: .normal)
         }else {
+            delegate?.checkBookmark(bookmark: bookmarkBool)
             bookmarkBool = false
-            bookmarkBtn.setImage(UIImage(systemName: "bookmark"), for: .normal)
         }
     }
     @IBAction func othereProfile(_ sender: UIButton) {
-        print("click")
         self.delegate?.moveOthereVC()
     }
     
@@ -97,6 +106,8 @@ class FeedViewCell: FSPagerViewCell {
         heartBtn.setImage(UIImage(systemName: "heart"), for: .normal)
         heartBtn.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
     }
+    
+    
     
 }
 //MARK: - Extension FSPagerView

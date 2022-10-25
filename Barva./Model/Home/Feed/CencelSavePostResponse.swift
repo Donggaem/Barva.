@@ -1,5 +1,5 @@
 //
-//  commentPostResponse.swift
+//  CencelSavePostResponse.swift
 //  Barva.
 //
 //  Created by 김동겸 on 2022/10/25.
@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct CommentPostResponse: Decodable {
+struct CencelSavePostResponse: Decodable{
     
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: CommentData?
+    var data: CencelSavePostData?
 }
 
-struct CommentData: Decodable {
+struct CencelSavePostData: Decodable {
     var err: String
 }

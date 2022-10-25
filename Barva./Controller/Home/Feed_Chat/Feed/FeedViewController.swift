@@ -39,6 +39,7 @@ class FeedViewController: UIViewController {
     var feedSpec = ""
     var feedText = ""
     var feedProfilImg = ""
+    var postid = 0
     
     var imgArray: [String] = []
     var feedArray: [FeedArray] = []
@@ -69,6 +70,7 @@ class FeedViewController: UIViewController {
     
     //MARK: - INNER FUNC
     private func setUI(){
+        feedPagerView.reloadData()
         
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
@@ -76,8 +78,8 @@ class FeedViewController: UIViewController {
         if paramSort == "Newest" {
             getNewestFeed()
             feedPagerView.reloadData()
+            
         } else if paramSort == "Gender" {
-            print(paramGender)
             let gender = paramGender
             let param = GenderSingleRequest(user_gender: gender)
             postGenderFeed(param)
@@ -171,19 +173,90 @@ class FeedViewController: UIViewController {
                         
                     } else {
                         BarvaLog.error("postGenderFeed - fail")
-                        let loginFail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
-                        loginFail_alert.addAction(okAction)
-                        present(loginFail_alert, animated: false, completion: nil)
+                        fail_alert.addAction(okAction)
+                        present(fail_alert, animated: false, completion: nil)
                         
                     }
                 case .failure(let error):
                     BarvaLog.error("postGenderFeed - err")
                     print(error.localizedDescription)
-                    let loginFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
-                    loginFail_alert.addAction(okAction)
-                    present(loginFail_alert, animated: false, completion: nil)
+                    fail_alert.addAction(okAction)
+                    present(fail_alert, animated: false, completion: nil)
+                }
+            }
+    }
+    
+    //MARK: - POST SAVEPOST
+    private func postSavePost(_ parameters: SavePostRequest){
+        AF.request(BarvaURL.savePostURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
+            .validate()
+            .responseDecodable(of: SavePostResponse.self) { [self] response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        
+                        BarvaLog.debug("postSavePost - Success")
+                        let succedd_alert = UIAlertController(title: "저장완료", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        succedd_alert.addAction(okAction)
+                        present(succedd_alert, animated: false, completion: nil)
+                        
+                        
+                    } else {
+                        BarvaLog.error("postSavePost - fail")
+
+                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        fail_alert.addAction(okAction)
+                        present(fail_alert, animated: false, completion: nil)
+                        
+                    }
+                case .failure(let error):
+                    BarvaLog.error("postSavePost - err")
+                    print(error.localizedDescription)
+                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    fail_alert.addAction(okAction)
+                    present(fail_alert, animated: false, completion: nil)
+                }
+            }
+    }
+    
+    //MARK: - POST CENCELSAVEPOST
+    private func postCencelSavePost(_ parameters: CencelSavePostRequest){
+        AF.request(BarvaURL.cencelSavePostURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
+            .validate()
+            .responseDecodable(of: CencelSavePostResponse.self) { [self] response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        
+                        BarvaLog.debug("postCencelSavePost - Success")
+                        let succedd_alert = UIAlertController(title: "취소완료", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        succedd_alert.addAction(okAction)
+                        present(succedd_alert, animated: false, completion: nil)
+                        
+                        
+                    } else {
+                        BarvaLog.error("postCencelSavePost - fail")
+                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        fail_alert.addAction(okAction)
+                        present(fail_alert, animated: false, completion: nil)
+                        
+                    }
+                case .failure(let error):
+                    BarvaLog.error("postCencelSavePost - err")
+                    print(error.localizedDescription)
+                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    fail_alert.addAction(okAction)
+                    present(fail_alert, animated: false, completion: nil)
                 }
             }
     }
@@ -213,11 +286,17 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.feedText.text = feedArray[index].post_content
         cell.paramImg = feedArray[index].post_url
         
+        cell.bookmarkBool = feedArray[index].isSave ?? false
+        
+        
         feedName = feedArray[index].post_users.user_nick
         feedSpec = "\(feedArray[index].user_gender) | \(feedArray[index].user_tall)cm | \(feedArray[index].user_weight)kg"
         feedText = feedArray[index].post_content
         feedProfilImg = feedArray[index].post_users.profile_url
-        
+                
+        //postid 값 받기
+        postid = feedArray[index].post_id
+                
         return cell
     }
     
@@ -229,6 +308,20 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
 
 //MARK: - Extension NaviAction
 extension FeedViewController: NaviAction {
+    func checkBookmark(bookmark: Bool) {
+        if bookmark == false {
+            let postid = postid
+            let param = SavePostRequest(post_id: postid)
+            postSavePost(param)
+            
+        }else {
+            print(postid)
+            let postid = postid
+            let param = CencelSavePostRequest(post_id: postid)
+            postCencelSavePost(param)
+        }
+    }
+    
     func moveChatVC() {
         
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
@@ -245,5 +338,6 @@ extension FeedViewController: NaviAction {
         let othereVC = storyBoard.instantiateViewController(withIdentifier: "OthereUserProfileViewController") as! OthereUserProfileViewController
         self.navigationController?.pushViewController(othereVC, animated: true)
     }
+    
     
 }

@@ -64,10 +64,12 @@
 		EBB8F45C28BF9C430069D4E1 /* ProfileTabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8F45B28BF9C430069D4E1 /* ProfileTabManViewController.swift */; };
 		EBB8F46028BFA5830069D4E1 /* MyUpTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8F45F28BFA5830069D4E1 /* MyUpTabViewController.swift */; };
 		EBB8F46228BFA61E0069D4E1 /* StorageTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8F46128BFA61E0069D4E1 /* StorageTabViewController.swift */; };
-		EBBBCE412907BE5C004404ED /* commentPostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBBCE402907BE5C004404ED /* commentPostRequest.swift */; };
-		EBBBCE432907BE6A004404ED /* commentPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBBCE422907BE6A004404ED /* commentPostResponse.swift */; };
+		EBBBCE412907BE5C004404ED /* CommentPostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBBCE402907BE5C004404ED /* CommentPostRequest.swift */; };
+		EBBBCE432907BE6A004404ED /* CommentPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBBCE422907BE6A004404ED /* CommentPostResponse.swift */; };
 		EBBBCE462907C1CF004404ED /* ResignRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBBCE452907C1CF004404ED /* ResignRequest.swift */; };
 		EBBBCE482907C1DC004404ED /* ResignResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBBCE472907C1DC004404ED /* ResignResponse.swift */; };
+		EBBBCE4A2907F882004404ED /* CencelSavePostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBBCE492907F882004404ED /* CencelSavePostRequest.swift */; };
+		EBBBCE4C2907F8A2004404ED /* CencelSavePostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBBCE4B2907F8A2004404ED /* CencelSavePostResponse.swift */; };
 		EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBC384E28A70DEE000D075D /* PopupViewController.swift */; };
 		EBBC40B328F4291F0014F949 /* ProfileSetImgResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBC40B228F4291F0014F949 /* ProfileSetImgResponse.swift */; };
 		EBBC40B728F429620014F949 /* ProfileSetIntroRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBC40B628F429620014F949 /* ProfileSetIntroRequest.swift */; };
@@ -173,10 +175,12 @@
 		EBB8F45B28BF9C430069D4E1 /* ProfileTabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabManViewController.swift; sourceTree = "<group>"; };
 		EBB8F45F28BFA5830069D4E1 /* MyUpTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUpTabViewController.swift; sourceTree = "<group>"; };
 		EBB8F46128BFA61E0069D4E1 /* StorageTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTabViewController.swift; sourceTree = "<group>"; };
-		EBBBCE402907BE5C004404ED /* commentPostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentPostRequest.swift; sourceTree = "<group>"; };
-		EBBBCE422907BE6A004404ED /* commentPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentPostResponse.swift; sourceTree = "<group>"; };
+		EBBBCE402907BE5C004404ED /* CommentPostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPostRequest.swift; sourceTree = "<group>"; };
+		EBBBCE422907BE6A004404ED /* CommentPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPostResponse.swift; sourceTree = "<group>"; };
 		EBBBCE452907C1CF004404ED /* ResignRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResignRequest.swift; sourceTree = "<group>"; };
 		EBBBCE472907C1DC004404ED /* ResignResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResignResponse.swift; sourceTree = "<group>"; };
+		EBBBCE492907F882004404ED /* CencelSavePostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CencelSavePostRequest.swift; sourceTree = "<group>"; };
+		EBBBCE4B2907F8A2004404ED /* CencelSavePostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CencelSavePostResponse.swift; sourceTree = "<group>"; };
 		EBBC384E28A70DEE000D075D /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		EBBC40B228F4291F0014F949 /* ProfileSetImgResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetImgResponse.swift; sourceTree = "<group>"; };
 		EBBC40B628F429620014F949 /* ProfileSetIntroRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetIntroRequest.swift; sourceTree = "<group>"; };
@@ -367,6 +371,8 @@
 			children = (
 				EBB1ADC529057A6B00285672 /* SavePostRequest.swift */,
 				EBB1ADC729057A7700285672 /* SavePostResponse.swift */,
+				EBBBCE492907F882004404ED /* CencelSavePostRequest.swift */,
+				EBBBCE4B2907F8A2004404ED /* CencelSavePostResponse.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -557,8 +563,8 @@
 		EBBBCE3F2907B8E9004404ED /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				EBBBCE402907BE5C004404ED /* commentPostRequest.swift */,
-				EBBBCE422907BE6A004404ED /* commentPostResponse.swift */,
+				EBBBCE402907BE5C004404ED /* CommentPostRequest.swift */,
+				EBBBCE422907BE6A004404ED /* CommentPostResponse.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -855,7 +861,7 @@
 				EB1751FA28AA8D43009FEFBF /* FindViewController.swift in Sources */,
 				EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */,
 				EB1751F828AA7D7A009FEFBF /* IDFindTabViewController.swift in Sources */,
-				EBBBCE432907BE6A004404ED /* commentPostResponse.swift in Sources */,
+				EBBBCE432907BE6A004404ED /* CommentPostResponse.swift in Sources */,
 				EB2F90B428E96D600098A3C1 /* UploadResponse.swift in Sources */,
 				EBB8F46228BFA61E0069D4E1 /* StorageTabViewController.swift in Sources */,
 				EB8D503A28E15F450045C4D2 /* PWFindRequest.swift in Sources */,
@@ -871,7 +877,7 @@
 				EBBC40B728F429620014F949 /* ProfileSetIntroRequest.swift in Sources */,
 				EBEF5EA32902A5D000C4B475 /* UserFeedViewCell.swift in Sources */,
 				EB86424629068A3000AFFAEC /* FollowViewController.swift in Sources */,
-				EBBBCE412907BE5C004404ED /* commentPostRequest.swift in Sources */,
+				EBBBCE412907BE5C004404ED /* CommentPostRequest.swift in Sources */,
 				EBC7609B28B5F32C006ED770 /* HomeTabManViewController.swift in Sources */,
 				EBB1ADC629057A6B00285672 /* SavePostRequest.swift in Sources */,
 				EBF510DA28AFBD060098BD5A /* SendMailRequest.swift in Sources */,
@@ -884,6 +890,7 @@
 				EB86424D29068D9700AFFAEC /* FollowTableViewCell.swift in Sources */,
 				EBF510DE28AFBD890098BD5A /* InspectMailRequest.swift in Sources */,
 				EBF510D528AFBC570098BD5A /* NickCheckRequest.swift in Sources */,
+				EBBBCE4C2907F8A2004404ED /* CencelSavePostResponse.swift in Sources */,
 				EB97FA0528E47F0700A43CEA /* HomeImageCollectionViewCell.swift in Sources */,
 				EB8642402906896600AFFAEC /* FollowerTabViewController.swift in Sources */,
 				EBCCD5622903E75A00B6BAA6 /* GenderSingleRequest.swift in Sources */,
@@ -898,6 +905,7 @@
 				EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */,
 				EB67130F2901336D00B8F8FC /* UserSingleResponse.swift in Sources */,
 				EBCCD5542903E52600B6BAA6 /* GenderCheckboardRequest.swift in Sources */,
+				EBBBCE4A2907F882004404ED /* CencelSavePostRequest.swift in Sources */,
 				EB1751F628AA78F8009FEFBF /* PWFindTabViewController.swift in Sources */,
 				EBB1ADC829057A7700285672 /* SavePostResponse.swift in Sources */,
 				EB1751F428AA78EA009FEFBF /* FindTabManViewController.swift in Sources */,

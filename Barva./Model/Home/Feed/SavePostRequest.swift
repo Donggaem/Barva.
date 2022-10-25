@@ -9,6 +9,6 @@ import Foundation
 
 struct SavePostRequest: Encodable {
     
-    var post_id: String
+    var post_id: Int
     
 }
