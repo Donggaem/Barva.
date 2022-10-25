@@ -27,7 +27,6 @@ struct BarvaURL {
     static let updatePWURL = "http://3.34.183.110:3003/auth/updatePw"
     static let pwFindEmailURL = "http://3.34.183.110:3003/auth/findPwMail"
     
-    
     //MARK: - 홈
     static let newestCheckerboardURL = "http://3.34.183.110:3003/sort/newestCheckerboard"
     static let newestSingleURL = "http://3.34.183.110:3003/sort/newestSingle"
@@ -35,10 +34,9 @@ struct BarvaURL {
     static let genderCheckerboardURL = "http://3.34.183.110:3003/sort/genderCheckerboard"
     static let genderSingleURL = "http://3.34.183.110:3003/sort/genderSingle"
     
-    
-    //MARK: - 피드 저장
+    //MARK: - 게시글 저장
     static let savePostURL = "http://3.34.183.110:3003/user/savePost"
-    static let cencelSavePostURL = "http://3.34.183.110:3003/user/cancelSavePost"
+    static let cancelSavePostURL = "http://3.34.183.110:3003/user/cancelSavePost"
     
     //MARK: - 업로드
     static let uploadPostURL = "http://3.34.183.110:3003/upload/uploadPost"
@@ -48,6 +46,7 @@ struct BarvaURL {
     
     //MARK: - 프로필
     static let profileURL = "http://3.34.183.110:3003/user/myProfile"
+    static let otherProfileURL = "http://3.34.183.110:3003/sort/otherProfile"
     
     static let setProfileImageURL = "http://3.34.183.110:3003/upload/setProfileImg"
     static let setProfileURL = "http://3.34.183.110:3003/user/setProfileIntro"
@@ -56,5 +55,9 @@ struct BarvaURL {
     static let userSingleURL = "http://3.34.183.110:3003/user/userSingle"
     
     static let storageImagesURL = ""
+    
+    //MARK: - 팔로우
+    static let addFollowingURL = "http://3.34.183.110:3003/user/addFollowing"
+    static let cancelFollowingURL = "http://3.34.183.110:3003/user/cancelFollowing"
 
 }

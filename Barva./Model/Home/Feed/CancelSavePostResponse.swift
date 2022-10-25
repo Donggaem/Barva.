@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct CencelSavePostResponse: Decodable{
+struct CancelSavePostResponse: Decodable{
     
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: CencelSavePostData?
+    var data: CancelSavePostData?
 }
 
-struct CencelSavePostData: Decodable {
+struct CancelSavePostData: Decodable {
     var err: String
 }

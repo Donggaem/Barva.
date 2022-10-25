@@ -35,7 +35,7 @@ class FeedViewController: UIViewController {
     var paramSort = ""
     var paramGender = ""
     
-    var feedName = ""
+    var feedNick = ""
     var feedSpec = ""
     var feedText = ""
     var feedProfilImg = ""
@@ -226,16 +226,16 @@ class FeedViewController: UIViewController {
             }
     }
     
-    //MARK: - POST CENCELSAVEPOST
-    private func postCencelSavePost(_ parameters: CencelSavePostRequest){
-        AF.request(BarvaURL.cencelSavePostURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
+    //MARK: - POST CANCELSAVEPOST
+    private func postCancelSavePost(_ parameters: CancelSavePostRequest){
+        AF.request(BarvaURL.cancelSavePostURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
             .validate()
-            .responseDecodable(of: CencelSavePostResponse.self) { [self] response in
+            .responseDecodable(of: CancelSavePostResponse.self) { [self] response in
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess == true {
                         
-                        BarvaLog.debug("postCencelSavePost - Success")
+                        BarvaLog.debug("postCancelSavePost - Success")
                         let succedd_alert = UIAlertController(title: "취소완료", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         succedd_alert.addAction(okAction)
@@ -243,7 +243,7 @@ class FeedViewController: UIViewController {
                         
                         
                     } else {
-                        BarvaLog.error("postCencelSavePost - fail")
+                        BarvaLog.error("postCancelSavePost - fail")
                         let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         fail_alert.addAction(okAction)
@@ -251,7 +251,7 @@ class FeedViewController: UIViewController {
                         
                     }
                 case .failure(let error):
-                    BarvaLog.error("postCencelSavePost - err")
+                    BarvaLog.error("postCancelSavePost - err")
                     print(error.localizedDescription)
                     let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
@@ -289,7 +289,7 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.bookmarkBool = feedArray[index].isSave ?? false
         
         
-        feedName = feedArray[index].post_users.user_nick
+        feedNick = feedArray[index].post_users.user_nick
         feedSpec = "\(feedArray[index].user_gender) | \(feedArray[index].user_tall)cm | \(feedArray[index].user_weight)kg"
         feedText = feedArray[index].post_content
         feedProfilImg = feedArray[index].post_users.profile_url
@@ -301,7 +301,6 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
     }
     
     func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
-        print("피드드래깅 \(targetIndex), \(pagerView.currentIndex)")
         self.feedPageControl.currentPage = targetIndex
     }
 }
@@ -315,10 +314,9 @@ extension FeedViewController: NaviAction {
             postSavePost(param)
             
         }else {
-            print(postid)
             let postid = postid
-            let param = CencelSavePostRequest(post_id: postid)
-            postCencelSavePost(param)
+            let param = CancelSavePostRequest(post_id: postid)
+            postCancelSavePost(param)
         }
     }
     
@@ -327,16 +325,18 @@ extension FeedViewController: NaviAction {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let chatVC = storyBoard.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
         self.navigationController?.pushViewController(chatVC, animated: true)
-        chatVC.paramFeedName = feedName
+        chatVC.paramFeedName = feedNick
         chatVC.paramFeedSpec = feedSpec
         chatVC.paramFeedImg = feedProfilImg
         chatVC.paramFeedText = feedText
     }
     
-    func moveOthereVC() {
+    func moveOtherVC() {
         let storyBoard = UIStoryboard(name: "ProfileTab", bundle: nil)
-        let othereVC = storyBoard.instantiateViewController(withIdentifier: "OthereUserProfileViewController") as! OthereUserProfileViewController
-        self.navigationController?.pushViewController(othereVC, animated: true)
+        let otherVC = storyBoard.instantiateViewController(withIdentifier: "OtherUserProfileViewController") as! OtherUserProfileViewController
+        self.navigationController?.pushViewController(otherVC, animated: true)
+        
+        otherVC.paramOtherNick = feedNick
     }
     
     

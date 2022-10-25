@@ -1,29 +1,29 @@
 //
-//  ProfileResponse.swift
+//  OtherProfileResponse.swift
 //  Barva.
 //
-//  Created by 김동겸 on 2022/10/09.
+//  Created by 김동겸 on 2022/10/26.
 //
 
 import Foundation
 
-struct ProfileResponse: Decodable {
+struct OtherProfileResponse:Decodable {
     
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: ProfileInfo?
-    
+    var data: OtherProfileInfo?
 }
 
-struct ProfileInfo: Decodable {
+struct OtherProfileInfo: Decodable {
     
-    var myProfileInfo: Userdata?
+    var otherProfileInfo: OtherProfileData?
     var err: String?
 }
 
-struct Userdata: Decodable {
-    var user_name:String
+struct OtherProfileData: Decodable {
+    
+    var user_name: String
     var user_nick: String
     var profile_url: String
     var user_introduce: String

@@ -16,6 +16,10 @@ class ProfileTabViewController: UIViewController {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userIntro: UILabel!
     
+    @IBOutlet weak var count_Post: UILabel!
+    @IBOutlet weak var count_Follower: UILabel!
+    @IBOutlet weak var count_Following: UILabel!
+    
     @IBOutlet weak var modifyBtn: UIButton!
     @IBOutlet weak var settingBtn: UIButton!
     
@@ -84,7 +88,8 @@ class ProfileTabViewController: UIViewController {
     private func getProfile() {
         AF.request(BarvaURL.profileURL, method: .get, headers: header)
             .validate()
-            .responseDecodable(of: ProfileResponse.self) { response in
+            .responseDecodable(of: ProfileResponse.self) { [weak self] response in
+                guard let self = self else {return}
                 switch response.result {
                 case .success(let response):
                     if response.isSuccess == true {
@@ -92,29 +97,36 @@ class ProfileTabViewController: UIViewController {
                         
                         if response.data != nil {
                             if response.data?.myProfileInfo != nil{
+                                
+                                self.count_Post.text = String(response.data?.myProfileInfo?.countPost ?? 0)
+                                self.count_Follower.text = String(response.data?.myProfileInfo?.countFollower ?? 0)
+                                self.count_Following.text = String(response.data?.myProfileInfo?.countFollowing ?? 0)
+                                
                                 if let nick = response.data?.myProfileInfo?.user_nick {
-                                    print(nick)
                                     self.userNick.text = nick
                                 }else {
                                     self.userNick.text = "이름없음"
                                     
                                 }
                                 
+                                if let name = response.data?.myProfileInfo?.user_name {
+                                    self.userName.text = name
+                                }else {
+                                    self.userName.text = "이름없음"
+                                    
+                                }
+                                
                                 if let intro = response.data?.myProfileInfo?.user_introduce {
-                                    print(intro)
                                     self.userIntro.text = intro
                                 }else {
                                     self.userIntro.text = ""
                                 }
                                 
                                 if response.data?.myProfileInfo?.profile_url == "" || response.data?.myProfileInfo?.profile_url == nil {
-                                    print("기본 이미지")
                                     
                                     self.profileImageView.image = UIImage(systemName: "person.crop.circle")
 
                                 }else {
-                                    print("이미지")
-                                    print(response.data?.myProfileInfo?.profile_url ?? "")
                                     let url = URL(string: response.data?.myProfileInfo?.profile_url ?? "")
 //                                    let url = URL(string: "https://barva-dot.s3.ap-northeast-2.amazonaws.com")
                                     self.profileImageView.kf.setImage(with: url)
@@ -127,9 +139,6 @@ class ProfileTabViewController: UIViewController {
                             
                     } else {
                         print(BarvaLog.error("getProfile-fail"))
-                        if let fail = response.data?.err{
-                            print(fail)
-                        }
                         let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         fail_alert.addAction(okAction)

@@ -150,7 +150,6 @@ extension SexBoardTabViewController: UICollectionViewDataSource, UICollectionVie
         let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
         self.navigationController?.pushViewController(feedVC, animated: true)
         
-        print("남여\(indexPath.row)")
         feedVC.paramSeletIndex = indexPath.row
         feedVC.paramSort = "Gender"
         feedVC.paramGender = selectGender

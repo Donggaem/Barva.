@@ -12,7 +12,7 @@ import Kingfisher
 protocol NaviAction: AnyObject {
     
     func moveChatVC()
-    func moveOthereVC()
+    func moveOtherVC()
     func checkBookmark(bookmark: Bool)
     
 }
@@ -89,7 +89,7 @@ class FeedViewCell: FSPagerViewCell {
         }
     }
     @IBAction func othereProfile(_ sender: UIButton) {
-        self.delegate?.moveOthereVC()
+        self.delegate?.moveOtherVC()
     }
     
     //MARK: - INNER FUNC

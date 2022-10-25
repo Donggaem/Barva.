@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CencelSavePostRequest: Encodable {
+struct CancelSavePostRequest: Encodable {
     
     var post_id: Int
 }
