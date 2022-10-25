@@ -24,7 +24,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Jyk-xv-P7f">
             <objects>
-                <navigationController id="4XO-S2-OF2" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNav" id="4XO-S2-OF2" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="H2n-gk-n2r">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

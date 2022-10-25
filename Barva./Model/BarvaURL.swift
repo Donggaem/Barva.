@@ -12,12 +12,15 @@ struct BarvaURL {
     //MARK: - 로그인
     static let loginURL = "http://3.34.183.110:3003/auth/login"
     
+    
     //MARK: - 회원가입
     static let signupURL = "http://3.34.183.110:3003/auth/signup"
     static let nickCheckURL = "http://3.34.183.110:3003/auth/isExistNick"
     static let idCheckURL = "http://3.34.183.110:3003/auth/isExistId"
     static let sendMailURL = "http://3.34.183.110:3003/auth/sendMail"
     static let insepectMailURL = "http://3.34.183.110:3003/auth/authMail"
+    
+    static let resignURL = "http://3.34.183.110:3003/auth/resign"
     
     //MARK: - 아이디, 비번 찾기
     static let idFindURL = "http://3.34.183.110:3003/auth/findId"
@@ -39,8 +42,10 @@ struct BarvaURL {
     
     //MARK: - 업로드
     static let uploadPostURL = "http://3.34.183.110:3003/upload/uploadPost"
-    
 
+    //MARK: - 채팅
+    static let commentPostURL = "http://3.34.183.110:3003/upload/commentPost"
+    
     //MARK: - 프로필
     static let profileURL = "http://3.34.183.110:3003/user/myProfile"
     
