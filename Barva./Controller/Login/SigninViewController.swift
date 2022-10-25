@@ -274,6 +274,13 @@ class SigninViewController: UIViewController {
         checkNumBtn.layer.cornerRadius = 14
         signinBtn.layer.cornerRadius = 5
         
+        //버튼 색깔셋
+        nickBtn.setColor_false(button: nickBtn)
+        idBtn.setColor_false(button: idBtn)
+        emailBtn.setColor_false(button: emailBtn)
+        checkNumBtn.setColor_false(button: checkNumBtn)
+        signinBtn.setColor_false(button: signinBtn)
+        
         btnHidden(msgBtn: msgIdBtn)
         btnHidden(msgBtn: msgPwBtn)
         btnHidden(msgBtn: msgNickBtn)
@@ -287,32 +294,36 @@ class SigninViewController: UIViewController {
         self.nickNameTextField.addAction(UIAction(handler: { _ in
             if self.nickNameTextField.text?.isEmpty == true {
                 self.nickBtn.isEnabled = false
-                self.nickBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
+                self.nickBtn.setColor_false(button: self.nickBtn)
                 self.btnHidden(msgBtn: self.msgNickBtn)
             } else {
                 self.nickBtn.isEnabled = true
-                self.nickBtn.backgroundColor = .black
+                self.nickBtn.setColor_true(button: self.nickBtn)
+                
             }
         }), for: .editingChanged)
         
         self.idTextField.addAction(UIAction(handler: { _ in
             if self.idTextField.text?.isEmpty == true {
                 self.idBtn.isEnabled = false
-                self.idBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
+                self.idBtn.setColor_false(button: self.idBtn)
                 self.btnHidden(msgBtn: self.msgIdBtn)
             } else {
                 self.idBtn.isEnabled = true
-                self.idBtn.backgroundColor = .black
+                self.idBtn.setColor_true(button: self.idBtn)
+
             }
         }), for: .editingChanged)
         
         self.emailTextField.addAction(UIAction(handler: { _ in
             if self.emailTextField.text?.isEmpty == true {
                 self.emailBtn.isEnabled = false
-                self.emailBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
+                self.emailBtn.setColor_false(button: self.emailBtn)
+
             } else {
                 self.emailBtn.isEnabled = true
-                self.emailBtn.backgroundColor = .black
+                self.emailBtn.setColor_true(button: self.emailBtn)
+
             }
         }), for: .editingChanged)
         
@@ -320,11 +331,12 @@ class SigninViewController: UIViewController {
             if self.checkNumTextField.text?.isEmpty == true {
                 self.btnHidden(msgBtn: self.msgCheckNumBtn)
                 self.checkNumBtn.isEnabled = false
-                self.checkNumBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
+                self.checkNumBtn.setColor_false(button: self.checkNumBtn)
                 self.btnHidden(msgBtn: self.msgCheckNumBtn)
             } else {
                 self.checkNumBtn.isEnabled = true
-                self.checkNumBtn.backgroundColor = .black
+                self.checkNumBtn.setColor_true(button: self.checkNumBtn)
+
             }
         }), for: .editingChanged)
         
@@ -690,11 +702,11 @@ extension SigninViewController: UITextFieldDelegate{
         if  !(self.pwTextField.text?.isEmpty ?? true) && !(self.pwCheckTextField.text?.isEmpty ?? true) &&  !(self.nameTextField.text?.isEmpty ?? true)
                 && isSameBothTextField(pwTextField, pwCheckTextField) {
             signinBtn.isEnabled = true
-            signinBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            signinBtn.setColor_true(button: signinBtn)
         }
         else {
             signinBtn.isEnabled = false
-            signinBtn.backgroundColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
+            signinBtn.setColor_false(button: signinBtn)
         }
     }
     
@@ -736,4 +748,16 @@ extension UIButton {
     )
     setAttributedTitle(attributedString, for: .normal)
   }
+    func setColor_false(button: UIButton) {
+        button.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
+        button.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
+    }
+    
+    func setColor_true(button: UIButton) {
+        button.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        button.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
+    }
+    
 }

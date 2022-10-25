@@ -36,7 +36,9 @@ class HomeViewController: UIViewController {
     private func setUI() {
                 
         //탭바 설정
-        self.tabBarController?.tabBar.tintColor = UIColor(red: 0.262, green: 0.262, blue: 0.262, alpha: 1) //탭바 선택 아이템 색
+//        self.tabBarController?.tabBar.tintColor = UIColor(red: 0.262, green: 0.262, blue: 0.262, alpha: 1) //탭바 선택 아이템 색
+        
+        self.tabBarController?.tabBar.tintColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1) //탭바 선택 아이템 색
         self.tabBarController?.tabBar.unselectedItemTintColor = UIColor(red: 0.262, green: 0.262, blue: 0.262, alpha: 1) //탭바 미선택 아이템 색
         self.tabBarController?.tabBar.backgroundColor = .white //탭바 배경색
         self.tabBarController?.tabBar.layer.borderWidth = 1 //탭바 보더

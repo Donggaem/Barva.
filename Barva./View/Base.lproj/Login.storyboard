@@ -51,6 +51,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="nZv-7M-ME9"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="13"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="로그인">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -101,7 +102,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="barva." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1w-h2-ujd">
-                                <rect key="frame" x="113" y="147.33333333333334" width="165" height="70"/>
+                                <rect key="frame" x="112.66666666666669" y="147.33333333333334" width="165" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="gtK-y4-X2c"/>
                                 </constraints>
@@ -153,12 +154,11 @@
                             <constraint firstItem="cOq-2E-Z7h" firstAttribute="leading" secondItem="UG7-KJ-I29" secondAttribute="leading" constant="30" id="LrP-T2-s9Z"/>
                             <constraint firstItem="8Md-0l-T8p" firstAttribute="top" secondItem="frt-GO-woG" secondAttribute="bottom" constant="14" id="aVw-ti-Afh"/>
                             <constraint firstItem="frt-GO-woG" firstAttribute="leading" secondItem="6b7-M2-bBW" secondAttribute="leading" constant="30" id="cet-2X-H2m"/>
-                            <constraint firstAttribute="trailing" secondItem="V1w-h2-ujd" secondAttribute="trailing" constant="112" id="dpf-iM-qb6"/>
-                            <constraint firstItem="V1w-h2-ujd" firstAttribute="leading" secondItem="UG7-KJ-I29" secondAttribute="leading" constant="113" id="j75-EW-1hC"/>
                             <constraint firstItem="cOq-2E-Z7h" firstAttribute="top" secondItem="V1w-h2-ujd" secondAttribute="bottom" constant="90" id="mEB-qK-Rce"/>
                             <constraint firstAttribute="bottom" secondItem="8Md-0l-T8p" secondAttribute="bottom" constant="309" id="mhw-qk-vpv"/>
                             <constraint firstItem="6b7-M2-bBW" firstAttribute="trailing" secondItem="frt-GO-woG" secondAttribute="trailing" constant="30" id="n6L-7b-J2U"/>
                             <constraint firstItem="frt-GO-woG" firstAttribute="top" secondItem="cOq-2E-Z7h" secondAttribute="bottom" constant="45" id="sNf-ZU-Hp5"/>
+                            <constraint firstItem="V1w-h2-ujd" firstAttribute="centerX" secondItem="UG7-KJ-I29" secondAttribute="centerX" id="vkZ-uc-crK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iSg-R5-lpJ"/>
@@ -198,7 +198,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="E5A-QD-wNs"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="13"/>
+                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="13"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="가입하기">
                                                     <color key="titleColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -262,7 +262,7 @@
                                                                                     <constraint firstAttribute="width" constant="78" id="IHP-cD-SbO"/>
                                                                                     <constraint firstAttribute="height" constant="28" id="lHT-bd-tLG"/>
                                                                                 </constraints>
-                                                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="10"/>
+                                                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="10"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="중복화인">
                                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -324,7 +324,7 @@
                                                                                     <constraint firstAttribute="height" constant="28" id="3R4-8g-oHC"/>
                                                                                     <constraint firstAttribute="width" constant="78" id="GuO-vJ-Nqi"/>
                                                                                 </constraints>
-                                                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="10"/>
+                                                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="10"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="중복화인">
                                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -454,7 +454,7 @@
                                                                                     <constraint firstAttribute="width" constant="78" id="bUP-q0-Wtz"/>
                                                                                     <constraint firstAttribute="height" constant="28" id="f7X-en-wt0"/>
                                                                                 </constraints>
-                                                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="10"/>
+                                                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="10"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="인증번호 발송">
                                                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -501,7 +501,7 @@
                                                                             <constraint firstAttribute="height" constant="28" id="WCr-T3-wds"/>
                                                                             <constraint firstAttribute="width" constant="78" id="Zgp-PE-25I"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="10"/>
+                                                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="10"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="인증하기">
                                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -813,7 +813,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="TTL-fc-btx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="13"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="아이디 찾기">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -928,7 +928,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="haa-r4-bcp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="13"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="비밀번호 재설정">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1013,7 +1013,7 @@
                                                             <constraint firstAttribute="width" constant="78" id="N5G-An-DLe"/>
                                                             <constraint firstAttribute="height" constant="28" id="QJe-jR-Q6g"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="10"/>
+                                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="10"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="인증번호 발송">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1058,7 +1058,7 @@
                                                             <constraint firstAttribute="width" constant="78" id="N3g-rY-xfM"/>
                                                             <constraint firstAttribute="height" constant="28" id="jHl-MW-nhC"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="10"/>
+                                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="10"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" title="인증하기">
                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1266,7 +1266,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="if9-rF-sAa"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="13"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="비밀번호 재설정">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

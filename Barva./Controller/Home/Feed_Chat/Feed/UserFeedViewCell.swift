@@ -24,15 +24,18 @@ class UserFeedViewCell: FSPagerViewCell {
     }
     @IBOutlet weak var userName_Feed: UILabel!
     @IBOutlet weak var userSpec_Feed: UILabel!
+    @IBOutlet weak var userFeedText: UILabel!
+    @IBOutlet weak var userFeedDate: UILabel!
     @IBOutlet weak var userFeedImg: FSPagerView!{
         didSet {
             self.userFeedImg.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
             self.userFeedImg.itemSize = FSPagerView.automaticSize
         }
     }
-    @IBOutlet weak var textView_Feed: UITextView!
+
     @IBOutlet weak var heartBtn: UIButton!
     
+    @IBOutlet weak var userHeartCount: UILabel!
     weak var delegate: UserFeedNaviAction?
 
     

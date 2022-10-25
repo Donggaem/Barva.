@@ -48,18 +48,8 @@
                         </label>
                     </subviews>
                 </stackView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AfA-ij-y3g">
-                    <rect key="frame" x="22" y="485.33333333333326" width="346" height="70"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="70" id="GbJ-lw-HJc"/>
-                        <constraint firstAttribute="width" constant="346" id="OM9-FN-PrE"/>
-                    </constraints>
-                    <color key="textColor" systemColor="labelColor"/>
-                    <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="11"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esr-2c-6iP">
-                    <rect key="frame" x="22" y="563.33333333333337" width="64" height="12"/>
+                    <rect key="frame" x="22" y="503" width="64" height="12"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="12" id="aRz-jD-69a"/>
                     </constraints>
@@ -96,9 +86,9 @@
                         <action selector="othereProfile:" destination="9cz-Ha-a7l" eventType="touchUpInside" id="hfp-pJ-gNy"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yy0-S0-Mab">
-                    <rect key="frame" x="51" y="446.33333333333331" width="41.333333333333343" height="20.333333333333314"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yy0-S0-Mab">
+                    <rect key="frame" x="51" y="448.66666666666669" width="8" height="15.666666666666686"/>
+                    <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -131,28 +121,43 @@
                         <action selector="heartBtnPressed:" destination="9cz-Ha-a7l" eventType="touchUpInside" id="AvQ-Ha-VTK"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글글글" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOm-gu-KzP">
+                    <rect key="frame" x="22" y="481.66666666666669" width="346" height="13.333333333333314"/>
+                    <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="11"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.10.22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqR-qb-M6y">
+                    <rect key="frame" x="22" y="523" width="48" height="11"/>
+                    <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="9"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="0Nf-c8-xCV"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="pxy-47-fr1" firstAttribute="centerY" secondItem="ptj-Al-5Rh" secondAttribute="centerY" id="3OC-to-L6g"/>
                 <constraint firstItem="ptj-Al-5Rh" firstAttribute="leading" secondItem="0Nf-c8-xCV" secondAttribute="leading" constant="22" id="5ek-hY-RH2"/>
-                <constraint firstItem="AfA-ij-y3g" firstAttribute="top" secondItem="gaB-1k-BXE" secondAttribute="bottom" constant="19.670000000000002" id="8k7-GH-zxN"/>
                 <constraint firstItem="ptj-Al-5Rh" firstAttribute="top" secondItem="9cz-Ha-a7l" secondAttribute="top" constant="5" id="DIA-Cm-BwI"/>
+                <constraint firstItem="aqR-qb-M6y" firstAttribute="top" secondItem="Esr-2c-6iP" secondAttribute="bottom" constant="8" id="EUO-aR-gaQ"/>
                 <constraint firstItem="mK4-tM-wlE" firstAttribute="leading" secondItem="0Nf-c8-xCV" secondAttribute="leading" id="FOh-2S-ilt"/>
-                <constraint firstItem="Esr-2c-6iP" firstAttribute="top" secondItem="AfA-ij-y3g" secondAttribute="bottom" constant="8" id="O3E-mb-IYf"/>
+                <constraint firstItem="qOm-gu-KzP" firstAttribute="leading" secondItem="9cz-Ha-a7l" secondAttribute="leading" constant="22" id="QXv-DU-H6C"/>
+                <constraint firstItem="0Nf-c8-xCV" firstAttribute="trailing" secondItem="qOm-gu-KzP" secondAttribute="trailing" constant="22" id="T3I-x6-IuQ"/>
                 <constraint firstItem="Yy0-S0-Mab" firstAttribute="leading" secondItem="gaB-1k-BXE" secondAttribute="trailing" constant="9" id="U7E-BN-7A4"/>
                 <constraint firstItem="pxy-47-fr1" firstAttribute="leading" secondItem="ptj-Al-5Rh" secondAttribute="trailing" constant="8" id="UqW-Gx-7w6"/>
+                <constraint firstItem="qOm-gu-KzP" firstAttribute="top" secondItem="gaB-1k-BXE" secondAttribute="bottom" constant="16" id="Wuh-b2-u4a"/>
                 <constraint firstItem="Yy0-S0-Mab" firstAttribute="centerY" secondItem="gaB-1k-BXE" secondAttribute="centerY" id="Zdf-mg-oA7"/>
                 <constraint firstAttribute="trailing" secondItem="P6y-tk-kJ1" secondAttribute="trailing" constant="22" id="cml-r3-X0Q"/>
+                <constraint firstItem="Esr-2c-6iP" firstAttribute="top" secondItem="qOm-gu-KzP" secondAttribute="bottom" constant="8" id="dHh-eM-tD5"/>
                 <constraint firstItem="gaB-1k-BXE" firstAttribute="leading" secondItem="0Nf-c8-xCV" secondAttribute="leading" constant="22" id="dVL-jO-60Q"/>
                 <constraint firstItem="gaB-1k-BXE" firstAttribute="top" secondItem="mK4-tM-wlE" secondAttribute="bottom" constant="12" id="ef3-oq-Ikd"/>
                 <constraint firstItem="mK4-tM-wlE" firstAttribute="top" secondItem="pxy-47-fr1" secondAttribute="bottom" constant="11" id="gmZ-gN-hIT"/>
-                <constraint firstItem="Esr-2c-6iP" firstAttribute="leading" secondItem="0Nf-c8-xCV" secondAttribute="leading" constant="22" id="ohH-eX-Q9W"/>
+                <constraint firstItem="aqR-qb-M6y" firstAttribute="leading" secondItem="qOm-gu-KzP" secondAttribute="leading" id="la2-oZ-MFX"/>
+                <constraint firstItem="Esr-2c-6iP" firstAttribute="leading" secondItem="qOm-gu-KzP" secondAttribute="leading" id="nff-zy-dX0"/>
                 <constraint firstItem="b0C-wK-Tzp" firstAttribute="leading" secondItem="9cz-Ha-a7l" secondAttribute="leading" constant="17" id="p3z-HI-dCd"/>
                 <constraint firstItem="P6y-tk-kJ1" firstAttribute="top" secondItem="mK4-tM-wlE" secondAttribute="bottom" constant="12" id="qxL-Gc-P9H"/>
                 <constraint firstItem="mK4-tM-wlE" firstAttribute="trailing" secondItem="0Nf-c8-xCV" secondAttribute="trailing" id="sKs-aP-Z3K"/>
-                <constraint firstItem="AfA-ij-y3g" firstAttribute="leading" secondItem="0Nf-c8-xCV" secondAttribute="leading" constant="22" id="tL6-fs-KPh"/>
                 <constraint firstItem="b0C-wK-Tzp" firstAttribute="top" secondItem="9cz-Ha-a7l" secondAttribute="top" constant="3" id="to9-zU-AVc"/>
                 <constraint firstItem="b0C-wK-Tzp" firstAttribute="leading" secondItem="9cz-Ha-a7l" secondAttribute="leading" constant="17" id="uv9-V0-5CV"/>
                 <constraint firstItem="b0C-wK-Tzp" firstAttribute="top" secondItem="9cz-Ha-a7l" secondAttribute="top" constant="3" id="wtk-wH-cNt"/>
@@ -160,12 +165,14 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="bookmarkBtn" destination="P6y-tk-kJ1" id="dLw-cs-TkE"/>
+                <outlet property="feedDay" destination="aqR-qb-M6y" id="pnb-eq-T12"/>
                 <outlet property="feedImage" destination="mK4-tM-wlE" id="pw5-J8-JyO"/>
                 <outlet property="feedNameLabel" destination="bvK-Ha-wgh" id="ZbM-AT-Q6T"/>
                 <outlet property="feedProfileImg" destination="ptj-Al-5Rh" id="J3j-Nm-igH"/>
                 <outlet property="feedSpecLabel" destination="Jrv-BT-BMm" id="lhr-93-65H"/>
-                <outlet property="feedTextView" destination="AfA-ij-y3g" id="W2g-RV-ODF"/>
+                <outlet property="feedText" destination="qOm-gu-KzP" id="eHJ-wy-WwB"/>
                 <outlet property="heartBtn" destination="gaB-1k-BXE" id="PZa-1n-iqa"/>
+                <outlet property="heartCount" destination="Yy0-S0-Mab" id="M23-ki-78H"/>
             </connections>
             <point key="canvasLocation" x="347.69230769230768" y="24.526066350710899"/>
         </view>
@@ -173,9 +180,6 @@
     <resources>
         <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="heart" catalog="system" width="128" height="107"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

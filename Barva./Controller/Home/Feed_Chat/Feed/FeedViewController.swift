@@ -210,7 +210,7 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         
         cell.feedNameLabel.text = feedArray[index].post_users.user_nick
         cell.feedSpecLabel.text = "\(feedArray[index].user_gender) | \(feedArray[index].user_tall)cm | \(feedArray[index].user_weight)kg"
-        cell.feedTextView.text = feedArray[index].post_content
+        cell.feedText.text = feedArray[index].post_content
         cell.paramImg = feedArray[index].post_url
         
         feedName = feedArray[index].post_users.user_nick

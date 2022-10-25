@@ -52,6 +52,11 @@ class LoginViewController: UIViewController {
         loginBtn.layer.cornerRadius = 5
         loginBtn.isEnabled = false
         
+        //다음 버튼 색 변경
+        loginBtn.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
+        loginBtn.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        loginBtn.layer.borderWidth = 1
+        loginBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
         
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
@@ -135,11 +140,15 @@ extension LoginViewController: UITextFieldDelegate {
         
         if(willActive == true) {
             //다음 버튼 색 변경
-            loginBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            loginBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            loginBtn.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
             loginBtn.isEnabled = true
         } else {
             //다음 버튼 색 변경
-            loginBtn.backgroundColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
+            loginBtn.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
+            loginBtn.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            loginBtn.layer.borderWidth = 1
+            loginBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
             loginBtn.isEnabled = false
         }
     }

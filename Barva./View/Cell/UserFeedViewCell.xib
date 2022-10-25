@@ -77,24 +77,13 @@
                                 <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="heartBtnPressed:" destination="kQ3-Or-DLq" eventType="touchUpInside" id="VTn-kq-iQ5"/>
-                                <action selector="modifyBtnPressed:" destination="kQ3-Or-DLq" eventType="touchUpInside" id="hSg-wM-syl"/>
+                                <action selector="heartBtnPressed:" destination="kQ3-Or-DLq" eventType="touchUpInside" id="0KN-pA-Vrf"/>
                             </connections>
                         </button>
                     </subviews>
                 </stackView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a7r-kn-fXc">
-                    <rect key="frame" x="22" y="484.66666666666674" width="346" height="70"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="346" id="OYo-DK-FS6"/>
-                        <constraint firstAttribute="height" constant="70" id="ymf-nm-VKc"/>
-                    </constraints>
-                    <color key="textColor" systemColor="labelColor"/>
-                    <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="11"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GM-Sr-VUa">
-                    <rect key="frame" x="22" y="562.66666666666663" width="64" height="12"/>
+                    <rect key="frame" x="22" y="506" width="64" height="12"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="12" id="exb-uy-n6W"/>
                     </constraints>
@@ -131,34 +120,60 @@
                         <action selector="othereProfile:" destination="kQ3-Or-DLq" eventType="touchUpInside" id="yIU-zi-3Zl"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uW-Zs-nOg">
+                    <rect key="frame" x="51" y="451.66666666666669" width="8" height="15.666666666666686"/>
+                    <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.10.22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yn-4O-7sH">
+                    <rect key="frame" x="22" y="526" width="48" height="11"/>
+                    <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="9"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글글글" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vD1-aw-WEe">
+                    <rect key="frame" x="22" y="484.66666666666669" width="346" height="13.333333333333314"/>
+                    <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="11"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="BEh-Yy-kVI"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="vD1-aw-WEe" secondAttribute="trailing" constant="22" id="59v-fO-V5m"/>
+                <constraint firstItem="5uW-Zs-nOg" firstAttribute="centerY" secondItem="mbs-55-1Hf" secondAttribute="centerY" id="5Hv-rK-fSL"/>
+                <constraint firstItem="3Yn-4O-7sH" firstAttribute="top" secondItem="6GM-Sr-VUa" secondAttribute="bottom" constant="8" id="5fM-Ct-CvV"/>
                 <constraint firstItem="l15-xC-Gna" firstAttribute="top" secondItem="tq8-XL-NNK" secondAttribute="bottom" constant="15" id="6Du-GM-nII"/>
-                <constraint firstItem="a7r-kn-fXc" firstAttribute="top" secondItem="l15-xC-Gna" secondAttribute="bottom" constant="16" id="7U1-XE-JXY"/>
-                <constraint firstItem="a7r-kn-fXc" firstAttribute="leading" secondItem="BEh-Yy-kVI" secondAttribute="leading" constant="22" id="Cfv-re-7oD"/>
                 <constraint firstItem="C9j-dC-FMd" firstAttribute="top" secondItem="kQ3-Or-DLq" secondAttribute="top" constant="3" id="JC6-eL-C9T"/>
                 <constraint firstItem="BEh-Yy-kVI" firstAttribute="trailing" secondItem="eag-oW-5Dm" secondAttribute="trailing" constant="22" id="LXd-8C-acZ"/>
                 <constraint firstItem="LRl-Co-PA0" firstAttribute="centerY" secondItem="GDD-yw-lFR" secondAttribute="centerY" id="M7E-mg-iBZ"/>
                 <constraint firstItem="tq8-XL-NNK" firstAttribute="top" secondItem="LRl-Co-PA0" secondAttribute="bottom" constant="11" id="OYn-3c-lcK"/>
                 <constraint firstItem="GDD-yw-lFR" firstAttribute="top" secondItem="kQ3-Or-DLq" secondAttribute="top" constant="5" id="OrQ-vj-26t"/>
+                <constraint firstItem="6GM-Sr-VUa" firstAttribute="leading" secondItem="vD1-aw-WEe" secondAttribute="leading" id="PPk-Zd-xak"/>
                 <constraint firstItem="tq8-XL-NNK" firstAttribute="leading" secondItem="BEh-Yy-kVI" secondAttribute="leading" id="Pd8-LD-tPN"/>
                 <constraint firstItem="eag-oW-5Dm" firstAttribute="top" secondItem="kQ3-Or-DLq" secondAttribute="top" constant="10" id="SX5-ex-4oc"/>
+                <constraint firstItem="6GM-Sr-VUa" firstAttribute="top" secondItem="vD1-aw-WEe" secondAttribute="bottom" constant="8" id="UZz-oU-hxS"/>
+                <constraint firstItem="vD1-aw-WEe" firstAttribute="leading" secondItem="BEh-Yy-kVI" secondAttribute="leading" constant="22" id="V7O-jh-HEY"/>
+                <constraint firstItem="3Yn-4O-7sH" firstAttribute="leading" secondItem="vD1-aw-WEe" secondAttribute="leading" id="Wb1-jt-x7k"/>
                 <constraint firstItem="C9j-dC-FMd" firstAttribute="top" secondItem="kQ3-Or-DLq" secondAttribute="top" constant="3" id="Zh4-KO-wxh"/>
                 <constraint firstItem="C9j-dC-FMd" firstAttribute="leading" secondItem="kQ3-Or-DLq" secondAttribute="leading" constant="17" id="af6-m1-mtg"/>
-                <constraint firstItem="6GM-Sr-VUa" firstAttribute="leading" secondItem="BEh-Yy-kVI" secondAttribute="leading" constant="22" id="cMn-XA-k33"/>
                 <constraint firstItem="l15-xC-Gna" firstAttribute="leading" secondItem="BEh-Yy-kVI" secondAttribute="leading" constant="22" id="cf9-3O-2pK"/>
                 <constraint firstItem="tq8-XL-NNK" firstAttribute="trailing" secondItem="BEh-Yy-kVI" secondAttribute="trailing" id="f7f-pC-30j"/>
+                <constraint firstItem="5uW-Zs-nOg" firstAttribute="leading" secondItem="l15-xC-Gna" secondAttribute="trailing" constant="9" id="icX-rf-43B"/>
                 <constraint firstItem="LRl-Co-PA0" firstAttribute="leading" secondItem="GDD-yw-lFR" secondAttribute="trailing" constant="8" id="lM8-of-LXz"/>
-                <constraint firstItem="6GM-Sr-VUa" firstAttribute="top" secondItem="a7r-kn-fXc" secondAttribute="bottom" constant="8" id="oZZ-GQ-LSo"/>
+                <constraint firstItem="vD1-aw-WEe" firstAttribute="top" secondItem="l15-xC-Gna" secondAttribute="bottom" constant="16" id="ns3-Kg-Jgt"/>
                 <constraint firstItem="C9j-dC-FMd" firstAttribute="leading" secondItem="kQ3-Or-DLq" secondAttribute="leading" constant="17" id="vaa-fC-0oX"/>
                 <constraint firstItem="GDD-yw-lFR" firstAttribute="leading" secondItem="BEh-Yy-kVI" secondAttribute="leading" constant="22" id="zgE-J2-kxC"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="textView_Feed" destination="a7r-kn-fXc" id="IqR-ZB-TI4"/>
+                <outlet property="heartBtn" destination="mbs-55-1Hf" id="Teu-xx-Uc4"/>
+                <outlet property="userFeedDate" destination="3Yn-4O-7sH" id="FY7-ot-dxe"/>
                 <outlet property="userFeedImg" destination="tq8-XL-NNK" id="kW2-Td-hD9"/>
+                <outlet property="userFeedText" destination="vD1-aw-WEe" id="Jrg-Nr-Ajf"/>
+                <outlet property="userHeartCount" destination="5uW-Zs-nOg" id="gic-Uz-BwP"/>
                 <outlet property="userImg_Feed" destination="GDD-yw-lFR" id="1kb-XZ-P2c"/>
                 <outlet property="userName_Feed" destination="kbh-Tl-q4R" id="yf3-tx-SIx"/>
                 <outlet property="userSpec_Feed" destination="mOj-sv-bFw" id="dbH-kk-HdV"/>
@@ -169,9 +184,6 @@
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="heart" catalog="system" width="128" height="107"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

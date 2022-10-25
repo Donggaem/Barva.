@@ -55,7 +55,7 @@ class FindTabManViewController: TabmanViewController {
         //indicator
         bar.indicator.weight = .custom(value: 3)
         bar.indicator.overscrollBehavior = .bounce
-        bar.indicator.tintColor = UIColor.black
+        bar.indicator.tintColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
         
         addBar(bar, dataSource: self, at:.top)
     }

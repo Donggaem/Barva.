@@ -60,6 +60,7 @@ class IDFindTabViewController: UIViewController {
         
         //버튼 모서리
         idFindBtn.layer.cornerRadius = 5
+        idFindBtn.setColor_false(button: idFindBtn)
         
     }
     
@@ -68,11 +69,25 @@ class IDFindTabViewController: UIViewController {
         
         if(willActive == true) {
             //다음 버튼 색 변경
-            idFindBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            idFindBtn.setColor_true(button: idFindBtn)
         } else {
             //다음 버튼 색 변경
-            idFindBtn.backgroundColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
+            idFindBtn.setColor_false(button: idFindBtn)
         }
+    }
+    
+    //버튼 비활 색깔
+    func setColor_false(button: UIButton) {
+        button.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
+        button.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
+    }
+    
+    //버튼 활 색깔
+    func setColor_true(button: UIButton) {
+        button.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        button.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
     }
     
     //이메일 형식 검사

@@ -136,7 +136,7 @@ extension UserFeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         
         cell.userName_Feed.text = userFeedArray[index].post_users.user_nick
         cell.userSpec_Feed.text = "\(userFeedArray[index].user_gender) | \(userFeedArray[index].user_tall)cm | \(userFeedArray[index].user_weight)kg"
-        cell.textView_Feed.text = userFeedArray[index].post_content
+        cell.userFeedText.text = userFeedArray[index].post_content
         cell.paramImg = userFeedArray[index].post_url
         
         userFeedName = userFeedArray[index].post_users.user_nick

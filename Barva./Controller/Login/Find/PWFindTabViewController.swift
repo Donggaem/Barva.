@@ -91,28 +91,46 @@ class PWFindTabViewController: UIViewController {
         checkNumBtn.layer.cornerRadius = 15
         pwFindBtn.layer.cornerRadius = 5
         
+        emailBtn.setColor_false(button: emailBtn)
+        checkNumBtn.setColor_false(button: checkNumBtn)
+        pwFindBtn.setColor_false(button: pwFindBtn)
+        
         btnHidden(msgBtn: msgCheckNumBtn)
         
         //버튼 활성/비활성 액션
         self.emailTextField.addAction(UIAction(handler: { _ in
             if self.emailTextField.text?.isEmpty == true {
                 self.emailBtn.isEnabled = false
-                self.emailBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
+                self.emailBtn.setColor_false(button: self.emailBtn)
             } else {
                 self.emailBtn.isEnabled = true
-                self.emailBtn.backgroundColor = .black
+                self.emailBtn.setColor_true(button: self.emailBtn)
             }
         }), for: .editingChanged)
         
         self.checkNumTextField.addAction(UIAction(handler: { _ in
             if self.checkNumTextField.text?.isEmpty == true {
                 self.checkNumBtn.isEnabled = false
-                self.checkNumBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
+                self.checkNumBtn.setColor_false(button: self.checkNumBtn)
             } else {
                 self.checkNumBtn.isEnabled = true
-                self.checkNumBtn.backgroundColor = .black
+                self.checkNumBtn.setColor_true(button: self.checkNumBtn)
             }
         }), for: .editingChanged)
+    }
+    
+    //버튼 비활 색깔
+    func setColor_false(button: UIButton) {
+        button.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
+        button.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
+    }
+    
+    //버튼 활 색깔
+    func setColor_true(button: UIButton) {
+        button.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        button.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
     }
     
     //이메일 형식 확인
@@ -298,11 +316,11 @@ extension PWFindTabViewController: UITextFieldDelegate{
         //텍스트필드가 채워졌는지, 비밀번호가 일치하는 지 확인, 필수 약관을 동의 했는지
         if  !(self.nameTextField.text?.isEmpty ?? true) && !(self.idTextField.text?.isEmpty ?? true) &&  !(self.emailTextField.text?.isEmpty ?? true) &&  !(self.checkNumTextField.text?.isEmpty ?? true) {
             pwFindBtn.isEnabled = true
-            pwFindBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            pwFindBtn.setColor_true(button: pwFindBtn)
         }
         else {
             pwFindBtn.isEnabled = false
-            pwFindBtn.backgroundColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
+            pwFindBtn.setColor_false(button: pwFindBtn)
         }
     }
     

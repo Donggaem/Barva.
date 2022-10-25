@@ -27,8 +27,10 @@ class FeedViewCell: FSPagerViewCell {
     }
     @IBOutlet weak var feedNameLabel: UILabel!
     @IBOutlet weak var feedSpecLabel: UILabel!
-    @IBOutlet weak var feedTextView: UITextView!
+
+    @IBOutlet weak var feedText: UILabel!
     
+    @IBOutlet weak var feedDay: UILabel!
     @IBOutlet weak var feedImage: FSPagerView!{
         didSet {
             self.feedImage.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -37,6 +39,7 @@ class FeedViewCell: FSPagerViewCell {
     }
     
     @IBOutlet weak var heartBtn: UIButton!
+    @IBOutlet weak var heartCount: UILabel!
     @IBOutlet weak var bookmarkBtn: UIButton!
     
     weak var delegate: NaviAction?
