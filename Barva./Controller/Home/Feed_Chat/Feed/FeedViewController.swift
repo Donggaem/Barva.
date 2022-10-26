@@ -389,6 +389,7 @@ extension FeedViewController: NaviAction {
         chatVC.paramFeedSpec = feedSpec
         chatVC.paramFeedImg = feedProfilImg
         chatVC.paramFeedText = feedText
+        chatVC.paramPostid = postid
     }
     
     func moveOtherVC() {

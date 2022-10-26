@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ChatViewController: UIViewController {
     
@@ -24,7 +25,7 @@ class ChatViewController: UIViewController {
     var paramFeedName = ""
     var paramFeedSpec = ""
     var paramFeedText = ""
-    
+    var paramPostid = 0
     
     var chatList: [String] = ["test", "test1", "test2", "test3","test4", "test5", "test6"]
     var reChatList: [String] = ["test7", "test8", "test9", "test10","test11", "test12", "test13"]
@@ -44,6 +45,14 @@ class ChatViewController: UIViewController {
     
     @IBAction func sendBtnPressed(_ sender: UIButton) {
         
+        let comment = sendTextField.text ?? ""
+        let postid = paramPostid
+        
+        let param = CommentPostRequest(comment: comment, post_id: postid)
+        postComment(param)
+        
+        sendTextField.text = ""
+        
     }
     //MARK: - INNER FUNC
     private func setUI(){
@@ -59,6 +68,42 @@ class ChatViewController: UIViewController {
         feedUserProfileImg.layer.cornerRadius = feedUserProfileImg.frame.height/2
         feedUserProfileImg.clipsToBounds = true
         
+        //프사 이미지 둥글게
+        userProfileImg.layer.cornerRadius = feedUserProfileImg.frame.height/2
+        userProfileImg.clipsToBounds = true
+        
+    }
+    
+    //MARK: - POST COMMENT
+    let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
+    private func postComment(_ parameters: CommentPostRequest){
+        AF.request(BarvaURL.commentPostURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
+            .validate()
+            .responseDecodable(of: CommentPostResponse.self) { [self] response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        
+                        BarvaLog.debug("postComment - Success")
+                        
+                        
+                    } else {
+                        BarvaLog.error("postComment - fail")
+                        let loginFail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        loginFail_alert.addAction(okAction)
+                        present(loginFail_alert, animated: false, completion: nil)
+                        
+                    }
+                case .failure(let error):
+                    BarvaLog.error("postComment - err")
+                    print(error.localizedDescription)
+                    let loginFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    loginFail_alert.addAction(okAction)
+                    present(loginFail_alert, animated: false, completion: nil)
+                }
+            }
     }
 }
 

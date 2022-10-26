@@ -8,6 +8,7 @@
 import Foundation
 
 struct CommentPostRequest: Encodable {
+    
     var comment: String
     var post_id: Int
 }

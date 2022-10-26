@@ -67,6 +67,8 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="chatLabel" destination="8Db-oD-2M8" id="OQC-IN-BPl"/>
+                <outlet property="chatProfileImg" destination="gtI-NA-KgX" id="ydn-zu-x26"/>
+                <outlet property="nickLabel" destination="gBy-1H-dyW" id="Kw8-8b-lU5"/>
             </connections>
             <point key="canvasLocation" x="165" y="-152"/>
         </tableViewCell>
