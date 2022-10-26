@@ -24,6 +24,8 @@
 		EB2EA2FB28A1410E00EC0685 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2EA2FA28A1410E00EC0685 /* Home.storyboard */; };
 		EB2F90B228E96D510098A3C1 /* UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F90B128E96D510098A3C1 /* UploadRequest.swift */; };
 		EB2F90B428E96D600098A3C1 /* UploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F90B328E96D600098A3C1 /* UploadResponse.swift */; };
+		EB50D06629090E2C00CFD496 /* SavePostCheckerboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50D06529090E2C00CFD496 /* SavePostCheckerboardResponse.swift */; };
+		EB50D06829090E7C00CFD496 /* SavePostSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50D06729090E7C00CFD496 /* SavePostSingleResponse.swift */; };
 		EB67130F2901336D00B8F8FC /* UserSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67130E2901336D00B8F8FC /* UserSingleResponse.swift */; };
 		EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67743B28C72F2B001A6F55 /* BarvaURL.swift */; };
 		EB82BA6C28EEB75E000CA4D1 /* ReChatTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB82BA6B28EEB75E000CA4D1 /* ReChatTableCell.xib */; };
@@ -139,6 +141,8 @@
 		EB2F90B128E96D510098A3C1 /* UploadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRequest.swift; sourceTree = "<group>"; };
 		EB2F90B328E96D600098A3C1 /* UploadResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadResponse.swift; sourceTree = "<group>"; };
 		EB2F99C628B0ABF10084EB7B /* YPImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YPImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB50D06529090E2C00CFD496 /* SavePostCheckerboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostCheckerboardResponse.swift; sourceTree = "<group>"; };
+		EB50D06729090E7C00CFD496 /* SavePostSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostSingleResponse.swift; sourceTree = "<group>"; };
 		EB67130E2901336D00B8F8FC /* UserSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleResponse.swift; sourceTree = "<group>"; };
 		EB67743B28C72F2B001A6F55 /* BarvaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarvaURL.swift; sourceTree = "<group>"; };
 		EB82BA6B28EEB75E000CA4D1 /* ReChatTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReChatTableCell.xib; sourceTree = "<group>"; };
@@ -425,6 +429,8 @@
 				EB83748328F2B70E00518A09 /* StorageImagesResponse.swift */,
 				EB1E7D6328FEE0CD00FE7737 /* UserCheckerBoardResponse.swift */,
 				EB67130E2901336D00B8F8FC /* UserSingleResponse.swift */,
+				EB50D06529090E2C00CFD496 /* SavePostCheckerboardResponse.swift */,
+				EB50D06729090E7C00CFD496 /* SavePostSingleResponse.swift */,
 				EBBC40B128F428E30014F949 /* Modify */,
 			);
 			path = Profile;
@@ -873,6 +879,7 @@
 				EB86424829068A4F00AFFAEC /* FollowTabManViewController.swift in Sources */,
 				EB8D504728E17E230045C4D2 /* IDFindResponse.swift in Sources */,
 				EB2EA2F928A1409800EC0685 /* SigninViewController.swift in Sources */,
+				EB50D06829090E7C00CFD496 /* SavePostSingleResponse.swift in Sources */,
 				EBCCD5602903E73600B6BAA6 /* GenderCheckboardResponse.swift in Sources */,
 				EBE4EDB628A4E6C7005C7516 /* SigninRequest.swift in Sources */,
 				EBCCD5642903E76C00B6BAA6 /* GenderSingleResponse.swift in Sources */,
@@ -938,6 +945,7 @@
 				EBAA5E7C2908627700AE4730 /* CancelFollowingResponse.swift in Sources */,
 				EB1751F628AA78F8009FEFBF /* PWFindTabViewController.swift in Sources */,
 				EBB1ADC829057A7700285672 /* SavePostResponse.swift in Sources */,
+				EB50D06629090E2C00CFD496 /* SavePostCheckerboardResponse.swift in Sources */,
 				EB1751F428AA78EA009FEFBF /* FindTabManViewController.swift in Sources */,
 				EB8D503C28E1601A0045C4D2 /* PWFindResponse.swift in Sources */,
 				EBAA5E7A2908626300AE4730 /* CancelFollowingRequest.swift in Sources */,

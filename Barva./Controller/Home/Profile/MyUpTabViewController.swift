@@ -23,7 +23,6 @@ class MyUpTabViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         getuserCheckerBoard()
-        setCollectionView()
     }
     
     //MARK: - GET MYUPIMAGES

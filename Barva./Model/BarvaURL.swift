@@ -54,7 +54,8 @@ struct BarvaURL {
     static let userCheckerboardURL = "http://3.34.183.110:3003/user/userCheckerboard"
     static let userSingleURL = "http://3.34.183.110:3003/user/userSingle"
     
-    static let storageImagesURL = ""
+    static let savePostCheckboardURL = "http://3.34.183.110:3003/user/savePostCheckerboard"
+    static let savePostSingleURL = "http://3.34.183.110:3003/user/savePostSingle"
     
     //MARK: - 팔로우
     static let addFollowingURL = "http://3.34.183.110:3003/user/addFollowing"

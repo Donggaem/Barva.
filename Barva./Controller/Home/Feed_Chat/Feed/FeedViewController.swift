@@ -43,7 +43,7 @@ class FeedViewController: UIViewController {
     
     var imgArray: [String] = []
     var feedArray: [FeedArray] = []
-    
+    var savePostArray: [SavedPosts] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +83,10 @@ class FeedViewController: UIViewController {
             let gender = paramGender
             let param = GenderSingleRequest(user_gender: gender)
             postGenderFeed(param)
+            feedPagerView.reloadData()
+            
+        } else if paramSort == "Storage" {
+            getStorageFeed()
             feedPagerView.reloadData()
         }
     }
@@ -189,6 +193,62 @@ class FeedViewController: UIViewController {
                 }
             }
     }
+    
+    //MARK: - GET STORAGEFEED
+    private func getStorageFeed() {
+        AF.request(BarvaURL.savePostSingleURL, method: .get, headers: header)
+            .validate()
+            .responseDecodable(of: SavePostSingleResponse.self) { [weak self] response in
+                guard let self = self else {return}
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        print(BarvaLog.debug("getStorageFeed-success"))
+                        self.feedArray.removeAll()
+                        self.feedPagerView.reloadData()
+                        if response.data != nil {
+                            if let storageFeedObject = response.data?.singleResult {
+                                self.savePostArray = storageFeedObject
+                                for index in 0..<self.savePostArray.count {
+                                    self.feedArray.append(self.savePostArray[index].saved_posts)
+                                }
+                                self.feedPagerView.reloadData()
+                                self.feedPageControl.numberOfPages = storageFeedObject.count
+
+                                DispatchQueue.main.async {
+                                    
+                                    self.feedPagerView.reloadData()
+                                    self.feedPageControl.numberOfPages = self.feedArray.count
+                                    self.feedPageControl.currentPage = self.paramSeletIndex
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.03){
+                                        self.feedPagerView.scrollToItem(at: self.feedPageControl.currentPage, animated: false)
+                                    }
+                                    
+                                }
+                            }
+                        }
+                        
+                    } else {
+                        print(BarvaLog.error("getStorageFeed-fail"))
+                        
+                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        fail_alert.addAction(okAction)
+                        self.present(fail_alert, animated: false, completion: nil)
+                    }
+                case .failure(let error):
+                    BarvaLog.error("getStorageFeed-err")
+                    print(error.localizedDescription)
+                    
+                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    fail_alert.addAction(okAction)
+                    self.present(fail_alert, animated: false, completion: nil)
+                }
+            }
+    }
+    
     
     //MARK: - POST SAVEPOST
     private func postSavePost(_ parameters: SavePostRequest){
