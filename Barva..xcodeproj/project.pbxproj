@@ -98,6 +98,8 @@
 		EBCCD5642903E76C00B6BAA6 /* GenderSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCD5632903E76C00B6BAA6 /* GenderSingleResponse.swift */; };
 		EBCCD5662903ECA000B6BAA6 /* FeedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCD5652903ECA000B6BAA6 /* FeedArray.swift */; };
 		EBD10B9228F6E80100CC7EDA /* ProfileSetImgRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD10B9128F6E80100CC7EDA /* ProfileSetImgRequest.swift */; };
+		EBD85E89290A4639007AE650 /* OtherSingleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD85E88290A4639007AE650 /* OtherSingleRequest.swift */; };
+		EBD85E8B290A4655007AE650 /* OtherSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD85E8A290A4655007AE650 /* OtherSingleResponse.swift */; };
 		EBDA2BFF28FE7B4000652D33 /* OtherUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDA2BFE28FE7B4000652D33 /* OtherUserProfileViewController.swift */; };
 		EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */; };
 		EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */; };
@@ -219,6 +221,8 @@
 		EBCCD5632903E76C00B6BAA6 /* GenderSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSingleResponse.swift; sourceTree = "<group>"; };
 		EBCCD5652903ECA000B6BAA6 /* FeedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedArray.swift; sourceTree = "<group>"; };
 		EBD10B9128F6E80100CC7EDA /* ProfileSetImgRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSetImgRequest.swift; sourceTree = "<group>"; };
+		EBD85E88290A4639007AE650 /* OtherSingleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherSingleRequest.swift; sourceTree = "<group>"; };
+		EBD85E8A290A4655007AE650 /* OtherSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherSingleResponse.swift; sourceTree = "<group>"; };
 		EBDA2BFE28FE7B4000652D33 /* OtherUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserProfileViewController.swift; sourceTree = "<group>"; };
 		EBE4EDB128A4E6A4005C7516 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		EBE4EDB328A4E6B4005C7516 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -567,6 +571,8 @@
 				EBAA5E8029086EA200AE4730 /* OtherProfileResponse.swift */,
 				EB68B4CD2909BED8003C632D /* OtherCheckboardRequest.swift */,
 				EB68B4D12909BEF4003C632D /* OtherCheckboardResponse.swift */,
+				EBD85E88290A4639007AE650 /* OtherSingleRequest.swift */,
+				EBD85E8A290A4655007AE650 /* OtherSingleResponse.swift */,
 			);
 			path = OtherProfile;
 			sourceTree = "<group>";
@@ -908,6 +914,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBD85E89290A4639007AE650 /* OtherSingleRequest.swift in Sources */,
 				EB8D503628E15E1F0045C4D2 /* IDFindRequest.swift in Sources */,
 				EBE4EDC028A5129A005C7516 /* ColorTabViewController.swift in Sources */,
 				EBBBCE462907C1CF004404ED /* ResignRequest.swift in Sources */,
@@ -969,6 +976,7 @@
 				EB97FA0528E47F0700A43CEA /* HomeImageCollectionViewCell.swift in Sources */,
 				EB8642402906896600AFFAEC /* FollowerTabViewController.swift in Sources */,
 				EBCCD5622903E75A00B6BAA6 /* GenderSingleRequest.swift in Sources */,
+				EBD85E8B290A4655007AE650 /* OtherSingleResponse.swift in Sources */,
 				EB83748428F2B70E00518A09 /* StorageImagesResponse.swift in Sources */,
 				EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */,
 				EBBC40B328F4291F0014F949 /* ProfileSetImgResponse.swift in Sources */,

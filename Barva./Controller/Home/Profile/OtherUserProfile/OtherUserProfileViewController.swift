@@ -309,11 +309,13 @@ extension OtherUserProfileViewController: UICollectionViewDataSource, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        let cell = collectionView.cellForItem(at: indexPath) as? HomeImageCollectionViewCell
         
-        let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
+        let storyboard = UIStoryboard.init(name: "Home", bundle: nil)
+        let feedVC = storyboard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
         self.navigationController?.pushViewController(feedVC, animated: true)
         
         feedVC.paramSeletIndex = indexPath.row
-
+        feedVC.paramSort = "Other"
+        feedVC.paramUserNick = paramOtherNick
     }
 
     // CollectionView Cell의 Size

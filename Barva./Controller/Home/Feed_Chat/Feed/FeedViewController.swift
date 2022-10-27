@@ -34,6 +34,7 @@ class FeedViewController: UIViewController {
     var paramSeletIndex = 0
     var paramSort = ""
     var paramGender = ""
+    var paramUserNick = ""
     
     var feedNick = ""
     var feedSpec = ""
@@ -87,6 +88,12 @@ class FeedViewController: UIViewController {
             
         } else if paramSort == "Storage" {
             getStorageFeed()
+            feedPagerView.reloadData()
+            
+        } else if paramSort == "Other" {
+            let nick = paramUserNick
+            let param = OtherSingleRequest(user_nick: nick)
+            postOtherFeed(param)
             feedPagerView.reloadData()
         }
     }
@@ -157,10 +164,10 @@ class FeedViewController: UIViewController {
                         self.feedPagerView.reloadData()
                         
                         if response.data != nil {
-                            if let GenderFeedObject = response.data?.singleResult {
-                                self.feedArray = GenderFeedObject
+                            if let genderFeedObject = response.data?.singleResult {
+                                self.feedArray = genderFeedObject
                                 self.feedPagerView.reloadData()
-                                self.feedPageControl.numberOfPages = GenderFeedObject.count
+                                self.feedPageControl.numberOfPages = genderFeedObject.count
                                 
                                 DispatchQueue.main.async {
                                     self.feedPagerView.reloadData()
@@ -245,6 +252,57 @@ class FeedViewController: UIViewController {
                     let okAction = UIAlertAction(title: "확인", style: .default)
                     fail_alert.addAction(okAction)
                     self.present(fail_alert, animated: false, completion: nil)
+                }
+            }
+    }
+    
+    //MARK: - POST OTHERFEED
+    private func postOtherFeed(_ parameters: OtherSingleRequest){
+        AF.request(BarvaURL.otherSingleURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
+            .validate()
+            .responseDecodable(of: OtherSingleResponse.self) { [self] response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        
+                        BarvaLog.debug("postOtherFeed - Success")
+                        self.feedArray.removeAll()
+                        self.feedPagerView.reloadData()
+                        
+                        if response.data != nil {
+                            if let otherFeedObject = response.data?.singleResult {
+                                self.feedArray = otherFeedObject
+                                self.feedPagerView.reloadData()
+                                self.feedPageControl.numberOfPages = otherFeedObject.count
+                                
+                                DispatchQueue.main.async {
+                                    self.feedPagerView.reloadData()
+                                    self.feedPageControl.numberOfPages = self.feedArray.count
+                                    self.feedPageControl.currentPage = self.paramSeletIndex
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.03){
+                                        self.feedPagerView.scrollToItem(at: self.feedPageControl.currentPage, animated: false)
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
+                    } else {
+                        BarvaLog.error("postOtherFeed - fail")
+                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        fail_alert.addAction(okAction)
+                        present(fail_alert, animated: false, completion: nil)
+                        
+                    }
+                case .failure(let error):
+                    BarvaLog.error("postOtherFeed - err")
+                    print(error.localizedDescription)
+                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    fail_alert.addAction(okAction)
+                    present(fail_alert, animated: false, completion: nil)
                 }
             }
     }

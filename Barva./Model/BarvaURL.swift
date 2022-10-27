@@ -61,6 +61,7 @@ struct BarvaURL {
     static let otherProfileURL = "http://3.34.183.110:3003/sort/otherProfile"
     
     static let otherCheckboardURL = "http://3.34.183.110:3003/sort/otherCheckerboard"
+    static let otherSingleURL = "http://3.34.183.110:3003/sort/otherSingle"
     
     //MARK: - 팔로우
     static let addFollowingURL = "http://3.34.183.110:3003/user/addFollowing"
