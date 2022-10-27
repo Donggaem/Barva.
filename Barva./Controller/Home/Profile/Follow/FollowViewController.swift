@@ -9,6 +9,10 @@ import UIKit
 
 class FollowViewController: UIViewController {
 
+    @IBOutlet weak var main_otheruser_nick: UILabel!
+    
+    var paramMainOtherNick = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +21,7 @@ class FollowViewController: UIViewController {
 
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+        UserDefaults.standard.removeObject(forKey: "follownick")
     }
     
     //MARK: - SETUI
@@ -25,5 +30,7 @@ class FollowViewController: UIViewController {
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
 
+        main_otheruser_nick.text = paramMainOtherNick
+        UserDefaults.standard.set(paramMainOtherNick, forKey: "follownick")
     }
 }

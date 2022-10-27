@@ -10,7 +10,12 @@ import UIKit
 
 class FollowTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView! {
+        didSet {
+            profileImage.layer.cornerRadius = profileImage.frame.height/2
+            profileImage.clipsToBounds = true
+        }
+    }
     
     @IBOutlet weak var nickLabel: UILabel!
     @IBOutlet weak var folowBtn: UIButton!
@@ -18,5 +23,6 @@ class FollowTableViewCell: UITableViewCell {
     
     
     @IBAction func followBtnPressed(_ sender: UIButton) {
+        
     }
 }

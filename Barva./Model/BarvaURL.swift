@@ -46,7 +46,7 @@ struct BarvaURL {
     
     //MARK: - 프로필
     static let profileURL = "http://3.34.183.110:3003/user/myProfile"
-    static let otherProfileURL = "http://3.34.183.110:3003/sort/otherProfile"
+    
     
     static let setProfileImageURL = "http://3.34.183.110:3003/upload/setProfileImg"
     static let setProfileURL = "http://3.34.183.110:3003/user/setProfileIntro"
@@ -57,8 +57,14 @@ struct BarvaURL {
     static let savePostCheckboardURL = "http://3.34.183.110:3003/user/savePostCheckerboard"
     static let savePostSingleURL = "http://3.34.183.110:3003/user/savePostSingle"
     
+    //MARK: - 다른사용자 프로필
+    static let otherProfileURL = "http://3.34.183.110:3003/sort/otherProfile"
+    
+    static let otherCheckboardURL = "http://3.34.183.110:3003/sort/otherCheckerboard"
+    
     //MARK: - 팔로우
     static let addFollowingURL = "http://3.34.183.110:3003/user/addFollowing"
     static let cancelFollowingURL = "http://3.34.183.110:3003/user/cancelFollowing"
 
+    static let otherFollowerListURL = "http://3.34.183.110:3003/sort/otherFollowerList"
 }
