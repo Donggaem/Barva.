@@ -73,6 +73,9 @@ class FeedViewController: UIViewController {
     private func setUI(){
         feedPagerView.reloadData()
         
+        feedPageControl.setStrokeColor(.white, for: .normal)
+        feedPageControl.setStrokeColor(.white, for: .selected)
+
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
         
@@ -403,7 +406,7 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.feedSpecLabel.text = "\(feedArray[index].user_gender) | \(feedArray[index].user_tall)cm | \(feedArray[index].user_weight)kg"
         cell.feedText.text = feedArray[index].post_content
         cell.paramImg = feedArray[index].post_url
-        
+        cell.pageControl.numberOfPages = feedArray[index].post_url.count
         cell.bookmarkBool = feedArray[index].isSave ?? false
         
         

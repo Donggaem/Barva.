@@ -23,7 +23,11 @@ class MyFollowTableViewCell: UITableViewCell {
         }
     }
     @IBOutlet weak var followName: UILabel!
-    @IBOutlet weak var followBtn: UIButton!
+    @IBOutlet weak var followBtn: UIButton! {
+        didSet {
+            followBtn.layer.cornerRadius = 5
+        }
+    }
     
     weak var delegate: FollowBtnAction?
     

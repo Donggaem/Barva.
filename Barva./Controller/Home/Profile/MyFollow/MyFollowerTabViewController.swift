@@ -35,7 +35,7 @@ class MyFollowerTabViewController: UIViewController {
                         print(BarvaLog.debug("getMyFollowerList-success"))
                         
                         if response.data != nil {
-                            if let myFollowerList = response.data?.myFollower {
+                            if let myFollowerList = response.data?.myFollowerResult {
                                 self.followerList = myFollowerList
                                 self.myFollowerTableView.reloadData()
                                 print(self.followerList)

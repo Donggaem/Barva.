@@ -62,7 +62,7 @@
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="l15-xC-Gna" userLabel="좋아요, 메세지Stack View">
-                    <rect key="frame" x="22" y="450.66666666666669" width="20" height="18"/>
+                    <rect key="frame" x="22" y="447.66666666666669" width="20" height="18"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbs-55-1Hf">
                             <rect key="frame" x="0.0" y="0.0" width="20" height="18"/>
@@ -83,7 +83,7 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GM-Sr-VUa">
-                    <rect key="frame" x="22" y="506" width="64" height="12"/>
+                    <rect key="frame" x="22" y="503" width="64" height="12"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="12" id="exb-uy-n6W"/>
                     </constraints>
@@ -121,23 +121,31 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uW-Zs-nOg">
-                    <rect key="frame" x="51" y="451.66666666666669" width="8" height="15.666666666666686"/>
+                    <rect key="frame" x="51" y="448.66666666666669" width="8" height="15.666666666666686"/>
                     <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.10.22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yn-4O-7sH">
-                    <rect key="frame" x="22" y="526" width="48" height="11"/>
+                    <rect key="frame" x="22" y="523" width="48" height="11"/>
                     <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="9"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글글글" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vD1-aw-WEe">
-                    <rect key="frame" x="22" y="484.66666666666669" width="346" height="13.333333333333314"/>
+                    <rect key="frame" x="22" y="481.66666666666669" width="346" height="13.333333333333314"/>
                     <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="11"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pVv-Qj-Sfd" customClass="FSPageControl" customModule="FSPagerView">
+                    <rect key="frame" x="114" y="442.66666666666669" width="160" height="26"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="Eak-75-1kR"/>
+                        <constraint firstAttribute="height" constant="26" id="QK6-cw-5hl"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="BEh-Yy-kVI"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -145,7 +153,9 @@
                 <constraint firstAttribute="trailing" secondItem="vD1-aw-WEe" secondAttribute="trailing" constant="22" id="59v-fO-V5m"/>
                 <constraint firstItem="5uW-Zs-nOg" firstAttribute="centerY" secondItem="mbs-55-1Hf" secondAttribute="centerY" id="5Hv-rK-fSL"/>
                 <constraint firstItem="3Yn-4O-7sH" firstAttribute="top" secondItem="6GM-Sr-VUa" secondAttribute="bottom" constant="8" id="5fM-Ct-CvV"/>
-                <constraint firstItem="l15-xC-Gna" firstAttribute="top" secondItem="tq8-XL-NNK" secondAttribute="bottom" constant="15" id="6Du-GM-nII"/>
+                <constraint firstItem="l15-xC-Gna" firstAttribute="top" secondItem="tq8-XL-NNK" secondAttribute="bottom" constant="12" id="6Du-GM-nII"/>
+                <constraint firstItem="pVv-Qj-Sfd" firstAttribute="leading" secondItem="5uW-Zs-nOg" secondAttribute="trailing" constant="55" id="9ou-e5-6o5"/>
+                <constraint firstItem="pVv-Qj-Sfd" firstAttribute="top" secondItem="tq8-XL-NNK" secondAttribute="bottom" constant="7.3300000000000001" id="Gud-3w-hZc"/>
                 <constraint firstItem="C9j-dC-FMd" firstAttribute="top" secondItem="kQ3-Or-DLq" secondAttribute="top" constant="3" id="JC6-eL-C9T"/>
                 <constraint firstItem="BEh-Yy-kVI" firstAttribute="trailing" secondItem="eag-oW-5Dm" secondAttribute="trailing" constant="22" id="LXd-8C-acZ"/>
                 <constraint firstItem="LRl-Co-PA0" firstAttribute="centerY" secondItem="GDD-yw-lFR" secondAttribute="centerY" id="M7E-mg-iBZ"/>
@@ -170,6 +180,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="heartBtn" destination="mbs-55-1Hf" id="Teu-xx-Uc4"/>
+                <outlet property="pageControl" destination="pVv-Qj-Sfd" id="asz-Wc-VhV"/>
                 <outlet property="userFeedDate" destination="3Yn-4O-7sH" id="FY7-ot-dxe"/>
                 <outlet property="userFeedImg" destination="tq8-XL-NNK" id="kW2-Td-hD9"/>
                 <outlet property="userFeedText" destination="vD1-aw-WEe" id="Jrg-Nr-Ajf"/>

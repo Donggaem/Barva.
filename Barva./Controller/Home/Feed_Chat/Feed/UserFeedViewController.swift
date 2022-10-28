@@ -55,6 +55,10 @@ class UserFeedViewController: UIViewController{
     //MARK: - INNER FUNC
     private func setUI(){
         
+        //페이지 컨트롤 스트로크색 변경
+        pageControl.setStrokeColor(.white, for: .normal)
+        pageControl.setStrokeColor(.white, for: .selected)
+        
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
         userFeedPagerView.reloadData()
@@ -138,6 +142,7 @@ extension UserFeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.userSpec_Feed.text = "\(userFeedArray[index].user_gender) | \(userFeedArray[index].user_tall)cm | \(userFeedArray[index].user_weight)kg"
         cell.userFeedText.text = userFeedArray[index].post_content
         cell.paramImg = userFeedArray[index].post_url
+        cell.pageControl.numberOfPages = userFeedArray[index].post_url.count
         
         userFeedName = userFeedArray[index].post_users.user_nick
         userFeedSpec = "\(userFeedArray[index].user_gender) | \(userFeedArray[index].user_tall)cm | \(userFeedArray[index].user_weight)kg"

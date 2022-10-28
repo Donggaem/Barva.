@@ -38,6 +38,11 @@ class OtherUserProfileViewController: UIViewController {
         setCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setAPI()
+        setCollectionView()
+    }
     //MARK: - INNER FUNC
     private func setUI() {
         

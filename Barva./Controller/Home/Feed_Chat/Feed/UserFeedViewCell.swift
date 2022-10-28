@@ -15,6 +15,16 @@ protocol UserFeedNaviAction: AnyObject {
 
 class UserFeedViewCell: FSPagerViewCell {
     
+    @IBOutlet weak var pageControl: FSPageControl!{
+        didSet {
+            pageControl.setStrokeColor(UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1), for: .normal)
+            pageControl.setStrokeColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .selected)
+            
+            pageControl.setFillColor(UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1), for: .normal)
+            pageControl.setFillColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .selected)
+        }
+    }
+    
     @IBOutlet weak var userImg_Feed: UIImageView!{
         didSet {
             //프사 이미지 둥글게
@@ -91,6 +101,8 @@ extension UserFeedViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
     //각셀에 대한 설정
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = userFeedImg.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+
+        pageControl.currentPage = index
 
         let url = URL(string: paramImg?[index] ?? "")
         cell.imageView?.kf.setImage(with: url)

@@ -87,7 +87,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yy0-S0-Mab">
-                    <rect key="frame" x="51" y="448.66666666666669" width="8" height="15.666666666666686"/>
+                    <rect key="frame" x="51" y="448.66666666666669" width="11" height="15.666666666666686"/>
                     <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -133,15 +133,25 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lt8-g6-h11" customClass="FSPageControl" customModule="FSPagerView">
+                    <rect key="frame" x="117" y="442.66666666666669" width="160" height="26"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="iDH-kf-XhI"/>
+                        <constraint firstAttribute="width" constant="160" id="oIM-kw-2LT"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="0Nf-c8-xCV"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="pxy-47-fr1" firstAttribute="centerY" secondItem="ptj-Al-5Rh" secondAttribute="centerY" id="3OC-to-L6g"/>
                 <constraint firstItem="ptj-Al-5Rh" firstAttribute="leading" secondItem="0Nf-c8-xCV" secondAttribute="leading" constant="22" id="5ek-hY-RH2"/>
+                <constraint firstItem="lt8-g6-h11" firstAttribute="leading" secondItem="Yy0-S0-Mab" secondAttribute="trailing" constant="55" id="6AE-7u-EA1"/>
                 <constraint firstItem="ptj-Al-5Rh" firstAttribute="top" secondItem="9cz-Ha-a7l" secondAttribute="top" constant="5" id="DIA-Cm-BwI"/>
                 <constraint firstItem="aqR-qb-M6y" firstAttribute="top" secondItem="Esr-2c-6iP" secondAttribute="bottom" constant="8" id="EUO-aR-gaQ"/>
                 <constraint firstItem="mK4-tM-wlE" firstAttribute="leading" secondItem="0Nf-c8-xCV" secondAttribute="leading" id="FOh-2S-ilt"/>
+                <constraint firstItem="P6y-tk-kJ1" firstAttribute="leading" secondItem="lt8-g6-h11" secondAttribute="trailing" constant="69" id="JeH-4a-65n"/>
                 <constraint firstItem="qOm-gu-KzP" firstAttribute="leading" secondItem="9cz-Ha-a7l" secondAttribute="leading" constant="22" id="QXv-DU-H6C"/>
                 <constraint firstItem="0Nf-c8-xCV" firstAttribute="trailing" secondItem="qOm-gu-KzP" secondAttribute="trailing" constant="22" id="T3I-x6-IuQ"/>
                 <constraint firstItem="Yy0-S0-Mab" firstAttribute="leading" secondItem="gaB-1k-BXE" secondAttribute="trailing" constant="9" id="U7E-BN-7A4"/>
@@ -153,6 +163,7 @@
                 <constraint firstItem="gaB-1k-BXE" firstAttribute="leading" secondItem="0Nf-c8-xCV" secondAttribute="leading" constant="22" id="dVL-jO-60Q"/>
                 <constraint firstItem="gaB-1k-BXE" firstAttribute="top" secondItem="mK4-tM-wlE" secondAttribute="bottom" constant="12" id="ef3-oq-Ikd"/>
                 <constraint firstItem="mK4-tM-wlE" firstAttribute="top" secondItem="pxy-47-fr1" secondAttribute="bottom" constant="11" id="gmZ-gN-hIT"/>
+                <constraint firstItem="lt8-g6-h11" firstAttribute="top" secondItem="mK4-tM-wlE" secondAttribute="bottom" constant="7.3300000000000001" id="jK6-Kl-W7g"/>
                 <constraint firstItem="aqR-qb-M6y" firstAttribute="leading" secondItem="qOm-gu-KzP" secondAttribute="leading" id="la2-oZ-MFX"/>
                 <constraint firstItem="Esr-2c-6iP" firstAttribute="leading" secondItem="qOm-gu-KzP" secondAttribute="leading" id="nff-zy-dX0"/>
                 <constraint firstItem="b0C-wK-Tzp" firstAttribute="leading" secondItem="9cz-Ha-a7l" secondAttribute="leading" constant="17" id="p3z-HI-dCd"/>
@@ -173,6 +184,7 @@
                 <outlet property="feedText" destination="qOm-gu-KzP" id="eHJ-wy-WwB"/>
                 <outlet property="heartBtn" destination="gaB-1k-BXE" id="PZa-1n-iqa"/>
                 <outlet property="heartCount" destination="Yy0-S0-Mab" id="M23-ki-78H"/>
+                <outlet property="pageControl" destination="lt8-g6-h11" id="Fwb-tK-Bge"/>
             </connections>
             <point key="canvasLocation" x="347.69230769230768" y="24.526066350710899"/>
         </view>

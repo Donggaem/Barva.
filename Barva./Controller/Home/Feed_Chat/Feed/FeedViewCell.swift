@@ -19,6 +19,16 @@ protocol NaviAction: AnyObject {
 
 class FeedViewCell: FSPagerViewCell {
     
+    @IBOutlet weak var pageControl: FSPageControl! {
+        didSet {
+            pageControl.setStrokeColor(UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1), for: .normal)
+            pageControl.setStrokeColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .selected)
+            
+            pageControl.setFillColor(UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1), for: .normal)
+            pageControl.setFillColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .selected)
+        }
+    }
+    
     @IBOutlet weak var feedProfileImg: UIImageView! {
         didSet {
             //프사 이미지 둥글게
@@ -36,6 +46,7 @@ class FeedViewCell: FSPagerViewCell {
         didSet {
             self.feedImage.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
             self.feedImage.itemSize = FSPagerView.automaticSize
+            self.feedImage.isExclusiveTouch = false
         }
     }
     
@@ -122,7 +133,8 @@ extension FeedViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = feedImage.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
 //        cell.imageView?.image = UIImage(named: self.delegateImg?.feedImages[index] ?? "")
-                
+               
+        pageControl.currentPage = index
         let url = URL(string: paramImg?[index] ?? "")
         cell.imageView?.kf.setImage(with: url)
         
