@@ -17,7 +17,7 @@ struct OtherFollowerListResponse:Decodable {
 
 struct OtherFollower: Decodable {
     
-    var otherFollowerList: [FollowerList]?
+    var otherFollowerResult: [FollowerList]?
     var err: String?
 }
 

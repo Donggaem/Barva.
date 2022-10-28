@@ -26,6 +26,9 @@ class UploadTabViewController: UIViewController {
         didSet {
             self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
             self.pagerView.itemSize = FSPagerView.automaticSize
+            self.pagerView.layer.borderWidth = 1
+            self.pagerView.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
+            self.pagerView.layer.cornerRadius = 5
         }
     }
     
@@ -81,23 +84,33 @@ class UploadTabViewController: UIViewController {
     @IBAction func manBtnPressed(_ sender: UIButton) {
         
         userGender = "남"
-        manBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        manBtn.layer.borderWidth = 1
+        manBtn.setTitle("남", for: .normal)
         manBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        manBtn.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
+        manBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
         
-        womanBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
-        womanBtn.setTitleColor( UIColor(red: 0.431, green: 0.431, blue: 0.431, alpha: 1), for: .normal)
-        print(userGender)
+        womanBtn.layer.borderWidth = 1
+        womanBtn.setTitle("여", for: .normal)
+        womanBtn.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
+        womanBtn.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        womanBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
     }
     
     @IBAction func womanBtnPressed(_ sender: UIButton) {
         
         userGender = "여"
-        womanBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        womanBtn.layer.borderWidth = 1
+        womanBtn.setTitle("여", for: .normal)
         womanBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        womanBtn.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
+        womanBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
         
-        manBtn.backgroundColor = UIColor(red: 0.941, green: 0.941, blue: 0.941, alpha: 1)
-        manBtn.setTitleColor( UIColor(red: 0.431, green: 0.431, blue: 0.431, alpha: 1), for: .normal)
-        print(userGender)
+        manBtn.layer.borderWidth = 1
+        manBtn.setTitle("남", for: .normal)
+        manBtn.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
+        manBtn.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        manBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
     }
     
     @IBAction func uploadBtnPressed(_ sender: UIButton) {

@@ -44,7 +44,7 @@ class MyFollowTabManViewController: TabmanViewController {
         //버튼 글시 커스텀
         bar.buttons.customize{(button) in
             button.tintColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
-            button.selectedTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            button.selectedTintColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
             button.font = UIFont(name: "SpoqaHanSansNeo-Medium", size: 14)!
             
         }
