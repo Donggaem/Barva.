@@ -18,8 +18,8 @@ class MyFollowerTabViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getMyFollowerList()
         setTable()
+        getMyFollowerList()
     }
     
     //MARK: - GET MY FOLLOWER
@@ -38,6 +38,7 @@ class MyFollowerTabViewController: UIViewController {
                             if let myFollowerList = response.data?.myFollower {
                                 self.followerList = myFollowerList
                                 self.myFollowerTableView.reloadData()
+                                print(self.followerList)
                                 
                             }
                         }
@@ -82,30 +83,64 @@ extension MyFollowerTabViewController: UITableViewDelegate, UITableViewDataSourc
     
     //각Row에서 해당하는 Cell을 Return하는 메소드
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FollowTableViewCell", for: indexPath) as! FollowTableViewCell
-        cell.nameLabel.text = followerList[indexPath.row].follower.user_name
-        cell.nickLabel.text = followerList[indexPath.row].follower.user_nick
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyFollowTableViewCell", for: indexPath) as! MyFollowTableViewCell
+        
+//        cell.contentView.isUserInteractionEnabled = false
+        cell.selectionStyle = .none
+        cell.followName.text = followerList[indexPath.row].follower.user_name
+        cell.followNick.text = followerList[indexPath.row].follower.user_nick
         
         let url = URL(string: followerList[indexPath.row].follower.profile_url)
-        cell.profileImage.kf.setImage(with: url)
+        cell.followProfileImg.kf.setImage(with: url)
         
+        print("이즈 팔로잉\(followerList[indexPath.row].isFollowing)")
         self.isFollowing = followerList[indexPath.row].isFollowing
         
         if isFollowing == true {
-            
-            cell.folowBtn.setTitle("팔로잉", for: .normal)
-            cell.folowBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-            cell.folowBtn.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
+           
+            cell.followBtn.layer.borderWidth = 1
+            cell.followBtn.setTitle("팔로잉", for: .normal)
+            cell.followBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            cell.followBtn.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
+            cell.followBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
             
         }else {
             
-            cell.folowBtn.setTitle("팔로우", for: .normal)
-            cell.folowBtn.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
-            cell.folowBtn.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-            cell.folowBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
+            cell.followBtn.layer.borderWidth = 1
+            cell.followBtn.setTitle("팔로우", for: .normal)
+            cell.followBtn.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
+            cell.followBtn.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            cell.followBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
         }
         
         
         return cell
     }
+}
+
+extension MyFollowerTabViewController: FollowBtnAction {
+    func followBtnAction(button: UIButton) {
+        if isFollowing == true {
+           
+            button.layer.borderWidth = 1
+            button.setTitle("팔로잉", for: .normal)
+            button.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            button.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
+            button.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
+            isFollowing = false
+            
+        }else {
+            
+            button.layer.borderWidth = 1
+            button.setTitle("팔로우", for: .normal)
+            button.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
+            button.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            button.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
+            isFollowing = true
+
+        }
+    }
+    
+    
 }

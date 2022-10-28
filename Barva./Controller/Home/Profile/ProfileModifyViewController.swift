@@ -11,10 +11,12 @@ import Alamofire
 class ProfileModifyViewController: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var nickTextField: UITextField!
     @IBOutlet weak var introTextView: UITextView!
     @IBOutlet weak var setProfileBtn: UIButton!
     
+    var paramName = ""
     var paramNick = ""
     var paramIntro = ""
     var paramProfileImg = UIImage()
@@ -66,6 +68,7 @@ class ProfileModifyViewController: UIViewController {
     //MARK: - INNER FUNC
     private func setUI() {
         
+        nameTextField.text = paramName
         nickTextField.text = paramNick
         introTextView.text = paramIntro
         profileImageView.image = paramProfileImg

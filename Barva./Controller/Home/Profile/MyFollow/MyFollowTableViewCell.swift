@@ -5,26 +5,30 @@
 //  Created by 김동겸 on 2022/10/28.
 //
 
+import Foundation
 import UIKit
 
-class MyFollowTableViewCell: UITableViewCell {
+protocol FollowBtnAction: AnyObject {
+    func followBtnAction(button: UIButton)
+}
 
-    @IBOutlet weak var followerProfileImg: UIImageView!
+class MyFollowTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var followNick: UILabel!
+    @IBOutlet weak var followProfileImg: UIImageView!{
+        didSet {
+            //프사 이미지 둥글게
+            followProfileImg.layer.cornerRadius = followProfileImg.frame.height/2
+            followProfileImg.clipsToBounds = true
+        }
+    }
     @IBOutlet weak var followName: UILabel!
     @IBOutlet weak var followBtn: UIButton!
     
-    @IBAction func followerBtnPressed(_ sender: UIButton) {
-    }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    weak var delegate: FollowBtnAction?
     
+    @IBAction func followBtnPressed(_ sender: UIButton) {
+        print("셀클릭")
+        delegate?.followBtnAction(button: followBtn)
+    }
 }

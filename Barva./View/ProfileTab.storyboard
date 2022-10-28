@@ -241,6 +241,7 @@
                     </view>
                     <connections>
                         <outlet property="introTextView" destination="iJu-gF-WmH" id="w8W-nQ-ifE"/>
+                        <outlet property="nameTextField" destination="D6o-JU-esv" id="j0f-ZB-iVL"/>
                         <outlet property="nickTextField" destination="Mjn-y0-s3z" id="RH0-T7-0Oj"/>
                         <outlet property="profileImageView" destination="bMi-mU-nSm" id="ugl-eC-22y"/>
                         <outlet property="setProfileBtn" destination="wU0-Ll-iIj" id="NOS-Ng-JaX"/>
@@ -1203,7 +1204,7 @@
         <!--My Follow Tab Man View Controller-->
         <scene sceneID="e79-po-P92">
             <objects>
-                <viewController storyboardIdentifier="MyFollowTabManViewController" id="dIL-rT-gWj" customClass="MyFollowTabManViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyFollowTabManViewController" id="dIL-rT-gWj" customClass="MyFollowTabManViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FeH-aa-kNT">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="669"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

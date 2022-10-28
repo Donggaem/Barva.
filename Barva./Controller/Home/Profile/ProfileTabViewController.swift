@@ -53,6 +53,7 @@ class ProfileTabViewController: UIViewController {
         let modifyVC = self.storyboard?.instantiateViewController(withIdentifier: "ProfileModifyViewController") as! ProfileModifyViewController
         self.navigationController?.pushViewController(modifyVC, animated: true)
         
+        modifyVC.paramName = userName.text ?? ""
         modifyVC.paramNick = userNick.text ?? ""
         modifyVC.paramIntro = userIntro.text ?? ""
         modifyVC.paramProfileImg = profileImageView.image ?? UIImage()
