@@ -17,6 +17,20 @@ struct MyFollowerListResponse: Decodable {
 
 struct MyFollower: Decodable {
     
-    var myFollower: [FollowerList]?
+    var myFollower: [MyFollowerList]?
     var err: String?
+}
+
+struct MyFollowerList: Decodable {
+    
+    var follower: MyFollowerData
+    var isFollowing: Bool
+}
+
+struct MyFollowerData: Decodable {
+    
+    var user_name: String
+    var user_nick: String
+    var profile_url: String
+    
 }

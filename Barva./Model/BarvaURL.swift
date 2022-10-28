@@ -68,5 +68,5 @@ struct BarvaURL {
     static let cancelFollowingURL = "http://3.34.183.110:3003/user/cancelFollowing"
 
     static let otherFollowerListURL = "http://3.34.183.110:3003/sort/otherFollowerList"
-    static let myFollowerListURL = "http://3.34.183.110:3003/sort/myFollowerList"
+    static let myFollowerListURL = "http://3.34.183.110:3003/user/myFollowerList"
 }

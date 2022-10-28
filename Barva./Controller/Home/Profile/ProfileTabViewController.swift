@@ -39,8 +39,10 @@ class ProfileTabViewController: UIViewController {
     //MARK: - IBACTION
     
     @IBAction func followerBtnPressed(_ sender: UIButton) {
-        let followVC = self.storyboard?.instantiateViewController(withIdentifier: "FollowViewController") as! FollowViewController
+        let followVC = self.storyboard?.instantiateViewController(withIdentifier: "MyFollowViewController") as! MyFollowViewController
         self.navigationController?.pushViewController(followVC, animated: true)
+        followVC.paramUserNick = userNick.text ?? ""
+        
     }
     
     @IBAction func followingBtnPressed(_ sender: UIButton) {

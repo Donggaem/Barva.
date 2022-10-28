@@ -27,7 +27,6 @@
 		EB50D06629090E2C00CFD496 /* SavePostCheckerboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50D06529090E2C00CFD496 /* SavePostCheckerboardResponse.swift */; };
 		EB50D06829090E7C00CFD496 /* SavePostSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50D06729090E7C00CFD496 /* SavePostSingleResponse.swift */; };
 		EB5C65F2290AC23600962684 /* MyFollowerListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5C65F1290AC23600962684 /* MyFollowerListResponse.swift */; };
-		EB5C65F4290AC5D200962684 /* FollowerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5C65F3290AC5D200962684 /* FollowerList.swift */; };
 		EB67130F2901336D00B8F8FC /* UserSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67130E2901336D00B8F8FC /* UserSingleResponse.swift */; };
 		EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67743B28C72F2B001A6F55 /* BarvaURL.swift */; };
 		EB68B4CE2909BED8003C632D /* OtherCheckboardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68B4CD2909BED8003C632D /* OtherCheckboardRequest.swift */; };
@@ -55,6 +54,10 @@
 		EB8D504728E17E230045C4D2 /* IDFindResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D504628E17E230045C4D2 /* IDFindResponse.swift */; };
 		EB958D6E290BF6FF009FFEA4 /* MyFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB958D6C290BF6FF009FFEA4 /* MyFollowTableViewCell.swift */; };
 		EB958D6F290BF6FF009FFEA4 /* MyFollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB958D6D290BF6FF009FFEA4 /* MyFollowTableViewCell.xib */; };
+		EB958D71290BF8A1009FFEA4 /* MyFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB958D70290BF8A1009FFEA4 /* MyFollowViewController.swift */; };
+		EB958D73290BF95E009FFEA4 /* MyFollowTabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB958D72290BF95E009FFEA4 /* MyFollowTabManViewController.swift */; };
+		EB958D75290BF96F009FFEA4 /* MyFollowerTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB958D74290BF96F009FFEA4 /* MyFollowerTabViewController.swift */; };
+		EB958D77290BF983009FFEA4 /* MyFollowingTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB958D76290BF983009FFEA4 /* MyFollowingTabViewController.swift */; };
 		EB97FA0528E47F0700A43CEA /* HomeImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB97FA0428E47F0700A43CEA /* HomeImageCollectionViewCell.swift */; };
 		EB9A223928EEB68800B13DB4 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9A223828EEB68800B13DB4 /* ChatTableViewCell.swift */; };
 		EB9BB22028E4254700AD34B1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BB21F28E4254700AD34B1 /* FeedViewController.swift */; };
@@ -154,7 +157,6 @@
 		EB50D06529090E2C00CFD496 /* SavePostCheckerboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostCheckerboardResponse.swift; sourceTree = "<group>"; };
 		EB50D06729090E7C00CFD496 /* SavePostSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostSingleResponse.swift; sourceTree = "<group>"; };
 		EB5C65F1290AC23600962684 /* MyFollowerListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFollowerListResponse.swift; sourceTree = "<group>"; };
-		EB5C65F3290AC5D200962684 /* FollowerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerList.swift; sourceTree = "<group>"; };
 		EB67130E2901336D00B8F8FC /* UserSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleResponse.swift; sourceTree = "<group>"; };
 		EB67743B28C72F2B001A6F55 /* BarvaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarvaURL.swift; sourceTree = "<group>"; };
 		EB68B4CD2909BED8003C632D /* OtherCheckboardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherCheckboardRequest.swift; sourceTree = "<group>"; };
@@ -182,6 +184,10 @@
 		EB8D504628E17E230045C4D2 /* IDFindResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDFindResponse.swift; sourceTree = "<group>"; };
 		EB958D6C290BF6FF009FFEA4 /* MyFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFollowTableViewCell.swift; sourceTree = "<group>"; };
 		EB958D6D290BF6FF009FFEA4 /* MyFollowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFollowTableViewCell.xib; sourceTree = "<group>"; };
+		EB958D70290BF8A1009FFEA4 /* MyFollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFollowViewController.swift; sourceTree = "<group>"; };
+		EB958D72290BF95E009FFEA4 /* MyFollowTabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFollowTabManViewController.swift; sourceTree = "<group>"; };
+		EB958D74290BF96F009FFEA4 /* MyFollowerTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFollowerTabViewController.swift; sourceTree = "<group>"; };
+		EB958D76290BF983009FFEA4 /* MyFollowingTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFollowingTabViewController.swift; sourceTree = "<group>"; };
 		EB97FA0428E47F0700A43CEA /* HomeImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB9A223828EEB68800B13DB4 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		EB9BB21F28E4254700AD34B1 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -522,6 +528,10 @@
 			children = (
 				EB958D6C290BF6FF009FFEA4 /* MyFollowTableViewCell.swift */,
 				EB958D6D290BF6FF009FFEA4 /* MyFollowTableViewCell.xib */,
+				EB958D70290BF8A1009FFEA4 /* MyFollowViewController.swift */,
+				EB958D72290BF95E009FFEA4 /* MyFollowTabManViewController.swift */,
+				EB958D74290BF96F009FFEA4 /* MyFollowerTabViewController.swift */,
+				EB958D76290BF983009FFEA4 /* MyFollowingTabViewController.swift */,
 			);
 			path = MyFollow;
 			sourceTree = "<group>";
@@ -679,7 +689,6 @@
 			children = (
 				EBC77D9D290986C8000A5D20 /* User */,
 				EBC77D9C290986BA000A5D20 /* Other */,
-				EB5C65F3290AC5D200962684 /* FollowerList.swift */,
 			);
 			path = FollowList;
 			sourceTree = "<group>";
@@ -953,6 +962,7 @@
 				EB8D504128E160FB0045C4D2 /* UpdatePWResponse.swift in Sources */,
 				EB25ACFC28A1364D0006C1F2 /* LoginViewController.swift in Sources */,
 				EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */,
+				EB958D77290BF983009FFEA4 /* MyFollowingTabViewController.swift in Sources */,
 				EBE6657D28E6C0EC007F3B48 /* FeedViewCell.swift in Sources */,
 				EBF510D128AFBC2D0098BD5A /* IDCheckRequest.swift in Sources */,
 				EB2F90B228E96D510098A3C1 /* UploadRequest.swift in Sources */,
@@ -1000,6 +1010,7 @@
 				EBCCD5622903E75A00B6BAA6 /* GenderSingleRequest.swift in Sources */,
 				EBD85E8B290A4655007AE650 /* OtherSingleResponse.swift in Sources */,
 				EB5C65F2290AC23600962684 /* MyFollowerListResponse.swift in Sources */,
+				EB958D73290BF95E009FFEA4 /* MyFollowTabManViewController.swift in Sources */,
 				EB83748428F2B70E00518A09 /* StorageImagesResponse.swift in Sources */,
 				EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */,
 				EBBC40B328F4291F0014F949 /* ProfileSetImgResponse.swift in Sources */,
@@ -1025,13 +1036,14 @@
 				EBBBCE482907C1DC004404ED /* ResignResponse.swift in Sources */,
 				EBCCD5522903E3E600B6BAA6 /* NewestSingleResponse.swift in Sources */,
 				EBF510D728AFBC660098BD5A /* NickCheckResponse.swift in Sources */,
+				EB958D71290BF8A1009FFEA4 /* MyFollowViewController.swift in Sources */,
 				EBE4EDBC28A51255005C7516 /* UploadTabViewController.swift in Sources */,
 				EB84F2E928F26F9A002921D6 /* ProfileResponse.swift in Sources */,
 				EBF510E028AFBD980098BD5A /* InspectMailResponse.swift in Sources */,
+				EB958D75290BF96F009FFEA4 /* MyFollowerTabViewController.swift in Sources */,
 				EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */,
 				EBB8F45C28BF9C430069D4E1 /* ProfileTabManViewController.swift in Sources */,
 				EBBC40B928F4298A0014F949 /* ProfileSetIntroResponse.swift in Sources */,
-				EB5C65F4290AC5D200962684 /* FollowerList.swift in Sources */,
 				EBF510DC28AFBD1C0098BD5A /* SendMailResponse.swift in Sources */,
 				EB9BB22228E4255200AD34B1 /* ChatViewController.swift in Sources */,
 				EBC7609D28B5F385006ED770 /* LatestBoardViewController.swift in Sources */,

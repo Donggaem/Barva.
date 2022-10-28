@@ -486,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKA-zS-LwK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2592" y="-600"/>
+            <point key="canvasLocation" x="2215" y="791"/>
         </scene>
         <!--Item-->
         <scene sceneID="BLT-hv-lVt">
@@ -710,7 +710,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SsB-pu-WDM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3415" y="-599"/>
+            <point key="canvasLocation" x="3038" y="791"/>
         </scene>
         <!--Follower Tab View Controller-->
         <scene sceneID="49Q-kq-8h8">
@@ -755,7 +755,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnS-JY-gEp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4064.6153846153843" y="-599.64454976303318"/>
+            <point key="canvasLocation" x="3689" y="791"/>
         </scene>
         <!--Following Tab View Controller-->
         <scene sceneID="k4q-Sb-koc">
@@ -797,7 +797,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSl-eh-RNX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4751" y="-600"/>
+            <point key="canvasLocation" x="4375" y="790"/>
         </scene>
         <!--Profile Setting View Controller-->
         <scene sceneID="mje-r1-1GJ">
@@ -1131,6 +1131,179 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LeL-mS-7I9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="954" y="791"/>
+        </scene>
+        <!--My Follow View Controller-->
+        <scene sceneID="dvn-uq-0uV">
+            <objects>
+                <viewController storyboardIdentifier="MyFollowViewController" id="Xbd-Bq-0W2" customClass="MyFollowViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N0s-Ns-G2H">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afe-b2-jdO" userLabel="naviView">
+                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96u-bB-T5B">
+                                        <rect key="frame" x="22" y="10" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="Dn9-1l-41H"/>
+                                            <constraint firstAttribute="height" constant="24" id="dCn-MV-tbt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" red="0.10980392160000001" green="0.1058823529" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="Xbd-Bq-0W2" eventType="touchUpInside" id="z6z-bb-ygw"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="유저이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkb-M6-EeY">
+                                        <rect key="frame" x="165.66666666666666" y="12.333333333333334" width="59" height="19.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="gkb-M6-EeY" firstAttribute="centerY" secondItem="96u-bB-T5B" secondAttribute="centerY" id="2c4-1Q-ORp"/>
+                                    <constraint firstAttribute="height" constant="44" id="GSb-NK-LKK"/>
+                                    <constraint firstItem="gkb-M6-EeY" firstAttribute="centerX" secondItem="afe-b2-jdO" secondAttribute="centerX" id="VDr-0q-YYl"/>
+                                    <constraint firstItem="96u-bB-T5B" firstAttribute="top" secondItem="afe-b2-jdO" secondAttribute="top" constant="10" id="kIK-Zn-ygl"/>
+                                    <constraint firstItem="96u-bB-T5B" firstAttribute="leading" secondItem="afe-b2-jdO" secondAttribute="leading" constant="22" id="s6t-CV-etj"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cwh-ca-U3y">
+                                <rect key="frame" x="0.0" y="88" width="390" height="669"/>
+                                <connections>
+                                    <segue destination="dIL-rT-gWj" kind="embed" id="9w4-r2-0va"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fv3-bg-jYK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="afe-b2-jdO" firstAttribute="leading" secondItem="N0s-Ns-G2H" secondAttribute="leading" id="0ah-Pu-iSP"/>
+                            <constraint firstItem="Cwh-ca-U3y" firstAttribute="leading" secondItem="fv3-bg-jYK" secondAttribute="leading" id="AkN-Xr-MCz"/>
+                            <constraint firstItem="fv3-bg-jYK" firstAttribute="bottom" secondItem="Cwh-ca-U3y" secondAttribute="bottom" constant="53" id="BNg-Aa-QeF"/>
+                            <constraint firstItem="Cwh-ca-U3y" firstAttribute="top" secondItem="afe-b2-jdO" secondAttribute="bottom" id="Hhz-gt-MkL"/>
+                            <constraint firstItem="Cwh-ca-U3y" firstAttribute="trailing" secondItem="fv3-bg-jYK" secondAttribute="trailing" id="RrS-aW-EaP"/>
+                            <constraint firstAttribute="trailing" secondItem="afe-b2-jdO" secondAttribute="trailing" id="eJN-vh-zpx"/>
+                            <constraint firstItem="afe-b2-jdO" firstAttribute="top" secondItem="N0s-Ns-G2H" secondAttribute="top" constant="44" id="xjl-ou-tii"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userNick" destination="gkb-M6-EeY" id="wet-HB-dG1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VdK-qQ-AEY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4125" y="58"/>
+        </scene>
+        <!--My Follow Tab Man View Controller-->
+        <scene sceneID="e79-po-P92">
+            <objects>
+                <viewController storyboardIdentifier="MyFollowTabManViewController" id="dIL-rT-gWj" customClass="MyFollowTabManViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FeH-aa-kNT">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="669"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="v3j-wV-JD7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8VP-kd-jfX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4948" y="59"/>
+        </scene>
+        <!--My Follower Tab View Controller-->
+        <scene sceneID="Zgu-jO-Utz">
+            <objects>
+                <viewController storyboardIdentifier="MyFollowerTabViewController" id="iyi-hK-YBm" customClass="MyFollowerTabViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z5m-3v-7dF">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="669"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HTZ-nD-lmH">
+                                <rect key="frame" x="0.0" y="40" width="390" height="629"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyFollowTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Vw6-rR-ju0">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vw6-rR-ju0" id="Ri3-2r-eeJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="iyi-hK-YBm" id="sHD-YV-x5v"/>
+                                    <outlet property="delegate" destination="iyi-hK-YBm" id="j1p-rr-Tm6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lmj-zl-uTC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HTZ-nD-lmH" firstAttribute="top" secondItem="Z5m-3v-7dF" secondAttribute="top" constant="40" id="GX9-js-Wnd"/>
+                            <constraint firstItem="HTZ-nD-lmH" firstAttribute="bottom" secondItem="Lmj-zl-uTC" secondAttribute="bottom" id="N2a-D2-WcI"/>
+                            <constraint firstItem="HTZ-nD-lmH" firstAttribute="leading" secondItem="Lmj-zl-uTC" secondAttribute="leading" id="oIV-ij-Xg6"/>
+                            <constraint firstItem="HTZ-nD-lmH" firstAttribute="trailing" secondItem="Lmj-zl-uTC" secondAttribute="trailing" id="yyB-Ms-nKI"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="390" height="669"/>
+                    <connections>
+                        <outlet property="myFollowerTableView" destination="HTZ-nD-lmH" id="bxK-c4-Ls7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k9x-ob-jeD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5598" y="59"/>
+        </scene>
+        <!--My Following Tab View Controller-->
+        <scene sceneID="vsi-z8-067">
+            <objects>
+                <viewController storyboardIdentifier="MyFollowingTabViewController" id="ObR-Ec-kOL" customClass="MyFollowingTabViewController" customModule="Barva_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gpy-fT-17T">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="669"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jnR-Fj-KmX">
+                                <rect key="frame" x="0.0" y="40" width="390" height="629"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="648-R5-KnZ">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="648-R5-KnZ" id="EBJ-dG-OMY">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ObR-Ec-kOL" id="2bP-Z3-MVQ"/>
+                                    <outlet property="delegate" destination="ObR-Ec-kOL" id="LcX-pS-Vg3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JKn-Zq-oMq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jnR-Fj-KmX" firstAttribute="bottom" secondItem="JKn-Zq-oMq" secondAttribute="bottom" id="K8x-mg-ouO"/>
+                            <constraint firstItem="jnR-Fj-KmX" firstAttribute="leading" secondItem="JKn-Zq-oMq" secondAttribute="leading" id="VkS-zv-RKq"/>
+                            <constraint firstItem="jnR-Fj-KmX" firstAttribute="trailing" secondItem="JKn-Zq-oMq" secondAttribute="trailing" id="ZpH-aV-q1W"/>
+                            <constraint firstItem="jnR-Fj-KmX" firstAttribute="top" secondItem="gpy-fT-17T" secondAttribute="top" constant="40" id="kVM-cK-bnu"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="390" height="669"/>
+                    <connections>
+                        <outlet property="myFollowingTableView" destination="jnR-Fj-KmX" id="TpS-z0-Wmb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSw-Jk-hlJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6285" y="58"/>
         </scene>
     </scenes>
     <resources>

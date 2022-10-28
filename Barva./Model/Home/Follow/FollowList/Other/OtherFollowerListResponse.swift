@@ -21,4 +21,18 @@ struct OtherFollower: Decodable {
     var err: String?
 }
 
+struct FollowerList: Decodable {
+    
+    var follower: FollowerData
+    var isMe: Bool?
+    var isFollowing: Bool?
+}
+
+struct FollowerData: Decodable {
+    
+    var user_name: String
+    var user_nick: String
+    var profile_url: String
+    
+}
 

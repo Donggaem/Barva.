@@ -9,6 +9,13 @@ import UIKit
 
 class MyFollowTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var followerProfileImg: UIImageView!
+    @IBOutlet weak var followNick: UILabel!
+    @IBOutlet weak var followName: UILabel!
+    @IBOutlet weak var followBtn: UIButton!
+    
+    @IBAction func followerBtnPressed(_ sender: UIButton) {
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
