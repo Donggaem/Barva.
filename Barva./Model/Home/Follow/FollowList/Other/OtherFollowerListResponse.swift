@@ -12,26 +12,13 @@ struct OtherFollowerListResponse:Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: OtherFollowerList?
+    var data: OtherFollower?
 }
 
-struct OtherFollowerList: Decodable {
+struct OtherFollower: Decodable {
     
     var otherFollowerList: [FollowerList]?
     var err: String?
 }
 
-struct FollowerList: Decodable {
-    
-    var follower: FollowerData
-    var isMe: Bool?
-    var isFollowing: Bool?
-}
 
-struct FollowerData: Decodable {
-    
-    var user_name: String
-    var user_nick: String
-    var profile_url: String
-    
-}

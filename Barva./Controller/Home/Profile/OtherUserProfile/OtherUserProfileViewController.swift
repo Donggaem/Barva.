@@ -18,7 +18,7 @@ class OtherUserProfileViewController: UIViewController {
     @IBOutlet weak var otherUserName: UILabel!
     @IBOutlet weak var otherUserIntro: UILabel!
     
-
+    
     @IBOutlet weak var count_Post: UILabel!
     @IBOutlet weak var count_Follower: UILabel!
     @IBOutlet weak var count_Following: UILabel!
@@ -29,21 +29,12 @@ class OtherUserProfileViewController: UIViewController {
     
     var OtherCheckboardArray: [String] = []
     
-    var followBool = false {
-        didSet {
-            if followBool == false {
-                followBtn.setColor_false(button: followBtn)
-            }else {
-                followBtn.setColor_true(button: followBtn)
-               
-            }
-        }
-    }
+    var followBool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
         setAPI()
+        setUI()
         setCollectionView()
     }
     
@@ -57,8 +48,7 @@ class OtherUserProfileViewController: UIViewController {
         //팔로우 버튼 조정
         followBtn.layer.cornerRadius = 3
         followBtn.layer.borderWidth = 1
-        followBtn.setColor_false(button: followBtn)
-
+        
     }
     
     private func setAPI() {
@@ -74,31 +64,16 @@ class OtherUserProfileViewController: UIViewController {
         postOtherCheckerboard(param_checkboard)
     }
     
-    //버튼 비활색
-   private func setColor_false(button: UIButton) {
-        button.setTitle("팔로우", for: .normal)
-        button.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
-        button.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        button.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
-    }
-    
-    //버튼 활색
-   private func setColor_true(button: UIButton) {
-        button.setTitle("팔로잉", for: .normal)
-        button.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
-        button.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
-    }
-    
     //MARK: - IBACTION
     @IBAction func backBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-
+        
     }
     
     @IBAction func followerBtnPressed(_ sender: UIButton) {
         let followVC = self.storyboard?.instantiateViewController(withIdentifier: "FollowViewController") as! FollowViewController
         self.navigationController?.pushViewController(followVC, animated: true)
-        
+
         followVC.paramMainOtherNick = otherUserNick.text ?? ""
     }
     
@@ -110,11 +85,18 @@ class OtherUserProfileViewController: UIViewController {
             let nick = otherUserNick.text ?? ""
             let param = AddFollowingRequest(user_nick: nick)
             postAddFollowing(param)
+            followBtn.setTitle("팔로잉", for: .normal)
+            followBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            followBtn.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
             followBool = true
         }else {
             let nick = otherUserNick.text ?? ""
             let param = CancelFollowingRequest(user_nick: nick)
             postCancelFollowing(param)
+            followBtn.setTitle("팔로우", for: .normal)
+            followBtn.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
+            followBtn.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            followBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
             followBool = false
         }
     }
@@ -140,17 +122,32 @@ class OtherUserProfileViewController: UIViewController {
                                 
                                 self.otherUserNick.text = response.data?.otherProfileInfo?.user_nick
                                 self.otherUserName.text = response.data?.otherProfileInfo?.user_name
+                                                                
+                                if response.data?.otherProfileInfo?.isFollowing == true {
+                                    self.followBtn.setTitle("팔로잉", for: .normal)
+                                    self.followBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+                                    self.followBtn.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
+                                    self.followBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
 
+                                    self.followBool = true
+                                }else {
+                                    self.followBtn.setTitle("팔로우", for: .normal)
+                                    self.followBtn.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
+                                    self.followBtn.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+                                    self.followBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
+                                    self.followBool = false
+                                }
+                                
                                 if let intro = response.data?.otherProfileInfo?.user_introduce {
                                     self.otherUserIntro.text = intro
                                 }else {
                                     self.otherUserIntro.text = ""
                                 }
-                                    
+                                
                                 if response.data?.otherProfileInfo?.profile_url == "" || response.data?.otherProfileInfo?.profile_url == nil {
                                     
                                     self.otherUserProfile.image = UIImage(systemName: "person.crop.circle")
-
+                                    
                                 }else {
                                     let url = URL(string: response.data?.otherProfileInfo?.profile_url ?? "")
                                     self.otherUserProfile.kf.setImage(with: url)
@@ -160,7 +157,7 @@ class OtherUserProfileViewController: UIViewController {
                         }else {
                             print("data 옵셔널 에러")
                         }
-
+                        
                         
                     } else {
                         BarvaLog.error("postOtherProfile - fail")
@@ -190,7 +187,7 @@ class OtherUserProfileViewController: UIViewController {
                 case .success(let response):
                     if response.isSuccess == true {
                         BarvaLog.debug("postAddFollowing - Success")
-
+                        
                         
                     } else {
                         BarvaLog.error("postAddFollowing - fail")
@@ -220,7 +217,7 @@ class OtherUserProfileViewController: UIViewController {
                 case .success(let response):
                     if response.isSuccess == true {
                         BarvaLog.debug("postCancelFollowing - Success")
-
+                        
                         
                     } else {
                         BarvaLog.error("postCancelFollowing - fail")
@@ -282,32 +279,32 @@ class OtherUserProfileViewController: UIViewController {
 
 //MARK: - Extension UICollectionView
 extension OtherUserProfileViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-
+    
     // CollectionView 셋팅
     func setCollectionView() {
         self.otherCheckBoardCollectionView.delegate = self
         self.otherCheckBoardCollectionView.dataSource = self
         self.otherCheckBoardCollectionView.register(UINib(nibName: "HomeImageCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeImageCollectionViewCell")
     }
-
+    
     // CollectionView item 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return OtherCheckboardArray.count
     }
-
+    
     // CollectionView Cell의 Object
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeImageCollectionViewCell", for: indexPath) as! HomeImageCollectionViewCell
-
+        
         let url = URL(string: OtherCheckboardArray[indexPath.row])
         cell.image.kf.setImage(with: url)
-
+        
         return cell
     }
     
     // CollectionView Cell 터치
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let cell = collectionView.cellForItem(at: indexPath) as? HomeImageCollectionViewCell
+        //        let cell = collectionView.cellForItem(at: indexPath) as? HomeImageCollectionViewCell
         
         let storyboard = UIStoryboard.init(name: "Home", bundle: nil)
         let feedVC = storyboard.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
@@ -317,20 +314,20 @@ extension OtherUserProfileViewController: UICollectionViewDataSource, UICollecti
         feedVC.paramSort = "Other"
         feedVC.paramUserNick = paramOtherNick
     }
-
+    
     // CollectionView Cell의 Size
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
+        
         let width: CGFloat = collectionView.frame.width / 3 - 1.0
-
+        
         return CGSize(width: width, height: width)
     }
-
+    
     // CollectionView Cell의 위아래 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 1.0
     }
-
+    
     // CollectionView Cell의 옆 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 1.0

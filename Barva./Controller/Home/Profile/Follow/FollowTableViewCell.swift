@@ -18,7 +18,12 @@ class FollowTableViewCell: UITableViewCell {
     }
     
     @IBOutlet weak var nickLabel: UILabel!
-    @IBOutlet weak var folowBtn: UIButton!
+    @IBOutlet weak var folowBtn: UIButton!{
+        didSet {
+            folowBtn.layer.cornerRadius = 3
+            folowBtn.layer.borderWidth = 1
+        }
+    }
     @IBOutlet weak var nameLabel: UILabel!
     
     

@@ -26,6 +26,8 @@
 		EB2F90B428E96D600098A3C1 /* UploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F90B328E96D600098A3C1 /* UploadResponse.swift */; };
 		EB50D06629090E2C00CFD496 /* SavePostCheckerboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50D06529090E2C00CFD496 /* SavePostCheckerboardResponse.swift */; };
 		EB50D06829090E7C00CFD496 /* SavePostSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50D06729090E7C00CFD496 /* SavePostSingleResponse.swift */; };
+		EB5C65F2290AC23600962684 /* MyFollowerListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5C65F1290AC23600962684 /* MyFollowerListResponse.swift */; };
+		EB5C65F4290AC5D200962684 /* FollowerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5C65F3290AC5D200962684 /* FollowerList.swift */; };
 		EB67130F2901336D00B8F8FC /* UserSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67130E2901336D00B8F8FC /* UserSingleResponse.swift */; };
 		EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67743B28C72F2B001A6F55 /* BarvaURL.swift */; };
 		EB68B4CE2909BED8003C632D /* OtherCheckboardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68B4CD2909BED8003C632D /* OtherCheckboardRequest.swift */; };
@@ -51,6 +53,8 @@
 		EB8D504328E16DAC0045C4D2 /* UpdatePWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D504228E16DAC0045C4D2 /* UpdatePWViewController.swift */; };
 		EB8D504528E17DF80045C4D2 /* IDCheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D504428E17DF80045C4D2 /* IDCheckResponse.swift */; };
 		EB8D504728E17E230045C4D2 /* IDFindResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D504628E17E230045C4D2 /* IDFindResponse.swift */; };
+		EB958D6E290BF6FF009FFEA4 /* MyFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB958D6C290BF6FF009FFEA4 /* MyFollowTableViewCell.swift */; };
+		EB958D6F290BF6FF009FFEA4 /* MyFollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB958D6D290BF6FF009FFEA4 /* MyFollowTableViewCell.xib */; };
 		EB97FA0528E47F0700A43CEA /* HomeImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB97FA0428E47F0700A43CEA /* HomeImageCollectionViewCell.swift */; };
 		EB9A223928EEB68800B13DB4 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9A223828EEB68800B13DB4 /* ChatTableViewCell.swift */; };
 		EB9BB22028E4254700AD34B1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BB21F28E4254700AD34B1 /* FeedViewController.swift */; };
@@ -149,6 +153,8 @@
 		EB2F99C628B0ABF10084EB7B /* YPImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YPImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB50D06529090E2C00CFD496 /* SavePostCheckerboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostCheckerboardResponse.swift; sourceTree = "<group>"; };
 		EB50D06729090E7C00CFD496 /* SavePostSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostSingleResponse.swift; sourceTree = "<group>"; };
+		EB5C65F1290AC23600962684 /* MyFollowerListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFollowerListResponse.swift; sourceTree = "<group>"; };
+		EB5C65F3290AC5D200962684 /* FollowerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerList.swift; sourceTree = "<group>"; };
 		EB67130E2901336D00B8F8FC /* UserSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleResponse.swift; sourceTree = "<group>"; };
 		EB67743B28C72F2B001A6F55 /* BarvaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarvaURL.swift; sourceTree = "<group>"; };
 		EB68B4CD2909BED8003C632D /* OtherCheckboardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherCheckboardRequest.swift; sourceTree = "<group>"; };
@@ -174,6 +180,8 @@
 		EB8D504228E16DAC0045C4D2 /* UpdatePWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePWViewController.swift; sourceTree = "<group>"; };
 		EB8D504428E17DF80045C4D2 /* IDCheckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDCheckResponse.swift; sourceTree = "<group>"; };
 		EB8D504628E17E230045C4D2 /* IDFindResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDFindResponse.swift; sourceTree = "<group>"; };
+		EB958D6C290BF6FF009FFEA4 /* MyFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFollowTableViewCell.swift; sourceTree = "<group>"; };
+		EB958D6D290BF6FF009FFEA4 /* MyFollowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFollowTableViewCell.xib; sourceTree = "<group>"; };
 		EB97FA0428E47F0700A43CEA /* HomeImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		EB9A223828EEB68800B13DB4 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		EB9BB21F28E4254700AD34B1 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -509,6 +517,15 @@
 			path = Update;
 			sourceTree = "<group>";
 		};
+		EB958D6B290BF651009FFEA4 /* MyFollow */ = {
+			isa = PBXGroup;
+			children = (
+				EB958D6C290BF6FF009FFEA4 /* MyFollowTableViewCell.swift */,
+				EB958D6D290BF6FF009FFEA4 /* MyFollowTableViewCell.xib */,
+			);
+			path = MyFollow;
+			sourceTree = "<group>";
+		};
 		EB9A223728EEB66700B13DB4 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,6 +618,7 @@
 		EBB8F45A28BF9BEE0069D4E1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				EB958D6B290BF651009FFEA4 /* MyFollow */,
 				EB864243290689DB00AFFAEC /* Follow */,
 				EBDA2BFD28FE7AD300652D33 /* OtherUserProfile */,
 				EBE4EDBD28A51288005C7516 /* ProfileTabViewController.swift */,
@@ -661,6 +679,7 @@
 			children = (
 				EBC77D9D290986C8000A5D20 /* User */,
 				EBC77D9C290986BA000A5D20 /* Other */,
+				EB5C65F3290AC5D200962684 /* FollowerList.swift */,
 			);
 			path = FollowList;
 			sourceTree = "<group>";
@@ -677,6 +696,7 @@
 		EBC77D9D290986C8000A5D20 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				EB5C65F1290AC23600962684 /* MyFollowerListResponse.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -849,6 +869,7 @@
 				EB9CC95E28A40A53003D9F22 /* ProfileTab.storyboard in Resources */,
 				EB25AD0428A136500006C1F2 /* LaunchScreen.storyboard in Resources */,
 				EBEF5EA52902A5E500C4B475 /* UserFeedViewCell.xib in Resources */,
+				EB958D6F290BF6FF009FFEA4 /* MyFollowTableViewCell.xib in Resources */,
 				EB9CC95C28A40A1A003D9F22 /* UploadTab.storyboard in Resources */,
 				EB834A9728E45662008A0706 /* HomeImageCollectionViewCell.xib in Resources */,
 				EB25AD0128A136500006C1F2 /* Assets.xcassets in Resources */,
@@ -960,6 +981,7 @@
 				EBB1ADC629057A6B00285672 /* SavePostRequest.swift in Sources */,
 				EBF510DA28AFBD060098BD5A /* SendMailRequest.swift in Sources */,
 				EBAA5E78290861F600AE4730 /* AddFollowingResponse.swift in Sources */,
+				EB958D6E290BF6FF009FFEA4 /* MyFollowTableViewCell.swift in Sources */,
 				EBEF5EA72902C14300C4B475 /* UserFeedViewController.swift in Sources */,
 				EB1E7D6428FEE0CD00FE7737 /* UserCheckerBoardResponse.swift in Sources */,
 				EBE4EDB428A4E6B4005C7516 /* LoginResponse.swift in Sources */,
@@ -977,6 +999,7 @@
 				EB8642402906896600AFFAEC /* FollowerTabViewController.swift in Sources */,
 				EBCCD5622903E75A00B6BAA6 /* GenderSingleRequest.swift in Sources */,
 				EBD85E8B290A4655007AE650 /* OtherSingleResponse.swift in Sources */,
+				EB5C65F2290AC23600962684 /* MyFollowerListResponse.swift in Sources */,
 				EB83748428F2B70E00518A09 /* StorageImagesResponse.swift in Sources */,
 				EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */,
 				EBBC40B328F4291F0014F949 /* ProfileSetImgResponse.swift in Sources */,
@@ -1008,6 +1031,7 @@
 				EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */,
 				EBB8F45C28BF9C430069D4E1 /* ProfileTabManViewController.swift in Sources */,
 				EBBC40B928F4298A0014F949 /* ProfileSetIntroResponse.swift in Sources */,
+				EB5C65F4290AC5D200962684 /* FollowerList.swift in Sources */,
 				EBF510DC28AFBD1C0098BD5A /* SendMailResponse.swift in Sources */,
 				EB9BB22228E4255200AD34B1 /* ChatViewController.swift in Sources */,
 				EBC7609D28B5F385006ED770 /* LatestBoardViewController.swift in Sources */,

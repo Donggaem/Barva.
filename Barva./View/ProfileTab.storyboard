@@ -1017,20 +1017,6 @@
                                     <action selector="followingBtnPressed:" destination="ALG-5S-TkW" eventType="touchUpInside" id="uUi-7X-FnU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2br-7K-XzP">
-                                <rect key="frame" x="14" y="339" width="362" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="axB-Ym-Dza"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="12"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="팔로우">
-                                    <color key="titleColor" red="0.26274509800000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="followBtnPressed:" destination="ALG-5S-TkW" eventType="touchUpInside" id="Pco-Pl-aXu"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crR-5h-u6z" userLabel="naviView">
                                 <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                                 <subviews>
@@ -1075,12 +1061,24 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORO-wF-rtO">
+                                <rect key="frame" x="14" y="339" width="362" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CQY-pd-h0u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="followBtnPressed:" destination="ALG-5S-TkW" eventType="touchUpInside" id="gNu-DY-r38"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="36Y-3Y-veG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ekf-1G-A1q" firstAttribute="leading" secondItem="ejr-rn-8ku" secondAttribute="leading" id="0P9-f4-3be"/>
-                            <constraint firstItem="2br-7K-XzP" firstAttribute="top" secondItem="NXp-iU-2Yo" secondAttribute="bottom" constant="22" id="1Je-WZ-eCk"/>
+                            <constraint firstItem="ORO-wF-rtO" firstAttribute="top" secondItem="NXp-iU-2Yo" secondAttribute="bottom" constant="22" id="8j9-c1-F6O"/>
                             <constraint firstItem="Ekf-1G-A1q" firstAttribute="top" secondItem="IOg-vJ-457" secondAttribute="bottom" constant="4" id="AgR-EK-ci7"/>
                             <constraint firstItem="NXp-iU-2Yo" firstAttribute="centerY" secondItem="Q2T-A7-Ewl" secondAttribute="centerY" id="BUO-Zf-OyT"/>
                             <constraint firstItem="G7X-pu-Nai" firstAttribute="leading" secondItem="36Y-3Y-veG" secondAttribute="leading" id="DrG-OS-fgr"/>
@@ -1101,13 +1099,13 @@
                             <constraint firstItem="Yed-gR-AZj" firstAttribute="bottom" secondItem="36Y-3Y-veG" secondAttribute="bottom" id="dSs-Fj-PfK"/>
                             <constraint firstItem="qJl-iw-CNR" firstAttribute="leading" secondItem="ejr-rn-8ku" secondAttribute="leading" id="eXA-sN-eSz"/>
                             <constraint firstItem="qJl-iw-CNR" firstAttribute="top" secondItem="Ekf-1G-A1q" secondAttribute="bottom" constant="8" id="gUw-yW-OT2"/>
-                            <constraint firstItem="2br-7K-XzP" firstAttribute="leading" secondItem="36Y-3Y-veG" secondAttribute="leading" constant="14" id="hog-u4-dgL"/>
                             <constraint firstItem="8Z1-4K-zfI" firstAttribute="leading" secondItem="mVu-DS-O8s" secondAttribute="trailing" constant="20" id="hxg-5a-rD1"/>
-                            <constraint firstAttribute="trailing" secondItem="2br-7K-XzP" secondAttribute="trailing" constant="14" id="iu8-vF-zjq"/>
                             <constraint firstItem="8Z1-4K-zfI" firstAttribute="centerY" secondItem="mVu-DS-O8s" secondAttribute="centerY" id="lcE-JJ-vQu"/>
+                            <constraint firstItem="ORO-wF-rtO" firstAttribute="leading" secondItem="36Y-3Y-veG" secondAttribute="leading" constant="14" id="lwj-5Q-W73"/>
                             <constraint firstItem="crR-5h-u6z" firstAttribute="leading" secondItem="gnk-ML-7KL" secondAttribute="leading" id="n2p-oh-mQy"/>
+                            <constraint firstItem="Yed-gR-AZj" firstAttribute="top" secondItem="ORO-wF-rtO" secondAttribute="bottom" constant="16" id="o6T-DA-DhP"/>
                             <constraint firstItem="G7X-pu-Nai" firstAttribute="trailing" secondItem="36Y-3Y-veG" secondAttribute="trailing" id="pbh-cU-aRV"/>
-                            <constraint firstItem="Yed-gR-AZj" firstAttribute="top" secondItem="2br-7K-XzP" secondAttribute="bottom" constant="16" id="tKt-MA-4Cb"/>
+                            <constraint firstItem="36Y-3Y-veG" firstAttribute="trailing" secondItem="ORO-wF-rtO" secondAttribute="trailing" constant="14" id="pdl-RL-K1h"/>
                             <constraint firstAttribute="trailing" secondItem="Yed-gR-AZj" secondAttribute="trailing" id="uiW-GQ-C7N"/>
                             <constraint firstItem="68N-Cu-GIS" firstAttribute="leading" secondItem="36Y-3Y-veG" secondAttribute="leading" constant="14" id="vWc-wh-OGF"/>
                             <constraint firstItem="mVu-DS-O8s" firstAttribute="centerY" secondItem="NXp-iU-2Yo" secondAttribute="centerY" id="wIV-Vp-z3p"/>
@@ -1122,7 +1120,7 @@
                         <outlet property="count_Follower" destination="NXp-iU-2Yo" id="dYy-lX-fMa"/>
                         <outlet property="count_Following" destination="8Z1-4K-zfI" id="M8P-4C-nqG"/>
                         <outlet property="count_Post" destination="qJl-iw-CNR" id="Bhd-Qh-DfX"/>
-                        <outlet property="followBtn" destination="2br-7K-XzP" id="xLe-Cn-9wH"/>
+                        <outlet property="followBtn" destination="ORO-wF-rtO" id="x0z-Iw-keK"/>
                         <outlet property="otherCheckBoardCollectionView" destination="Yed-gR-AZj" id="3Xd-pi-TXa"/>
                         <outlet property="otherUserIntro" destination="Ekf-1G-A1q" id="n2o-d7-MMm"/>
                         <outlet property="otherUserName" destination="IOg-vJ-457" id="2wE-UF-hze"/>

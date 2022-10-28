@@ -30,4 +30,5 @@ struct OtherProfileData: Decodable {
     var countPost: Int
     var countFollower: Int
     var countFollowing: Int
+    var isFollowing: Bool
 }
