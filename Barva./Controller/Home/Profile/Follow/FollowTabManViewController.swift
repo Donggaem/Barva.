@@ -80,7 +80,6 @@ extension FollowTabManViewController: PageboyViewControllerDataSource, TMBarData
     }
     
     func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
-        
         return viewControllers[index]
     }
     

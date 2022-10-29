@@ -24,6 +24,8 @@
 		EB2EA2FB28A1410E00EC0685 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2EA2FA28A1410E00EC0685 /* Home.storyboard */; };
 		EB2F90B228E96D510098A3C1 /* UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F90B128E96D510098A3C1 /* UploadRequest.swift */; };
 		EB2F90B428E96D600098A3C1 /* UploadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2F90B328E96D600098A3C1 /* UploadResponse.swift */; };
+		EB2FCE76290D9E23008D2778 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2FCE75290D9E23008D2778 /* SplashViewController.swift */; };
+		EB2FCE78290D9E2F008D2778 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB2FCE77290D9E2F008D2778 /* Splash.storyboard */; };
 		EB50D06629090E2C00CFD496 /* SavePostCheckerboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50D06529090E2C00CFD496 /* SavePostCheckerboardResponse.swift */; };
 		EB50D06829090E7C00CFD496 /* SavePostSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50D06729090E7C00CFD496 /* SavePostSingleResponse.swift */; };
 		EB5C65F2290AC23600962684 /* MyFollowerListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5C65F1290AC23600962684 /* MyFollowerListResponse.swift */; };
@@ -165,6 +167,8 @@
 		EB2F90B128E96D510098A3C1 /* UploadRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadRequest.swift; sourceTree = "<group>"; };
 		EB2F90B328E96D600098A3C1 /* UploadResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadResponse.swift; sourceTree = "<group>"; };
 		EB2F99C628B0ABF10084EB7B /* YPImagePicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YPImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB2FCE75290D9E23008D2778 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		EB2FCE77290D9E2F008D2778 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		EB50D06529090E2C00CFD496 /* SavePostCheckerboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostCheckerboardResponse.swift; sourceTree = "<group>"; };
 		EB50D06729090E7C00CFD496 /* SavePostSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostSingleResponse.swift; sourceTree = "<group>"; };
 		EB5C65F1290AC23600962684 /* MyFollowerListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFollowerListResponse.swift; sourceTree = "<group>"; };
@@ -399,6 +403,7 @@
 		EB25AD0E28A137380006C1F2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EB2FCE74290D9E0E008D2778 /* Splash */,
 				EB1751F128AA7869009FEFBF /* Login */,
 				EB1751F228AA788A009FEFBF /* Home */,
 			);
@@ -425,6 +430,15 @@
 				EB2F90B328E96D600098A3C1 /* UploadResponse.swift */,
 			);
 			path = Upload;
+			sourceTree = "<group>";
+		};
+		EB2FCE74290D9E0E008D2778 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				EB2FCE75290D9E23008D2778 /* SplashViewController.swift */,
+				EB2FCE77290D9E2F008D2778 /* Splash.storyboard */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		EB67130B290132E700B8F8FC /* Feed */ = {
@@ -926,6 +940,7 @@
 				EB9CC96028A40A6D003D9F22 /* ColorTab.storyboard in Resources */,
 				EB9CC95E28A40A53003D9F22 /* ProfileTab.storyboard in Resources */,
 				EB25AD0428A136500006C1F2 /* LaunchScreen.storyboard in Resources */,
+				EB2FCE78290D9E2F008D2778 /* Splash.storyboard in Resources */,
 				EBEF5EA52902A5E500C4B475 /* UserFeedViewCell.xib in Resources */,
 				EB958D7B290C0D43009FFEA4 /* MyFollowTableViewCell.xib in Resources */,
 				EB9C1E56290D1EB600D97F56 /* NoChatTableViewCell.xib in Resources */,
@@ -1068,6 +1083,7 @@
 				EB958D73290BF95E009FFEA4 /* MyFollowTabManViewController.swift in Sources */,
 				EB83748428F2B70E00518A09 /* StorageImagesResponse.swift in Sources */,
 				EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */,
+				EB2FCE76290D9E23008D2778 /* SplashViewController.swift in Sources */,
 				EBBC40B328F4291F0014F949 /* ProfileSetImgResponse.swift in Sources */,
 				EBBA3D18290D668900E6A156 /* LikePostResponse.swift in Sources */,
 				EBABC36D290C571100994F81 /* OtherFollowingListResponse.swift in Sources */,

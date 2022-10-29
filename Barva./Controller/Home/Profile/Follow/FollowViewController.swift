@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import Pageboy
 
 class FollowViewController: UIViewController {
 
     @IBOutlet weak var main_otheruser_nick: UILabel!
         
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setUI()
     }
 

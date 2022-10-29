@@ -19,6 +19,7 @@ struct FeedArray: Decodable {
     var post_url: [String]
     var post_users: Feed_Data
     var isSave: Bool?
+    var isLike: Bool?
 }
 
 struct Feed_Data: Decodable {

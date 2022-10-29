@@ -17,5 +17,6 @@ struct LikePostResponse: Decodable {
 
 struct LikePostData: Decodable {
     
-    var err: String
+    var likeCount: Int?
+    var err: String?
 }

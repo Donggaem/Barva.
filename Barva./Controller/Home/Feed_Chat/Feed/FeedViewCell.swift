@@ -52,7 +52,7 @@ class FeedViewCell: FSPagerViewCell {
     }
     
     @IBOutlet weak var heartBtn: UIButton!
-    @IBOutlet weak var heartCount: UILabel!
+    @IBOutlet weak var heartCount: UILabel! 
     @IBOutlet weak var bookmarkBtn: UIButton!
     
     weak var delegate: NaviAction?
@@ -87,6 +87,12 @@ class FeedViewCell: FSPagerViewCell {
         }
     }
     
+    var heartIntCount = 0 {
+        didSet {
+            heartCount.text = String(heartIntCount)
+        }
+    }
+    
     //MARK: - IBACTION
     @IBAction func allChatBtnPressed(_ sender: UIButton) {
 
@@ -99,10 +105,12 @@ class FeedViewCell: FSPagerViewCell {
             delegate?.checkLike(like: likeBool)
             likeBool = true
             heartBtnColorT(checkBtn: heartBtn)
+            heartIntCount += 1
         }else{
             delegate?.checkLike(like: likeBool)
             likeBool = false
             heartBtnColorF(checkBtn: heartBtn)
+            heartIntCount -= 1
         }
     }
     @IBAction func bookmarkBtnPressed(_ sender: UIButton) {

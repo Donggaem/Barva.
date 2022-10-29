@@ -45,7 +45,7 @@ class FeedViewController: UIViewController {
     var imgArray: [String] = []
     var feedArray: [FeedArray] = []
     var savePostArray: [SavedPosts] = []
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,7 +58,6 @@ class FeedViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
         
     }
     
@@ -422,6 +421,7 @@ class FeedViewController: UIViewController {
                     if response.isSuccess == true {
                         
                         BarvaLog.debug("postCencelLikePost - Success")
+
                         
                     } else {
                         BarvaLog.error("postCencelLikePost - fail")
@@ -468,8 +468,10 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.paramImg = feedArray[index].post_url
         cell.pageControl.numberOfPages = feedArray[index].post_url.count
         cell.bookmarkBool = feedArray[index].isSave ?? false
-//        cell.likeBool = feedArray[index].isLike ?? false
+        
+        cell.likeBool = feedArray[index].isLike ?? false
         cell.heartCount.text = String(feedArray[index].likeCount)
+        cell.heartIntCount = feedArray[index].likeCount
         
         feedNick = feedArray[index].post_users.user_nick
         feedSpec = "\(feedArray[index].user_gender) | \(feedArray[index].user_tall)cm | \(feedArray[index].user_weight)kg"

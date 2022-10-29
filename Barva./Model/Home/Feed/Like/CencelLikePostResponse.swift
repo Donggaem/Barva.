@@ -17,6 +17,7 @@ struct CencelLikePostResponse: Decodable {
 
 struct CencelLikePostData: Decodable {
     
-    var err: String
+    var likeCount: Int?
+    var err: String?
 }
 
