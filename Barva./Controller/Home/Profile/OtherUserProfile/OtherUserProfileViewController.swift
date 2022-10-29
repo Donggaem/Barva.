@@ -42,6 +42,7 @@ class OtherUserProfileViewController: UIViewController {
         super.viewWillAppear(true)
         setAPI()
         setCollectionView()
+        UserDefaults.standard.removeObject(forKey: "follownick")
     }
     //MARK: - INNER FUNC
     private func setUI() {
@@ -78,11 +79,15 @@ class OtherUserProfileViewController: UIViewController {
     @IBAction func followerBtnPressed(_ sender: UIButton) {
         let followVC = self.storyboard?.instantiateViewController(withIdentifier: "FollowViewController") as! FollowViewController
         self.navigationController?.pushViewController(followVC, animated: true)
-
-        followVC.paramMainOtherNick = otherUserNick.text ?? ""
+        
+        UserDefaults.standard.set(otherUserNick.text, forKey: "follownick")
     }
     
     @IBAction func followingBtnPressed(_ sender: UIButton) {
+        let followVC = self.storyboard?.instantiateViewController(withIdentifier: "FollowViewController") as! FollowViewController
+        self.navigationController?.pushViewController(followVC, animated: true)
+
+        UserDefaults.standard.set(otherUserNick.text, forKey: "follownick")
     }
     
     @IBAction func followBtnPressed(_ sender: UIButton) {

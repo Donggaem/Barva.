@@ -14,7 +14,7 @@ class FollowerTabViewController: UIViewController {
 
     @IBOutlet weak var followerTableView: UITableView!
     
-    var followerList: [FollowerList] = []
+    var followerList: [OtherFollowerList] = []
     var isMe = false
     var isFollowing = false
         
@@ -27,24 +27,24 @@ class FollowerTabViewController: UIViewController {
     //MARK: - INNER FUNC
     private func setAPI() {
         let nick = UserDefaults.standard.string(forKey: "follownick") ?? ""
-        let param = OtherFollowListRequest(user_nick: nick)
-        postOtherFollowList(param)
+        print(nick)
+        let param = OtherFollowerListRequest(user_nick: nick)
+        postOtherFollowerList(param)
         
     }
     
-    //MARK: - POST OTHERFOLLOWLIST
+    //MARK: - POST OTHERFOLLOWER LIST
     let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
-    private func postOtherFollowList(_ parameters: OtherFollowListRequest){
+    private func postOtherFollowerList(_ parameters: OtherFollowerListRequest){
         AF.request(BarvaURL.otherFollowerListURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
             .validate()
             .responseDecodable(of: OtherFollowerListResponse.self) { [weak self] response in
                 guard let self = self else {return}
                 switch response.result {
                 case .success(let response):
-                    print(response)
                     if response.isSuccess == true {
                         
-                        BarvaLog.debug("postOtherFollowList - Success")
+                        BarvaLog.debug("postOtherFollowerList - Success")
                         
                         if response.data != nil {
                             if let otherFollowerList = response.data?.otherFollowerResult {
@@ -59,7 +59,7 @@ class FollowerTabViewController: UIViewController {
                         
                         
                     } else {
-                        BarvaLog.error("postOtherFollowList - fail")
+                        BarvaLog.error("postOtherFollowerList - fail")
                         let loginFail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         loginFail_alert.addAction(okAction)
@@ -68,7 +68,7 @@ class FollowerTabViewController: UIViewController {
                     }
                 case .failure(let error):
                     print(error.localizedDescription)
-                    BarvaLog.error("postOtherFollowList - err")
+                    BarvaLog.error("postOtherFollowerList - err")
                     let loginFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
                     let okAction = UIAlertAction(title: "확인", style: .default)
                     loginFail_alert.addAction(okAction)

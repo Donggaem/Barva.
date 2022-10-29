@@ -17,18 +17,18 @@ struct OtherFollowerListResponse:Decodable {
 
 struct OtherFollower: Decodable {
     
-    var otherFollowerResult: [FollowerList]?
+    var otherFollowerResult: [OtherFollowerList]?
     var err: String?
 }
 
-struct FollowerList: Decodable {
+struct OtherFollowerList: Decodable {
     
-    var follower: FollowerData
+    var follower: OtherFollowerData
     var isMe: Bool?
     var isFollowing: Bool?
 }
 
-struct FollowerData: Decodable {
+struct OtherFollowerData: Decodable {
     
     var user_name: String
     var user_nick: String

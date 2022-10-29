@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OtherFollowListRequest: Encodable {
+struct OtherFollowerListRequest: Encodable {
     
     var user_nick: String
 }

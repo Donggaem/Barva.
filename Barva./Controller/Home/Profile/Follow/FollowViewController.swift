@@ -10,9 +10,7 @@ import UIKit
 class FollowViewController: UIViewController {
 
     @IBOutlet weak var main_otheruser_nick: UILabel!
-    
-    var paramMainOtherNick = ""
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,8 +27,5 @@ class FollowViewController: UIViewController {
         
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
-
-        main_otheruser_nick.text = paramMainOtherNick
-        UserDefaults.standard.set(paramMainOtherNick, forKey: "follownick")
     }
 }

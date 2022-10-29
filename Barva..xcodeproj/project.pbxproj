@@ -73,6 +73,9 @@
 		EBAA5E7C2908627700AE4730 /* CancelFollowingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAA5E7B2908627700AE4730 /* CancelFollowingResponse.swift */; };
 		EBAA5E7F29086E8D00AE4730 /* OtherProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAA5E7E29086E8D00AE4730 /* OtherProfileRequest.swift */; };
 		EBAA5E8129086EA200AE4730 /* OtherProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAA5E8029086EA200AE4730 /* OtherProfileResponse.swift */; };
+		EBABC369290C555000994F81 /* MyFollowingListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBABC368290C555000994F81 /* MyFollowingListResponse.swift */; };
+		EBABC36B290C56A000994F81 /* OtherFollowingListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBABC36A290C56A000994F81 /* OtherFollowingListRequest.swift */; };
+		EBABC36D290C571100994F81 /* OtherFollowingListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBABC36C290C571100994F81 /* OtherFollowingListResponse.swift */; };
 		EBAEEF5D28B35A5A00744A4F /* SpoqaHanSans in Resources */ = {isa = PBXBuildFile; fileRef = EBAEEF5C28B35A5A00744A4F /* SpoqaHanSans */; };
 		EBB1ADC629057A6B00285672 /* SavePostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1ADC529057A6B00285672 /* SavePostRequest.swift */; };
 		EBB1ADC829057A7700285672 /* SavePostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1ADC729057A7700285672 /* SavePostResponse.swift */; };
@@ -95,7 +98,7 @@
 		EBC7609D28B5F385006ED770 /* LatestBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */; };
 		EBC7609F28B5F3CB006ED770 /* todayColorTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC7609E28B5F3CB006ED770 /* todayColorTabViewController.swift */; };
 		EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC760A028B5F3FC006ED770 /* SexBoardViewController.swift */; };
-		EBC77D9F290986E4000A5D20 /* OtherFollowListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC77D9E290986E4000A5D20 /* OtherFollowListRequest.swift */; };
+		EBC77D9F290986E4000A5D20 /* OtherFollowerListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC77D9E290986E4000A5D20 /* OtherFollowerListRequest.swift */; };
 		EBC77DA129098701000A5D20 /* OtherFollowerListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC77DA029098701000A5D20 /* OtherFollowerListResponse.swift */; };
 		EBCCD5522903E3E600B6BAA6 /* NewestSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCD5512903E3E600B6BAA6 /* NewestSingleResponse.swift */; };
 		EBCCD5542903E52600B6BAA6 /* GenderCheckboardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCCD5532903E52600B6BAA6 /* GenderCheckboardRequest.swift */; };
@@ -203,6 +206,9 @@
 		EBAA5E7B2908627700AE4730 /* CancelFollowingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelFollowingResponse.swift; sourceTree = "<group>"; };
 		EBAA5E7E29086E8D00AE4730 /* OtherProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileRequest.swift; sourceTree = "<group>"; };
 		EBAA5E8029086EA200AE4730 /* OtherProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileResponse.swift; sourceTree = "<group>"; };
+		EBABC368290C555000994F81 /* MyFollowingListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFollowingListResponse.swift; sourceTree = "<group>"; };
+		EBABC36A290C56A000994F81 /* OtherFollowingListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFollowingListRequest.swift; sourceTree = "<group>"; };
+		EBABC36C290C571100994F81 /* OtherFollowingListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFollowingListResponse.swift; sourceTree = "<group>"; };
 		EBAEEF5C28B35A5A00744A4F /* SpoqaHanSans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SpoqaHanSans; sourceTree = "<group>"; };
 		EBB1ADC529057A6B00285672 /* SavePostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostRequest.swift; sourceTree = "<group>"; };
 		EBB1ADC729057A7700285672 /* SavePostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostResponse.swift; sourceTree = "<group>"; };
@@ -225,7 +231,7 @@
 		EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestBoardViewController.swift; sourceTree = "<group>"; };
 		EBC7609E28B5F3CB006ED770 /* todayColorTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayColorTabViewController.swift; sourceTree = "<group>"; };
 		EBC760A028B5F3FC006ED770 /* SexBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexBoardViewController.swift; sourceTree = "<group>"; };
-		EBC77D9E290986E4000A5D20 /* OtherFollowListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFollowListRequest.swift; sourceTree = "<group>"; };
+		EBC77D9E290986E4000A5D20 /* OtherFollowerListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFollowerListRequest.swift; sourceTree = "<group>"; };
 		EBC77DA029098701000A5D20 /* OtherFollowerListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFollowerListResponse.swift; sourceTree = "<group>"; };
 		EBCCD5512903E3E600B6BAA6 /* NewestSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewestSingleResponse.swift; sourceTree = "<group>"; };
 		EBCCD5532903E52600B6BAA6 /* GenderCheckboardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCheckboardRequest.swift; sourceTree = "<group>"; };
@@ -696,8 +702,10 @@
 		EBC77D9C290986BA000A5D20 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				EBC77D9E290986E4000A5D20 /* OtherFollowListRequest.swift */,
+				EBC77D9E290986E4000A5D20 /* OtherFollowerListRequest.swift */,
 				EBC77DA029098701000A5D20 /* OtherFollowerListResponse.swift */,
+				EBABC36A290C56A000994F81 /* OtherFollowingListRequest.swift */,
+				EBABC36C290C571100994F81 /* OtherFollowingListResponse.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -706,6 +714,7 @@
 			isa = PBXGroup;
 			children = (
 				EB5C65F1290AC23600962684 /* MyFollowerListResponse.swift */,
+				EBABC368290C555000994F81 /* MyFollowingListResponse.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -950,7 +959,7 @@
 				EBBBCE462907C1CF004404ED /* ResignRequest.swift in Sources */,
 				EBE4EDC328A514AF005C7516 /* UIViewController+Extension.swift in Sources */,
 				EB86424829068A4F00AFFAEC /* FollowTabManViewController.swift in Sources */,
-				EBC77D9F290986E4000A5D20 /* OtherFollowListRequest.swift in Sources */,
+				EBC77D9F290986E4000A5D20 /* OtherFollowerListRequest.swift in Sources */,
 				EB8D504728E17E230045C4D2 /* IDFindResponse.swift in Sources */,
 				EB2EA2F928A1409800EC0685 /* SigninViewController.swift in Sources */,
 				EB50D06829090E7C00CFD496 /* SavePostSingleResponse.swift in Sources */,
@@ -986,6 +995,7 @@
 				EBEF5EA32902A5D000C4B475 /* UserFeedViewCell.swift in Sources */,
 				EB86424629068A3000AFFAEC /* FollowViewController.swift in Sources */,
 				EBBBCE412907BE5C004404ED /* CommentPostRequest.swift in Sources */,
+				EBABC369290C555000994F81 /* MyFollowingListResponse.swift in Sources */,
 				EB68B4D22909BEF4003C632D /* OtherCheckboardResponse.swift in Sources */,
 				EBC7609B28B5F32C006ED770 /* HomeTabManViewController.swift in Sources */,
 				EBB1ADC629057A6B00285672 /* SavePostRequest.swift in Sources */,
@@ -1004,6 +1014,7 @@
 				EBF510DE28AFBD890098BD5A /* InspectMailRequest.swift in Sources */,
 				EBF510D528AFBC570098BD5A /* NickCheckRequest.swift in Sources */,
 				EB958D79290C0D1E009FFEA4 /* MyFollowTableViewCell.swift in Sources */,
+				EBABC36B290C56A000994F81 /* OtherFollowingListRequest.swift in Sources */,
 				EBBBCE4C2907F8A2004404ED /* CancelSavePostResponse.swift in Sources */,
 				EB97FA0528E47F0700A43CEA /* HomeImageCollectionViewCell.swift in Sources */,
 				EB8642402906896600AFFAEC /* FollowerTabViewController.swift in Sources */,
@@ -1014,6 +1025,7 @@
 				EB83748428F2B70E00518A09 /* StorageImagesResponse.swift in Sources */,
 				EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */,
 				EBBC40B328F4291F0014F949 /* ProfileSetImgResponse.swift in Sources */,
+				EBABC36D290C571100994F81 /* OtherFollowingListResponse.swift in Sources */,
 				EBE4EDBE28A51288005C7516 /* ProfileTabViewController.swift in Sources */,
 				EBDA2BFF28FE7B4000652D33 /* OtherUserProfileViewController.swift in Sources */,
 				EBE4EDB828A4E6D5005C7516 /* SigninResponse.swift in Sources */,
