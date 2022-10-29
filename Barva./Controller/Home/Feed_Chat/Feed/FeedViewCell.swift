@@ -14,6 +14,7 @@ protocol NaviAction: AnyObject {
     func moveChatVC()
     func moveOtherVC()
     func checkBookmark(bookmark: Bool)
+    func checkLike(like: Bool)
     
 }
 
@@ -74,6 +75,18 @@ class FeedViewCell: FSPagerViewCell {
         }
     }
     
+    var likeBool = false {
+        didSet {
+            if likeBool == false {
+                
+                heartBtnColorF(checkBtn: heartBtn)
+            }else {
+                
+                heartBtnColorT(checkBtn: heartBtn)
+            }
+        }
+    }
+    
     //MARK: - IBACTION
     @IBAction func allChatBtnPressed(_ sender: UIButton) {
 
@@ -82,11 +95,13 @@ class FeedViewCell: FSPagerViewCell {
     }
     
     @IBAction func heartBtnPressed(_ sender: UIButton) {
-        if heartBtn.isSelected == false {
-            heartBtn.isSelected = true
+        if likeBool == false {
+            delegate?.checkLike(like: likeBool)
+            likeBool = true
             heartBtnColorT(checkBtn: heartBtn)
         }else{
-            heartBtn.isSelected = false
+            delegate?.checkLike(like: likeBool)
+            likeBool = false
             heartBtnColorF(checkBtn: heartBtn)
         }
     }
@@ -109,6 +124,7 @@ class FeedViewCell: FSPagerViewCell {
         BarvaLog.debug("termsCheckT")
         heartBtn.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         heartBtn.tintColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+        heartCount.textColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
         
     }
     
@@ -116,6 +132,7 @@ class FeedViewCell: FSPagerViewCell {
         BarvaLog.debug("termsCheckF")
         heartBtn.setImage(UIImage(systemName: "heart"), for: .normal)
         heartBtn.tintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        heartCount.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
     

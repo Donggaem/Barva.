@@ -62,6 +62,8 @@
 		EB9A223928EEB68800B13DB4 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9A223828EEB68800B13DB4 /* ChatTableViewCell.swift */; };
 		EB9BB22028E4254700AD34B1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BB21F28E4254700AD34B1 /* FeedViewController.swift */; };
 		EB9BB22228E4255200AD34B1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9BB22128E4255200AD34B1 /* ChatViewController.swift */; };
+		EB9C1E54290D1EA300D97F56 /* NoChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9C1E53290D1EA300D97F56 /* NoChatTableViewCell.swift */; };
+		EB9C1E56290D1EB600D97F56 /* NoChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB9C1E55290D1EB600D97F56 /* NoChatTableViewCell.xib */; };
 		EB9CC95C28A40A1A003D9F22 /* UploadTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */; };
 		EB9CC95E28A40A53003D9F22 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */; };
 		EB9CC96028A40A6D003D9F22 /* ColorTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */; };
@@ -77,6 +79,8 @@
 		EBABC36B290C56A000994F81 /* OtherFollowingListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBABC36A290C56A000994F81 /* OtherFollowingListRequest.swift */; };
 		EBABC36D290C571100994F81 /* OtherFollowingListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBABC36C290C571100994F81 /* OtherFollowingListResponse.swift */; };
 		EBAEEF5D28B35A5A00744A4F /* SpoqaHanSans in Resources */ = {isa = PBXBuildFile; fileRef = EBAEEF5C28B35A5A00744A4F /* SpoqaHanSans */; };
+		EBB145F6290D058A00F277C6 /* CommentListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB145F5290D058A00F277C6 /* CommentListRequest.swift */; };
+		EBB145F8290D06AD00F277C6 /* CommentListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB145F7290D06AD00F277C6 /* CommentListResponse.swift */; };
 		EBB1ADC629057A6B00285672 /* SavePostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1ADC529057A6B00285672 /* SavePostRequest.swift */; };
 		EBB1ADC829057A7700285672 /* SavePostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB1ADC729057A7700285672 /* SavePostResponse.swift */; };
 		EBB2A0F828DB2E55002AAF1E /* ChatTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB2A0F728DB2E55002AAF1E /* ChatTableCell.xib */; };
@@ -84,6 +88,10 @@
 		EBB8F45C28BF9C430069D4E1 /* ProfileTabManViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8F45B28BF9C430069D4E1 /* ProfileTabManViewController.swift */; };
 		EBB8F46028BFA5830069D4E1 /* MyUpTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8F45F28BFA5830069D4E1 /* MyUpTabViewController.swift */; };
 		EBB8F46228BFA61E0069D4E1 /* StorageTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8F46128BFA61E0069D4E1 /* StorageTabViewController.swift */; };
+		EBBA3D16290D666700E6A156 /* LikePostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA3D15290D666700E6A156 /* LikePostRequest.swift */; };
+		EBBA3D18290D668900E6A156 /* LikePostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA3D17290D668900E6A156 /* LikePostResponse.swift */; };
+		EBBA3D1A290D67B900E6A156 /* CencelLikePostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA3D19290D67B900E6A156 /* CencelLikePostRequest.swift */; };
+		EBBA3D1C290D67D400E6A156 /* CencelLikePostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBA3D1B290D67D400E6A156 /* CencelLikePostResponse.swift */; };
 		EBBBCE412907BE5C004404ED /* CommentPostRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBBCE402907BE5C004404ED /* CommentPostRequest.swift */; };
 		EBBBCE432907BE6A004404ED /* CommentPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBBCE422907BE6A004404ED /* CommentPostResponse.swift */; };
 		EBBBCE462907C1CF004404ED /* ResignRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBBCE452907C1CF004404ED /* ResignRequest.swift */; };
@@ -195,6 +203,8 @@
 		EB9A223828EEB68800B13DB4 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		EB9BB21F28E4254700AD34B1 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		EB9BB22128E4255200AD34B1 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		EB9C1E53290D1EA300D97F56 /* NoChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoChatTableViewCell.swift; sourceTree = "<group>"; };
+		EB9C1E55290D1EB600D97F56 /* NoChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoChatTableViewCell.xib; sourceTree = "<group>"; };
 		EB9CC95B28A40A1A003D9F22 /* UploadTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UploadTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95D28A40A53003D9F22 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
 		EB9CC95F28A40A6D003D9F22 /* ColorTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorTab.storyboard; sourceTree = "<group>"; };
@@ -210,6 +220,8 @@
 		EBABC36A290C56A000994F81 /* OtherFollowingListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFollowingListRequest.swift; sourceTree = "<group>"; };
 		EBABC36C290C571100994F81 /* OtherFollowingListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFollowingListResponse.swift; sourceTree = "<group>"; };
 		EBAEEF5C28B35A5A00744A4F /* SpoqaHanSans */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SpoqaHanSans; sourceTree = "<group>"; };
+		EBB145F5290D058A00F277C6 /* CommentListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListRequest.swift; sourceTree = "<group>"; };
+		EBB145F7290D06AD00F277C6 /* CommentListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListResponse.swift; sourceTree = "<group>"; };
 		EBB1ADC529057A6B00285672 /* SavePostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostRequest.swift; sourceTree = "<group>"; };
 		EBB1ADC729057A7700285672 /* SavePostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostResponse.swift; sourceTree = "<group>"; };
 		EBB2A0F728DB2E55002AAF1E /* ChatTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableCell.xib; sourceTree = "<group>"; };
@@ -217,6 +229,10 @@
 		EBB8F45B28BF9C430069D4E1 /* ProfileTabManViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabManViewController.swift; sourceTree = "<group>"; };
 		EBB8F45F28BFA5830069D4E1 /* MyUpTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUpTabViewController.swift; sourceTree = "<group>"; };
 		EBB8F46128BFA61E0069D4E1 /* StorageTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTabViewController.swift; sourceTree = "<group>"; };
+		EBBA3D15290D666700E6A156 /* LikePostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePostRequest.swift; sourceTree = "<group>"; };
+		EBBA3D17290D668900E6A156 /* LikePostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePostResponse.swift; sourceTree = "<group>"; };
+		EBBA3D19290D67B900E6A156 /* CencelLikePostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CencelLikePostRequest.swift; sourceTree = "<group>"; };
+		EBBA3D1B290D67D400E6A156 /* CencelLikePostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CencelLikePostResponse.swift; sourceTree = "<group>"; };
 		EBBBCE402907BE5C004404ED /* CommentPostRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPostRequest.swift; sourceTree = "<group>"; };
 		EBBBCE422907BE6A004404ED /* CommentPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPostResponse.swift; sourceTree = "<group>"; };
 		EBBBCE452907C1CF004404ED /* ResignRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResignRequest.swift; sourceTree = "<group>"; };
@@ -414,10 +430,8 @@
 		EB67130B290132E700B8F8FC /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				EBB1ADC529057A6B00285672 /* SavePostRequest.swift */,
-				EBB1ADC729057A7700285672 /* SavePostResponse.swift */,
-				EBBBCE492907F882004404ED /* CancelSavePostRequest.swift */,
-				EBBBCE4B2907F8A2004404ED /* CancelSavePostResponse.swift */,
+				EBBA3D14290D665600E6A156 /* Like */,
+				EBBA3D13290D664B00E6A156 /* Save */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -450,6 +464,7 @@
 				EBEF5EA42902A5E500C4B475 /* UserFeedViewCell.xib */,
 				EB86424929068D7300AFFAEC /* FollowTableViewCell.xib */,
 				EB958D7A290C0D43009FFEA4 /* MyFollowTableViewCell.xib */,
+				EB9C1E55290D1EB600D97F56 /* NoChatTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -548,6 +563,7 @@
 				EB9BB22128E4255200AD34B1 /* ChatViewController.swift */,
 				EB9A223828EEB68800B13DB4 /* ChatTableViewCell.swift */,
 				EB82BA6D28EEBF1D000CA4D1 /* ReChatTableViewCell.swift */,
+				EB9C1E53290D1EA300D97F56 /* NoChatTableViewCell.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -647,11 +663,35 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		EBBA3D13290D664B00E6A156 /* Save */ = {
+			isa = PBXGroup;
+			children = (
+				EBB1ADC529057A6B00285672 /* SavePostRequest.swift */,
+				EBB1ADC729057A7700285672 /* SavePostResponse.swift */,
+				EBBBCE492907F882004404ED /* CancelSavePostRequest.swift */,
+				EBBBCE4B2907F8A2004404ED /* CancelSavePostResponse.swift */,
+			);
+			path = Save;
+			sourceTree = "<group>";
+		};
+		EBBA3D14290D665600E6A156 /* Like */ = {
+			isa = PBXGroup;
+			children = (
+				EBBA3D15290D666700E6A156 /* LikePostRequest.swift */,
+				EBBA3D17290D668900E6A156 /* LikePostResponse.swift */,
+				EBBA3D19290D67B900E6A156 /* CencelLikePostRequest.swift */,
+				EBBA3D1B290D67D400E6A156 /* CencelLikePostResponse.swift */,
+			);
+			path = Like;
+			sourceTree = "<group>";
+		};
 		EBBBCE3F2907B8E9004404ED /* Chat */ = {
 			isa = PBXGroup;
 			children = (
 				EBBBCE402907BE5C004404ED /* CommentPostRequest.swift */,
 				EBBBCE422907BE6A004404ED /* CommentPostResponse.swift */,
+				EBB145F5290D058A00F277C6 /* CommentListRequest.swift */,
+				EBB145F7290D06AD00F277C6 /* CommentListResponse.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -888,6 +928,7 @@
 				EB25AD0428A136500006C1F2 /* LaunchScreen.storyboard in Resources */,
 				EBEF5EA52902A5E500C4B475 /* UserFeedViewCell.xib in Resources */,
 				EB958D7B290C0D43009FFEA4 /* MyFollowTableViewCell.xib in Resources */,
+				EB9C1E56290D1EB600D97F56 /* NoChatTableViewCell.xib in Resources */,
 				EB9CC95C28A40A1A003D9F22 /* UploadTab.storyboard in Resources */,
 				EB834A9728E45662008A0706 /* HomeImageCollectionViewCell.xib in Resources */,
 				EB25AD0128A136500006C1F2 /* Assets.xcassets in Resources */,
@@ -969,6 +1010,7 @@
 				EBA45B3228C100B7007B95CC /* ProfileModifyViewController.swift in Sources */,
 				EB9A223928EEB68800B13DB4 /* ChatTableViewCell.swift in Sources */,
 				EB8D504128E160FB0045C4D2 /* UpdatePWResponse.swift in Sources */,
+				EBBA3D1C290D67D400E6A156 /* CencelLikePostResponse.swift in Sources */,
 				EB25ACFC28A1364D0006C1F2 /* LoginViewController.swift in Sources */,
 				EBC760A128B5F3FC006ED770 /* SexBoardViewController.swift in Sources */,
 				EB958D77290BF983009FFEA4 /* MyFollowingTabViewController.swift in Sources */,
@@ -1009,6 +1051,7 @@
 				EBC77DA129098701000A5D20 /* OtherFollowerListResponse.swift in Sources */,
 				EBE4EDBA28A51238005C7516 /* HomeViewController.swift in Sources */,
 				EBAA5E8129086EA200AE4730 /* OtherProfileResponse.swift in Sources */,
+				EBBA3D16290D666700E6A156 /* LikePostRequest.swift in Sources */,
 				EBAA5E7F29086E8D00AE4730 /* OtherProfileRequest.swift in Sources */,
 				EB86424D29068D9700AFFAEC /* FollowTableViewCell.swift in Sources */,
 				EBF510DE28AFBD890098BD5A /* InspectMailRequest.swift in Sources */,
@@ -1020,17 +1063,21 @@
 				EB8642402906896600AFFAEC /* FollowerTabViewController.swift in Sources */,
 				EBCCD5622903E75A00B6BAA6 /* GenderSingleRequest.swift in Sources */,
 				EBD85E8B290A4655007AE650 /* OtherSingleResponse.swift in Sources */,
+				EBBA3D1A290D67B900E6A156 /* CencelLikePostRequest.swift in Sources */,
 				EB5C65F2290AC23600962684 /* MyFollowerListResponse.swift in Sources */,
 				EB958D73290BF95E009FFEA4 /* MyFollowTabManViewController.swift in Sources */,
 				EB83748428F2B70E00518A09 /* StorageImagesResponse.swift in Sources */,
 				EBE4EDB228A4E6A4005C7516 /* LoginRequest.swift in Sources */,
 				EBBC40B328F4291F0014F949 /* ProfileSetImgResponse.swift in Sources */,
+				EBBA3D18290D668900E6A156 /* LikePostResponse.swift in Sources */,
 				EBABC36D290C571100994F81 /* OtherFollowingListResponse.swift in Sources */,
 				EBE4EDBE28A51288005C7516 /* ProfileTabViewController.swift in Sources */,
 				EBDA2BFF28FE7B4000652D33 /* OtherUserProfileViewController.swift in Sources */,
 				EBE4EDB828A4E6D5005C7516 /* SigninResponse.swift in Sources */,
+				EB9C1E54290D1EA300D97F56 /* NoChatTableViewCell.swift in Sources */,
 				EBA63E9828AB717100144E3A /* BarvaLog.swift in Sources */,
 				EB86424F29069F7600AFFAEC /* ProfileSettingViewController.swift in Sources */,
+				EBB145F8290D06AD00F277C6 /* CommentListResponse.swift in Sources */,
 				EB25ACFA28A1364D0006C1F2 /* SceneDelegate.swift in Sources */,
 				EB67130F2901336D00B8F8FC /* UserSingleResponse.swift in Sources */,
 				EBCCD5542903E52600B6BAA6 /* GenderCheckboardRequest.swift in Sources */,
@@ -1055,6 +1102,7 @@
 				EB958D75290BF96F009FFEA4 /* MyFollowerTabViewController.swift in Sources */,
 				EBBC384F28A70DEE000D075D /* PopupViewController.swift in Sources */,
 				EBB8F45C28BF9C430069D4E1 /* ProfileTabManViewController.swift in Sources */,
+				EBB145F6290D058A00F277C6 /* CommentListRequest.swift in Sources */,
 				EBBC40B928F4298A0014F949 /* ProfileSetIntroResponse.swift in Sources */,
 				EBF510DC28AFBD1C0098BD5A /* SendMailResponse.swift in Sources */,
 				EB9BB22228E4255200AD34B1 /* ChatViewController.swift in Sources */,

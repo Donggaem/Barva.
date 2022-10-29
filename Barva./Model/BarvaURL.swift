@@ -34,6 +34,11 @@ struct BarvaURL {
     static let genderCheckerboardURL = "http://3.34.183.110:3003/sort/genderCheckerboard"
     static let genderSingleURL = "http://3.34.183.110:3003/sort/genderSingle"
     
+    
+    //MARK: - 좋아요
+    static let likePostURL = "http://3.34.183.110:3003/upload/likePost"
+    static let cancelLikePostURL = "http://3.34.183.110:3003/upload/cancelLikePost"
+    
     //MARK: - 게시글 저장
     static let savePostURL = "http://3.34.183.110:3003/user/savePost"
     static let cancelSavePostURL = "http://3.34.183.110:3003/user/cancelSavePost"
@@ -43,6 +48,7 @@ struct BarvaURL {
 
     //MARK: - 채팅
     static let commentPostURL = "http://3.34.183.110:3003/upload/commentPost"
+    static let commentListURL = "http://3.34.183.110:3003/upload/commentList"
     
     //MARK: - 프로필
     static let profileURL = "http://3.34.183.110:3003/user/myProfile"

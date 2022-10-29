@@ -428,37 +428,37 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGN-ov-a4R">
-                                <rect key="frame" x="0.0" y="160.66666666666666" width="390" height="1"/>
+                                <rect key="frame" x="0.0" y="174.33333333333334" width="390" height="1"/>
                                 <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="QeG-mx-xeI"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PMa-Fy-B0o">
-                                <rect key="frame" x="22" y="104" width="46" height="20"/>
+                                <rect key="frame" x="21.999999999999996" y="104" width="63.666666666666657" height="30"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hwi-cs-lfg">
-                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hwi-cs-lfg">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="FFY-1Q-fEt"/>
-                                            <constraint firstAttribute="height" constant="20" id="vDu-iF-3lc"/>
+                                            <constraint firstAttribute="width" constant="30" id="FFY-1Q-fEt"/>
+                                            <constraint firstAttribute="height" constant="30" id="vDu-iF-3lc"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Jcb-Y9-16Y">
-                                        <rect key="frame" x="28" y="0.0" width="18" height="20"/>
+                                        <rect key="frame" x="38" y="0.0" width="25.666666666666671" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsE-nN-gu0">
-                                                <rect key="frame" x="0.0" y="0.0" width="18" height="10"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="25.666666666666668" height="10"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="jeQ-nq-B9b"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="8"/>
+                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Bold" family="Spoqa Han Sans Neo" pointSize="11"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3D-8j-dql">
-                                                <rect key="frame" x="0.0" y="12" width="18" height="8"/>
-                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="7"/>
+                                                <rect key="frame" x="0.0" y="12" width="25.666666666666668" height="18"/>
+                                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="10"/>
                                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -467,37 +467,43 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9tF-nq-xub">
-                                <rect key="frame" x="0.0" y="161.66666666666669" width="390" height="528.33333333333326"/>
+                                <rect key="frame" x="0.0" y="175.33333333333331" width="390" height="524.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abR-0w-G1u">
-                                <rect key="frame" x="0.0" y="690" width="390" height="1"/>
+                                <rect key="frame" x="0.0" y="700" width="390" height="1"/>
                                 <color key="backgroundColor" red="0.85882352939999995" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="4zF-fD-ews"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YWB-Mg-ij9">
-                                <rect key="frame" x="16" y="706" width="358" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gT2-e2-fW4">
+                                <rect key="frame" x="22" y="145" width="346" height="13.333333333333343"/>
+                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="457-Ag-Qa4">
+                                <rect key="frame" x="16" y="716" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="G3v-N1-nzA"/>
+                                    <constraint firstAttribute="height" constant="40" id="QMd-Kj-N1h"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IFH-Ox-DIc">
+                                <rect key="frame" x="64" y="716" width="310" height="40"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="457-Ag-Qa4">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="G3v-N1-nzA"/>
-                                            <constraint firstAttribute="height" constant="40" id="QMd-Kj-N1h"/>
-                                        </constraints>
-                                    </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="댓글달기" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4nf-1D-giv">
-                                        <rect key="frame" x="48" y="0.0" width="262" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="1S0-F3-bxo"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="248.33000000000001" id="3FX-3t-Rjm"/>
+                                            <constraint firstAttribute="height" constant="40" id="pBe-cW-GKc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="11"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tH-RM-J7b">
-                                        <rect key="frame" x="318" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="270" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="Hxq-sO-xa3"/>
                                         </constraints>
@@ -510,22 +516,14 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gT2-e2-fW4">
-                                <rect key="frame" x="22" y="135" width="346" height="9.6666666666666572"/>
-                                <fontDescription key="fontDescription" name="SpoqaHanSansNeo-Regular" family="Spoqa Han Sans Neo" pointSize="8"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ilv-iH-Gud"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YWB-Mg-ij9" firstAttribute="leading" secondItem="ilv-iH-Gud" secondAttribute="leading" constant="16" id="1oh-KF-jW4"/>
                             <constraint firstItem="abR-0w-G1u" firstAttribute="leading" secondItem="Ycm-Rp-3Ag" secondAttribute="leading" id="3mH-WT-rGw"/>
-                            <constraint firstItem="ilv-iH-Gud" firstAttribute="trailing" secondItem="YWB-Mg-ij9" secondAttribute="trailing" constant="16" id="5pa-E0-4zB"/>
                             <constraint firstItem="k0m-IP-w14" firstAttribute="leading" secondItem="ilv-iH-Gud" secondAttribute="leading" id="6ly-fx-V3N"/>
                             <constraint firstItem="9tF-nq-xub" firstAttribute="leading" secondItem="ilv-iH-Gud" secondAttribute="leading" id="AhB-Wc-Qfq"/>
-                            <constraint firstItem="ilv-iH-Gud" firstAttribute="bottom" secondItem="YWB-Mg-ij9" secondAttribute="bottom" constant="15" id="EI6-bR-FbR"/>
+                            <constraint firstItem="ilv-iH-Gud" firstAttribute="bottom" secondItem="457-Ag-Qa4" secondAttribute="bottom" constant="5" id="Cmr-pV-Vuj"/>
                             <constraint firstItem="Mc5-fP-Bpj" firstAttribute="top" secondItem="k0m-IP-w14" secondAttribute="bottom" constant="3" id="Fd3-96-6O6"/>
                             <constraint firstAttribute="trailing" secondItem="eGN-ov-a4R" secondAttribute="trailing" id="J4B-CB-jVt"/>
                             <constraint firstItem="PMa-Fy-B0o" firstAttribute="leading" secondItem="ilv-iH-Gud" secondAttribute="leading" constant="22" id="Ra3-0a-pcT"/>
@@ -536,14 +534,18 @@
                             <constraint firstItem="gT2-e2-fW4" firstAttribute="top" secondItem="PMa-Fy-B0o" secondAttribute="bottom" constant="11" id="Z7G-c3-cFx"/>
                             <constraint firstItem="9tF-nq-xub" firstAttribute="trailing" secondItem="ilv-iH-Gud" secondAttribute="trailing" id="ZEk-Rj-ztv"/>
                             <constraint firstItem="Mc5-fP-Bpj" firstAttribute="leading" secondItem="Ycm-Rp-3Ag" secondAttribute="leading" id="ZeH-Pn-O14"/>
+                            <constraint firstItem="457-Ag-Qa4" firstAttribute="leading" secondItem="ilv-iH-Gud" secondAttribute="leading" constant="16" id="aKw-Zs-uw1"/>
+                            <constraint firstItem="IFH-Ox-DIc" firstAttribute="leading" secondItem="457-Ag-Qa4" secondAttribute="trailing" constant="8" id="bKO-me-Ntm"/>
                             <constraint firstItem="gT2-e2-fW4" firstAttribute="leading" secondItem="ilv-iH-Gud" secondAttribute="leading" constant="22" id="cfE-7O-fXR"/>
                             <constraint firstItem="k0m-IP-w14" firstAttribute="trailing" secondItem="ilv-iH-Gud" secondAttribute="trailing" id="fMI-4o-Iaw"/>
                             <constraint firstItem="k0m-IP-w14" firstAttribute="leading" secondItem="ilv-iH-Gud" secondAttribute="leading" id="fqG-Vt-6xV"/>
                             <constraint firstItem="9tF-nq-xub" firstAttribute="top" secondItem="eGN-ov-a4R" secondAttribute="bottom" id="g05-tV-qbF"/>
                             <constraint firstItem="ilv-iH-Gud" firstAttribute="trailing" secondItem="gT2-e2-fW4" secondAttribute="trailing" constant="22" id="hbk-Cc-dcB"/>
-                            <constraint firstItem="YWB-Mg-ij9" firstAttribute="top" secondItem="abR-0w-G1u" secondAttribute="bottom" constant="15" id="k69-gj-D6J"/>
+                            <constraint firstItem="ilv-iH-Gud" firstAttribute="trailing" secondItem="IFH-Ox-DIc" secondAttribute="trailing" constant="16" id="lB6-Lo-pBm"/>
                             <constraint firstItem="k0m-IP-w14" firstAttribute="trailing" secondItem="ilv-iH-Gud" secondAttribute="trailing" id="n4I-mr-XkP"/>
+                            <constraint firstItem="457-Ag-Qa4" firstAttribute="top" secondItem="abR-0w-G1u" secondAttribute="bottom" constant="15" id="nMN-zk-O4e"/>
                             <constraint firstItem="eGN-ov-a4R" firstAttribute="leading" secondItem="Ycm-Rp-3Ag" secondAttribute="leading" id="nPa-dI-G5i"/>
+                            <constraint firstItem="IFH-Ox-DIc" firstAttribute="top" secondItem="abR-0w-G1u" secondAttribute="bottom" constant="15" id="nmP-Fk-2Rm"/>
                             <constraint firstAttribute="trailing" secondItem="abR-0w-G1u" secondAttribute="trailing" id="tkw-1A-AeP"/>
                             <constraint firstItem="k0m-IP-w14" firstAttribute="top" secondItem="Ycm-Rp-3Ag" secondAttribute="top" constant="44" id="xR2-sw-Kff"/>
                         </constraints>

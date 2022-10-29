@@ -10,6 +10,7 @@ import UIKit
 class ReChatTableViewCell: UITableViewCell {
 
     @IBOutlet weak var reChatLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

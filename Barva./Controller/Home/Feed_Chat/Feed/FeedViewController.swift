@@ -75,7 +75,7 @@ class FeedViewController: UIViewController {
         
         feedPageControl.setStrokeColor(.white, for: .normal)
         feedPageControl.setStrokeColor(.white, for: .selected)
-
+        
         //네비바 숨김
         self.navigationController?.navigationBar.isHidden = true
         
@@ -224,7 +224,7 @@ class FeedViewController: UIViewController {
                                 }
                                 self.feedPagerView.reloadData()
                                 self.feedPageControl.numberOfPages = storageFeedObject.count
-
+                                
                                 DispatchQueue.main.async {
                                     
                                     self.feedPagerView.reloadData()
@@ -329,7 +329,7 @@ class FeedViewController: UIViewController {
                         
                     } else {
                         BarvaLog.error("postSavePost - fail")
-
+                        
                         let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
                         let okAction = UIAlertAction(title: "확인", style: .default)
                         fail_alert.addAction(okAction)
@@ -381,6 +381,66 @@ class FeedViewController: UIViewController {
                 }
             }
     }
+    
+    //MARK: - POST LIKEPOST
+    func postLikePost(_ parameters: LikePostRequest) {
+        AF.request(BarvaURL.likePostURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
+            .validate()
+            .responseDecodable(of: LikePostResponse.self) { [self] response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        
+                        BarvaLog.debug("postLikePost - Success")
+                        
+                    } else {
+                        BarvaLog.error("postLikePost - fail")
+                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        fail_alert.addAction(okAction)
+                        present(fail_alert, animated: false, completion: nil)
+                        
+                    }
+                case .failure(let error):
+                    BarvaLog.error("postLikePost - err")
+                    print(error.localizedDescription)
+                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    fail_alert.addAction(okAction)
+                    present(fail_alert, animated: false, completion: nil)
+                }
+            }
+    }
+    
+    //MARK: - POST CENCELLIKEPOST
+    func postCencelLikePost(_ parameters: CencelLikePostRequest) {
+        AF.request(BarvaURL.cancelLikePostURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
+            .validate()
+            .responseDecodable(of: CencelLikePostResponse.self) { [self] response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        
+                        BarvaLog.debug("postCencelLikePost - Success")
+                        
+                    } else {
+                        BarvaLog.error("postCencelLikePost - fail")
+                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        fail_alert.addAction(okAction)
+                        present(fail_alert, animated: false, completion: nil)
+                        
+                    }
+                case .failure(let error):
+                    BarvaLog.error("postCencelLikePost - err")
+                    print(error.localizedDescription)
+                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    fail_alert.addAction(okAction)
+                    present(fail_alert, animated: false, completion: nil)
+                }
+            }
+    }
 }
 
 //MARK: - Extension FSPagerView
@@ -408,16 +468,17 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.paramImg = feedArray[index].post_url
         cell.pageControl.numberOfPages = feedArray[index].post_url.count
         cell.bookmarkBool = feedArray[index].isSave ?? false
-        
+//        cell.likeBool = feedArray[index].isLike ?? false
+        cell.heartCount.text = String(feedArray[index].likeCount)
         
         feedNick = feedArray[index].post_users.user_nick
         feedSpec = "\(feedArray[index].user_gender) | \(feedArray[index].user_tall)cm | \(feedArray[index].user_weight)kg"
         feedText = feedArray[index].post_content
         feedProfilImg = feedArray[index].post_users.profile_url
-                
+        
         //postid 값 받기
         postid = feedArray[index].post_id
-                
+        
         return cell
     }
     
@@ -428,6 +489,19 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
 
 //MARK: - Extension NaviAction
 extension FeedViewController: NaviAction {
+    func checkLike(like: Bool) {
+        if like == false {
+            let postid = postid
+            let param = LikePostRequest(post_id: postid)
+            postLikePost(param)
+        }else {
+            let postid = postid
+            let param = CencelLikePostRequest(post_id: postid)
+            postCencelLikePost(param)
+        }
+    }
+    
+    
     func checkBookmark(bookmark: Bool) {
         if bookmark == false {
             let postid = postid
@@ -460,6 +534,7 @@ extension FeedViewController: NaviAction {
         
         otherVC.paramOtherNick = feedNick
     }
+    
     
     
 }

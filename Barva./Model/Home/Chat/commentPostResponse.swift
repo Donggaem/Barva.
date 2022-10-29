@@ -12,9 +12,9 @@ struct CommentPostResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var data: CommentData?
+    var data: CommentPostData?
 }
 
-struct CommentData: Decodable {
+struct CommentPostData: Decodable {
     var err: String
 }

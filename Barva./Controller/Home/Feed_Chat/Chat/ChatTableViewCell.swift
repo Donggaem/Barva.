@@ -9,7 +9,12 @@ import UIKit
 
 class ChatTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var chatProfileImg: UIImageView!
+    @IBOutlet weak var chatProfileImg: UIImageView! {
+        didSet {
+            chatProfileImg.layer.cornerRadius = chatProfileImg.frame.height/2
+            chatProfileImg.clipsToBounds = true
+        }
+    }
     @IBOutlet weak var nickLabel: UILabel!
     @IBOutlet weak var chatLabel: UILabel!
     
