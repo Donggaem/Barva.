@@ -27,6 +27,8 @@
 		EB50D06629090E2C00CFD496 /* SavePostCheckerboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50D06529090E2C00CFD496 /* SavePostCheckerboardResponse.swift */; };
 		EB50D06829090E7C00CFD496 /* SavePostSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50D06729090E7C00CFD496 /* SavePostSingleResponse.swift */; };
 		EB5C65F2290AC23600962684 /* MyFollowerListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5C65F1290AC23600962684 /* MyFollowerListResponse.swift */; };
+		EB604684290EB472007393C2 /* green.gif in Resources */ = {isa = PBXBuildFile; fileRef = EB604682290EB472007393C2 /* green.gif */; };
+		EB604685290EB472007393C2 /* black.gif in Resources */ = {isa = PBXBuildFile; fileRef = EB604683290EB472007393C2 /* black.gif */; };
 		EB67130F2901336D00B8F8FC /* UserSingleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67130E2901336D00B8F8FC /* UserSingleResponse.swift */; };
 		EB67743C28C72F2B001A6F55 /* BarvaURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67743B28C72F2B001A6F55 /* BarvaURL.swift */; };
 		EB68B4CE2909BED8003C632D /* OtherCheckboardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB68B4CD2909BED8003C632D /* OtherCheckboardRequest.swift */; };
@@ -169,6 +171,8 @@
 		EB50D06529090E2C00CFD496 /* SavePostCheckerboardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostCheckerboardResponse.swift; sourceTree = "<group>"; };
 		EB50D06729090E7C00CFD496 /* SavePostSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePostSingleResponse.swift; sourceTree = "<group>"; };
 		EB5C65F1290AC23600962684 /* MyFollowerListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFollowerListResponse.swift; sourceTree = "<group>"; };
+		EB604682290EB472007393C2 /* green.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = green.gif; sourceTree = "<group>"; };
+		EB604683290EB472007393C2 /* black.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = black.gif; sourceTree = "<group>"; };
 		EB67130E2901336D00B8F8FC /* UserSingleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleResponse.swift; sourceTree = "<group>"; };
 		EB67743B28C72F2B001A6F55 /* BarvaURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarvaURL.swift; sourceTree = "<group>"; };
 		EB68B4CD2909BED8003C632D /* OtherCheckboardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherCheckboardRequest.swift; sourceTree = "<group>"; };
@@ -429,6 +433,14 @@
 			path = Upload;
 			sourceTree = "<group>";
 		};
+		EB604686290EBE24007393C2 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				EBBC384E28A70DEE000D075D /* PopupViewController.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
 		EB67130B290132E700B8F8FC /* Feed */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,6 +602,8 @@
 		EBA45B3028C0F965007B95CC /* Color */ = {
 			isa = PBXGroup;
 			children = (
+				EB604683290EB472007393C2 /* black.gif */,
+				EB604682290EB472007393C2 /* green.gif */,
 				EBF7BAA8290E62CB00139379 /* beage.gif */,
 				EBE4EDBF28A5129A005C7516 /* ColorTabViewController.swift */,
 			);
@@ -723,7 +737,7 @@
 			isa = PBXGroup;
 			children = (
 				EB834A9328E45587008A0706 /* Cell */,
-				EBBC384E28A70DEE000D075D /* PopupViewController.swift */,
+				EB604686290EBE24007393C2 /* Popup */,
 				EBE4EDB928A51238005C7516 /* HomeViewController.swift */,
 				EBC7609A28B5F32C006ED770 /* HomeTabManViewController.swift */,
 				EBC7609C28B5F385006ED770 /* LatestBoardViewController.swift */,
@@ -934,7 +948,9 @@
 				EB958D7B290C0D43009FFEA4 /* MyFollowTableViewCell.xib in Resources */,
 				EB9C1E56290D1EB600D97F56 /* NoChatTableViewCell.xib in Resources */,
 				EB9CC95C28A40A1A003D9F22 /* UploadTab.storyboard in Resources */,
+				EB604685290EB472007393C2 /* black.gif in Resources */,
 				EB834A9728E45662008A0706 /* HomeImageCollectionViewCell.xib in Resources */,
+				EB604684290EB472007393C2 /* green.gif in Resources */,
 				EB25AD0128A136500006C1F2 /* Assets.xcassets in Resources */,
 				EB25ACFF28A1364D0006C1F2 /* Login.storyboard in Resources */,
 				EB86424A29068D7300AFFAEC /* FollowTableViewCell.xib in Resources */,

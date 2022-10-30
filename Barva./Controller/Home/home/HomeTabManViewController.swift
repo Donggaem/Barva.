@@ -84,9 +84,8 @@ extension HomeTabManViewController: PageboyViewControllerDataSource, TMBarDataSo
     }
     
     func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
-        
+        print(index)
         if (index == 2) {
-            print("2")
             sexVC.setDropDown()
 
         }
