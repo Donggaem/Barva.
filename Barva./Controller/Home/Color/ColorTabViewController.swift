@@ -17,7 +17,15 @@ class ColorTabViewController: UIViewController {
     @IBOutlet weak var colorExtractBtn: UIButton!
     @IBOutlet weak var colorExtractImage: GIFImageView!
     
-    var colorBtnBool = false
+    var colorBtnBool = false {
+        didSet {
+            if colorBtnBool == false {
+                extractBtn_Paint(button: colorExtractBtn)
+            }else {
+                extractBtn_Person(button: colorExtractBtn)
+            }
+        }
+    }
     
     let imagePickerController = UIImagePickerController()
     
@@ -42,11 +50,14 @@ class ColorTabViewController: UIViewController {
         if colorBtnBool == false {
             
             colorExtractImage.animate(withGIFNamed: "beage")
-            extractBtn_Person(button: colorExtractBtn)
             colorBtnBool = true
+            
+            // 1초 후 실행될 부분
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.9) {
+                self.colorExtractImage.stopAnimatingGIF()
+            }
         }else {
             
-            extractBtn_Paint(button: colorExtractBtn)
             colorBtnBool = false
 
         }

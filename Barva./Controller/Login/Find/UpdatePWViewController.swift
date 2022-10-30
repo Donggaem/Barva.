@@ -46,6 +46,11 @@ class UpdatePWViewController: UIViewController {
         resetPWBtn.layer.cornerRadius = 5
         btnHidden(msgBtn: msgPwBtn)
         
+        resetPWBtn.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
+        resetPWBtn.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        resetPWBtn.layer.borderWidth = 1
+        resetPWBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
+        
         idLabel.font = UIFont(name: "SpoqaHanSansNeo-Regular", size: 16)
         idLabel.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         idLabel.text = "아이디 : \(paramUserid)"
@@ -177,11 +182,19 @@ extension UpdatePWViewController: UITextFieldDelegate{
         //텍스트필드가 채워졌는지, 비밀번호가 일치하는 지 확인, 필수 약관을 동의 했는지
         if  !(self.pwTextField.text?.isEmpty ?? true) && !(self.pwCheckTextField.text?.isEmpty ?? true) &&   isSameBothTextField(pwTextField, pwCheckTextField) {
             resetPWBtn.isEnabled = true
-            resetPWBtn.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            resetPWBtn.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+            resetPWBtn.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
+            resetPWBtn.layer.borderWidth = 1
+            resetPWBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
         }
         else {
             resetPWBtn.isEnabled = false
-            resetPWBtn.backgroundColor = UIColor(red: 0.733, green: 0.733, blue: 0.733, alpha: 1)
+            resetPWBtn.setTitleColor(UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1), for: .normal)
+            resetPWBtn.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+            resetPWBtn.layer.borderWidth = 1
+            resetPWBtn.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
+            
+            
         }
     }
     

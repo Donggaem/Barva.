@@ -34,7 +34,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_a_photo" translatesAutoresizingMaskIntoConstraints="NO" id="ged-Oc-1P0">
-                                <rect key="frame" x="175" y="264" width="40" height="40"/>
+                                <rect key="frame" x="178" y="261" width="40" height="40"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuC-9K-rWN" userLabel="naviView">
                                 <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -89,15 +89,14 @@
                         <constraints>
                             <constraint firstItem="0Qu-f5-znN" firstAttribute="centerY" secondItem="Z8u-Xp-Qyc" secondAttribute="centerY" id="4mt-CH-duS"/>
                             <constraint firstItem="0Qu-f5-znN" firstAttribute="leading" secondItem="Z8u-Xp-Qyc" secondAttribute="trailing" constant="34" id="6ai-Zl-vDH"/>
-                            <constraint firstItem="ged-Oc-1P0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="175" id="90O-tI-oMb"/>
-                            <constraint firstItem="ged-Oc-1P0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="173" id="Etv-VY-mVw"/>
+                            <constraint firstItem="ged-Oc-1P0" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="178" id="90O-tI-oMb"/>
                             <constraint firstItem="JBy-6p-MkL" firstAttribute="top" secondItem="0Qu-f5-znN" secondAttribute="bottom" constant="15" id="L72-IW-u4a"/>
-                            <constraint firstAttribute="trailing" secondItem="ged-Oc-1P0" secondAttribute="trailing" constant="175" id="SKq-FC-0JO"/>
                             <constraint firstAttribute="trailing" secondItem="ORw-6A-54a" secondAttribute="trailing" constant="3" id="Sij-fH-zBk"/>
                             <constraint firstItem="Z8u-Xp-Qyc" firstAttribute="top" secondItem="ORw-6A-54a" secondAttribute="bottom" constant="84" id="SxG-u7-IQ9"/>
                             <constraint firstAttribute="trailing" secondItem="LuC-9K-rWN" secondAttribute="trailing" id="U4N-iY-VYG"/>
                             <constraint firstItem="LuC-9K-rWN" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="cWM-sL-ykZ"/>
                             <constraint firstItem="Z8u-Xp-Qyc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="77" id="gGL-YC-1Y6"/>
+                            <constraint firstItem="ged-Oc-1P0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="170" id="iS0-RX-jvf"/>
                             <constraint firstItem="JBy-6p-MkL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="iXJ-GU-iuY"/>
                             <constraint firstItem="ORw-6A-54a" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="3" id="lb5-JV-UQV"/>
                             <constraint firstItem="LuC-9K-rWN" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="44" id="xEu-hy-fmi"/>
