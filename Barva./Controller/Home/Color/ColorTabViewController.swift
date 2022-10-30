@@ -8,11 +8,16 @@
 import UIKit
 import AVFoundation
 import Photos
+import Gifu
 
 class ColorTabViewController: UIViewController {
     
     @IBOutlet weak var colorImageView: UIImageView!
     @IBOutlet weak var photoIcon: UIImageView!
+    @IBOutlet weak var colorExtractBtn: UIButton!
+    @IBOutlet weak var colorExtractImage: GIFImageView!
+    
+    var colorBtnBool = false
     
     let imagePickerController = UIImagePickerController()
     
@@ -32,11 +37,36 @@ class ColorTabViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    //MARK: - IBACTION
+    @IBAction func coloreExtractBtnPressed(_ sender: UIButton) {
+        if colorBtnBool == false {
+            
+            colorExtractImage.animate(withGIFNamed: "beage")
+            extractBtn_Person(button: colorExtractBtn)
+            colorBtnBool = true
+        }else {
+            
+            extractBtn_Paint(button: colorExtractBtn)
+            colorBtnBool = false
+
+        }
+    }
     
     //MARK: - INNER func
     private func setUI() {
         
         self.imagePickerController.delegate = self
+        
+        //익스트랙 버튼 조정
+
+        extractBtn_Paint(button: colorExtractBtn)
+        colorExtractBtn.layer.cornerRadius = colorExtractBtn.frame.height/2
+        colorExtractBtn.clipsToBounds = true
+        
+        //이미지뷰 조정
+        colorImageView.layer.borderWidth = 1
+        colorImageView.layer.borderColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1).cgColor
+        colorImageView.layer.cornerRadius = 5
         
         //이미지뷰 클릭동작
         let tapImageViewRecognizer
@@ -46,6 +76,18 @@ class ColorTabViewController: UIViewController {
         //이미지뷰에 제스처인식기 연결
         colorImageView.addGestureRecognizer(tapImageViewRecognizer)
         
+    }
+    
+    func extractBtn_Person (button: UIButton) {
+        button.setImage(UIImage(systemName: "person.2.fill"), for: .normal)
+        button.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        button.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
+    }
+    
+    func extractBtn_Paint (button: UIButton) {
+        button.setImage(UIImage(systemName: "paintbrush.fill"), for: .normal)
+        button.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        button.backgroundColor = UIColor(red: 0.483, green: 0.835, blue: 0.883, alpha: 1)
     }
     
     //알림창 설정

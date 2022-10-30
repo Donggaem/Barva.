@@ -14,6 +14,8 @@ pod 'Pageboy'
 pod 'FSPagerView'
 pod 'Kingfisher'
 pod 'DropDown'
+pod 'Gifu'
+
 
   # Workaround for Cocoapods issue #7606
   post_install do |installer|

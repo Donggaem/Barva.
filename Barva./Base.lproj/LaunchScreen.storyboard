@@ -8,11 +8,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="MPLUS1Code-Regular.ttf">
-            <string>MPLUS1Code-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -22,26 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="barva." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug6-eA-D25">
-                                <rect key="frame" x="250" y="380" width="120" height="49"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barva." translatesAutoresizingMaskIntoConstraints="NO" id="5EX-xY-8nj">
+                                <rect key="frame" x="250" y="428" width="120" height="49"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="Zlz-QF-kn8"/>
+                                    <constraint firstAttribute="width" constant="120" id="App-Qs-FX4"/>
+                                    <constraint firstAttribute="height" constant="49" id="efq-SU-2xS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MPLUS1Code-Regular" family="M PLUS 1 Code" pointSize="40"/>
-                                <color key="textColor" red="0.4823529412" green="0.83529411760000005" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ug6-eA-D25" secondAttribute="trailing" constant="44" id="Ak8-pf-9ba"/>
-                            <constraint firstItem="Ug6-eA-D25" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="380" id="Cfz-nP-dCs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5EX-xY-8nj" secondAttribute="trailing" constant="44" id="V38-6o-0OG"/>
+                            <constraint firstItem="5EX-xY-8nj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="380" id="jue-CD-j57"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="barvaLabel" destination="Ug6-eA-D25" id="nCI-NH-WhF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -49,6 +39,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="barva." width="112" height="31"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
