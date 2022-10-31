@@ -46,7 +46,8 @@ class FeedViewController: UIViewController {
     var imgArray: [String] = []
     var feedArray: [FeedArray] = []
     var savePostArray: [SavedPosts] = []
-        
+    var stringArray: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -525,6 +526,10 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.feedNameLabel.text = feedArray[index].post_users.user_nick
         cell.feedSpecLabel.text = "\(feedArray[index].user_gender) | \(feedArray[index].user_tall)cm | \(feedArray[index].user_weight)kg"
         cell.feedText.text = feedArray[index].post_content
+        
+        stringArray = feedArray[index].created_at.components(separatedBy: "T")
+        cell.feedDay.text = stringArray[0]
+        
         cell.paramImg = feedArray[index].post_url
         cell.pageControl.numberOfPages = feedArray[index].post_url.count
         cell.bookmarkBool = feedArray[index].isSave ?? false

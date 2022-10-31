@@ -68,7 +68,7 @@ extension HomeTabManViewController: PageboyViewControllerDataSource, TMBarDataSo
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
         switch index {
         case 0:
-            return TMBarItem(title: "최신순 보기")
+            return TMBarItem(title: "최신순")
         case 1:
             return TMBarItem(title: "오늘의 색상")
         case 2:
