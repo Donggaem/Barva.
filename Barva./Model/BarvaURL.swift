@@ -31,6 +31,9 @@ struct BarvaURL {
     static let newestCheckerboardURL = "http://3.34.183.110:3003/sort/newestCheckerboard"
     static let newestSingleURL = "http://3.34.183.110:3003/sort/newestSingle"
     
+    static let colorCheckboardURL = "http://3.34.183.110:3003/test/colorCheck"
+    static let colorSingleURL = "http://3.34.183.110:3003/test/colorSingle"
+    
     static let genderCheckerboardURL = "http://3.34.183.110:3003/sort/genderCheckerboard"
     static let genderSingleURL = "http://3.34.183.110:3003/sort/genderSingle"
     

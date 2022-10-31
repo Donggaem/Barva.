@@ -17,7 +17,7 @@ struct SavePostSingleResponse: Decodable {
 
 struct SavePostSingleData: Decodable {
     
-    var singleResult: [SavedPosts]?
+    var singleArr: [SavedPosts]?
     var err: String?
 }
 

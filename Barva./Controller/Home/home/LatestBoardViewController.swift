@@ -46,6 +46,8 @@ class LatestBoardTabViewController: UIViewController {
                                 self.latestCollectionView.reloadData()
                                 
                             }
+                        }else {
+                            self.latestImageArray = []
                         }
 
 

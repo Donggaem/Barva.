@@ -39,6 +39,10 @@ class SigninViewController: UIViewController {
     
     var authNumber = ""
     var checkNum = 0
+    
+    var allcheckBool = false
+    var termsBool = false
+    var personalBool = false
     var marketingBool = false
     
     override func viewDidLoad() {
@@ -142,60 +146,67 @@ class SigninViewController: UIViewController {
     }
     
     @IBAction func allCheckBtnPressed(_ sender: UIButton) {
-        if allCheckBtn.isSelected == false {
-            allCheckBtn.isSelected = true
+        if allcheckBool == false {
+            
             termsCheckColorT(checkBtn: allCheckBtn)
             termsCheckColorT(checkBtn: termsBtn)
             termsCheckColorT(checkBtn: termsGoBtn)
             termsCheckColorT(checkBtn: personalBtn)
             termsCheckColorT(checkBtn: personalGoBtn)
             termsCheckColorT(checkBtn: marketingBtn)
+            allcheckBool = true
             
         }else {
-            allCheckBtn.isSelected = false
+
             termsCheckColorF(checkBtn: allCheckBtn)
             termsCheckColorF(checkBtn: termsBtn)
             termsCheckColorF(checkBtn: termsGoBtn)
             termsCheckColorF(checkBtn: personalBtn)
             termsCheckColorF(checkBtn: personalGoBtn)
             termsCheckColorF(checkBtn: marketingBtn)
+            allcheckBool = false
         }
         
 
     }
     @IBAction func termsBtnPressed(_ sender: UIButton) {
-        if termsBtn.isSelected == false {
-            termsBtn.isSelected = true
+        if termsBool == false {
+            termsBool = true
             allCheck()
             termsCheckColorT(checkBtn: termsBtn)
             termsCheckColorT(checkBtn: termsGoBtn)
+            
         }else {
-            termsBtn.isSelected = false
+            termsBool = false
             allCheck()
             termsCheckColorF(checkBtn: termsBtn)
             termsCheckColorF(checkBtn: termsGoBtn)
         }
     }
     @IBAction func termsGoBtnPressed(_ sender: UIButton) {
+        let termsVC = self.storyboard?.instantiateViewController(withIdentifier: "TermsViewController") as! TermsViewController
+        self.navigationController?.pushViewController(termsVC, animated: true)
         
     }
     @IBAction func personalBtnPressed(_ sender: UIButton) {
-        if personalBtn.isSelected == false {
-            personalBtn.isSelected = true
+        if personalBool == false {
+            personalBool = true
             allCheck()
             termsCheckColorT(checkBtn: personalBtn)
             termsCheckColorT(checkBtn: personalGoBtn)
         }else {
-            personalBtn.isSelected = false
+            personalBool = false
             allCheck()
             termsCheckColorF(checkBtn: personalBtn)
             termsCheckColorF(checkBtn: personalGoBtn)
         }
     }
     @IBAction func personalGoBtnPressed(_ sender: UIButton) {
+        let personalVC = self.storyboard?.instantiateViewController(withIdentifier: "PersonalViewController") as! PersonalViewController
+        self.navigationController?.pushViewController(personalVC, animated: true)
     }
     @IBAction func marketingBtnPressed(_ sender: UIButton) {
-        if marketingBtn.isSelected == false {
+        if marketingBool == false {
             marketingBool = true
             marketingBtn.isSelected = true
             allCheck()
@@ -425,7 +436,7 @@ class SigninViewController: UIViewController {
     }
     
     private func allCheck(){
-        if (termsBtn.isSelected == true) && (personalBtn.isSelected == true) && (marketingBtn.isSelected == true) {
+        if (termsBool == true) && (personalBool == true) && (marketingBool == true) {
             termsCheckColorT(checkBtn: allCheckBtn)
         }else {
             termsCheckColorF(checkBtn: allCheckBtn)
@@ -699,7 +710,7 @@ extension SigninViewController: UITextFieldDelegate{
         
         
         //텍스트필드가 채워졌는지, 비밀번호가 일치하는 지 확인, 필수 약관을 동의 했는지
-        if  !(self.pwTextField.text?.isEmpty ?? true) && !(self.pwCheckTextField.text?.isEmpty ?? true) &&  !(self.nameTextField.text?.isEmpty ?? true)
+        if  !(self.pwTextField.text?.isEmpty ?? true) && !(self.pwCheckTextField.text?.isEmpty ?? true) &&  !(self.nameTextField.text?.isEmpty ?? true) && !(self.emailTextField.text?.isEmpty ?? true) && !(self.checkNumTextField.text?.isEmpty ?? true) && termsBool == true && personalBool == true && checkNum == 3
                 && isSameBothTextField(pwTextField, pwCheckTextField) {
             signinBtn.isEnabled = true
             signinBtn.setColor_true(button: signinBtn)

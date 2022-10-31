@@ -35,6 +35,7 @@ class FeedViewController: UIViewController {
     var paramSort = ""
     var paramGender = ""
     var paramUserNick = ""
+    var paramColor = ""
     
     var feedNick = ""
     var feedSpec = ""
@@ -97,7 +98,16 @@ class FeedViewController: UIViewController {
             let param = OtherSingleRequest(user_nick: nick)
             postOtherFeed(param)
             feedPagerView.reloadData()
+        }else if paramSort == "Color" {
+            let color = paramColor
+            let param = ColorSingleRequest(color_extract: color)
+            postColorFeed(param)
+        }else if paramSort == "Extract" {
+            let color = paramColor
+            let param = ColorSingleRequest(color_extract: color)
+            postColorFeed(param)
         }
+
     }
     
     //MARK: - GET NEWESTFEED
@@ -152,6 +162,56 @@ class FeedViewController: UIViewController {
             }
     }
     
+    //MARK: - POST COLORFEED
+    private func postColorFeed(_ parameters: ColorSingleRequest){
+        AF.request(BarvaURL.colorSingleURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
+            .validate()
+            .responseDecodable(of: ColorSingleResponse.self) { [self] response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        
+                        BarvaLog.debug("postColorFeed - Success")
+                        self.feedArray.removeAll()
+                        self.feedPagerView.reloadData()
+                        
+                        if response.data != nil {
+                            if let colorFeedObject = response.data?.singleResult {
+                                self.feedArray = colorFeedObject
+                                self.feedPagerView.reloadData()
+                                self.feedPageControl.numberOfPages = colorFeedObject.count
+                                
+                                DispatchQueue.main.async {
+                                    self.feedPagerView.reloadData()
+                                    self.feedPageControl.numberOfPages = self.feedArray.count
+                                    self.feedPageControl.currentPage = self.paramSeletIndex
+                                    
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.03){
+                                        self.feedPagerView.scrollToItem(at: self.feedPageControl.currentPage, animated: false)
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
+                    } else {
+                        BarvaLog.error("postColorFeed - fail")
+                        let fail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        fail_alert.addAction(okAction)
+                        present(fail_alert, animated: false, completion: nil)
+                        
+                    }
+                case .failure(let error):
+                    BarvaLog.error("postColorFeed - err")
+                    print(error.localizedDescription)
+                    let fail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    fail_alert.addAction(okAction)
+                    present(fail_alert, animated: false, completion: nil)
+                }
+            }
+    }
     //MARK: - POST GENDERFEED
     private func postGenderFeed(_ parameters: GenderSingleRequest){
         AF.request(BarvaURL.genderSingleURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
@@ -216,7 +276,7 @@ class FeedViewController: UIViewController {
                         self.feedArray.removeAll()
                         self.feedPagerView.reloadData()
                         if response.data != nil {
-                            if let storageFeedObject = response.data?.singleResult {
+                            if let storageFeedObject = response.data?.singleArr{
                                 self.savePostArray = storageFeedObject
                                 for index in 0..<self.savePostArray.count {
                                     self.feedArray.append(self.savePostArray[index].saved_posts)

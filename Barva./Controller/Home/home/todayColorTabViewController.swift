@@ -6,16 +6,69 @@
 //
 
 import UIKit
+import Alamofire
 
 class todayColorTabViewController: UIViewController {
     
     @IBOutlet weak var todayColorCollectionView: UICollectionView!
     
-    var todayColorImageArray: [String] = ["common","common (1)","common (2)","common (3)","common (4)","common (5)","common (6)","common (7)","common (8)","common (9)","common (10)","common (11)","common (12)","common (13)","common (14)","common (15)","common (16)","common (17)","common (18)","common (19)","common (20)","common (21)","common (22)","common (23)","common (24)","common (25)","common (26)","common (27)","common (28)","common (29)","common (30)","common (31)","common (32)","common (33)","common (34)","common (35)","common (36)","common (37)"]
+    var todayColorImageArray: [String] = []
+    
+    var setColor = "black"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        let color = setColor
+        let param = ColorCheckboardRequest(color_extract: color)
+        
+        postTodayColorCheckerboard(param)
+        
+        todayColorCollectionView.reloadData()
+
+    }
+    
+    //MARK: - POST COLORCHECKBOARD
+    let header: HTTPHeaders = ["authorization": UserDefaults.standard.string(forKey: "data")!]
+    private func postTodayColorCheckerboard(_ parameters: ColorCheckboardRequest){
+        AF.request(BarvaURL.colorCheckboardURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: header)
+            .validate()
+            .responseDecodable(of: ColorCheckboardResponse.self) { [self] response in
+                switch response.result {
+                case .success(let response):
+                    if response.isSuccess == true {
+                        
+                        BarvaLog.debug("postTodayColorCheckerboard - Success")
+                        
+                        if response.data != nil {
+                            if let imgarry = response.data?.checkerboardArr?.compactMap({$0}) {
+                                self.todayColorImageArray = imgarry
+                                self.todayColorCollectionView.reloadData()
+                                
+                            }
+                        }
+                        
+                    } else {
+                        BarvaLog.error("postTodayColorCheckerboard - fail")
+                        let loginFail_alert = UIAlertController(title: "실패", message: response.message, preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        loginFail_alert.addAction(okAction)
+                        present(loginFail_alert, animated: false, completion: nil)
+                        
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    BarvaLog.error("postTodayColorCheckerboard - err")
+                    let loginFail_alert = UIAlertController(title: "실패", message: "서버 통신 실패", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "확인", style: .default)
+                    loginFail_alert.addAction(okAction)
+                    present(loginFail_alert, animated: false, completion: nil)
+                }
+            }
     }
     
 }
@@ -38,9 +91,10 @@ extension todayColorTabViewController: UICollectionViewDataSource, UICollectionV
     // CollectionView Cell의 Object
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeImageCollectionViewCell", for: indexPath) as! HomeImageCollectionViewCell
-
-        cell.image.image = UIImage(named: todayColorImageArray[indexPath.row]) ?? UIImage()
-
+                
+        let url = URL(string: todayColorImageArray[indexPath.row])
+        cell.image.kf.setImage(with: url)
+        
         return cell
     }
     
@@ -51,7 +105,10 @@ extension todayColorTabViewController: UICollectionViewDataSource, UICollectionV
         let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
         self.navigationController?.pushViewController(feedVC, animated: true)
         
-//        feedVC.paramImg = self.todayColorImageArray[indexPath.row]
+        feedVC.paramSeletIndex = indexPath.row
+        feedVC.paramSort = "Color"
+        feedVC.paramColor = setColor
+
     }
 
     // CollectionView Cell의 Size

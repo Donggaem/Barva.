@@ -10,10 +10,14 @@ import UIKit
 
 class HomeViewController: UIViewController {
             
+    var popCount = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        popupPresent()
+        if popCount == 0{
+            popupPresent()
+        }
         setUI()
         
     }
@@ -31,6 +35,7 @@ class HomeViewController: UIViewController {
         popUp.modalPresentationStyle = .overFullScreen
         popUp.modalTransitionStyle = .crossDissolve
         self.present(popUp, animated: true, completion: nil)
+        popCount += 1
     }
     
     private func setUI() {
