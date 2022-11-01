@@ -194,6 +194,7 @@ class SigninViewController: UIViewController {
             allCheck()
             termsCheckColorT(checkBtn: personalBtn)
             termsCheckColorT(checkBtn: personalGoBtn)
+            
         }else {
             personalBool = false
             allCheck()
@@ -710,8 +711,7 @@ extension SigninViewController: UITextFieldDelegate{
         
         
         //텍스트필드가 채워졌는지, 비밀번호가 일치하는 지 확인, 필수 약관을 동의 했는지
-        if  !(self.pwTextField.text?.isEmpty ?? true) && !(self.pwCheckTextField.text?.isEmpty ?? true) &&  !(self.nameTextField.text?.isEmpty ?? true) && !(self.emailTextField.text?.isEmpty ?? true) && !(self.checkNumTextField.text?.isEmpty ?? true) && termsBool == true && personalBool == true && checkNum == 3
-                && isSameBothTextField(pwTextField, pwCheckTextField) {
+        if  !(self.pwTextField.text?.isEmpty ?? true) && !(self.pwCheckTextField.text?.isEmpty ?? true) &&  !(self.nameTextField.text?.isEmpty ?? true) && !(self.emailTextField.text?.isEmpty ?? true) && !(self.checkNumTextField.text?.isEmpty ?? true) && isSameBothTextField(pwTextField, pwCheckTextField) {
             signinBtn.isEnabled = true
             signinBtn.setColor_true(button: signinBtn)
         }

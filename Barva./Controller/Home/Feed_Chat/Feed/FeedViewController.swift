@@ -48,6 +48,9 @@ class FeedViewController: UIViewController {
     var savePostArray: [SavedPosts] = []
     var stringArray: [String] = []
     
+    var sisSave: [Bool] = []
+    var sisLike: [Bool] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -141,6 +144,7 @@ class FeedViewController: UIViewController {
                                     
                                 }
                             }
+                        
                         }
                         
                     } else {
@@ -281,6 +285,9 @@ class FeedViewController: UIViewController {
                                 self.savePostArray = storageFeedObject
                                 for index in 0..<self.savePostArray.count {
                                     self.feedArray.append(self.savePostArray[index].saved_posts)
+                                    self.sisSave.append(self.savePostArray[index].isSave)
+                                    self.sisLike.append(self.savePostArray[index].isLike)
+
                                 }
                                 self.feedPagerView.reloadData()
                                 self.feedPageControl.numberOfPages = storageFeedObject.count
@@ -297,6 +304,8 @@ class FeedViewController: UIViewController {
                                     
                                 }
                             }
+                            
+                            
                         }
                         
                     } else {
@@ -537,6 +546,10 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.likeBool = feedArray[index].isLike ?? false
         cell.heartCount.text = String(feedArray[index].likeCount)
         cell.heartIntCount = feedArray[index].likeCount
+        
+        //영상용, 개인 저장피드에 좋아요와 북마크 표시가 안됌
+//        cell.likeBool = sisLike[index]
+//        cell.bookmarkBool = sisSave[index]
         
         feedNick = feedArray[index].post_users.user_nick
         feedSpec = "\(feedArray[index].user_gender) | \(feedArray[index].user_tall)cm | \(feedArray[index].user_weight)kg"

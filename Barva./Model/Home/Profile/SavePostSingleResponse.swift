@@ -24,5 +24,6 @@ struct SavePostSingleData: Decodable {
 struct SavedPosts:Decodable {
     var saved_posts: FeedArray
     var isSave: Bool
+    var isLike: Bool
 }
 

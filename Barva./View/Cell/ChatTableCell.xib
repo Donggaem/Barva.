@@ -24,9 +24,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="346" height="31"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gtI-NA-KgX">
-                        <rect key="frame" x="12" y="0.66666666666666607" width="30" height="30"/>
-                        <color key="backgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gtI-NA-KgX">
+                        <rect key="frame" x="12" y="1.6666666666666643" width="30" height="28.666666666666664"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="tta-38-Na6"/>
                             <constraint firstAttribute="height" constant="30" id="vV7-Jf-o82"/>
@@ -73,4 +73,7 @@
             <point key="canvasLocation" x="165" y="-152"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
+    </resources>
 </document>

@@ -97,7 +97,7 @@ class UpdatePWViewController: UIViewController {
     
     //MARK: - POST PWUPDATE
     private func postUpdatePW(_ parameters: UpdatePWRequest){
-        AF.request(BarvaURL.pwFindURL, method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+        AF.request(BarvaURL.updatePWURL, method: .put, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
             .responseDecodable(of: UpdatePWResponse.self) { [self] response in
                 switch response.result {

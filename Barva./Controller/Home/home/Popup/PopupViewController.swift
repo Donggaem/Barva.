@@ -29,7 +29,7 @@ class PopupViewController: UIViewController {
     @IBOutlet weak var countImg: UIImageView!
     @IBOutlet weak var popupView: UIView!
     
-    var images = ["jo","jo3", "jo2"]
+    var images = ["a","b", "c"]
     var images_control = ["one", "two", "third"]
     
     override func viewDidLoad() {
