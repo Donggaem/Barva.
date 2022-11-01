@@ -43,10 +43,8 @@ class ColorTabViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        roadCount += 1
-        colorImageView.image = nil
-        colorExtractImage.image = nil
 
+        colorExtractImage.image = nil
     }
     
     //MARK: - OBJC
@@ -68,21 +66,21 @@ class ColorTabViewController: UIViewController {
                 self.colorExtractImage.stopAnimatingGIF()
             }
             
-            //두번째 사진
-            if roadCount == 2 {
-                colorExtractImage.animate(withGIFNamed: "green")
-                colorBtnBool = true
-                
-                // 1초 후 실행될 부분
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.9) {
-                    self.colorExtractImage.stopAnimatingGIF()
-                }
-            }
+//            //두번째 사진
+//            if roadCount == 2 {
+//                colorExtractImage.animate(withGIFNamed: "green")
+//                colorBtnBool = true
+//
+//                // 1초 후 실행될 부분
+//                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.9) {
+//                    self.colorExtractImage.stopAnimatingGIF()
+//                }
+//            }
         }else {
             let extractVC = self.storyboard?.instantiateViewController(withIdentifier: "ExtractViewController") as! ExtractViewController
             self.navigationController?.pushViewController(extractVC, animated: true)
             
-            extractVC.paramRoadCount = roadCount
+//            extractVC.paramRoadCount = roadCount
             colorBtnBool = false
 
         }

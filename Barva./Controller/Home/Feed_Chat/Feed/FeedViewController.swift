@@ -547,9 +547,12 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
         cell.heartCount.text = String(feedArray[index].likeCount)
         cell.heartIntCount = feedArray[index].likeCount
         
-        //영상용, 개인 저장피드에 좋아요와 북마크 표시가 안됌
-//        cell.likeBool = sisLike[index]
-//        cell.bookmarkBool = sisSave[index]
+        if paramSort == "Storage" {
+            //영상용, 개인 저장피드에 좋아요와 북마크 표시가 안됌
+            cell.likeBool = sisLike[index]
+            cell.bookmarkBool = sisSave[index]
+        }
+
         
         feedNick = feedArray[index].post_users.user_nick
         feedSpec = "\(feedArray[index].user_gender) | \(feedArray[index].user_tall)cm | \(feedArray[index].user_weight)kg"

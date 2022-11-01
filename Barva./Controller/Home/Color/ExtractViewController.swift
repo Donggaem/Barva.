@@ -29,31 +29,40 @@ class ExtractViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
 
-        paramRoadCount += 1
+        extractImageView.image = UIImage(named: "beage_p")
         
+        let color = "beige"
+        let param = ColorCheckboardRequest(color_extract: color)
         
+        postColorCheckerboard(param)
         
-        if paramRoadCount == 3 {
-            
-            extractImageView.image = UIImage(named: "green_p")
-
-            let color = "green"
-            let param = ColorCheckboardRequest(color_extract: color)
-            
-            postColorCheckerboard(param)
-            
-            extractCollectionView.reloadData()
-        }else {
-            
-            extractImageView.image = UIImage(named: "beage_p")
-            
-            let color = setColor
-            let param = ColorCheckboardRequest(color_extract: color)
-            
-            postColorCheckerboard(param)
-            
-            extractCollectionView.reloadData()
-        }
+        extractCollectionView.reloadData()
+        
+//        paramRoadCount += 1
+//
+//
+//
+//        if paramRoadCount == 3 {
+//
+//            extractImageView.image = UIImage(named: "green_p")
+//
+//            let color = "green"
+//            let param = ColorCheckboardRequest(color_extract: color)
+//
+//            postColorCheckerboard(param)
+//
+//            extractCollectionView.reloadData()
+//        }else {
+//
+//            extractImageView.image = UIImage(named: "beage_p")
+//
+//            let color = setColor
+//            let param = ColorCheckboardRequest(color_extract: color)
+//
+//            postColorCheckerboard(param)
+//
+//            extractCollectionView.reloadData()
+//        }
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {
