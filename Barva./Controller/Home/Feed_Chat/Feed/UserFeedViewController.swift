@@ -44,7 +44,7 @@ class UserFeedViewController: UIViewController{
         
         setUI()
         getUserFeed()
-
+        
     }
     
     @IBAction func backBtnPressed(_ sender: UIButton) {

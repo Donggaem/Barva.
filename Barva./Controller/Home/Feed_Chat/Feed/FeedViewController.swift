@@ -111,7 +111,7 @@ class FeedViewController: UIViewController {
             let param = ColorSingleRequest(color_extract: color)
             postColorFeed(param)
         }
-
+        
     }
     
     //MARK: - GET NEWESTFEED
@@ -144,7 +144,7 @@ class FeedViewController: UIViewController {
                                     
                                 }
                             }
-                        
+                            
                         }
                         
                     } else {
@@ -287,7 +287,7 @@ class FeedViewController: UIViewController {
                                     self.feedArray.append(self.savePostArray[index].saved_posts)
                                     self.sisSave.append(self.savePostArray[index].isSave)
                                     self.sisLike.append(self.savePostArray[index].isLike)
-
+                                    
                                 }
                                 self.feedPagerView.reloadData()
                                 self.feedPageControl.numberOfPages = storageFeedObject.count
@@ -491,7 +491,7 @@ class FeedViewController: UIViewController {
                     if response.isSuccess == true {
                         
                         BarvaLog.debug("postCencelLikePost - Success")
-
+                        
                         
                     } else {
                         BarvaLog.error("postCencelLikePost - fail")
@@ -552,7 +552,7 @@ extension FeedViewController: FSPagerViewDelegate, FSPagerViewDataSource {
             cell.likeBool = sisLike[index]
             cell.bookmarkBool = sisSave[index]
         }
-
+        
         
         feedNick = feedArray[index].post_users.user_nick
         feedSpec = "\(feedArray[index].user_gender) | \(feedArray[index].user_tall)cm | \(feedArray[index].user_weight)kg"
