@@ -29,7 +29,7 @@ class ChatViewController: UIViewController {
     var paramPostid = 0
     
     var chatList: [CommentResult] = []
-//    var reChatList: [String] = ["test7", "test8", "test9", "test10","test11", "test12", "test13"]
+    //    var reChatList: [String] = ["test7", "test8", "test9", "test10","test11", "test12", "test13"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -175,28 +175,28 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         self.chatTableView.register(UINib(nibName: "ChatTableCell", bundle: nil),  forCellReuseIdentifier: "ChatTableViewCell")
         self.chatTableView.register(UINib(nibName: "ReChatTableCell", bundle: nil),  forCellReuseIdentifier: "ReChatTableViewCell")
     }
-
+    
     // MARK: - Row Cell
-
+    
     // 몇개의 Cell을 반환할지 Return하는 메소드
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        var chatCount = chatList.count + reChatList.count
+        //        var chatCount = chatList.count + reChatList.count
         return chatList.count
     }
-
+    
     //각Row에서 해당하는 Cell을 Return하는 메소드
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.row % 2 == 0 {
-//            let chatCell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell") as! ChatTableViewCell
-//            chatCell.chatLabel.text = chatList[indexPath.row]
-//                    return chatCell
-//        }else {
-//            let reChatCell = tableView.dequeueReusableCell(withIdentifier: "ReChatTableViewCell", for: indexPath) as! ReChatTableViewCell
-//
-//            reChatCell.reChatLabel.text = reChatList[indexPath.row]
-//            return reChatCell
-//        }
-//
+        //        if indexPath.row % 2 == 0 {
+        //            let chatCell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell") as! ChatTableViewCell
+        //            chatCell.chatLabel.text = chatList[indexPath.row]
+        //                    return chatCell
+        //        }else {
+        //            let reChatCell = tableView.dequeueReusableCell(withIdentifier: "ReChatTableViewCell", for: indexPath) as! ReChatTableViewCell
+        //
+        //            reChatCell.reChatLabel.text = reChatList[indexPath.row]
+        //            return reChatCell
+        //        }
+        //
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell") as! ChatTableViewCell
         cell.selectionStyle = .none
         cell.nickLabel.text = chatList[indexPath.row].comment_users.user_nick
