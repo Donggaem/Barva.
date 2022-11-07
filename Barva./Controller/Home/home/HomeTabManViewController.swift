@@ -85,6 +85,8 @@ extension HomeTabManViewController: PageboyViewControllerDataSource, TMBarDataSo
     
     func viewController(for pageboyViewController: PageboyViewController, at index: PageboyViewController.PageIndex) -> UIViewController? {
         print(index)
+        
+        //수정 인덱스가 두번뜨고 알맞는 수가 안떠서 오류 발생
         if (index == 2) {
             sexVC.setDropDown()
 

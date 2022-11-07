@@ -7,10 +7,12 @@
 
 import UIKit
 
-class MyFollowViewController: UIViewController {
+class MyFollowViewController: UIViewController { //수정 팔로워 버튼 클릭시 팔로워로 팔로잉은 팔로잉
 
     @IBOutlet weak var userNick: UILabel!
+    
     var paramUserNick = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()

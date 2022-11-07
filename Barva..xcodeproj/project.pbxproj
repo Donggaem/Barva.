@@ -43,7 +43,6 @@
 		EB82BA6C28EEB75E000CA4D1 /* ReChatTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB82BA6B28EEB75E000CA4D1 /* ReChatTableCell.xib */; };
 		EB82BA6E28EEBF1D000CA4D1 /* ReChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB82BA6D28EEBF1D000CA4D1 /* ReChatTableViewCell.swift */; };
 		EB834A9728E45662008A0706 /* HomeImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB834A9628E45662008A0706 /* HomeImageCollectionViewCell.xib */; };
-		EB834A9A28E45B5D008A0706 /* testImage in Resources */ = {isa = PBXBuildFile; fileRef = EB834A9928E45B5D008A0706 /* testImage */; };
 		EB83748428F2B70E00518A09 /* StorageImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83748328F2B70E00518A09 /* StorageImagesResponse.swift */; };
 		EB84F2E928F26F9A002921D6 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84F2E828F26F9A002921D6 /* ProfileResponse.swift */; };
 		EB8642402906896600AFFAEC /* FollowerTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB86423F2906896600AFFAEC /* FollowerTabViewController.swift */; };
@@ -194,7 +193,6 @@
 		EB82BA6B28EEB75E000CA4D1 /* ReChatTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReChatTableCell.xib; sourceTree = "<group>"; };
 		EB82BA6D28EEBF1D000CA4D1 /* ReChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReChatTableViewCell.swift; sourceTree = "<group>"; };
 		EB834A9628E45662008A0706 /* HomeImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeImageCollectionViewCell.xib; sourceTree = "<group>"; };
-		EB834A9928E45B5D008A0706 /* testImage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = testImage; sourceTree = "<group>"; };
 		EB83748328F2B70E00518A09 /* StorageImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageImagesResponse.swift; sourceTree = "<group>"; };
 		EB84F2E828F26F9A002921D6 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		EB86423F2906896600AFFAEC /* FollowerTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerTabViewController.swift; sourceTree = "<group>"; };
@@ -368,7 +366,6 @@
 		EB25ACF628A1364D0006C1F2 /* Barva. */ = {
 			isa = PBXGroup;
 			children = (
-				EB834A9928E45B5D008A0706 /* testImage */,
 				EB25AD0E28A137380006C1F2 /* Controller */,
 				EB25AD0C28A137170006C1F2 /* Model */,
 				EB25AD0D28A1372A0006C1F2 /* View */,
@@ -995,7 +992,6 @@
 				EB2EA2FB28A1410E00EC0685 /* Home.storyboard in Resources */,
 				EBB8F45828BF99FA0069D4E1 /* inter-cufonfonts in Resources */,
 				EBB2A0F828DB2E55002AAF1E /* ChatTableCell.xib in Resources */,
-				EB834A9A28E45B5D008A0706 /* testImage in Resources */,
 				EB03C48428B262B700AECA53 /* MPLUS1Code in Resources */,
 				EB82BA6C28EEB75E000CA4D1 /* ReChatTableCell.xib in Resources */,
 				EBE6657928E6B28D007F3B48 /* FeedViewCell.xib in Resources */,

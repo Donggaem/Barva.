@@ -29,6 +29,8 @@ class ExtractViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
 
+        
+        //수정 색을 받아와 이미지 띄우기
         extractImageView.image = UIImage(named: "beage_p")
         
         let color = "beige"

@@ -17,7 +17,7 @@ class ColorTabViewController: UIViewController {
     @IBOutlet weak var colorExtractBtn: UIButton!
     @IBOutlet weak var colorExtractImage: GIFImageView!
     
-    var roadCount = 0
+    var roadCount = 0 //수정
 
     var colorBtnBool = false {
         didSet {
@@ -56,6 +56,8 @@ class ColorTabViewController: UIViewController {
     
     //MARK: - IBACTION
     @IBAction func coloreExtractBtnPressed(_ sender: UIButton) {
+        
+        //수정할 부분 버튼 클릭시 색깔을 받고 띄워주기, 그리고 다음 뷰컨을 팝했을떄 화면 리셋
         if colorBtnBool == false {
             
             colorExtractImage.animate(withGIFNamed: "beige")
