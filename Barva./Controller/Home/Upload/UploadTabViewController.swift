@@ -60,7 +60,6 @@ class UploadTabViewController: UIViewController {
     //MARK: - OBJC
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
-        // MARK: - 본의 photo picker 수정 부분
         /// 버튼 클릭 시 갤러리 화면 보여줌
         
         // MARK: 1
@@ -69,14 +68,9 @@ class UploadTabViewController: UIViewController {
         config.filter = PHPickerFilter.any(of: [.images, .livePhotos]) // 어떤 종류의 사진들 (사진, 라이브 포토, 영상) 을 보여줄지 여기서 필터링 진행
         let vc = PHPickerViewController(configuration: config)  // 올라오는 vc 정의
         vc.delegate = self  // 포토 피커의 델리게이트 자신으로 채택
-        //vc.modalPresentationStyle = .overFullScreen // 풀 스크린으로 올리고 싶으면 해당 라인 주석 풀어주세요~
+        //vc.modalPresentationStyle = .overFullScreen // 풀 스크린
         present(vc, animated: true)   // 현재 프레즌트 형식으로 올리는데 네비로도 넘길 수 있을 듯 아니면 풀 스크린으로도 가능함.
         
-        // MARK: 2
-        // 상단에 PHPickerViewControllerDelegate 채택
-        
-        // MARK: 3.
-        // 채택된 델리게이트 관련 메소드 (func picker) 아래에 정의함 ⬇️
     }
     
     //MARK: - IBACTION
